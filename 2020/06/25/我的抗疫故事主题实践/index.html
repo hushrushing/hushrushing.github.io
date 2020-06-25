@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+    <meta name="keywords" content="hushrush" />
+    <title>
+        TheHushrush
+    </title>
+    <!-- favicon -->
+    
+    <link rel="icon" href="https://cdn.jsdelivr.net/gh/frontendsophie/hexo-theme-autumn@1.0.0/source/img/favicon.ico" />
+     
+<link rel="stylesheet" href="/css/style.css">
+
+
+    <!-- highlight -->
+    <link rel="stylesheet" href="https://cdn.bootcss.com/highlight.js/9.12.0/styles/github-gist.min.css" />
+    <script src="//cdn.bootcss.com/highlight.js/9.2.0/highlight.min.js"></script>
+    <script>
+        hljs.initHighlightingOnLoad()
+    </script>
+    <script src="https://cdn.jsdelivr.net/gh/frontendsophie/hexo-infinite-scroll@2.0.0/dist/main.js"></script>
+
+    <script>
+        infiniteScroll()
+
+        window.addEventListener('DOMContentLoaded', function () {
+            const [
+                mainTitle,
+                mobileMenu,
+                mobileMainTitle,
+                mobileMenuBtn,
+                ipadMenuBtn,
+                aside,
+                closeBtn,
+            ] = getEle(
+                '#main-title',
+                '.mobile-menu',
+                '.mobile-menu h3',
+                '.mobile-menu button',
+                '.ipad-menu',
+                'aside',
+                'aside .close',
+            )
+            const io = new IntersectionObserver(entries => {
+                if (entries[0].intersectionRatio <= 0) {
+                    mobileMainTitle.classList.remove('invisibile')
+                } else {
+                    mobileMainTitle.classList.add('invisibile')
+                }
+            })
+            io.observe(mainTitle)
+
+            clickToggleAside(mobileMenuBtn)
+            clickToggleAside(ipadMenuBtn)
+            clickToggleAside(closeBtn, false)
+
+            const isMenuVisible = window.getComputedStyle(mobileMenu).display !== 'none'
+            if (isMenuVisible) document.body.style.background = 'none'
+
+            function getEle(...args) {
+                return args.map(arg => document.querySelector(arg))
+            }
+
+            function clickToggleAside(btn, show = true) {
+                btn.addEventListener('click', function () {
+                    if (show) {
+                        aside.style.display = 'block'
+                    } else {
+                        aside.style.display = 'none'
+                    }
+                })
+            }
+        })
+    </script>
+<meta name="generator" content="Hexo 4.2.0"></head>
+
+<body style="background: url(https://cdn.jsdelivr.net/gh/frontendsophie/hexo-theme-autumn@1.0.0/source/img/button-bg.png) #f3f3f3">
+    <div class="container">
+        <header class="header">
+    <nav class="mobile-menu" style="background: url(https://cdn.jsdelivr.net/gh/frontendsophie/hexo-theme-autumn@1.0.0/source/img/button-bg.png) #f3f3f3">
+        <h3 class="invisibile">
+            <a href="/" class="logo">
+                TheHushrush
+            </a>
+        </h3>
+        <button class="menu">menu</button>
+    </nav>
+
+    <button class="ipad-menu menu">menu</button>
+
+    <h1 class="title" id="main-title">
+        <a href="/" class="logo">
+            TheHushrush
+        </a>
+    </h1>
+    <h2 class="desc">
+        
+    </h2>
+
+    <div class="links">
+        <ul>
+            
+            <li>
+                <a href="https://github.com/hushrushing" target="_blank" rel="noopener">
+                    Github
+                </a>
+            </li>
+            
+            <li>
+                <a href="https://space.bilibili.com/10524420" target="_blank" rel="noopener">
+                    Bilibili
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+</header>
+        <main class="main">
+            <article class="post">
+    
+    
+    <h4 class="post-cat">
+        <a href="/categories/%E4%BD%9C%E4%B8%9A/">
+            作业
+        </a>
+    </h4>
+    
+    
+    <h2 class="post-title">
+        “我的抗疫故事”主题实践活动
+    </h2>
+    <ul class="post-date">
+        <li>
+            2020-06-25
+        </li>
+        <li>
+            Hushrush
+        </li>
+    </ul>
+    <div class="post-content">
+        <h1 id="“我的抗疫故事”主题实践活动"><a href="#“我的抗疫故事”主题实践活动" class="headerlink" title="“我的抗疫故事”主题实践活动"></a>“我的抗疫故事”主题实践活动</h1><pre><code>今年伊始，全世界就遭受了一次空前的大流行病浩劫。新型冠状病毒引发的肺炎疫情给全人类带来了难以想象的巨大影响。但是坚强的中国人民并没有被这次疫情打倒，面对传染性极强的新冠肺炎疫情，习近平总书记亲自指挥，亲自部署，中国人民在党的领导下打响了疫情防控阻击战。在无数社会各界人员，尤其是医护人员和科研工作者艰苦卓绝的努力下，武汉保卫战，湖北保卫战终于取得了重大战略成果。在我国国内，疫情以湖北尤甚，作为一个湖北人，虽不是武汉人，但深深感受到了疫情带来的巨大影响和防控疫情的巨大牺牲和努力。从1月24日到3月17日，我见证了“按下暂停键”的湖北省荆州市，在那些艰难的日子里，疫情恐怖的肆虐就发生在我身边，但全国人民的支援奋斗也同样发生在我身边。</code></pre><p>我是个关注时事的人。跨年的夜晚，我看到手机上的新闻报道了武汉“不明原因的肺炎病例”，但和其他人一样，我也没有特别在意。直到快要回家时，家里人提醒我要在武汉转车时戴口罩，我才回想起这件事。1月9日，在疫情爆发两周前，偌大的武汉站，拥挤的人群，来往不息的人潮不断进出，但只有我一人戴着原本用来防雾霾的N95口罩，站在人少处躲避着人群。这是我后来所一直庆幸的，倘若当时掉以轻心，我或许会成为散播病毒的传染源之一。</p>
+<p>1月20日左右，空气中弥漫着疫情的紧张气氛，武汉的确诊数字牵动着我的神经，我一整天都在刷疫情相关的消息，下楼买到了药店里的最后一包口罩。23日，武汉封了城，英雄的武汉人民尽力将疫情限制在自己的一城之内，然而春运已经开始，数以万计的武汉返乡人员早已踏上了列车。24日，我所在的荆州市宣布封城，成为了湖北省内第14个“封城”的城市。</p>
+<p>在封闭的52天里，我看见了应对疫情初期的措手不及。社区中午上门发放出门证，要求三天之内只能一人出门一次，下午全市发布通告禁止出门。我看见了极少数愚昧无知的人，有一男子不戴口罩硬闯出门，辱骂制止他的保安，攻击党和政府。我看见了空无一人的街道，全市最繁华的道路灯光稀疏，只有执勤的车辆偶尔驶过。我看见了滞留乡下的人，许多同学亲戚回了乡下就一直不能回来，只能滞留到解封。我常常在夜里从阳台向外眺望，总能看到第一人民医院，市内仅有的几座三甲医院之一，彻夜灯火通明。我常常想，那其中每天上演着多少生离死别，有多少支离破碎的家庭无助地徘徊在过道里，有多少无助的患者躺在病床上遭受病魔的折磨。这次疫情彻底改变了生活的模样，我们重新认识拥有一个健康的身体是多么大的一件幸事，习以为常的购买物资是多么不易。</p>
+<p>然而，我也同样看见了党和政府的担当关怀。大年初一，习近平总书记主持政治局常委会会议亲自指挥亲自部署，患者治疗的费用由国家财政负担。我看见了驰援而来的医护人员，尤其是对口支援荆州市的广东省、海南省的医护人员和交大一附院、二附院的援鄂医疗队员。我看见了社区的辛苦工作，不能出门的日子，我们网上下单，社区的工作人员会送上门。我看见了全国人民的积极援助，我家就收到了许多援助的蔬菜水果，不断滚动的时事新闻诉说着全国人民对湖北的祝福。我看见了人们抗击疫情的决心，社区招募志愿者，而名额立刻就报满了，市民严格遵守各项建议，用“宅家”遏制疫情的传播。</p>
+<p>对比国外一些国家的抗“疫”，我由衷感受到了我国的制度优势。作为疫情最先爆发的国家，我国在极为不利的条件下，迅速向世界卫生组织分享了病毒的基因序列，用三个月左右的时间取得了武汉保卫战，湖北保卫战的决定性成果和全国疫情防控的战略成果。习近平总书记在日前召开的党外人士座谈会上精辟总结到，取到这些成果的原因关键就在于我们坚持中国共产党的集中统一领导，坚持以人民为中心，紧紧依靠人民群众，发挥集中力量办大事的制度优势，统筹运用综合国力，紧紧依靠科技进步，弘扬社会主义核心价值观，加强国际交流合作。对我们这样一个拥有14亿人口的大国来说，这样的成绩来之不易，这样的经验弥足珍贵。实践再次证明，中国共产党领导和我国社会主义制度、我国国家治理体系具有强大生命力和显著优越性，能够战胜任何艰难险阻，能够为人类文明进步作出重大贡献。而国外一些国家虽有中国疫情爆发的先例，但至今仍未遏制住疫情大规模蔓延的势头。更有甚者不仅不积极抗击疫情，制定措施，反而频频“甩锅”、“碰瓷”，一些政客为一己私利大搞阴谋论，鼓吹完全站不住脚的错误言论，实在是令人费解。</p>
+<p>我深深感激为此次疫情全力付出的各界人士，他们是时代的楷模，他们的壮举将永远被历史铭记。从全国各地勇敢逆行，不分昼夜坚守在抗疫一线的医护人员；彻夜高强度工作，对居民逐个上门测量体温的社区人员；在空荡的城市中奔波运送物资的司机；主动执勤检测体温，分发物资的志愿者……无数双手一起撑起武汉，共同支援湖北，这样的人正是中华民族强有力的脊梁，他们的存在正是中华文明得以永续发展的原因。</p>
+<p>没有一个冬天不可逾越，没有一个春天不会来临。摧伤虽多意愈厉，直与天地争春回，我坚信，面对此次由新型冠状病毒引发的肺炎疫情，全人类一定会像面对历史上其他严峻考验一样，取得最终的胜利。</p>
+
+    </div>
+</article>
+        </main>
+        <aside class="aside">
+            <div class="close"></div>
+            <section class="aside-section">
+                
+    <h1>Categories</h1>
+
+    <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/%E4%B8%8D%E7%9C%A0%E5%A4%9C/">不眠夜</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E4%BD%9C%E4%B8%9A/">作业</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%A4%A7%E5%8C%96%E7%AC%94%E8%AE%B0/">大化笔记</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%A4%A7%E7%89%A9%E7%AC%94%E8%AE%B0/">大物笔记</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%BE%A9%E8%AE%BA/">辩论</a></li></ul>
+
+            </section>
+            <section class="aside-section">
+                
+    <h1>Archives</h1>
+
+    <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/">2020</a></li></ul>
+
+
+            </section>
+            <section class="aside-section tag">
+                
+    <h1>Tags</h1>
+
+    <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%BD%9C%E4%B8%9A/" rel="tag">作业</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%A4%A7%E5%8C%96%E7%AC%94%E8%AE%B0/" rel="tag">大化笔记</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%BF%83%E5%BE%97/" rel="tag">心得</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%AC%94%E8%AE%B0/" rel="tag">笔记</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%BE%A9%E8%AE%BA/" rel="tag">辩论</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%9A%8F%E6%83%B3/" rel="tag">随想</a></li></ul>
+
+            </section>
+        </aside>
+    </div>
+</body>
+
+</html>

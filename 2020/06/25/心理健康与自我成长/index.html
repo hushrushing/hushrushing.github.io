@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+    <meta name="keywords" content="hushrush" />
+    <title>
+        TheHushrush
+    </title>
+    <!-- favicon -->
+    
+    <link rel="icon" href="https://cdn.jsdelivr.net/gh/frontendsophie/hexo-theme-autumn@1.0.0/source/img/favicon.ico" />
+     
+<link rel="stylesheet" href="/css/style.css">
+
+
+    <!-- highlight -->
+    <link rel="stylesheet" href="https://cdn.bootcss.com/highlight.js/9.12.0/styles/github-gist.min.css" />
+    <script src="//cdn.bootcss.com/highlight.js/9.2.0/highlight.min.js"></script>
+    <script>
+        hljs.initHighlightingOnLoad()
+    </script>
+    <script src="https://cdn.jsdelivr.net/gh/frontendsophie/hexo-infinite-scroll@2.0.0/dist/main.js"></script>
+
+    <script>
+        infiniteScroll()
+
+        window.addEventListener('DOMContentLoaded', function () {
+            const [
+                mainTitle,
+                mobileMenu,
+                mobileMainTitle,
+                mobileMenuBtn,
+                ipadMenuBtn,
+                aside,
+                closeBtn,
+            ] = getEle(
+                '#main-title',
+                '.mobile-menu',
+                '.mobile-menu h3',
+                '.mobile-menu button',
+                '.ipad-menu',
+                'aside',
+                'aside .close',
+            )
+            const io = new IntersectionObserver(entries => {
+                if (entries[0].intersectionRatio <= 0) {
+                    mobileMainTitle.classList.remove('invisibile')
+                } else {
+                    mobileMainTitle.classList.add('invisibile')
+                }
+            })
+            io.observe(mainTitle)
+
+            clickToggleAside(mobileMenuBtn)
+            clickToggleAside(ipadMenuBtn)
+            clickToggleAside(closeBtn, false)
+
+            const isMenuVisible = window.getComputedStyle(mobileMenu).display !== 'none'
+            if (isMenuVisible) document.body.style.background = 'none'
+
+            function getEle(...args) {
+                return args.map(arg => document.querySelector(arg))
+            }
+
+            function clickToggleAside(btn, show = true) {
+                btn.addEventListener('click', function () {
+                    if (show) {
+                        aside.style.display = 'block'
+                    } else {
+                        aside.style.display = 'none'
+                    }
+                })
+            }
+        })
+    </script>
+<meta name="generator" content="Hexo 4.2.0"></head>
+
+<body style="background: url(https://cdn.jsdelivr.net/gh/frontendsophie/hexo-theme-autumn@1.0.0/source/img/button-bg.png) #f3f3f3">
+    <div class="container">
+        <header class="header">
+    <nav class="mobile-menu" style="background: url(https://cdn.jsdelivr.net/gh/frontendsophie/hexo-theme-autumn@1.0.0/source/img/button-bg.png) #f3f3f3">
+        <h3 class="invisibile">
+            <a href="/" class="logo">
+                TheHushrush
+            </a>
+        </h3>
+        <button class="menu">menu</button>
+    </nav>
+
+    <button class="ipad-menu menu">menu</button>
+
+    <h1 class="title" id="main-title">
+        <a href="/" class="logo">
+            TheHushrush
+        </a>
+    </h1>
+    <h2 class="desc">
+        
+    </h2>
+
+    <div class="links">
+        <ul>
+            
+            <li>
+                <a href="https://github.com/hushrushing" target="_blank" rel="noopener">
+                    Github
+                </a>
+            </li>
+            
+            <li>
+                <a href="https://space.bilibili.com/10524420" target="_blank" rel="noopener">
+                    Bilibili
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+</header>
+        <main class="main">
+            <article class="post">
+    
+    
+    <h4 class="post-cat">
+        <a href="/categories/%E4%BD%9C%E4%B8%9A/">
+            作业
+        </a>
+    </h4>
+    
+    
+    <h2 class="post-title">
+        心理健康与自我成长--个人成长报告
+    </h2>
+    <ul class="post-date">
+        <li>
+            2020-06-25
+        </li>
+        <li>
+            Hushrush
+        </li>
+    </ul>
+    <div class="post-content">
+        <h1 id="心理健康与自我成长–个人成长报告"><a href="#心理健康与自我成长–个人成长报告" class="headerlink" title="心理健康与自我成长–个人成长报告"></a>心理健康与自我成长–个人成长报告</h1><h2 id="（1）-谈谈你对大学生心理健康的理解和认识（15分）"><a href="#（1）-谈谈你对大学生心理健康的理解和认识（15分）" class="headerlink" title="（1）    谈谈你对大学生心理健康的理解和认识（15分）"></a>（1）    谈谈你对大学生心理健康的理解和认识（15分）</h2><p>经过一个学期的大学生心理健康课程的学习，我对现当代大学生的心理健康问题有了一个更加深刻入里的认识。健康并非仅仅只是指身体上没有任何疾病，而是还要保持精神上的心理健康。所谓心理健康，其实就是指心理的各个方面及活动过程处于一种良好或正常的状态。其理想状态是保持性格完好、智力正常、认知正确、情感适当、意志合理、态度积极、行为恰当、适应良好。而谈到大学生的心理健康，则除上述特点之外，还有更多年龄和环境特点，例如进入大学的大学生往往会遇到社会交往和沟通问题，对未来发展的担忧，学习生活压力还有情感困扰等方面的问题。经过一位位专家的细心讲述和深刻点评，我学到了许多操作性强，易于使用的心理调节方法，能够更好地调节自己的心态，使我在繁忙的生活中不至于迷失自我，陷入迷茫。</p>
+<h2 id="（2）-结合自我成长经历和所学内容，谈谈你感受最深的体会，重点在自我认知评价、自我接纳、要求具体，详实。（60分）"><a href="#（2）-结合自我成长经历和所学内容，谈谈你感受最深的体会，重点在自我认知评价、自我接纳、要求具体，详实。（60分）" class="headerlink" title="（2）    结合自我成长经历和所学内容，谈谈你感受最深的体会，重点在自我认知评价、自我接纳、要求具体，详实。（60分）"></a>（2）    结合自我成长经历和所学内容，谈谈你感受最深的体会，重点在自我认知评价、自我接纳、要求具体，详实。（60分）</h2><p>本学期的大学生心理健康课虽然在新冠肺炎疫情的影响之下全部在线上进行，但是线上名师专家绘声绘色，娓娓道来，极富创造力和引导力的讲解让我深感受益匪浅，一些长久困扰苦恼的问题瞬间就不再是问题了，可以说是醍醐灌顶，茅塞顿开。在总共三个章节的课程里面，让我感触最深的有以下几点。</p>
+<p>一是如何适应学业环境与人际关系。正所谓心理健康的关键着眼点在于“适应”，我自从进入大学，就一直在不断自我改革，以更好地融入大学课程的学习，但是效果却总是不尽如人意。归根结底还是没有掌握科学、合理、有效的正确方法。聆听老师的教诲以后，我明白了大学的学习任务，学习目标，学习方式都有了极大的变化，强调的就是一个“自主性”。我不能再沿用高中时代的“依赖性”学习，不能指望一切靠老师手把手地教，而是要充分发挥自我优势，根据自己学习的特点把握进度，同时做到不掉队。进入大学以后，我还发现周围的同学来自天南地北，生活方式习惯都有极大的不同，如何与同学们建立良好的友谊成为了一个难题。即使到了这个学期，我依然对班上一些同学不甚了解，极少接触。然而老师提示我应该以诚相待，豁达大度。同时还要注意保持人际互动的距离，根据关系的远近亲疏适当选择交往的距离。</p>
+<p>第二是对相互沟通有了更深入的认识。我初入大学时，对陌生的环境感到惶恐不安，不知道如何去有效且良好的沟通。老师介绍了“萨提亚人际沟通理论”，其中“萨提亚沟通圆”让我知道了有效的沟通，一定既要关注到自己，又要关注到他人，同时还要和情境相匹配。在与他人沟通的时候，不能忽略自己，不能变成讨好型的沟通姿态；也不能忽略他人，从而变为指责型的沟通姿态；同时还不能变成超理智或打岔型的沟通姿态，而是要努力让自己内外调和，达到一致。</p>
+<p>最后，最为重要，最为关键的，还是我对于自我认知有了全新的认识，对自己能够更好地接纳。进入大学以后，我深深地感受到了理想与现实的落差，自己早已不再是高中班上数一数二的那一个，而是“泯然众人矣”。同时第一次独自在外生活，远离了熟悉的环境，内心往往惶恐不安，不知如何倾诉。遇到挫折了，不再像以前那样自己很快就能调整过来，而是需要很长一段时间。老师的讲解让我清醒地认识到，在大学里，我的自我认知开始动摇了，身边有了更加优秀的同学，开始怀疑、否认自己，出现自卑的情节。</p>
+<p>但是，“自我认识是不断变化的，自我认同是一生的任务”。我的自我认识一部分来源于比较，比较一方面会让我们更加自信，更有动力，但是另一方面也促成了我们的自卑，让我们嫉妒重重，盲目自信，远离了自己的内心，感受到人格的不平等。另一方面，还取决于自己成功与否。但是所谓“成功”的判断标准是很不一的，因此其实更多地还是来源于对自己的看法。</p>
+<p>就这样，我开始尝试自我接纳。一件事情好的好与不好，有没有用，更多地取决于我们自己如何看待，如何思考。面对苦恼的事情，我尝试用正面的观点去解读，去获得滋养内心的资源。另外，面对失败，我不再将其看作是失败，而是看作成功路上必不可少的一部分，这样让我的生活轻松了许多。另一方面，我们每一个人的能力，一定要有来自自己或者他人的肯定才能转化为自信，自爱和自尊，才能成为自我认识的一部分。有心理学家研究，人的一生需要5000次肯定。现在这个阶段，当我远离亲人朋友的时候，最为需要的还是来源于自己的肯定。当我每完成一件事时，我便充分地肯定自己，自此以来，我便不再觉得自己不行不好，而是拥有了一个更加强大坚韧的内心。</p>
+<p>总而言之，本学期选择了本门“大学生心理健康与自我调适”课程是一个十分正确的决定，让我收获了心里健康的知识。我在以后的学习生活中会尽量将其付诸实践，让自己的大学生活变得更好。</p>
+<h2 id="（3）-结合自我实际情况，怎样发挥自我优势，做优秀的自己。（25分）"><a href="#（3）-结合自我实际情况，怎样发挥自我优势，做优秀的自己。（25分）" class="headerlink" title="（3）    结合自我实际情况，怎样发挥自我优势，做优秀的自己。（25分）"></a>（3）    结合自我实际情况，怎样发挥自我优势，做优秀的自己。（25分）</h2><p>一是要发掘自我优势，找到自己的长处。许多时候我们认为自己一无是处，缺乏长处，难以找到与众不同的地方，或者觉得自己的长处也没有那么“长”，甚至认为自己就是一个普通人。其实正是这样的思维方式才导致自己不愿意去变得更好。倘若我们努力发掘自身的优点，总是能够在自己身上找到优势的。对于我个人来说，我的一大优势在于英语掌握较好，阅读文章的压力较小。众所周知，英语对于大学的学习或者是以后的工作的重要性是不言而喻的，因此我会坚持英语学习的打卡，将其变为自己的核心竞争力之一。另外的优势在于有较强的自学能力，许多科目的学习我是通过自我学习来完成的。因此我应该充分发挥这个优势，多学一些与本专业相关的知识，不断充实自己。</p>
+<p>二是要悦纳自己，与自己和解。正所谓“理想很丰满，现实很骨感”，过高的要求和不切实际的幻想会让我们对现实生活抱有失落感。殊不知长期沉溺于自我否定和自我厌恶中会让我们无法发挥出自己真实的水平，而导致每况愈下，形成恶性循环。“退一步海阔天空”，我们不妨尝试与自己和解，接受自己的不完美，反而会让自己的身心得到发展。我打算将来在力争上游，不断进步的同时，也接受自己身上的不完美，虽去争取但不强求。做“最好的自己”。</p>
+<p>三是要广结益友，共同进步。个人独行终究无法长远，在大学生活中，我们必定需要结伴同行，这时好的朋友会成为我们的助力。因此我会结交优秀朋友，但既不需多，也不必强求，有三五知己足以让我们取长补短，互相鼓励，共同进步。</p>
+<p>总而言之，这次虽由于疫情无法线下面授，但依然还是要感谢老师的辛勤付出，我从这门课中学到了许多有用知识，一定会多向身边同学宣传！发挥自身优势，做优秀的自己是一项长期的工程，不能急于一时。大学生活还有很长，我将会尽力地做好自己，少留遗憾。</p>
+
+    </div>
+</article>
+        </main>
+        <aside class="aside">
+            <div class="close"></div>
+            <section class="aside-section">
+                
+    <h1>Categories</h1>
+
+    <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/%E4%B8%8D%E7%9C%A0%E5%A4%9C/">不眠夜</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E4%BD%9C%E4%B8%9A/">作业</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%A4%A7%E5%8C%96%E7%AC%94%E8%AE%B0/">大化笔记</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%A4%A7%E7%89%A9%E7%AC%94%E8%AE%B0/">大物笔记</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%BE%A9%E8%AE%BA/">辩论</a></li></ul>
+
+            </section>
+            <section class="aside-section">
+                
+    <h1>Archives</h1>
+
+    <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/">2020</a></li></ul>
+
+
+            </section>
+            <section class="aside-section tag">
+                
+    <h1>Tags</h1>
+
+    <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%BD%9C%E4%B8%9A/" rel="tag">作业</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%A4%A7%E5%8C%96%E7%AC%94%E8%AE%B0/" rel="tag">大化笔记</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%BF%83%E5%BE%97/" rel="tag">心得</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%AC%94%E8%AE%B0/" rel="tag">笔记</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%BE%A9%E8%AE%BA/" rel="tag">辩论</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%9A%8F%E6%83%B3/" rel="tag">随想</a></li></ul>
+
+            </section>
+        </aside>
+    </div>
+</body>
+
+</html>
