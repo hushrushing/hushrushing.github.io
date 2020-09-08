@@ -1,299 +1,344 @@
 <!DOCTYPE html>
-<html>
-<head>
+<html lang="zh-CN">
+    <head>
+    <meta charset="utf-8">
 
-    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
-    <meta name="keywords" content="hushrush" />
-    <title>
-        TheHushrush
-    </title>
-    <!-- favicon -->
     
-    <link rel="icon" href="https://github.com/hushrushing/hushrush/blob/master/favicon.ico" />
+
+    <!-- 渲染优化 -->
+    <meta name="renderer" content="webkit">
+    <meta name="force-rendering" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="HandheldFriendly" content="True" >
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!--icon-->
+
+    <link rel="shortcut icon" type='image/x-icon' href="/favicon.ico">
+
+
+    <!-- meta -->
+
+
+<title>归档 | TheHushrush</title>
+
+
+
+
+
+    <!-- OpenGraph -->
+ 
+    <meta name="description" content="Simple&amp;Naive">
+<meta property="og:type" content="website">
+<meta property="og:title" content="TheHushrush">
+<meta property="og:url" content="http://hushrushly.github.io/archives/index.html">
+<meta property="og:site_name" content="TheHushrush">
+<meta property="og:description" content="Simple&amp;Naive">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:author" content="Hushrush">
+<meta name="twitter:card" content="summary_large_image">
+
+
+    
+<link rel="stylesheet" href="/css/style/main.css">
+ 
+
+
+
+    
+    
+    
+
+    
+
      
-<link rel="stylesheet" href="/css/style.css">
 
+    <!-- custom head -->
 
-    <!-- highlight -->
-    <link rel="stylesheet" href="https://cdn.bootcss.com/highlight.js/9.12.0/styles/github-gist.min.css" />
-    <script src="//cdn.bootcss.com/highlight.js/9.2.0/highlight.min.js"></script>
-    <script>
-        hljs.initHighlightingOnLoad()
-    </script>
-    <script src="https://cdn.jsdelivr.net/gh/frontendsophie/hexo-infinite-scroll@2.0.0/dist/main.js"></script>
-
-    <script>
-        infiniteScroll()
-
-        window.addEventListener('DOMContentLoaded', function () {
-            const [
-                mainTitle,
-                mobileMenu,
-                mobileMainTitle,
-                mobileMenuBtn,
-                ipadMenuBtn,
-                aside,
-                closeBtn,
-            ] = getEle(
-                '#main-title',
-                '.mobile-menu',
-                '.mobile-menu h3',
-                '.mobile-menu button',
-                '.ipad-menu',
-                'aside',
-                'aside .close',
-            )
-            const io = new IntersectionObserver(entries => {
-                if (entries[0].intersectionRatio <= 0) {
-                    mobileMainTitle.classList.remove('invisibile')
-                } else {
-                    mobileMainTitle.classList.add('invisibile')
-                }
-            })
-            io.observe(mainTitle)
-
-            clickToggleAside(mobileMenuBtn)
-            clickToggleAside(ipadMenuBtn)
-            clickToggleAside(closeBtn, false)
-
-            const isMenuVisible = window.getComputedStyle(mobileMenu).display !== 'none'
-            if (isMenuVisible) document.body.style.background = 'none'
-
-            function getEle(...args) {
-                return args.map(arg => document.querySelector(arg))
-            }
-
-            function clickToggleAside(btn, show = true) {
-                btn.addEventListener('click', function () {
-                    if (show) {
-                        aside.style.display = 'block'
-                    } else {
-                        aside.style.display = 'none'
-                    }
-                })
-            }
-        })
-    </script>
 <meta name="generator" content="Hexo 4.2.0"></head>
 
-<body style="background: url(https://cdn.jsdelivr.net/gh/frontendsophie/hexo-theme-autumn@1.0.0/source/img/button-bg.png) #f3f3f3">
-    <div class="container">
-        <header class="header">
-    <nav class="mobile-menu" style="background: url(https://cdn.jsdelivr.net/gh/frontendsophie/hexo-theme-autumn@1.0.0/source/img/button-bg.png) #f3f3f3">
-        <h3 class="invisibile">
-            <a href="/" class="logo">
-                TheHushrush
-            </a>
-        </h3>
-        <button class="menu">menu</button>
-    </nav>
-
-    <button class="ipad-menu menu">menu</button>
-
-    <h1 class="title" id="main-title">
-        <a href="/" class="logo">
-            TheHushrush
+    <body>
+        <div id="app">
+            <header class="header">
+    <div class="header__left">
+        <a href="/" class="button">
+            <span class="logo__text">
+                Demo
+            </span>
         </a>
-    </h1>
-    <h2 class="desc">
+    </div>
+    <div class="header__right">
         
-    </h2>
+            <div class="navbar__menus">
+                
+                    <a href="/" class="navbar-menu button">
+                        首页
+                    </a>
+                
+                    <a href="/tags/" class="navbar-menu button">
+                        标签
+                    </a>
+                
+                    <a href="/archives/" class="navbar-menu button">
+                        归档
+                    </a>
+                
+                    <a href="/page/" class="navbar-menu button">
+                        Page
+                    </a>
+                
+            </div>
+        
+        
+        
 
-    <div class="links">
-        <ul>
-            
-            <li>
-                <a href="https://github.com/hushrushing" target="_blank" rel="noopener">
-                    Github
+        
+        
+
+        
+
+        
+            <a class="dropdown-icon button" id="btn-dropdown">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width='24' height='24' fill="none" stroke="currentColor" stroke-width="0.7" stroke-linecap="round" stroke-linejoin="round">
+                    <path fill="currentColor" d="M3.314,4.8h13.372c0.41,0,0.743-0.333,0.743-0.743c0-0.41-0.333-0.743-0.743-0.743H3.314c-0.41,0-0.743,0.333-0.743,0.743C2.571,4.467,2.904,4.8,3.314,4.8z M16.686,15.2H3.314c-0.41,0-0.743,0.333-0.743,0.743s0.333,0.743,0.743,0.743h13.372c0.41,0,0.743-0.333,0.743-0.743S17.096,15.2,16.686,15.2z M16.686,9.257H3.314c-0.41,0-0.743,0.333-0.743,0.743s0.333,0.743,0.743,0.743h13.372c0.41,0,0.743-0.333,0.743-0.743S17.096,9.257,16.686,9.257z"></path>
+                </svg>
+            </a>
+            <div class="dropdown-menus" id="dropdown-menus">
+                <a class="dropback-icon button" id="btn-dropback">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width='24' height='24' fill="none" stroke="currentColor" stroke-width="0.7" stroke-linecap="round" stroke-linejoin="round">
+                        <path fill="currentColor" d="M11.469,10l7.08-7.08c0.406-0.406,0.406-1.064,0-1.469c-0.406-0.406-1.063-0.406-1.469,0L10,8.53l-7.081-7.08c-0.406-0.406-1.064-0.406-1.469,0c-0.406,0.406-0.406,1.063,0,1.469L8.531,10L1.45,17.081c-0.406,0.406-0.406,1.064,0,1.469c0.203,0.203,0.469,0.304,0.735,0.304c0.266,0,0.531-0.101,0.735-0.304L10,11.469l7.08,7.081c0.203,0.203,0.469,0.304,0.735,0.304c0.267,0,0.532-0.101,0.735-0.304c0.406-0.406,0.406-1.064,0-1.469L11.469,10z"></path>
+                    </svg>
                 </a>
-            </li>
-            
-            <li>
-                <a href="https://space.bilibili.com/10524420" target="_blank" rel="noopener">
-                    Bilibili
-                </a>
-            </li>
-            
-        </ul>
+                
+                    <a href="/" class="dropdown-menu button">
+                        首页
+                    </a>
+                
+                    <a href="/tags/" class="dropdown-menu button">
+                        标签
+                    </a>
+                
+                    <a href="/archives/" class="dropdown-menu button">
+                        归档
+                    </a>
+                
+                    <a href="/page/" class="dropdown-menu button">
+                        Page
+                    </a>
+                
+            </div>
+            <script>
+                document.getElementById('btn-dropdown').addEventListener('click', () => {
+                    const dd = document.getElementById('dropdown-menus');
+                    requestAnimationFrame(() => {
+                        dd.style.display = 'flex';
+                        requestAnimationFrame(() => {
+                            dd.style.transform = 'translateY(0)';
+                            dd.style.opacity = '1';
+                        });
+                    });
+                });
+                document.getElementById('btn-dropback').addEventListener('click', () => {
+                    const dd = document.getElementById('dropdown-menus');
+                    dd.style.transform = 'translateY(2.25rem)';                    
+                    dd.style.opacity = '0';
+                    setTimeout(() => {dd.style.display = 'none';}, 350);
+                });
+            </script>
+        
     </div>
 </header>
-        <main class="main">
-            
-<section class="posts">
-    
-        <article class="post">
-            
-                <h4 class="post-cat">
-                    <a href="/categories/%E4%B8%8D%E7%9C%A0%E5%A4%9C/">
-                        不眠夜
-                    </a>
-                </h4>
-                
-                    <h1 class="post-title">
-                        <a href="/2020/09/08/20200908/">
-                            啊我好喜欢沃玛，阿伟你看着办吧。
-                        </a>
-                    </h1>
 
-                    <ul class="post-date">
-                        <li>
-                            2020年9月8日
-                        </li>
-                        <li>
-                            Hushrush
-                        </li>
-                    </ul>
-                    
-                    <div class="post-content ">
-                        
-                            <a href="/2020/09/08/20200908/" class="more-link">Continue reading</a>
-                    </div>
-        </article>
+
+    <div class="cover">
+        <div class="cover__logo">
+            
+                <h1>Demo</h1>
+            
+        </div>
         
-        <article class="post">
-            
-                <h4 class="post-cat">
-                    <a href="/categories/%E4%B8%8D%E7%9C%A0%E5%A4%9C/">
-                        不眠夜
-                    </a>
-                </h4>
-                
-                    <h1 class="post-title">
-                        <a href="/2020/09/07/2020090701/">
-                            我的外文阅读
-                        </a>
-                    </h1>
-
-                    <ul class="post-date">
-                        <li>
-                            2020年9月7日
-                        </li>
-                        <li>
-                            Hushrush
-                        </li>
-                    </ul>
-                    
-                    <div class="post-content ">
-                        
-                            <a href="/2020/09/07/2020090701/" class="more-link">Continue reading</a>
-                    </div>
-        </article>
+            <div class="cover__intro">
+                <p>Simple &amp; Naive</p>
+ 
+            </div>
         
-        <article class="post">
-            
-                <h4 class="post-cat">
-                    <a href="/categories/%E4%B8%8D%E7%9C%A0%E5%A4%9C/">
-                        不眠夜
-                    </a>
-                </h4>
-                
-                    <h1 class="post-title">
-                        <a href="/2020/09/07/20200907/">
-                            notitle
-                        </a>
-                    </h1>
-
-                    <ul class="post-date">
-                        <li>
-                            2020年9月7日
-                        </li>
-                        <li>
-                            Hushrush
-                        </li>
-                    </ul>
-                    
-                    <div class="post-content ">
-                        
-                            <a href="/2020/09/07/20200907/" class="more-link">Continue reading</a>
-                    </div>
-        </article>
-        
-        <article class="post">
-            
-                <h4 class="post-cat">
-                    <a href="/categories/%E4%B8%8D%E7%9C%A0%E5%A4%9C/">
-                        不眠夜
-                    </a>
-                </h4>
-                
-                    <h1 class="post-title">
-                        <a href="/2020/06/24/624/">
-                            不眠夜
-                        </a>
-                    </h1>
-
-                    <ul class="post-date">
-                        <li>
-                            2020年6月24日
-                        </li>
-                        <li>
-                            Hushrush
-                        </li>
-                    </ul>
-                    
-                        <div class="post-cover">
-                            <img src="https://ftp.bmp.ovh/imgs/2020/06/6bdb62fef9e0705d.jpg">
-                        </div>
-                    
-                    <div class="post-content ">
-                        
-                            <a href="/2020/06/24/624/" class="more-link">Continue reading</a>
-                    </div>
-        </article>
-        
-        <article class="post">
-            
-                    <h1 class="post-title">
-                        <a href="/2020/04/07/about/About%20me/">
-                            page
-                        </a>
-                    </h1>
-
-                    <ul class="post-date">
-                        <li>
-                            2020年4月7日
-                        </li>
-                        <li>
-                            Hushrush
-                        </li>
-                    </ul>
-                    
-                    <div class="post-content ">
-                        
-                            <a href="/2020/04/07/about/About%20me/" class="more-link">Continue reading</a>
-                    </div>
-        </article>
-        
-</section>
-
-        </main>
-        <aside class="aside">
-            <div class="close"></div>
-            <section class="aside-section">
-                
-    <h1>Categories</h1>
-
-    <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/%E4%B8%8D%E7%9C%A0%E5%A4%9C/">不眠夜</a></li></ul>
-
-            </section>
-            <section class="aside-section">
-                
-    <h1>Archives</h1>
-
-    <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/">2020</a></li></ul>
-
-
-            </section>
-            <section class="aside-section tag">
-                
-    <h1>Tags</h1>
-
-    <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%9A%8F%E6%83%B3/" rel="tag">随想</a></li></ul>
-
-            </section>
-        </aside>
     </div>
-</body>
 
+            
+<main class='main'>
+    
+        <div class="archives">
+            
+                    <div class="archives-item">
+                        <div class="archives-left">
+                            <div class="archives-icon icon-lg"></div>
+                        </div>
+                        <div class="archives-content">
+                            <h3>2020</h3>
+                        </div>
+                    </div>
+                
+                <div class="archives-item">
+                    <div class="archives-left">
+                        <div class="archives-icon">
+
+                        </div>
+                    </div>
+                    <span class="archives-content">
+                        09-08
+                        &nbsp;
+                        <a href="/2020/09/08/20200908/">
+                            <span class="archives-title">
+                                
+                                    啊我好喜欢沃玛，阿伟你看着办吧。
+                                
+                            </span>
+                        </a>
+                        <br><br>
+                    </span>
+                </div>
+            
+                <div class="archives-item">
+                    <div class="archives-left">
+                        <div class="archives-icon">
+
+                        </div>
+                    </div>
+                    <span class="archives-content">
+                        09-07
+                        &nbsp;
+                        <a href="/2020/09/07/2020090701/">
+                            <span class="archives-title">
+                                
+                                    我的外文阅读
+                                
+                            </span>
+                        </a>
+                        <br><br>
+                    </span>
+                </div>
+            
+                <div class="archives-item">
+                    <div class="archives-left">
+                        <div class="archives-icon">
+
+                        </div>
+                    </div>
+                    <span class="archives-content">
+                        09-07
+                        &nbsp;
+                        <a href="/2020/09/07/20200907/">
+                            <span class="archives-title">
+                                
+                                    notitle
+                                
+                            </span>
+                        </a>
+                        <br><br>
+                    </span>
+                </div>
+            
+                <div class="archives-item">
+                    <div class="archives-left">
+                        <div class="archives-icon">
+
+                        </div>
+                    </div>
+                    <span class="archives-content">
+                        06-24
+                        &nbsp;
+                        <a href="/2020/06/24/624/">
+                            <span class="archives-title">
+                                
+                                    不眠夜
+                                
+                            </span>
+                        </a>
+                        <br><br>
+                    </span>
+                </div>
+            
+                <div class="archives-item">
+                    <div class="archives-left">
+                        <div class="archives-icon">
+
+                        </div>
+                    </div>
+                    <span class="archives-content">
+                        04-07
+                        &nbsp;
+                        <a href="/2020/04/07/about/About%20me/">
+                            <span class="archives-title">
+                                
+                                    page
+                                
+                            </span>
+                        </a>
+                        <br><br>
+                    </span>
+                </div>
+            
+        </div>
+    
+</main>
+
+            <footer class="footer">
+    
+
+
+    
+     
+ 
+
+ 
+    
+        
+        <p class="footer-copyright">
+            Copyright&nbsp;©&nbsp;2020&nbsp;-&nbsp;2020&nbsp;<a href="/">TheHushrush</a>
+        </p>
+    
+    
+    <p>Powered by <a href="https://hexo.io" target="_blank">Hexo</a> | Theme - <a href="https://github.com/ChrAlpha/hexo-theme-cards" target="_blank">Cards</a></p>
+</footer>
+
+        </div>
+         
+
+ 
+
+ 
+
+ 
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement('script');
+            hm.src = 'https://hm.baidu.com/hm.js?fe1d9d2dc48a2ab8ea7f292f05e237cd';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+ 
+
+  
+
+
+
+ 
+
+
+    
+
+
+ 
+
+
+
+
+
+
+
+
+    </body>
 </html>

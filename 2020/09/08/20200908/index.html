@@ -1,147 +1,202 @@
 <!DOCTYPE html>
-<html>
-<head>
+<html lang="zh-CN">
+    <head>
+    <meta charset="utf-8">
 
-    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
-    <meta name="keywords" content="hushrush" />
-    <title>
-        TheHushrush
-    </title>
-    <!-- favicon -->
     
-    <link rel="icon" href="https://github.com/hushrushing/hushrush/blob/master/favicon.ico" />
+
+    <!-- 渲染优化 -->
+    <meta name="renderer" content="webkit">
+    <meta name="force-rendering" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="HandheldFriendly" content="True" >
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!--icon-->
+
+    <link rel="shortcut icon" type='image/x-icon' href="/favicon.ico">
+
+
+    <!-- meta -->
+
+
+<title>啊我好喜欢沃玛，阿伟你看着办吧。 | TheHushrush</title>
+
+
+    <meta name="keywords" content="随想">
+
+
+
+
+    <!-- OpenGraph -->
+ 
+    <meta name="description" content="1刚看了看B站的关注列表，我关注了87个人，我是从2020年的拜年祭开始关注沃玛的，也算是新粉。以为会在关注列表的前几个。不过一看才发现竟然在毕导前面，这才想到现在已经是9月8日了，今年只剩下3个月，1&#x2F;4年（左右）了。这样看来也能算半个老粉吧。 这还得从另外一个up主开始说起。我从18年左右开始看Overidea的谢拉的视频和直播，本来日语是听不懂的，但是Vtb的直播内容本来也没什么深度，加上她">
+<meta property="og:type" content="article">
+<meta property="og:title" content="啊我好喜欢沃玛，阿伟你看着办吧。">
+<meta property="og:url" content="http://hushrushly.github.io/2020/09/08/20200908/index.html">
+<meta property="og:site_name" content="TheHushrush">
+<meta property="og:description" content="1刚看了看B站的关注列表，我关注了87个人，我是从2020年的拜年祭开始关注沃玛的，也算是新粉。以为会在关注列表的前几个。不过一看才发现竟然在毕导前面，这才想到现在已经是9月8日了，今年只剩下3个月，1&#x2F;4年（左右）了。这样看来也能算半个老粉吧。 这还得从另外一个up主开始说起。我从18年左右开始看Overidea的谢拉的视频和直播，本来日语是听不懂的，但是Vtb的直播内容本来也没什么深度，加上她">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2020-09-08T15:52:07.000Z">
+<meta property="article:modified_time" content="2020-09-08T13:02:58.085Z">
+<meta property="article:author" content="Hushrush">
+<meta property="article:tag" content="随想">
+<meta name="twitter:card" content="summary_large_image">
+
+
+    
+<link rel="stylesheet" href="/css/style/main.css">
+ 
+
+
+
+    
+    
+        <link rel="stylesheet" id="hl-default-theme" href="/css/highlight/default.css" media="none" onload="if(getComputedStyle(document.documentElement).getPropertyValue('--color-mode').indexOf('dark')===-1)this.media='all'">
+        
+    
+
+    
+    
+
+    
+
      
-<link rel="stylesheet" href="/css/style.css">
 
+    <!-- custom head -->
 
-    <!-- highlight -->
-    <link rel="stylesheet" href="https://cdn.bootcss.com/highlight.js/9.12.0/styles/github-gist.min.css" />
-    <script src="//cdn.bootcss.com/highlight.js/9.2.0/highlight.min.js"></script>
-    <script>
-        hljs.initHighlightingOnLoad()
-    </script>
-    <script src="https://cdn.jsdelivr.net/gh/frontendsophie/hexo-infinite-scroll@2.0.0/dist/main.js"></script>
-
-    <script>
-        infiniteScroll()
-
-        window.addEventListener('DOMContentLoaded', function () {
-            const [
-                mainTitle,
-                mobileMenu,
-                mobileMainTitle,
-                mobileMenuBtn,
-                ipadMenuBtn,
-                aside,
-                closeBtn,
-            ] = getEle(
-                '#main-title',
-                '.mobile-menu',
-                '.mobile-menu h3',
-                '.mobile-menu button',
-                '.ipad-menu',
-                'aside',
-                'aside .close',
-            )
-            const io = new IntersectionObserver(entries => {
-                if (entries[0].intersectionRatio <= 0) {
-                    mobileMainTitle.classList.remove('invisibile')
-                } else {
-                    mobileMainTitle.classList.add('invisibile')
-                }
-            })
-            io.observe(mainTitle)
-
-            clickToggleAside(mobileMenuBtn)
-            clickToggleAside(ipadMenuBtn)
-            clickToggleAside(closeBtn, false)
-
-            const isMenuVisible = window.getComputedStyle(mobileMenu).display !== 'none'
-            if (isMenuVisible) document.body.style.background = 'none'
-
-            function getEle(...args) {
-                return args.map(arg => document.querySelector(arg))
-            }
-
-            function clickToggleAside(btn, show = true) {
-                btn.addEventListener('click', function () {
-                    if (show) {
-                        aside.style.display = 'block'
-                    } else {
-                        aside.style.display = 'none'
-                    }
-                })
-            }
-        })
-    </script>
 <meta name="generator" content="Hexo 4.2.0"></head>
 
-<body style="background: url(https://cdn.jsdelivr.net/gh/frontendsophie/hexo-theme-autumn@1.0.0/source/img/button-bg.png) #f3f3f3">
-    <div class="container">
-        <header class="header">
-    <nav class="mobile-menu" style="background: url(https://cdn.jsdelivr.net/gh/frontendsophie/hexo-theme-autumn@1.0.0/source/img/button-bg.png) #f3f3f3">
-        <h3 class="invisibile">
-            <a href="/" class="logo">
-                TheHushrush
-            </a>
-        </h3>
-        <button class="menu">menu</button>
-    </nav>
-
-    <button class="ipad-menu menu">menu</button>
-
-    <h1 class="title" id="main-title">
-        <a href="/" class="logo">
-            TheHushrush
+    <body>
+        <div id="app">
+            <header class="header">
+    <div class="header__left">
+        <a href="/" class="button">
+            <span class="logo__text">
+                Demo
+            </span>
         </a>
-    </h1>
-    <h2 class="desc">
+    </div>
+    <div class="header__right">
         
-    </h2>
+            <div class="navbar__menus">
+                
+                    <a href="/" class="navbar-menu button">
+                        首页
+                    </a>
+                
+                    <a href="/tags/" class="navbar-menu button">
+                        标签
+                    </a>
+                
+                    <a href="/archives/" class="navbar-menu button">
+                        归档
+                    </a>
+                
+                    <a href="/page/" class="navbar-menu button">
+                        Page
+                    </a>
+                
+            </div>
+        
+        
+        
 
-    <div class="links">
-        <ul>
-            
-            <li>
-                <a href="https://github.com/hushrushing" target="_blank" rel="noopener">
-                    Github
+        
+        
+
+        
+
+        
+            <a class="dropdown-icon button" id="btn-dropdown">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width='24' height='24' fill="none" stroke="currentColor" stroke-width="0.7" stroke-linecap="round" stroke-linejoin="round">
+                    <path fill="currentColor" d="M3.314,4.8h13.372c0.41,0,0.743-0.333,0.743-0.743c0-0.41-0.333-0.743-0.743-0.743H3.314c-0.41,0-0.743,0.333-0.743,0.743C2.571,4.467,2.904,4.8,3.314,4.8z M16.686,15.2H3.314c-0.41,0-0.743,0.333-0.743,0.743s0.333,0.743,0.743,0.743h13.372c0.41,0,0.743-0.333,0.743-0.743S17.096,15.2,16.686,15.2z M16.686,9.257H3.314c-0.41,0-0.743,0.333-0.743,0.743s0.333,0.743,0.743,0.743h13.372c0.41,0,0.743-0.333,0.743-0.743S17.096,9.257,16.686,9.257z"></path>
+                </svg>
+            </a>
+            <div class="dropdown-menus" id="dropdown-menus">
+                <a class="dropback-icon button" id="btn-dropback">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width='24' height='24' fill="none" stroke="currentColor" stroke-width="0.7" stroke-linecap="round" stroke-linejoin="round">
+                        <path fill="currentColor" d="M11.469,10l7.08-7.08c0.406-0.406,0.406-1.064,0-1.469c-0.406-0.406-1.063-0.406-1.469,0L10,8.53l-7.081-7.08c-0.406-0.406-1.064-0.406-1.469,0c-0.406,0.406-0.406,1.063,0,1.469L8.531,10L1.45,17.081c-0.406,0.406-0.406,1.064,0,1.469c0.203,0.203,0.469,0.304,0.735,0.304c0.266,0,0.531-0.101,0.735-0.304L10,11.469l7.08,7.081c0.203,0.203,0.469,0.304,0.735,0.304c0.267,0,0.532-0.101,0.735-0.304c0.406-0.406,0.406-1.064,0-1.469L11.469,10z"></path>
+                    </svg>
                 </a>
-            </li>
-            
-            <li>
-                <a href="https://space.bilibili.com/10524420" target="_blank" rel="noopener">
-                    Bilibili
-                </a>
-            </li>
-            
-        </ul>
+                
+                    <a href="/" class="dropdown-menu button">
+                        首页
+                    </a>
+                
+                    <a href="/tags/" class="dropdown-menu button">
+                        标签
+                    </a>
+                
+                    <a href="/archives/" class="dropdown-menu button">
+                        归档
+                    </a>
+                
+                    <a href="/page/" class="dropdown-menu button">
+                        Page
+                    </a>
+                
+            </div>
+            <script>
+                document.getElementById('btn-dropdown').addEventListener('click', () => {
+                    const dd = document.getElementById('dropdown-menus');
+                    requestAnimationFrame(() => {
+                        dd.style.display = 'flex';
+                        requestAnimationFrame(() => {
+                            dd.style.transform = 'translateY(0)';
+                            dd.style.opacity = '1';
+                        });
+                    });
+                });
+                document.getElementById('btn-dropback').addEventListener('click', () => {
+                    const dd = document.getElementById('dropdown-menus');
+                    dd.style.transform = 'translateY(2.25rem)';                    
+                    dd.style.opacity = '0';
+                    setTimeout(() => {dd.style.display = 'none';}, 350);
+                });
+            </script>
+        
     </div>
 </header>
-        <main class="main">
-            <article class="post">
+
+
+            <main class="main">
     
-    
-    <h4 class="post-cat">
-        <a href="/categories/%E4%B8%8D%E7%9C%A0%E5%A4%9C/">
-            不眠夜
-        </a>
-    </h4>
-    
-    
-    <h2 class="post-title">
+<div class="post-title">
+    <h1 class="post-title__text">
         啊我好喜欢沃玛，阿伟你看着办吧。
-    </h2>
-    <ul class="post-date">
-        <li>
-            2020-09-08
-        </li>
-        <li>
-            Hushrush
-        </li>
-    </ul>
-    <div class="post-content">
-        <h1 id="1"><a href="#1" class="headerlink" title="1"></a>1</h1><p>刚看了看B站的关注列表，我关注了87个人，我是从2020年的拜年祭开始关注沃玛的，也算是新粉。以为会在关注列表的前几个。不过一看才发现竟然在毕导前面，这才想到现在已经是9月8日了，今年只剩下3个月，1/4年（左右）了。这样看来也能算半个老粉吧。</p>
+    </h1>
+    <div class="post-title__meta">
+        <a href="/archives/2020/09/" class="post-meta__date button">
+    2020-09-08
+</a>
+        
+    <span class="separate-dot"></span><a href="/categories/%E4%B8%8D%E7%9C%A0%E5%A4%9C/" class="button">不眠夜</a>
+
+ 
+        
+    
+    
+
+
+ 
+
+ 
+    </div>
+</div>
+
+
+    <div class="post__with-side">
+        <aside class="post-side">
+            <div class="post-side__toc">
+                
+            </div>
+        </aside>
+        <article class="post content-card">
+            <div class="post__header"></div>
+            <div class="post__content">
+                <h1 id="1"><a href="#1" class="headerlink" title="1"></a>1</h1><p>刚看了看B站的关注列表，我关注了87个人，我是从2020年的拜年祭开始关注沃玛的，也算是新粉。以为会在关注列表的前几个。不过一看才发现竟然在毕导前面，这才想到现在已经是9月8日了，今年只剩下3个月，1/4年（左右）了。这样看来也能算半个老粉吧。</p>
 <p>这还得从另外一个up主开始说起。我从18年左右开始看Overidea的谢拉的视频和直播，本来日语是听不懂的，但是Vtb的直播内容本来也没什么深度，加上她是中日英三语一起直播的，因此还可以勉强看一点。虽然当时在上高中，但是只要想看总是能找到时间的。非常可惜的是，去年12月左右谢拉似乎因为学业而隐退了。</p>
 <p>由于在B站我只是看番剧、游戏、知识（去年好像还没有）、数码和生活区，有时还看看电影和鬼畜，所以拜年祭的一些节目我并不感兴趣，就跳过了。但是看到本来已经隐退的谢拉突然出现在屏幕上，我就来了兴趣。主角除了谢拉还有沃玛，我就都关注了。</p>
 <p>喜欢一个up主是一件很快的事情。对于我来说一般是看到一个该up主的视频，觉得有意思就关注了，然后点进投稿列表一个一个看视频。而这次也是一样的，不过我只看了几个视频，之后很长一段时间也没有主动点进投稿去看过，只是推送到了偶尔看一看。</p>
@@ -150,35 +205,84 @@
 <p>沃玛是长沙人，曾经在中南大学读书，据本人说今年应该是要出国留学的，但由于疫情等原因推迟了。其实我不太弄得懂她到底在读哪个阶段的书，医学生的学制是很复杂的。</p>
 <p>今天以后就要忙起来了，可能看视频也要变少了（我想应该也不会）。还是祝沃玛身体健康，学业顺利吧，也祝我自己将来能够顺利，将来还有很长呢。</p>
 
+            </div>
+             
+            <div class="post-footer__meta">
+    <p>
+        更新于 2020-09-08
+    </p>
+</div> 
+            <div class="post-meta__cats">
+    
+        <a href="/categories/%E4%B8%8D%E7%9C%A0%E5%A4%9C/" class="post-cats__link button">不眠夜</a>
+    
+    
+        <a href="/tags/%E9%9A%8F%E6%83%B3/" class="post-tags__link button"># 随想</a>
+    
+</div> 
+        </article>
+        
     </div>
-</article>
-        </main>
-        <aside class="aside">
-            <div class="close"></div>
-            <section class="aside-section">
-                
-    <h1>Categories</h1>
-
-    <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/%E4%B8%8D%E7%9C%A0%E5%A4%9C/">不眠夜</a></li></ul>
-
-            </section>
-            <section class="aside-section">
-                
-    <h1>Archives</h1>
-
-    <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/">2020</a></li></ul>
 
 
-            </section>
-            <section class="aside-section tag">
-                
-    <h1>Tags</h1>
+</main>
 
-    <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%9A%8F%E6%83%B3/" rel="tag">随想</a></li></ul>
+            <footer class="footer">
+    
 
-            </section>
-        </aside>
-    </div>
-</body>
 
+    
+     
+ 
+
+ 
+    
+        
+        <p class="footer-copyright">
+            Copyright&nbsp;©&nbsp;2020&nbsp;-&nbsp;2020&nbsp;<a href="/">TheHushrush</a>
+        </p>
+    
+    
+    <p>Powered by <a href="https://hexo.io" target="_blank">Hexo</a> | Theme - <a href="https://github.com/ChrAlpha/hexo-theme-cards" target="_blank">Cards</a></p>
+</footer>
+
+        </div>
+         
+
+ 
+
+ 
+
+ 
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement('script');
+            hm.src = 'https://hm.baidu.com/hm.js?fe1d9d2dc48a2ab8ea7f292f05e237cd';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+ 
+
+  
+
+
+
+ 
+
+
+    
+
+
+ 
+
+
+
+
+
+
+
+
+    </body>
 </html>
