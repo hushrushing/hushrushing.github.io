@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+    <meta name="keywords" content="hushrush" />
+    <title>
+        TheHushrush
+    </title>
+    <!-- favicon -->
+    
+    <link rel="icon" href="https://github.com/hushrushing/hushrush/blob/master/favicon.ico" />
+     
+<link rel="stylesheet" href="/css/style.css">
+
+
+    <!-- highlight -->
+    <link rel="stylesheet" href="https://cdn.bootcss.com/highlight.js/9.12.0/styles/github-gist.min.css" />
+    <script src="//cdn.bootcss.com/highlight.js/9.2.0/highlight.min.js"></script>
+    <script>
+        hljs.initHighlightingOnLoad()
+    </script>
+    <script src="https://cdn.jsdelivr.net/gh/frontendsophie/hexo-infinite-scroll@2.0.0/dist/main.js"></script>
+
+    <script>
+        infiniteScroll()
+
+        window.addEventListener('DOMContentLoaded', function () {
+            const [
+                mainTitle,
+                mobileMenu,
+                mobileMainTitle,
+                mobileMenuBtn,
+                ipadMenuBtn,
+                aside,
+                closeBtn,
+            ] = getEle(
+                '#main-title',
+                '.mobile-menu',
+                '.mobile-menu h3',
+                '.mobile-menu button',
+                '.ipad-menu',
+                'aside',
+                'aside .close',
+            )
+            const io = new IntersectionObserver(entries => {
+                if (entries[0].intersectionRatio <= 0) {
+                    mobileMainTitle.classList.remove('invisibile')
+                } else {
+                    mobileMainTitle.classList.add('invisibile')
+                }
+            })
+            io.observe(mainTitle)
+
+            clickToggleAside(mobileMenuBtn)
+            clickToggleAside(ipadMenuBtn)
+            clickToggleAside(closeBtn, false)
+
+            const isMenuVisible = window.getComputedStyle(mobileMenu).display !== 'none'
+            if (isMenuVisible) document.body.style.background = 'none'
+
+            function getEle(...args) {
+                return args.map(arg => document.querySelector(arg))
+            }
+
+            function clickToggleAside(btn, show = true) {
+                btn.addEventListener('click', function () {
+                    if (show) {
+                        aside.style.display = 'block'
+                    } else {
+                        aside.style.display = 'none'
+                    }
+                })
+            }
+        })
+    </script>
+<meta name="generator" content="Hexo 4.2.0"></head>
+
+<body style="background: url(https://cdn.jsdelivr.net/gh/frontendsophie/hexo-theme-autumn@1.0.0/source/img/button-bg.png) #f3f3f3">
+    <div class="container">
+        <header class="header">
+    <nav class="mobile-menu" style="background: url(https://cdn.jsdelivr.net/gh/frontendsophie/hexo-theme-autumn@1.0.0/source/img/button-bg.png) #f3f3f3">
+        <h3 class="invisibile">
+            <a href="/" class="logo">
+                TheHushrush
+            </a>
+        </h3>
+        <button class="menu">menu</button>
+    </nav>
+
+    <button class="ipad-menu menu">menu</button>
+
+    <h1 class="title" id="main-title">
+        <a href="/" class="logo">
+            TheHushrush
+        </a>
+    </h1>
+    <h2 class="desc">
+        
+    </h2>
+
+    <div class="links">
+        <ul>
+            
+            <li>
+                <a href="https://github.com/hushrushing" target="_blank" rel="noopener">
+                    Github
+                </a>
+            </li>
+            
+            <li>
+                <a href="https://space.bilibili.com/10524420" target="_blank" rel="noopener">
+                    Bilibili
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+</header>
+        <main class="main">
+            <article class="post">
+    
+    
+    <h4 class="post-cat">
+        <a href="/categories/%E4%B8%8D%E7%9C%A0%E5%A4%9C/">
+            不眠夜
+        </a>
+    </h4>
+    
+    
+    <h2 class="post-title">
+        啊我好喜欢沃玛，阿伟你看着办吧。
+    </h2>
+    <ul class="post-date">
+        <li>
+            2020-09-08
+        </li>
+        <li>
+            Hushrush
+        </li>
+    </ul>
+    <div class="post-content">
+        <h1 id="1"><a href="#1" class="headerlink" title="1"></a>1</h1><p>刚看了看B站的关注列表，我关注了87个人，我是从2020年的拜年祭开始关注沃玛的，也算是新粉。以为会在关注列表的前几个。不过一看才发现竟然在毕导前面，这才想到现在已经是9月8日了，今年只剩下3个月，1/4年（左右）了。这样看来也能算半个老粉吧。</p>
+<p>这还得从另外一个up主开始说起。我从18年左右开始看Overidea的谢拉的视频和直播，本来日语是听不懂的，但是Vtb的直播内容本来也没什么深度，加上她是中日英三语一起直播的，因此还可以勉强看一点。虽然当时在上高中，但是只要想看总是能找到时间的。非常可惜的是，去年12月左右谢拉似乎因为学业而隐退了。</p>
+<p>由于在B站我只是看番剧、游戏、知识（去年好像还没有）、数码和生活区，有时还看看电影和鬼畜，所以拜年祭的一些节目我并不感兴趣，就跳过了。但是看到本来已经隐退的谢拉突然出现在屏幕上，我就来了兴趣。主角除了谢拉还有沃玛，我就都关注了。</p>
+<p>喜欢一个up主是一件很快的事情。对于我来说一般是看到一个该up主的视频，觉得有意思就关注了，然后点进投稿列表一个一个看视频。而这次也是一样的，不过我只看了几个视频，之后很长一段时间也没有主动点进投稿去看过，只是推送到了偶尔看一看。</p>
+<p>今天不知道出于什么原因，可能是推送到了，就点进去看了。她的视频真的很有意思，非常有创意和想法（虽然经常是猎奇方面的创意）。有一段时间我的头像都是她画的猫（自称？）。唱歌的投稿也非常好听，我已经循环一整天了。</p>
+<p>一开始的投稿里面普通话是比较标准的，到了后来可能就放飞自我了，经常带湖南口音。这应该就是所谓“塑料普通话”吧。其实我并不太喜欢湘鄂一带的口音，但是听了沃玛说话，觉得带点湖南口音也很可爱。</p>
+<p>沃玛是长沙人，曾经在中南大学读书，据本人说今年应该是要出国留学的，但由于疫情等原因推迟了。其实我不太弄得懂她到底在读哪个阶段的书，医学生的学制是很复杂的。</p>
+<p>今天以后就要忙起来了，可能看视频也要变少了（我想应该也不会）。还是祝沃玛身体健康，学业顺利吧，也祝我自己将来能够顺利，将来还有很长呢。</p>
+
+    </div>
+</article>
+        </main>
+        <aside class="aside">
+            <div class="close"></div>
+            <section class="aside-section">
+                
+    <h1>Categories</h1>
+
+    <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/%E4%B8%8D%E7%9C%A0%E5%A4%9C/">不眠夜</a></li></ul>
+
+            </section>
+            <section class="aside-section">
+                
+    <h1>Archives</h1>
+
+    <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/">2020</a></li></ul>
+
+
+            </section>
+            <section class="aside-section tag">
+                
+    <h1>Tags</h1>
+
+    <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%9A%8F%E6%83%B3/" rel="tag">随想</a></li></ul>
+
+            </section>
+        </aside>
+    </div>
+</body>
+
+</html>
