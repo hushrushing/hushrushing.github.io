@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+    <meta charset="utf-8">
+
+    
+
+    <!-- 渲染优化 -->
+    <meta name="renderer" content="webkit">
+    <meta name="force-rendering" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="HandheldFriendly" content="True" >
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!--icon-->
+
+    <link rel="shortcut icon" type='image/x-icon' href="/favicon.ico">
+
+
+    <!-- meta -->
+
+
+<title>KMP算法 | TheHushrush</title>
+
+
+    <meta name="keywords" content="学习">
+
+
+
+
+    <!-- OpenGraph -->
+ 
+    <meta name="description" content="KMP算法在b站看的天勤率辉考研数据结构   指针不需要回溯  匹配速度快  1 基本思路 1.1 模式串和主串中字符一一比较，直到找到不同处 1.2 前n个字符一定是相同的，现在找最大公共前后缀 1.3 将移动模式串使得模式串中的前缀位对应主串中的后缀位 1.4 继续比较  2 注意 2.1 最大公共前后缀要小于本身 2.2 如果某一时刻模式串尾已经超出主串长度，则匹配失败 2.3 公共前后缀可">
+<meta property="og:type" content="article">
+<meta property="og:title" content="KMP算法">
+<meta property="og:url" content="http://hushrushly.github.io/2020/11/15/kmp/index.html">
+<meta property="og:site_name" content="TheHushrush">
+<meta property="og:description" content="KMP算法在b站看的天勤率辉考研数据结构   指针不需要回溯  匹配速度快  1 基本思路 1.1 模式串和主串中字符一一比较，直到找到不同处 1.2 前n个字符一定是相同的，现在找最大公共前后缀 1.3 将移动模式串使得模式串中的前缀位对应主串中的后缀位 1.4 继续比较  2 注意 2.1 最大公共前后缀要小于本身 2.2 如果某一时刻模式串尾已经超出主串长度，则匹配失败 2.3 公共前后缀可">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2020-11-15T15:52:07.000Z">
+<meta property="article:modified_time" content="2020-11-15T12:40:50.764Z">
+<meta property="article:author" content="Hushrush">
+<meta property="article:tag" content="学习">
+<meta name="twitter:card" content="summary_large_image">
+
+
+    
+<link rel="stylesheet" href="/css/style/main.css">
+ 
+
+
+
+    
+    
+        <link rel="stylesheet" id="hl-default-theme" href="/css/highlight/default.css" media="none" onload="if(getComputedStyle(document.documentElement).getPropertyValue('--color-mode').indexOf('dark')===-1)this.media='all'">
+        
+    
+
+    
+    
+
+    
+
+     
+
+    <!-- custom head -->
+
+<meta name="generator" content="Hexo 4.2.0"></head>
+
+    <body>
+        <div id="app">
+            <header class="header">
+    <div class="header__left">
+        <a href="/" class="button">
+            <span class="logo__text">
+                TheHushrush
+            </span>
+        </a>
+    </div>
+    <div class="header__right">
+        
+            <div class="navbar__menus">
+                
+                    <a href="/" class="navbar-menu button">
+                        首页
+                    </a>
+                
+                    <a href="/tags/" class="navbar-menu button">
+                        标签
+                    </a>
+                
+                    <a href="/archives/" class="navbar-menu button">
+                        归档
+                    </a>
+                
+                    <a href="/page/" class="navbar-menu button">
+                        Page
+                    </a>
+                
+            </div>
+        
+        
+        
+
+        
+        
+
+        
+
+        
+            <a class="dropdown-icon button" id="btn-dropdown">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width='24' height='24' fill="none" stroke="currentColor" stroke-width="0.7" stroke-linecap="round" stroke-linejoin="round">
+                    <path fill="currentColor" d="M3.314,4.8h13.372c0.41,0,0.743-0.333,0.743-0.743c0-0.41-0.333-0.743-0.743-0.743H3.314c-0.41,0-0.743,0.333-0.743,0.743C2.571,4.467,2.904,4.8,3.314,4.8z M16.686,15.2H3.314c-0.41,0-0.743,0.333-0.743,0.743s0.333,0.743,0.743,0.743h13.372c0.41,0,0.743-0.333,0.743-0.743S17.096,15.2,16.686,15.2z M16.686,9.257H3.314c-0.41,0-0.743,0.333-0.743,0.743s0.333,0.743,0.743,0.743h13.372c0.41,0,0.743-0.333,0.743-0.743S17.096,9.257,16.686,9.257z"></path>
+                </svg>
+            </a>
+            <div class="dropdown-menus" id="dropdown-menus">
+                <a class="dropback-icon button" id="btn-dropback">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width='24' height='24' fill="none" stroke="currentColor" stroke-width="0.7" stroke-linecap="round" stroke-linejoin="round">
+                        <path fill="currentColor" d="M11.469,10l7.08-7.08c0.406-0.406,0.406-1.064,0-1.469c-0.406-0.406-1.063-0.406-1.469,0L10,8.53l-7.081-7.08c-0.406-0.406-1.064-0.406-1.469,0c-0.406,0.406-0.406,1.063,0,1.469L8.531,10L1.45,17.081c-0.406,0.406-0.406,1.064,0,1.469c0.203,0.203,0.469,0.304,0.735,0.304c0.266,0,0.531-0.101,0.735-0.304L10,11.469l7.08,7.081c0.203,0.203,0.469,0.304,0.735,0.304c0.267,0,0.532-0.101,0.735-0.304c0.406-0.406,0.406-1.064,0-1.469L11.469,10z"></path>
+                    </svg>
+                </a>
+                
+                    <a href="/" class="dropdown-menu button">
+                        首页
+                    </a>
+                
+                    <a href="/tags/" class="dropdown-menu button">
+                        标签
+                    </a>
+                
+                    <a href="/archives/" class="dropdown-menu button">
+                        归档
+                    </a>
+                
+                    <a href="/page/" class="dropdown-menu button">
+                        Page
+                    </a>
+                
+            </div>
+            <script>
+                document.getElementById('btn-dropdown').addEventListener('click', () => {
+                    const dd = document.getElementById('dropdown-menus');
+                    requestAnimationFrame(() => {
+                        dd.style.display = 'flex';
+                        requestAnimationFrame(() => {
+                            dd.style.transform = 'translateY(0)';
+                            dd.style.opacity = '1';
+                        });
+                    });
+                });
+                document.getElementById('btn-dropback').addEventListener('click', () => {
+                    const dd = document.getElementById('dropdown-menus');
+                    dd.style.transform = 'translateY(2.25rem)';                    
+                    dd.style.opacity = '0';
+                    setTimeout(() => {dd.style.display = 'none';}, 350);
+                });
+            </script>
+        
+    </div>
+</header>
+
+
+            <main class="main">
+    
+<div class="post-title">
+    <h1 class="post-title__text">
+        KMP算法
+    </h1>
+    <div class="post-title__meta">
+        <a href="/archives/2020/11/" class="post-meta__date button">
+    2020-11-15
+</a>
+        
+    <span class="separate-dot"></span><a href="/categories/%E5%AD%A6%E4%B9%A0/" class="button">学习</a>
+
+ 
+        
+    
+    
+
+
+ 
+
+ 
+    </div>
+</div>
+
+
+    <article class="post content-card">
+        <div class="post__header"> </div>
+        <div class="post__content">
+            <h1 id="KMP算法"><a href="#KMP算法" class="headerlink" title="KMP算法"></a>KMP算法</h1><p>在b站看的天勤率辉考研数据结构</p>
+<hr>
+<ol>
+<li><p>指针不需要回溯</p>
+</li>
+<li><p>匹配速度快</p>
+<hr>
+<p>1 基本思路</p>
+<p>1.1 模式串和主串中字符一一比较，直到找到不同处</p>
+<p>1.2 前n个字符一定是相同的，现在找最大公共前后缀</p>
+<p>1.3 将移动模式串使得模式串中的前缀位对应主串中的后缀位</p>
+<p>1.4 继续比较</p>
+<hr>
+<p>2 注意</p>
+<p>2.1 最大公共前后缀要小于本身</p>
+<p>2.2 如果某一时刻模式串尾已经超出主串长度，则匹配失败</p>
+<p>2.3 公共前后缀可以交叉，前缀中的某部分可以在后缀中，只要能让模式串移动就行</p>
+<p>2.4 如果没有公共前后缀，就直接往后移动一位</p>
+<hr>
+<p>3 求解方法</p>
+<p>3.1 移动一位也就是与下一位比较</p>
+<p>3.2 将模式串存于一个数组中，一般习惯从下标为1开始存</p>
+<p>3.3 主串与模式串发生不匹配的位置叫做当前位置</p>
+<p>3.4 从1号位开始比较</p>
+<p>​        3.4.1 1号位不匹配则与下一位比较</p>
+<p>​        3.4.2 1号位匹配，而2号位不匹配，则公共前后缀相同，违反2.1，即公共前后缀长度为0，1号位与当前位置比较</p>
+<p>3.5 发生不匹配，则模式串中前缀的下一位与当前位置比较</p>
+<hr>
+<p>4 注意</p>
+<p>4.1 所谓指针在主串上，当前位置是主串上的位置</p>
+<p>4.2 模式串0号位默认不存储数据，从1号位开始存</p>
+<p>*4.3 如果公共前后缀长度位n，则模式串上n+1号位与当前位置比较。这样除了1号位就不匹配时没有公共前后缀，其他的都有（最多长度为0），所以可以把1号位不匹配的情况单独出来，其他情况按以上规律</p>
+<p>*4.4 next数组</p>
+<p>​        求模式串每一位失配时的公共前后缀长度，将其加一存到一个数组中就是next数组。设1号位的公共前后缀长度为-1，这样next数组第一位是0.</p>
+<p>*4.5 求出next数组后就知道每一位失配后下一步的操作</p>
+<hr>
+<p>以上是一种手工操作</p>
+<p>5 改进方法求next数组</p>
+<p>5.1 设next[j]=t，则j号位失配时，前面的公共前后缀长度是t-1。</p>
+<p>5.2 那么p[1]<del>p[t-1]是前缀，p[j-t+1]</del>p[j-1]是后缀</p>
+<p>5.3 若p[j]=p[t]，则next[j+1]=t+1=next[j]+1</p>
+<p>​        若p[j]!=p[t]，则循环将t赋值为next[t]，直到t=0或满足p[j]=p[t].t=0时next[j+1]=1</p>
+<p>5.4 背下来</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">getNext</span><span class="params">(Str substr, <span class="keyword">int</span> next[])</span><span class="comment">//求next和主串没关系</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> j = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">int</span> t = <span class="number">0</span>;<span class="comment">//next[1]==0</span></span><br><span class="line">    next[<span class="number">1</span>] = <span class="number">0</span>;<span class="comment">//1号位默认是0</span></span><br><span class="line">    <span class="keyword">while</span>(j&lt;substr.length)<span class="comment">//j&lt;字符串长度，而不能等于，因为接下来要求j+1的next</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span>(t==<span class="number">0</span>||j&lt;substr.ch[j]==substr.ch[t])</span><br><span class="line">        &#123;</span><br><span class="line">            next[j+<span class="number">1</span>]=t+<span class="number">1</span>;</span><br><span class="line">            ++t;</span><br><span class="line">            ++j;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">        &#123;</span><br><span class="line">            t=next[t];<span class="comment">//j还是不变</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">KMP</span><span class="params">(Str str, Str substr, <span class="keyword">int</span> next[])</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> i = <span class="number">1</span>;<span class="keyword">int</span> j = <span class="number">1</span>;<span class="comment">//i,j指向主串和模式串的位置</span></span><br><span class="line">    <span class="keyword">while</span>(i&lt;=str.length&amp;&amp;j&lt;=substr.length)<span class="comment">//i大于时匹配失败，j大于时匹配成功</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span>(str.ch[i]==substr.ch[j]||j==<span class="number">0</span>)<span class="comment">//若两字符相等，则比较下一位字符是否相等。j==0时模式串中无内容</span></span><br><span class="line">        &#123;</span><br><span class="line">            ++i;</span><br><span class="line">            ++j;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">        &#123;</span><br><span class="line">            j=next[j];<span class="comment">//i没有动，就是没有回溯，next[j]就是模式串中应该与主串比较的位置。next[j]为0就是第一位就不匹配，恰好让j也为0，这样可以并入if中</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span>(j&gt;substr.length)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">return</span> i-substr.length;<span class="comment">//匹配成功，返回主串中位置</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+
+        </div>
+         
+        <div class="post-footer__meta">
+    <p>
+        更新于 2020-11-15
+    </p>
+</div> 
+        <div class="post-meta__cats">
+    
+        <a href="/categories/%E5%AD%A6%E4%B9%A0/" class="post-cats__link button">学习</a>
+    
+    
+        <a href="/tags/%E5%AD%A6%E4%B9%A0/" class="post-tags__link button"># 学习</a>
+    
+</div> 
+    </article>
+    
+
+
+</main>
+
+            <footer class="footer">
+    
+
+
+    
+     
+ 
+
+ 
+    
+        
+        <p class="footer-copyright">
+            Copyright&nbsp;©&nbsp;2020&nbsp;-&nbsp;2020&nbsp;<a href="/">TheHushrush</a>
+        </p>
+    
+    
+    <p>Powered by <a href="https://hexo.io" target="_blank">Hexo</a> | Theme - <a href="https://github.com/ChrAlpha/hexo-theme-cards" target="_blank">Cards</a></p>
+</footer>
+
+        </div>
+        
+    <script defer src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.1.0/dist/lazyload.min.js"></script>
+    <script>
+        window.lazyLoadOptions = {
+            elements_selector: ".lazyload",
+            threshold: 0
+        };
+    </script>
+ 
+
+ 
+
+ 
+
+ 
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement('script');
+            hm.src = 'https://hm.baidu.com/hm.js?fe1d9d2dc48a2ab8ea7f292f05e237cd';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+ 
+
+  
+
+
+
+ 
+
+
+    
+
+
+ 
+
+
+
+
+    <script>
+        if (typeof MathJax === 'undefined') {
+            window.MathJax = {
+                loader: {
+                    source: {
+                        '[tex]/amsCd': '[tex]/amscd',
+                        '[tex]/AMScd': '[tex]/amscd'
+                    }
+                },
+                tex: {
+                    inlineMath: {'[+]': [['$', '$']]},
+                    tags: 'ams'
+                },
+                options: {
+                    renderActions: {
+                        findScript: [10, doc => {
+                            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+                                const display = !!node.type.match(/; *mode=display/);
+                                const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                                const text = document.createTextNode('');
+                                node.parentNode.replaceChild(text, node);
+                                math.start = {node: text, delim: '', n: 0};
+                                math.end = {node: text, delim: '', n: 0};
+                                doc.math.push(math);
+                            });
+                        }, '', false],
+                        insertedScript: [200, () => {
+                            document.querySelectorAll('mjx-container').forEach(node => {
+                                let target = node.parentNode;
+                                if (target.nodeName.toLowerCase() === 'li') {
+                                    target.parentNode.classList.add('has-jax');
+                                }
+                            });
+                        }, '', false]
+                    }
+                }
+            };
+            (function () {
+                var script = document.createElement('script');
+                script.src = "https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js";
+                script.defer = true;
+                document.head.appendChild(script);
+            })();
+        } else {
+            MathJax.startup.document.state(0);
+            MathJax.texReset();
+            MathJax.typeset();
+        }
+    </script>
+
+
+
+
+
+    </body>
+</html>
