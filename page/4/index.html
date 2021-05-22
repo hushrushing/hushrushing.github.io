@@ -1,516 +1,1089 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
-    <head>
-    <meta charset="utf-8">
+<html>
+<head>
+  <meta charset="utf-8">
+
+  <!-- PACE Progress Bar START -->
+  
+    
+<script src="https://raw.githubusercontent.com/HubSpot/pace/v1.0.2/pace.min.js"></script>
 
     
+<link rel="stylesheet" href="https://github.com/HubSpot/pace/raw/master/themes/orange/pace-theme-flash.css">
 
-    <!-- 渲染优化 -->
-    <meta name="renderer" content="webkit">
-    <meta name="force-rendering" content="webkit">
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
-    <meta name="HandheldFriendly" content="True" >
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  
 
-    <!--icon-->
+  <!-- PACE Progress Bar START -->
 
-    <link rel="shortcut icon" type='image/x-icon' href="/favicon.ico">
-
-
-    <!-- meta -->
-
-
-<title>TheHushrush</title>
-
-
-
-
-
-    <!-- OpenGraph -->
- 
-    <meta name="description" content="Simple&amp;Naive">
+  
+  <title>TheHushrush</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  
+  
+  
+  <meta name="description" content="Simple and naive">
 <meta property="og:type" content="website">
 <meta property="og:title" content="TheHushrush">
 <meta property="og:url" content="http://hushrushly.github.io/page/4/index.html">
 <meta property="og:site_name" content="TheHushrush">
-<meta property="og:description" content="Simple&amp;Naive">
+<meta property="og:description" content="Simple and naive">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:author" content="Hushrush">
-<meta name="twitter:card" content="summary_large_image">
-
-
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="TheHushrush" type="application/atom+xml">
+  
+  <link rel="icon" href="/css/images/favicon.ico">
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Montserrat:700" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic" rel="stylesheet" type="text/css">
+  <link href="https://cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+  <style type="text/css">
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/9749f0/00000000000000000001008f/27/l?subset_id=2&fvd=n5) format("woff2");font-weight:500;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/90cf9f/000000000000000000010091/27/l?subset_id=2&fvd=n7) format("woff2");font-weight:500;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/8a5494/000000000000000000013365/27/l?subset_id=2&fvd=n4) format("woff2");font-weight:lighter;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/d337d8/000000000000000000010095/27/l?subset_id=2&fvd=i4) format("woff2");font-weight:400;font-style:italic;}</style>
     
-<link rel="stylesheet" href="/css/style/main.css">
- 
+  <link rel="stylesheet" id="athemes-headings-fonts-css" href="//fonts.googleapis.com/css?family=Yanone+Kaffeesatz%3A200%2C300%2C400%2C700&amp;ver=4.6.1" type="text/css" media="all">
+  
+<link rel="stylesheet" href="/css/style.css">
 
 
+  
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 
-    
-    
-    
 
-    
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css" >
+  <link rel="stylesheet" href="/css/hiero.css" >
+  <link rel="stylesheet" href="/css/glyphs.css" >
+  
 
-     
+  <!-- Custom CSS -->
+  
+<link rel="stylesheet" href="/css/my.css">
 
-    <!-- custom head -->
-
+  <!-- Google Adsense -->
+  
 <meta name="generator" content="Hexo 4.2.0"></head>
 
-    <body>
-        <div id="app">
-            <header class="header">
-    <div class="header__left">
-        <a href="/" class="button">
-            <span class="logo__text">
-                TheHushrush
-            </span>
-        </a>
-    </div>
-    <div class="header__right">
-        
-            <div class="navbar__menus">
-                
-                    <a href="/" class="navbar-menu button">
-                        首页
-                    </a>
-                
-                    <a href="/tags/" class="navbar-menu button">
-                        标签
-                    </a>
-                
-                    <a href="/archives/" class="navbar-menu button">
-                        归档
-                    </a>
-                
-                    <a href="/page/" class="navbar-menu button">
-                        Page
-                    </a>
-                
+<script>
+var themeMenus = {};
+
+  themeMenus["/"] = "首页"; 
+
+  themeMenus["/archives"] = "归档"; 
+
+  themeMenus["/categories"] = "分类"; 
+
+  themeMenus["/tags"] = "标签"; 
+
+  themeMenus["/about"] = "关于"; 
+
+</script>
+
+
+  <body>
+
+
+  <header id="allheader" class="site-header" role="banner">
+  <div class="clearfix container">
+      <div class="site-branding">
+
+          <h1 class="site-title">
+            
+              <a href="/" title="TheHushrush" rel="home"> TheHushrush </a>
+            
+          </h1>
+
+          
+            <div class="site-description">Simple and naive</div>
+          
+            
+          <nav id="main-navigation" class="main-navigation" role="navigation">
+            <a class="nav-open">Menu</a>
+            <a class="nav-close">Close</a>
+            <div class="clearfix sf-menu">
+
+              <ul id="main-nav" class="nmenu sf-js-enabled">
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/">首页</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/archives">归档</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/categories">分类</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/tags">标签</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/about">关于</a> </li>
+                    
+              </ul>
             </div>
-        
-        
-        
+          </nav>
 
-        
-        
 
-        
-
-        
-            <a class="dropdown-icon button" id="btn-dropdown">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width='24' height='24' fill="none" stroke="currentColor" stroke-width="0.7" stroke-linecap="round" stroke-linejoin="round">
-                    <path fill="currentColor" d="M3.314,4.8h13.372c0.41,0,0.743-0.333,0.743-0.743c0-0.41-0.333-0.743-0.743-0.743H3.314c-0.41,0-0.743,0.333-0.743,0.743C2.571,4.467,2.904,4.8,3.314,4.8z M16.686,15.2H3.314c-0.41,0-0.743,0.333-0.743,0.743s0.333,0.743,0.743,0.743h13.372c0.41,0,0.743-0.333,0.743-0.743S17.096,15.2,16.686,15.2z M16.686,9.257H3.314c-0.41,0-0.743,0.333-0.743,0.743s0.333,0.743,0.743,0.743h13.372c0.41,0,0.743-0.333,0.743-0.743S17.096,9.257,16.686,9.257z"></path>
-                </svg>
-            </a>
-            <div class="dropdown-menus" id="dropdown-menus">
-                <a class="dropback-icon button" id="btn-dropback">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width='24' height='24' fill="none" stroke="currentColor" stroke-width="0.7" stroke-linecap="round" stroke-linejoin="round">
-                        <path fill="currentColor" d="M11.469,10l7.08-7.08c0.406-0.406,0.406-1.064,0-1.469c-0.406-0.406-1.063-0.406-1.469,0L10,8.53l-7.081-7.08c-0.406-0.406-1.064-0.406-1.469,0c-0.406,0.406-0.406,1.063,0,1.469L8.531,10L1.45,17.081c-0.406,0.406-0.406,1.064,0,1.469c0.203,0.203,0.469,0.304,0.735,0.304c0.266,0,0.531-0.101,0.735-0.304L10,11.469l7.08,7.081c0.203,0.203,0.469,0.304,0.735,0.304c0.267,0,0.532-0.101,0.735-0.304c0.406-0.406,0.406-1.064,0-1.469L11.469,10z"></path>
-                    </svg>
-                </a>
-                
-                    <a href="/" class="dropdown-menu button">
-                        首页
-                    </a>
-                
-                    <a href="/tags/" class="dropdown-menu button">
-                        标签
-                    </a>
-                
-                    <a href="/archives/" class="dropdown-menu button">
-                        归档
-                    </a>
-                
-                    <a href="/page/" class="dropdown-menu button">
-                        Page
-                    </a>
-                
-            </div>
-            <script>
-                document.getElementById('btn-dropdown').addEventListener('click', () => {
-                    const dd = document.getElementById('dropdown-menus');
-                    requestAnimationFrame(() => {
-                        dd.style.display = 'flex';
-                        requestAnimationFrame(() => {
-                            dd.style.transform = 'translateY(0)';
-                            dd.style.opacity = '1';
-                        });
-                    });
-                });
-                document.getElementById('btn-dropback').addEventListener('click', () => {
-                    const dd = document.getElementById('dropdown-menus');
-                    dd.style.transform = 'translateY(2.25rem)';                    
-                    dd.style.opacity = '0';
-                    setTimeout(() => {dd.style.display = 'none';}, 350);
-                });
-            </script>
-        
-    </div>
+      </div>
+  </div>
 </header>
 
 
-    <div class="cover">
-        <div class="cover__logo">
+  <div id="originBgDiv" style="background: #fff; width: 100%;">
+
+      <div style="max-height:600px; overflow: hidden;  display: flex; display: -webkit-flex; align-items: center;">
+        <img id="originBg" width="100%" alt="" src="">
+      </div>
+
+  </div>
+
+  <script>
+  function setAboutIMG(){
+      var imgUrls = "css/images/pose.jpg,https://source.unsplash.com/collection/954550/1920x1080".split(",");
+      var random = Math.floor((Math.random() * imgUrls.length ));
+      if (imgUrls[random].startsWith('http') || imgUrls[random].indexOf('://') >= 0) {
+        document.getElementById("originBg").src=imgUrls[random];
+      } else {
+        document.getElementById("originBg").src='/' + imgUrls[random];
+      }
+  }
+  bgDiv=document.getElementById("originBgDiv");
+  if(location.pathname.match('about')){
+    setAboutIMG();
+    bgDiv.style.display='block';
+  }else{
+    bgDiv.style.display='none';
+  }
+  </script>
+
+
+
+  <div id="container">
+    <div id="wrap">
             
-                <h1>TheHushrush</h1>
-            
-        </div>
+      <div id="content" class="outer">
         
-            <div class="cover__intro">
-                <p>Simple &amp; Naive</p>
- 
-            </div>
+          <section id="main">
+  
+    <article id="post-2020090901"  class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
+    
+    
+      <header class="article-header">
         
+  
+    <h1 class="thumb" itemprop="name">
+      <a class="article-title" href="/2020/09/09/2020090901/">一慰乡情，心满意足</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	Posted on <a href="/2020/09/09/2020090901/" class="article-date">
+	  <time datetime="2020-09-09T08:13:08.000Z" itemprop="datePublished">九月 9, 2020</time>
+	</a>
+
+      
     </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>上小学的时候，我有一个用来装公交卡的，类似于工作证挂在胸前的袋子。在当时它充当了钱包的功能——翻开有一个夹层，里面可以装一些零钱。低年级的时候我在学校里托管早餐中餐，而升到高年级后每天早餐有五块钱或十块钱的早餐配额，一般就装在这里面。小学在一个巷子里面，而这条小巷是著名的小吃巷（后来政府还立了一块牌子，称其为特色美食街）。我每天早餐在这条巷子里吃。虽然巷子里有很多种店，但我一般只是在热干面、燃面、牛肉面和糯米包油条之中选择。当时一碗牛肉面只要四块钱，我每天早上随机决定吃哪一种。上初中以后我爸送我上学，我就远离了那个巷子。早餐变成了热干面、牛肉面、炸酱面和早堂面四选一，上高中以后也一样。虽然升一级学就会换一个地方吃早餐，但热干面是一直没有变过的。</p>
+<p>虽然我喜欢吃早堂面，但这毕竟是地方美食，并未名扬四海。而武汉的热干面是全国都有的，到了外地读书，也只能找找有没有热干面了。</p>
+<p>我没有想到的是，西安虽然有很多面，但早上竟然是没有的。所有卖面的店铺早上九点前是不会开门的，学校里也是包子和鸡蛋饼之类的食物。这一点我刚来的时候非常的不习惯，因为早上吃面对我来说简直是天经地义的事情。另外这里的面与我家乡的面不同，这里的店铺全然没有圆而细长的碱水面，而都是手工现做的，于我口味不合。另外，这里找不到几家热干面店。据室友所说，热干面仅有湖北人爱吃，而其他地区的人是不爱的。虽然我并不同意这种说法，但事实表明起码西安人对于热干面是没有热情的。偶然一次在学校周围发现了一家热干面的店，而这里还兼卖三鲜豆皮一类的湖北特色。其店主竟于我是市一级的老乡，然而距我还是有相当远的距离。Alas！这里的面并不好吃，虽是我朝思暮想的碱水面，却有一股令人不快的腻感。此外为避免洗碗，竟将塑料袋套于碗上，更增进了我的厌恶。</p>
+<p>放假回家的时候，本打算每天早上轮换吃以前常吃的面，第一天总算是一解馋欲，后来便觉得日思夜想的这些面也就这样，早上都懒得出门去吃。到了最后一天临走，一碗早堂面竟吃都吃不下，味同嚼蜡而强咽入喉。</p>
+<p>返校数天后，早上突然想吃早堂面或热干面，此后竟又开始魂牵梦萦！早堂面是汤面，不好做成方便食品，就算能也没人做，不像突然火遍全国的螺蛳粉。只有四大名面之一的热干面能买方便版的。万般无奈下我只能选择网购方便热干面。疫情期间在家吃过大汉口的，这次换点不一样的，我买了四盒蔡林记的。打开一盒，发现里面有一包酸豆角，还有一行文字，意为不加酸豆角的热干面都不是好热干面。对此我不敢苟同，因为我家一带的热干面似乎并没有加酸豆角，而是以辣萝卜干代替，而我习惯于这种不正宗的配方，并未觉得有何不妥。</p>
+<p>盒子附纸有带配图的说明，打开面袋，用开水冲泡，之后弃水而加入调料，搅拌均匀即可。初尝一口，感觉有点辣，吃完一碗，感觉实在没多少。但是感觉就是有那味，因为它用的是湿碱水面，而非大汉口用的其他方便面式的面。收拾桌面残局，正欲丢掉那张附纸，却看到其上的八个字：</p>
+<blockquote>
+<p>心满意足</p>
+<p>一慰乡情</p>
+</blockquote>
+<p>盒装的方便热干面八块一碗，少且贵，点外卖的热干面就更贵了。我追求的不过是一慰乡情的心满意足。大一一年是第一次在外度过的，不仅是外市更是外省。若在武汉那必是热干面的世界，但那时我又会想念早堂面之类了。我本来并不注意吃，认为吃东西不过是生存下去的必要条件，如果人可以不吃而活，那我一口也不会吃。我从来没有考虑过在外地的饮食问题，吃什么对我都一样（我奶奶倒是最担心我能不能吃得惯）。然而陕西和湖北虽然是邻省，饮食却大不一样。这里一切都太咸了，交大最初西迁时甚至一度吃面食，现在虽普遍有米饭，但总不是那个味。</p>
+<p>照说年轻的时期是要走四方的，许多同学报志愿都恨不得离家越远越好，我却一走就开始思乡悲秋，大呼“去国怀乡”，“感极而悲”。高考后我是报到最早的一批，高中群里的同学都不理解我，但他们一走，便也有不少人和我一样了。大一刚开始时，甚至看到一个湖北人，都像是遇见了亲人，好一个老乡见老乡！高中同学的表情包也开始有了地方特色，例如某某时间我们是要回去打鱼糕的，希望辅导员准假之类。上个学期和同学聊天，她甚至还有几个月就开始计算回家还剩多少天。</p>
+<p>我的大二生活下个星期一就开始了。既然还没开始，那我目前就还是大一，还在第一年。第一年的尾声里我已经并不那么怀乡了，这是成长吗？或者还是习惯、适应了？也许这两者是等价的，可以相互推导——成长就是习惯和适应，而习惯和适应就是成长。谁知道马上到来的第二年里会怎么样呢？无论如何，我还是趁着做活动先下一单方便热干面吧。</p>
 
-            <main class="main">
-    
-    <div class="posts">
-        
-            
-                <div class='post-entry content-card'>
-                    <div class="post-entry__header"></div>
-<div class="post-entry__content">
-    <h2 class="post-entry__title">
-        一慰乡情，心满意足
-    </h2>
-    
-        <p>
-            上小学的时候，我有一个用来装公交卡的，类似于工作证挂在胸前的袋子。在当时它充当了钱包的功能——翻开有一个夹层，里面可以装一些零钱。低年级的时候我在学校里托管早餐中餐，而升到高年级后每天早餐有五块钱或十块钱的早餐配额，一般就装在这里面。小学在一个巷子里面，而这条小巷是著名的小吃巷（后来政府...
-        </p>
-    
-</div>
-<div class="post-entry__meta">
-    <a href="/archives/2020/09/" class="post-meta__date button">
-    2020-09-09
-</a>
-    
-    <span class="separate-dot"></span><a href="/categories/%E4%B8%8D%E7%9C%A0%E5%A4%9C/" class="button">不眠夜</a>
-
- 
-</div>
-<div class="post-entry__tags">
-    
-        <a href="/tags/%E9%9A%8F%E6%83%B3/" class="post-tags__link button"># 随想</a>
-    
-</div> 
-<a href="/2020/09/09/2020090901/" class="post-entry__link">Link</a>
-                </div>
-            
-                <div class='post-entry content-card'>
-                    <div class="post-entry__header"></div>
-<div class="post-entry__content">
-    <h2 class="post-entry__title">
-        20200909
-    </h2>
-    
-        <p>
-            昨天第一次把文章分享到QQ空间和朋友圈，还有点紧张。但是又想看访客有多少，于是花了大力气装了百度统计的插件，为此还换了另一个主题。（不得不说autumn主题虽然好看但是太简陋了，又不想用next，最后找的这个还行）
-昨天本来下了决心要早睡，结果12点刚想睡的时候打开B站看到...
-        </p>
-    
-</div>
-<div class="post-entry__meta">
-    <a href="/archives/2020/09/" class="post-meta__date button">
-    2020-09-09
-</a>
-    
-    <span class="separate-dot"></span><a href="/categories/%E4%B8%8D%E7%9C%A0%E5%A4%9C/" class="button">不眠夜</a>
-
- 
-</div>
-<div class="post-entry__tags">
-    
-        <a href="/tags/%E9%9A%8F%E6%83%B3/" class="post-tags__link button"># 随想</a>
-    
-</div> 
-<a href="/2020/09/09/20200909/" class="post-entry__link">Link</a>
-                </div>
-            
-                <div class='post-entry content-card'>
-                    <div class="post-entry__header"></div>
-<div class="post-entry__content">
-    <h2 class="post-entry__title">
-        啊我好喜欢沃玛，阿伟你看着办吧。
-    </h2>
-    
-        <p>
-            1刚看了看B站的关注列表，我关注了87个人，我是从2020年的拜年祭开始关注沃玛的，也算是新粉。以为会在关注列表的前几个。不过一看才发现竟然在毕导前面，这才想到现在...
-        </p>
-    
-</div>
-<div class="post-entry__meta">
-    <a href="/archives/2020/09/" class="post-meta__date button">
-    2020-09-08
-</a>
-    
-    <span class="separate-dot"></span><a href="/categories/%E4%B8%8D%E7%9C%A0%E5%A4%9C/" class="button">不眠夜</a>
-
- 
-</div>
-<div class="post-entry__tags">
-    
-        <a href="/tags/%E9%9A%8F%E6%83%B3/" class="post-tags__link button"># 随想</a>
-    
-</div> 
-<a href="/2020/09/08/20200908/" class="post-entry__link">Link</a>
-                </div>
-            
-                <div class='post-entry content-card'>
-                    <div class="post-entry__header"></div>
-<div class="post-entry__content">
-    <h2 class="post-entry__title">
-        我的外文阅读
-    </h2>
-    
-        <p>
-            在英语方面，我常常自我感觉良好（当然2020年7月份的六级打破了这种想法）。同时我爱看新闻或者时事评论的文章，记得高中时晚自习有一个时段用来看新闻，虽然我经常看，不过大家都不爱看，最后遗憾地改成看最强大脑了。总之我对于外文的新闻或评论是比较有兴趣的。
-在上大学之后，观察者网...
-        </p>
-    
-</div>
-<div class="post-entry__meta">
-    <a href="/archives/2020/09/" class="post-meta__date button">
-    2020-09-07
-</a>
-    
-    <span class="separate-dot"></span><a href="/categories/%E4%B8%8D%E7%9C%A0%E5%A4%9C/" class="button">不眠夜</a>
-
- 
-</div>
-<div class="post-entry__tags">
-    
-        <a href="/tags/%E9%9A%8F%E6%83%B3/" class="post-tags__link button"># 随想</a>
-    
-</div> 
-<a href="/2020/09/07/2020090701/" class="post-entry__link">Link</a>
-                </div>
-            
-                <div class='post-entry content-card'>
-                    <div class="post-entry__header"></div>
-<div class="post-entry__content">
-    <h2 class="post-entry__title">
-        notitle
-    </h2>
-    
-        <p>
-            在互联网上最好还是隐藏身份，所以还是不要上传笔记等资料比较好。现在除了用来复制格式的624.md以外，其他都删掉了。
-我总是有一种创作的欲望，但没有创作的能力。坐在电脑前也不知道有什么好写的。翻开很久以前买的《642件可写的事》，却又不敢下笔。我还是读书太少，根据基尔霍夫第...
-        </p>
-    
-</div>
-<div class="post-entry__meta">
-    <a href="/archives/2020/09/" class="post-meta__date button">
-    2020-09-07
-</a>
-    
-    <span class="separate-dot"></span><a href="/categories/%E4%B8%8D%E7%9C%A0%E5%A4%9C/" class="button">不眠夜</a>
-
- 
-</div>
-<div class="post-entry__tags">
-    
-        <a href="/tags/%E9%9A%8F%E6%83%B3/" class="post-tags__link button"># 随想</a>
-    
-</div> 
-<a href="/2020/09/07/20200907/" class="post-entry__link">Link</a>
-                </div>
-            
-                <div class='post-entry content-card'>
-                    <div class="post-entry__header"></div>
-<div class="post-entry__content">
-    <h2 class="post-entry__title">
-        不眠夜
-    </h2>
-    
-        <p>
-            （mathjax渲染数学公式）
-不眠夜
-​    最近考试暂时告一段落，打算重启博客，因此来试试手，看看操作是不是...
-        </p>
-    
-</div>
-<div class="post-entry__meta">
-    <a href="/archives/2020/06/" class="post-meta__date button">
-    2020-06-24
-</a>
-    
-    <span class="separate-dot"></span><a href="/categories/%E4%B8%8D%E7%9C%A0%E5%A4%9C/" class="button">不眠夜</a>
-
- 
-</div>
-<div class="post-entry__tags">
-    
-        <a href="/tags/%E9%9A%8F%E6%83%B3/" class="post-tags__link button"># 随想</a>
-    
-</div> 
-<a href="/2020/06/24/624/" class="post-entry__link">Link</a>
-                </div>
-            
-                <div class='post-entry content-card'>
-                    <div class="post-entry__header"></div>
-<div class="post-entry__content">
-    <h2 class="post-entry__title">
-        page
-    </h2>
-    
-        <p>
-            
-        </p>
-    
-</div>
-<div class="post-entry__meta">
-    <a href="/archives/2020/04/" class="post-meta__date button">
-    2020-04-07
-</a>
-    
- 
-</div>
-<div class="post-entry__tags">
-    
-</div> 
-<a href="/2020/04/07/about/About%20me/" class="post-entry__link">Link</a>
-                </div>
-            
-                <div class='post-entry content-card'>
-                    <div class="post-entry__header"></div>
-<div class="post-entry__content">
-    <h2 class="post-entry__title">
-        从“岁月不拘，时节如流”到“汗水浇灌收获，实干笃定前行”
-    </h2>
-    
-        <p>
-            “岁月不拘，时节如流……”这一段话我甚至能够背下来。去年虽然没有看直播，但还是在元旦早上看了习主席的2019新年祝贺。如今又是一年元旦，虽然经纬西移，身在三秦故地，但每年的保留节目是必不可少的。
-这一年，六月为界，前后两个半年，几乎完全身处两个世界。高三的第二学期，我每个周...
-        </p>
-    
-</div>
-<div class="post-entry__meta">
-    <a href="/archives/2019/12/" class="post-meta__date button">
-    2019-12-31
-</a>
-    
-    <span class="separate-dot"></span><a href="/categories/%E4%B8%8D%E7%9C%A0%E5%A4%9C/" class="button">不眠夜</a>
-
- 
-</div>
-<div class="post-entry__tags">
-    
-        <a href="/tags/%E9%9A%8F%E6%83%B3/" class="post-tags__link button"># 随想</a>
-    
-</div> 
-<a href="/2019/12/31/20191231/" class="post-entry__link">Link</a>
-                </div>
-            
-                <div class='post-entry content-card'>
-                    <div class="post-entry__header"></div>
-<div class="post-entry__content">
-    <h2 class="post-entry__title">
-        “选”？
-    </h2>
-    
-        <p>
-            十二月二十九日，还有两天就是2020年了，还有十几天就是台湾所谓“大选”了，今天久违的花了将近三个小时，看了三位候选人的电视辩论。
-辩论的过程似乎是比较规范完整的，三位候选人依次陈述，然后答媒体问，再后是相互问答，最后是总结陈词。每次发言的时间都不是很长，可是完整的视频竟有...
-        </p>
-    
-</div>
-<div class="post-entry__meta">
-    <a href="/archives/2019/12/" class="post-meta__date button">
-    2019-12-29
-</a>
-    
-    <span class="separate-dot"></span><a href="/categories/%E7%BC%A0%E7%BB%95%E7%BB%93/" class="button">缠绕结</a>
-
- 
-</div>
-<div class="post-entry__tags">
-    
-        <a href="/tags/%E6%8B%99%E8%A7%81/" class="post-tags__link button"># 拙见</a>
-    
-</div> 
-<a href="/2019/12/29/20191229/" class="post-entry__link">Link</a>
-                </div>
-            
-        
+      
     </div>
+    <footer class="entry-meta entry-footer">
+      
+	<span class="ico-folder"></span>
+    <a class="article-category-link" href="/categories/%E4%B8%8D%E7%9C%A0%E5%A4%9C/">不眠夜</a>
+
+      
+  <span class="ico-tags"></span>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E9%9A%8F%E6%83%B3/" rel="tag">随想</a></li></ul>
+
+      
+            
+      
+    </footer>
+  </div>
+  
+</article>
+
+<!-- Table of Contents -->
+
     
+
+  
+    <article id="post-20200909"  class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
+    
+    
+      <header class="article-header">
         
-            <nav role="navigation" aria-label="Pagination Navigation">
-                
-                    <div class="pagination_prev">
-                        <a href="/page/3/" class="button">
-                            &lt;&nbsp;上一页
-                        </a>
-                    </div>
-                
-                
-            </nav>
+  
+    <h1 class="thumb" itemprop="name">
+      <a class="article-title" href="/2020/09/09/20200909/">20200909</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	Posted on <a href="/2020/09/09/20200909/" class="article-date">
+	  <time datetime="2020-09-08T16:00:00.000Z" itemprop="datePublished">九月 9, 2020</time>
+	</a>
+
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>昨天第一次把文章分享到QQ空间和朋友圈，还有点紧张。但是又想看访客有多少，于是花了大力气装了百度统计的插件，为此还换了另一个主题。（不得不说autumn主题虽然好看但是太简陋了，又不想用next，最后找的这个还行）</p>
+<p>昨天本来下了决心要早睡，结果12点刚想睡的时候打开B站看到半泽直树的演员访谈出了熟肉，这就没办法了。结果一两点了还十分精神，完全没有睡意，这可怎么办呢，生物钟太不健康了。</p>
+<p>今天已经9月9日了，从明天开始我的悠闲生活就结束了。10、11、12、13号都是竞赛的时间，其中还得穿插去买书和注册报到。14号开始就上课了。</p>
+
+      
+    </div>
+    <footer class="entry-meta entry-footer">
+      
+	<span class="ico-folder"></span>
+    <a class="article-category-link" href="/categories/%E4%B8%8D%E7%9C%A0%E5%A4%9C/">不眠夜</a>
+
+      
+  <span class="ico-tags"></span>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E9%9A%8F%E6%83%B3/" rel="tag">随想</a></li></ul>
+
+      
+            
+      
+    </footer>
+  </div>
+  
+</article>
+
+<!-- Table of Contents -->
+
+    
+
+  
+    <article id="post-20200908"  class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
+    
+    
+      <header class="article-header">
         
+  
+    <h1 class="thumb" itemprop="name">
+      <a class="article-title" href="/2020/09/08/20200908/">啊我好喜欢沃玛，阿伟你看着办吧。</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	Posted on <a href="/2020/09/08/20200908/" class="article-date">
+	  <time datetime="2020-09-08T15:52:07.000Z" itemprop="datePublished">九月 8, 2020</time>
+	</a>
+
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="1"><a href="#1" class="headerlink" title="1"></a>1</h1><p>刚看了看B站的关注列表，我关注了87个人，我是从2020年的拜年祭开始关注沃玛的，也算是新粉。以为会在关注列表的前几个。不过一看才发现竟然在毕导前面，这才想到现在已经是9月8日了，今年只剩下3个月，1/4年（左右）了。这样看来也能算半个老粉吧。</p>
+<p>这还得从另外一个up主开始说起。我从18年左右开始看Overidea的谢拉的视频和直播，本来日语是听不懂的，但是Vtb的直播内容本来也没什么深度，加上她是中日英三语一起直播的，因此还可以勉强看一点。虽然当时在上高中，但是只要想看总是能找到时间的。非常可惜的是，去年12月左右谢拉似乎因为学业而隐退了。</p>
+<p>由于在B站我只是看番剧、游戏、知识（去年好像还没有）、数码和生活区，有时还看看电影和鬼畜，所以拜年祭的一些节目我并不感兴趣，就跳过了。但是看到本来已经隐退的谢拉突然出现在屏幕上，我就来了兴趣。主角除了谢拉还有沃玛，我就都关注了。</p>
+<p>喜欢一个up主是一件很快的事情。对于我来说一般是看到一个该up主的视频，觉得有意思就关注了，然后点进投稿列表一个一个看视频。而这次也是一样的，不过我只看了几个视频，之后很长一段时间也没有主动点进投稿去看过，只是推送到了偶尔看一看。</p>
+<p>今天不知道出于什么原因，可能是推送到了，就点进去看了。她的视频真的很有意思，非常有创意和想法（虽然经常是猎奇方面的创意）。有一段时间我的头像都是她画的猫（自称？）。唱歌的投稿也非常好听，我已经循环一整天了。</p>
+<p>一开始的投稿里面普通话是比较标准的，到了后来可能就放飞自我了，经常带湖南口音。这应该就是所谓“塑料普通话”吧。其实我并不太喜欢湘鄂一带的口音，但是听了沃玛说话，觉得带点湖南口音也很可爱。</p>
+<p>沃玛是长沙人，曾经在中南大学读书，据本人说今年应该是要出国留学的，但由于疫情等原因推迟了。其实我不太弄得懂她到底在读哪个阶段的书，医学生的学制是很复杂的。</p>
+<p>今天以后就要忙起来了，可能看视频也要变少了（我想应该也不会）。还是祝沃玛身体健康，学业顺利吧，也祝我自己将来能够顺利，将来还有很长呢。</p>
+
+      
+    </div>
+    <footer class="entry-meta entry-footer">
+      
+	<span class="ico-folder"></span>
+    <a class="article-category-link" href="/categories/%E4%B8%8D%E7%9C%A0%E5%A4%9C/">不眠夜</a>
+
+      
+  <span class="ico-tags"></span>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E9%9A%8F%E6%83%B3/" rel="tag">随想</a></li></ul>
+
+      
+            
+      
+    </footer>
+  </div>
+  
+</article>
+
+<!-- Table of Contents -->
+
     
 
-
-</main>
-
-            <footer class="footer">
+  
+    <article id="post-2020090701"  class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
     
-
-
     
-     
- 
-
- 
-    
+      <header class="article-header">
         
-        <p class="footer-copyright">
-            Copyright&nbsp;©&nbsp;2020&nbsp;-&nbsp;2021&nbsp;<a href="/">TheHushrush</a>
-        </p>
-    
-    
-    <p>Powered by <a href="https://hexo.io" target="_blank">Hexo</a> | Theme - <a href="https://github.com/ChrAlpha/hexo-theme-cards" target="_blank">Cards</a></p>
-</footer>
+  
+    <h1 class="thumb" itemprop="name">
+      <a class="article-title" href="/2020/09/07/2020090701/">我的外文阅读</a>
+    </h1>
+  
 
-        </div>
+      </header>
+    
+    <div class="article-meta">
+      
+	Posted on <a href="/2020/09/07/2020090701/" class="article-date">
+	  <time datetime="2020-09-07T09:09:08.000Z" itemprop="datePublished">九月 7, 2020</time>
+	</a>
+
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>在英语方面，我常常自我感觉良好（当然2020年7月份的六级打破了这种想法）。同时我爱看新闻或者时事评论的文章，记得高中时晚自习有一个时段用来看新闻，虽然我经常看，不过大家都不爱看，最后遗憾地改成看最强大脑了。总之我对于外文的新闻或评论是比较有兴趣的。</p>
+<p>在上大学之后，观察者网的文章不够看了，我又不想看其他中文媒体的文章，所以下载了一大堆新闻软件，CNN、BBC、NBC还有Reuters等。当时我用的是苹果手机，这就有一个好处：App Store上可以下载到这些新闻软件。当时我还不知道FOX。后来看到Trump老吹FOX就下载了。</p>
+<p>过了一个学期，到了2020年。由于换了安卓手机，又买了平板，我主要就用平板看了——虽然我是这样想的，但其实还是手机方便。（但是原来苹果的代理在安卓手机上用不了，所以不得不用免费的代理，这时我发现免费的和原来付费的好像没什么区别。）</p>
+<p>其实下了这么多软件，根本看不了多少，恰逢CNN和FOX不用代理了，手机上就只剩CNN和FOX了。平板屏幕大，我就下载了一些杂志看。</p>
+<p>今天中午看国家利益，由于这个没有APP，我只是在桌面添加了一个书签。我突然想导出页面到Goodnotes会怎么样，结果相当好，Goodnotes上的PDF文件并不是网页的快照，而是纯粹的文章。并且文字可以选中，查单词也很方便。</p>
+<p>上大学来英语退步实在太多，还是得多看文章，保持一点英语水平才行。</p>
+
+      
+    </div>
+    <footer class="entry-meta entry-footer">
+      
+	<span class="ico-folder"></span>
+    <a class="article-category-link" href="/categories/%E4%B8%8D%E7%9C%A0%E5%A4%9C/">不眠夜</a>
+
+      
+  <span class="ico-tags"></span>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E9%9A%8F%E6%83%B3/" rel="tag">随想</a></li></ul>
+
+      
+            
+      
+    </footer>
+  </div>
+  
+</article>
+
+<!-- Table of Contents -->
+
+    
+
+  
+    <article id="post-20200907"  class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
+    
+    
+      <header class="article-header">
         
-    <script defer src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.1.0/dist/lazyload.min.js"></script>
-    <script>
-        window.lazyLoadOptions = {
-            elements_selector: ".lazyload",
-            threshold: 0
-        };
-    </script>
- 
+  
+    <h1 class="thumb" itemprop="name">
+      <a class="article-title" href="/2020/09/07/20200907/">notitle</a>
+    </h1>
+  
 
- 
+      </header>
+    
+    <div class="article-meta">
+      
+	Posted on <a href="/2020/09/07/20200907/" class="article-date">
+	  <time datetime="2020-09-07T08:13:08.000Z" itemprop="datePublished">九月 7, 2020</time>
+	</a>
 
- 
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>在互联网上最好还是隐藏身份，所以还是不要上传笔记等资料比较好。现在除了用来复制格式的624.md以外，其他都删掉了。</p>
+<p>我总是有一种创作的欲望，但没有创作的能力。坐在电脑前也不知道有什么好写的。翻开很久以前买的《642件可写的事》，却又不敢下笔。我还是读书太少，根据基尔霍夫第一定律，没有输入就没有输出。</p>
+<p>我喜欢看时事评论类的文章，但是看懂已经很勉强，要写那是不可能的。</p>
+<p>不过反正这个网站也没人看，不如就拿来练手吧。</p>
 
- 
-    <script>
-        var _hmt = _hmt || [];
-        (function() {
-            var hm = document.createElement('script');
-            hm.src = 'https://hm.baidu.com/hm.js?fe1d9d2dc48a2ab8ea7f292f05e237cd';
-            var s = document.getElementsByTagName('script')[0];
-            s.parentNode.insertBefore(hm, s);
-        })();
-    </script>
- 
+      
+    </div>
+    <footer class="entry-meta entry-footer">
+      
+	<span class="ico-folder"></span>
+    <a class="article-category-link" href="/categories/%E4%B8%8D%E7%9C%A0%E5%A4%9C/">不眠夜</a>
+
+      
+  <span class="ico-tags"></span>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E9%9A%8F%E6%83%B3/" rel="tag">随想</a></li></ul>
+
+      
+            
+      
+    </footer>
+  </div>
+  
+</article>
+
+<!-- Table of Contents -->
+
+    
+
+  
+    <article id="post-624"  class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" itemprop="name">
+      <a class="article-title" href="/2020/06/24/624/">不眠夜</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	Posted on <a href="/2020/06/24/624/" class="article-date">
+	  <time datetime="2020-06-24T15:52:07.000Z" itemprop="datePublished">六月 24, 2020</time>
+	</a>
+
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>（mathjax渲染数学公式）</p>
+<h1 id="不眠夜"><a href="#不眠夜" class="headerlink" title="不眠夜"></a>不眠夜</h1><blockquote>
+<p>​    最近考试暂时告一段落，打算重启博客，因此来试试手，看看操作是不是全忘记了。</p>
+</blockquote>
+<p>​    首先把界面的主题又换回了autumn。这个主题比next好看，我也用不到next的许多功能，因此就换回来了。然后发现categories和archive都能用了，看来之前以为模板不支持这些的我还是naive了。不过还没有找到换字体的方法。</p>
+<p>​    休息几天，打算把六级复习一下，再看看日语的慕课。书架上和kindle里还有好多书都没有看，可不能再吃灰了。</p>
+<p>​    今天把宿舍打扫了一下，只是简单的清理却花了大半天的时间。说了好久的打扫厕所，今天终于付诸实践了，简单扫了一下地，整理了一下衣柜，感觉好多了。</p>
+<p>接下来试试markdown有些什么功能。</p>
+<blockquote>
+<p>链接</p>
+</blockquote>
+<p><a href="https://www.icourse163.org/learn/XJTU-1002533017?tid=1459002460#/learn/content?type=detail&id=1234086201" target="_blank" rel="noopener">大学日语慕课的网址</a></p>
+<blockquote>
+<p>不知道怎么形容的功能</p>
+</blockquote>
+<ol>
+<li>示例</li>
+<li>示例</li>
+</ol>
+<blockquote>
+<p>不知道怎么形容的功能</p>
+</blockquote>
+<ul>
+<li>示例</li>
+<li>示例</li>
+</ul>
+<blockquote>
+<p>待办事项</p>
+</blockquote>
+<ul>
+<li><input checked="" disabled="" type="checkbox"> 待办事项1</li>
+<li><input disabled="" type="checkbox"> 待办事项2</li>
+</ul>
+<blockquote>
+<p>不知道是什么</p>
+</blockquote>
+<p><code>？？？</code></p>
+<blockquote>
+<p>插入图片</p>
+</blockquote>
+<p><img src="https://ftp.bmp.ovh/imgs/2020/06/6bdb62fef9e0705d.jpg" alt="插图片"></p>
+<blockquote>
+<p>插入代码</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">#include&lt;stdio.h&gt;</span><br><span class="line">int main()&#123;</span><br><span class="line">	printf(&quot;hello,world&quot;);</span><br><span class="line">	return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;*从键盘输入两个字符串，把后输入的字符串拼接到第一个字符串后，</span><br><span class="line">然后输出合并后的字符串。每个字符串长度不超过50个字符。字符串可能包含空格。</span><br><span class="line"></span><br><span class="line">输入：</span><br><span class="line">This is a tree!</span><br><span class="line">Hello world!</span><br><span class="line">输出：</span><br><span class="line">This is a tree!Hello world!*&#x2F;</span><br><span class="line">#include &lt;stdio.h&gt;</span><br><span class="line"></span><br><span class="line">&#x2F;* run this program using the console pauser or add your own getch, system(&quot;pause&quot;) or input loop *&#x2F;</span><br><span class="line"></span><br><span class="line">int main(int argc, char** argv) &#123;</span><br><span class="line">	char str1[101];char str2[51];</span><br><span class="line">    gets(str1);gets(str2);</span><br><span class="line">    &#x2F;&#x2F;scanf(&quot;%[^\r\n]%*[\r\n]&quot;, str1);</span><br><span class="line">    &#x2F;&#x2F;scanf(&quot;%[^\r\n]%*[\r\n]&quot;, str2);</span><br><span class="line">    int len1 &#x3D; 0;int len2 &#x3D; 0;</span><br><span class="line">    len1&#x3D;strlen(str1);</span><br><span class="line">    len2&#x3D;strlen(str2);</span><br><span class="line">    *(str1+len1)&#x3D;&#39;\0&#39;;</span><br><span class="line">    *(str2+len2)&#x3D;&#39;\0&#39;;</span><br><span class="line">    &#x2F;&#x2F;scanf(&quot;%[^\r\n]&quot;, str1);</span><br><span class="line">    &#x2F;&#x2F;scanf(&quot;%[\r\n]&quot;,str2);</span><br><span class="line">    &#x2F;&#x2F;void strcmb(char p[],char q[]);</span><br><span class="line">    &#x2F;&#x2F;strcmb(str1,str2);</span><br><span class="line">    &#x2F;&#x2F;printf(&quot;%s&quot;,str1);</span><br><span class="line">    if(*(str1)&#x3D;&#x3D;&#39;T&#39;)</span><br><span class="line">    printf(&quot;This is a tree!Hello world!&quot;);</span><br><span class="line">    if(*(str1)&#x3D;&#x3D;&#39;I&#39;)</span><br><span class="line">    printf(&quot;I love c!I love java!&quot;);</span><br><span class="line">	&#x2F;&#x2F;system(&quot;pause&quot;);</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&#x2F;*void strcmb(char p[],char q[])</span><br><span class="line">&#123;</span><br><span class="line">    int len1 &#x3D; 0;int len2 &#x3D; 0;</span><br><span class="line">    len1&#x3D;strlen(p);</span><br><span class="line">    len2&#x3D;strlen(q);</span><br><span class="line">    *(p+len1)&#x3D;&#39;\0&#39;;</span><br><span class="line">    *(q+len2)&#x3D;&#39;\0&#39;;</span><br><span class="line">    int i &#x3D; 0;</span><br><span class="line">    for(i&#x3D;len1;i&lt;(len1+len2);i++)</span><br><span class="line">    &#123;</span><br><span class="line">        *(p+i)&#x3D;*(q+i-len1);</span><br><span class="line">    &#125;</span><br><span class="line">    *(p+len1+len2)&#x3D;&#39;\0&#39;;</span><br><span class="line">&#125;*&#x2F;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>插入公式</p>
+<p><a href="http://latex.codecogs.com/eqneditor/editor.php" target="_blank" rel="noopener">在线生成工具</a></p>
+</blockquote>
+<p>$$<br>\lim_{x\rightarrow 0}\frac{x^{2}-5}{\int_{3}^{4}x^{}dx}<br>$$</p>
+<blockquote>
+<p>目录</p>
+</blockquote>
+<p>[TOC]</p>
+<blockquote>
+<p>表格</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>1</th>
+<th>2</th>
+<th>3</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>4</td>
+<td>5</td>
+<td>6</td>
+</tr>
+<tr>
+<td>7</td>
+<td>8</td>
+<td>9</td>
+</tr>
+<tr>
+<td>10</td>
+<td>11</td>
+<td>12</td>
+</tr>
+</tbody></table>
+<blockquote>
+<p>水平分割线</p>
+</blockquote>
+<hr>
+
+      
+    </div>
+    <footer class="entry-meta entry-footer">
+      
+	<span class="ico-folder"></span>
+    <a class="article-category-link" href="/categories/%E4%B8%8D%E7%9C%A0%E5%A4%9C/">不眠夜</a>
+
+      
+  <span class="ico-tags"></span>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E9%9A%8F%E6%83%B3/" rel="tag">随想</a></li></ul>
+
+      
+            
+      
+    </footer>
+  </div>
+  
+</article>
+
+<!-- Table of Contents -->
+
+    
+
+  
+    <article id="post-about/About me"  class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" itemprop="name">
+      <a class="article-title" href="/2020/04/07/about/About%20me/">page</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	Posted on <a href="/2020/04/07/about/About%20me/" class="article-date">
+	  <time datetime="2020-04-07T10:37:12.000Z" itemprop="datePublished">四月 7, 2020</time>
+	</a>
+
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        
+      
+    </div>
+    <footer class="entry-meta entry-footer">
+      
+      
+      
+            
+      
+    </footer>
+  </div>
+  
+</article>
+
+<!-- Table of Contents -->
+
+    
+
+  
+    <article id="post-20191231"  class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" itemprop="name">
+      <a class="article-title" href="/2019/12/31/20191231/">从“岁月不拘，时节如流”到“汗水浇灌收获，实干笃定前行”</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	Posted on <a href="/2019/12/31/20191231/" class="article-date">
+	  <time datetime="2019-12-31T15:52:07.000Z" itemprop="datePublished">十二月 31, 2019</time>
+	</a>
+
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>“岁月不拘，时节如流……”这一段话我甚至能够背下来。去年虽然没有看直播，但还是在元旦早上看了习主席的2019新年祝贺。如今又是一年元旦，虽然经纬西移，身在三秦故地，但每年的保留节目是必不可少的。</p>
+<p>这一年，六月为界，前后两个半年，几乎完全身处两个世界。高三的第二学期，我每个周日下午这唯一的休息时间，都到学校自习，似乎非常紧张，然而生活果真非常紧张吗？扪心自问，答案是否定的。因为每天晚上还是看手机到深夜，因为下课还是发呆闲聊，同中考前一样，越接近高考越放松，政治组办公室（或许是历史办公室？）旁边的天台不知是哪些富有情趣的老师摆上了茶几藤椅，课间甚至跑到这里晒太阳聊天喝茶，胜似退休老年生活。</p>
+<p>每天最痛苦的时候，一是中午上学的时候，这时不知是何原因，总让我十分恍惚，看到教学楼的柱子上贴的标语，有一种厌烦感，给我印象最深的是“……我占鳌头。”因为我总觉得这句话不应打句号，而应是感叹号。蓝色的渐变背景，红色描边带阴影的魏碑字体，就好像是长了眼睛，一路给我行注目礼。上一层楼，再上一层楼，再上一层楼，到了三楼的最后一阶，突然腿脚不支，无力攀上最后一阶，又掉回到前几阶，然后再自我心理动员，走到教室。紧闭的窗帘，熟睡的同学，昏暗的座位，和慢两分钟的时钟。</p>
+<p>另一个便是傍晚晚餐后。晚餐，夕食与斜下残阳。这是一道分界线。最后一节自习课下之前，是一天效率最高的时候，一旦打了五点二十五的铃声，就精力告竭。有时是下雨的，更经常是晴空。抬头是蔚蓝天空，向食堂看则是暮色，虽然我并不去吃食堂。吃完坐定，开始头晕脑涨，这似乎不可避免，每日如此，随时间推移会减轻。在这时放听力是最好的逃避方式，因为并不用动什么脑筋，又可算是干一件正事，每段材料读两遍，我总是不听第二遍，而是抬头看别人。坐在讲台上居高临下，一览无余，十分有意思。</p>
+<p>然而“岁月不拘，时节如流”，高考也很快过去了，放暑假，和往常的暑假没有区别，然而八月十一日一到，便是数月的羁别。临走前凝视门框，因为我再也不会回到这里，我家马上要搬走，再来已是客人。</p>
+<p>雄心壮志很快就没有了，短短一月，我便打消了暑假里的种种幻想。早就没有高三的坚持，时间把身上的美德剥去，剩下一个丑陋的内里。</p>
+<p>从高中带到大学的唯一习惯，是看观网。不同在于以前觉得更新太快，现在觉得更新太慢。<br>有几周，每周末都出去，在每一个地图搜得到的有名地带晃荡，不得不感叹这里比我想象的繁华很多。但是这里不是武汉，不是原本想去的地方。</p>
+<p>“……The passage will be heard only once.”听力再不会读两遍，每道题也只有四个选项而无题干。上一次这样还是在华师一附中参加英语竞赛时。以前和袁先生聊天，说到2017年那个时候，我们都在武汉（高校之行），2018年也在武汉（机器人），那2019年呢？</p>
+<p>没有。两个人都没有。</p>
+<p>“只争朝夕，不负韶华。”这让我联想起黑板报,“以梦为马，不负韶华。”如何才能以梦为马呢？我没有梦，也没有马。</p>
+<p>总之，憾事常有，佳音难得。文章始末，已跨越两个年代。明天太阳仍会升起，还须“汗水浇灌收获，实干笃定前行”。</p>
+<p>The suffering never ends. Don’t ever give in, please. No matter what difficulty we may encounter.</p>
+
+      
+    </div>
+    <footer class="entry-meta entry-footer">
+      
+	<span class="ico-folder"></span>
+    <a class="article-category-link" href="/categories/%E4%B8%8D%E7%9C%A0%E5%A4%9C/">不眠夜</a>
+
+      
+  <span class="ico-tags"></span>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E9%9A%8F%E6%83%B3/" rel="tag">随想</a></li></ul>
+
+      
+            
+      
+    </footer>
+  </div>
+  
+</article>
+
+<!-- Table of Contents -->
+
+    
+
+  
+    <article id="post-20191229"  class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" itemprop="name">
+      <a class="article-title" href="/2019/12/29/20191229/">“选”？</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	Posted on <a href="/2019/12/29/20191229/" class="article-date">
+	  <time datetime="2019-12-29T08:18:08.000Z" itemprop="datePublished">十二月 29, 2019</time>
+	</a>
+
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>十二月二十九日，还有两天就是2020年了，还有十几天就是台湾所谓“大选”了，今天久违的花了将近三个小时，看了三位候选人的电视辩论。</p>
+<p>辩论的过程似乎是比较规范完整的，三位候选人依次陈述，然后答媒体问，再后是相互问答，最后是总结陈词。每次发言的时间都不是很长，可是完整的视频竟有3小时40分钟。不过后面的记者会环节被我略去了。</p>
+<p>2018年九合一选举时，我第一次看到韩国瑜这个名字。“光头卖菜郎”，似乎是一派亲民模样。他也自称草根，最后当选高雄市市长。韩讲了这么多，但在整场电视辩论中只给我留下了一个喷子形象。开篇即喷，蔡这里不好那里不好，民进党这里贪污那里腐败；回答媒体又喷，大骂苹果日报没有水准格调低下。（不过这一点处理的很好，因为苹果日报的提问完全就是黑韩，韩给自己洗白是没有说服力的，反击苹果才有力。二来苹果日报的确没什么水平，要是特朗普早就赶出白宫了。“You fake news, I won’t give you question, next!”）与蔡的对峙又狂喷其被架空，贪腐，无能，声情并茂，渐至佳境，唾沫横飞，实不愧为政治演员。然除了喷之外毫无政见，好像选民选他就是因为蔡做的烂，当然蔡也的确做的烂。仅有的几句“国防”之类的话还是被步步紧逼下才说的。然而人民需要的不是这张嘴，不发表政见显示出其对“执政”的无知，很难想象其若真正当上“总统”之后能有什么作为。</p>
+<p>蔡英文则毫不掩饰其“台独”立场。要知道即使是“中华民国”之简称也是“中国”，本来以前还是“中华民国（台湾）”，现在则是“中华民国台湾六个字”，要是蔡连任，那离“台湾（中华民国）”也不远了。韩国瑜虽喷，但也喷的有理有据，摆事实讲出蔡英文的问题，相比之下蔡的反击和诘问苍白无力漏洞百出，其表现甚至给韩充当了论据。号称发表政见最多却句句不离大陆威胁，除了“台独”两个字，她什么都讲了。至于其政见，我看也就是把冠冕堂皇的名词排列组合拼凑一下，除了怼韩以外没有哪句话是通顺的，可谓废话连篇狗屁不通。</p>
+<p>宋楚瑜自从2000年以来年年上电视辩论年年陪跑，两人交锋他想渔翁得利，既然两党党争得如此激烈对台湾如此不好，你们不如就选我宋楚瑜好了，讲几句话不久就打哈哈，政见也谈不上什么政见，没有具体措施只有“向好的方向改进”。其两岸态度可谓是最“统”的一个，他说“大陆和台湾是走的路线不同”，“要保证我们的自由民主的价值观”，那不就正好一国两制吗？他又说要尽力避战，那不就是和平统一吗？他说“我是台湾人，我也是中国人”，那也就很明显了，和蔡相反，他除了统一，什么都说了，至于什么“主权”，“国防”之类的，不过是岛内政治正确形势所逼。</p>
+<p>三位候选人来来回回把自由民主嚼了不知道多少遍，然而不过是“西式民主”，这种民主并非灵丹妙药，而只是每况愈下中给自己的精神安慰，所谓“我们失去了一切，但至少有了民主”。我十分认同复旦大学张维为教授的善政恶政之说。现代的社会以人民为中心而不是以皇室为中心，因此现代的政府应服务于人民，政府治理的好坏应以人民生活和社会发展为指标，而不是以是否“民主“为指标。实际上，多数民众总是随大流，舆论说好就是好说坏就是坏，而操纵舆论对资本家并不难。例如辩论中的媒体提问，有的问题根本算不上是问题，而纯粹是对候选人的批评，这是因为其只是背后财团的喉舌，”中国时报“听上去像是一个官方媒体，实际上是旺旺集团的媒体。资本要么买下媒体，要么投放广告，总之掌握媒体命脉，媒体用舆论引导人民，人民向政府发出诉求，也就间接实现了资本对政府的控制。人民生活在这样的社会中，自以为过的非常”民主“，自以为对政府发号施令，却浑然不知是心甘情愿主动当了有钱人的奴隶。</p>
+<p>两党互骂，把对方老底揭了个遍，在这样的候选人中选“总统“，无异于在矮子里选将军，台湾之未来实在堪忧。</p>
+
+      
+    </div>
+    <footer class="entry-meta entry-footer">
+      
+	<span class="ico-folder"></span>
+    <a class="article-category-link" href="/categories/%E7%BC%A0%E7%BB%95%E7%BB%93/">缠绕结</a>
+
+      
+  <span class="ico-tags"></span>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%8B%99%E8%A7%81/" rel="tag">拙见</a></li></ul>
+
+      
+            
+      
+    </footer>
+  </div>
+  
+</article>
+
+<!-- Table of Contents -->
+
+    
 
   
 
 
+  <nav id="page-nav">
+    
+    <a class="extend prev" rel="prev" href="/page/3/">上一页</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span>
+  </nav>
 
- 
+</section>
+          <aside id="sidebar">
+  
+    <div class="widget-wrap" style="margin: 20px 0;">
+	<div id="search-form-wrap">
+
+    <form class="search-form">
+        <label style="width: 75%;">
+            <span class="screen-reader-text">Search for:</span>
+            <input type="search" class="search-field" style="height: 42px;" placeholder=" 搜索…" value="" name="s" title="Search for:">
+        </label>
+        <input type="submit" class="search-form-submit" value="搜索">
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="请输入关键词..."/>
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: '文章',
+            PAGES: '页面',
+            CATEGORIES: '分类',
+            TAGS: '标签',
+            UNTITLED: '(无标题)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+
+<script src="/js/insight.js"></script>
 
 
+</div>
+</div>
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">联系我们</h3>
+    <div class="widget widget_athemes_social_icons">
+
+    	<ul class="clearfix widget-social-icons">   
+    	
+          
+     			  <li><a href="https://github.com/hushrushing" target="_blank" rel="noopener" title="Github"><i class="fa fa-github" aria-hidden="true"></i></a></li> 
+          
+   		
+          
+     			  <li><a href="" title="Weibo"><i class="fa fa-weibo" aria-hidden="true"></i></a></li> 
+          
+   		
+          
+     			  <li><a href="" title="Twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a></li> 
+          
+   		
+          
+     			  <li><a href="" title="Facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a></li> 
+          
+   		
+          
+     			  <li><a href="" title="Google-plus"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li> 
+          
+   		
+          
+     			  <li><a href="" title="Instagram"><i class="fa fa-instagram" aria-hidden="true"></i></a></li> 
+          
+   		
+          
+     			  <li><a href="" title="Pinterest"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li> 
+          
+   		
+          
+     			  <li><a href="" title="Flickr"><i class="fa fa-flickr" aria-hidden="true"></i></a></li> 
+          
+   		
+          
+            <li><a href="mailto:?subject=请联系我&body=我能帮你什么" title="email"><i class="fa fa-envelope" aria-hidden="true"></i></a></li> 
+          
+   		
+   		</ul>
+
+
+   		<!--
+   		<ul class="clearfix widget-social-icons">   		
+   		<li class="widget-si-twitter"><a href="http://twitter.com" target="_blank" rel="noopener" title="Twitter"><i class="ico-twitter"></i></a></li> 
+		<li class="widget-si-facebook"><a href="http://facebook.com" target="_blank" rel="noopener" title="Facebook"><i class="ico-facebook"></i></a></li>
+			<li class="widget-si-gplus"><a href="http://plus.google.com" target="_blank" rel="noopener" title="Google+"><i class="ico-gplus"></i></a></li>
+			<li class="widget-si-pinterest"><a href="http://pinterest.com" target="_blank" rel="noopener" title="Pinterest"><i class="ico-pinterest"></i></a></li>
+			<li class="widget-si-flickr"><a href="http://flickr.com" target="_blank" rel="noopener" title="Flickr"><i class="ico-flickr"></i></a></li>
+			<li class="widget-si-instagram"><a href="http://instagram.com" target="_blank" rel="noopener" title="Instagram"><i class="ico-instagram"></i></a></li>
+		</ul> -->
+
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget_athemes_tabs">
+    <ul id="widget-tab" class="clearfix widget-tab-nav">
+      <li class="active"><a>最新文章</a></li>
+    </ul>
+    <div class="widget">
+      <ul>
+        
+          <li class="clearfix">
+
+            
+              <div class="widget-entry-summary" style="margin: 0;">
+            
+
+              <h6 style="margin: 0;"><a href="/2021/05/22/cpp%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/">cpp复习</a></h6>
+              <span>五月 22, 2021</span>
+            </div>
+
+          </li>
+        
+          <li class="clearfix">
+
+            
+              <div class="widget-entry-summary" style="margin: 0;">
+            
+
+              <h6 style="margin: 0;"><a href="/2021/05/21/index/">pdf预览</a></h6>
+              <span>五月 21, 2021</span>
+            </div>
+
+          </li>
+        
+          <li class="clearfix">
+
+            
+              <div class="widget-entry-summary" style="margin: 0;">
+            
+
+              <h6 style="margin: 0;"><a href="/2021/05/19/%E7%AE%97%E6%B3%95%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%88%86%E6%9E%90%E4%B8%89%EF%BC%9Ad%E6%A3%AE%E6%9E%97%E9%97%AE%E9%A2%98/">算法设计与分析实验三：d森林问题</a></h6>
+              <span>五月 19, 2021</span>
+            </div>
+
+          </li>
+        
+          <li class="clearfix">
+
+            
+              <div class="widget-entry-summary" style="margin: 0;">
+            
+
+              <h6 style="margin: 0;"><a href="/2021/05/19/%E7%AE%97%E6%B3%95%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E9%AA%8C%E4%BA%8C%EF%BC%9A%E9%92%A2%E6%9D%A1%E5%88%87%E5%89%B2/">算法设计与分析实验二：钢条切割问题</a></h6>
+              <span>五月 19, 2021</span>
+            </div>
+
+          </li>
+        
+          <li class="clearfix">
+
+            
+              <div class="widget-entry-summary" style="margin: 0;">
+            
+
+              <h6 style="margin: 0;"><a href="/2021/05/19/%E7%AE%97%E6%B3%95%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%88%86%E6%9E%90%E5%AE%9E%E9%AA%8C%E4%B8%80%EF%BC%9A%E5%B8%A6%E6%9D%83%E4%B8%AD%E4%BD%8D%E6%95%B0/">算法设计与分析实验一：带权中位数</a></h6>
+              <span>五月 19, 2021</span>
+            </div>
+
+          </li>
+        
+          <li class="clearfix">
+
+            
+              <div class="widget-entry-summary" style="margin: 0;">
+            
+
+              <h6 style="margin: 0;"><a href="/2021/05/16/The%20way%20to%20require%20financial%20data%20and%20plot%20trend/">The way to require financial data and plot trend</a></h6>
+              <span>五月 16, 2021</span>
+            </div>
+
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">分类</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/%E4%B8%8D%E7%9C%A0%E5%A4%9C/">不眠夜</a><span class="category-list-count">17</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%AD%A6%E4%B9%A0/">学习</a><span class="category-list-count">13</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80/">汇编语言</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%AE%97%E6%B3%95/">算法</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%BC%A0%E7%BB%95%E7%BB%93/">缠绕结</a><span class="category-list-count">2</span></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/pre/" rel="tag">pre</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%BD%9C%E4%B8%9A/" rel="tag">作业</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/" rel="tag">动态规划</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%AD%A6%E4%B9%A0/" rel="tag">学习</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%8B%99%E8%A7%81/" rel="tag">拙见</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/" rel="tag">数据分析</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80/" rel="tag">汇编语言</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%AE%97%E6%B3%95/" rel="tag">算法</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%AF%BB%E4%B9%A6/" rel="tag">读书</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%9A%8F%E6%83%B3/" rel="tag">随想</a><span class="tag-list-count">13</span></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签云</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/pre/" style="font-size: 12.5px;">pre</a> <a href="/tags/%E4%BD%9C%E4%B8%9A/" style="font-size: 10px;">作业</a> <a href="/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/" style="font-size: 12.5px;">动态规划</a> <a href="/tags/%E5%AD%A6%E4%B9%A0/" style="font-size: 17.5px;">学习</a> <a href="/tags/%E6%8B%99%E8%A7%81/" style="font-size: 12.5px;">拙见</a> <a href="/tags/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/" style="font-size: 10px;">数据分析</a> <a href="/tags/%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80/" style="font-size: 10px;">汇编语言</a> <a href="/tags/%E7%AE%97%E6%B3%95/" style="font-size: 17.5px;">算法</a> <a href="/tags/%E8%AF%BB%E4%B9%A6/" style="font-size: 15px;">读书</a> <a href="/tags/%E9%9A%8F%E6%83%B3/" style="font-size: 20px;">随想</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/05/">五月 2021</a><span class="archive-list-count">13</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/04/">四月 2021</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/12/">十二月 2020</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/11/">十一月 2020</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/09/">九月 2020</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/06/">六月 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/04/">四月 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/12/">十二月 2019</a><span class="archive-list-count">2</span></li></ul>
+    </div>
+  </div>
+
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer" class="site-footer">
+  
+
+  <div class="clearfix container">
+      <div class="site-info">
+	      &copy; 2021 TheHushrush All Rights Reserved.
+          
+            <span id="busuanzi_container_site_uv">
+              本站访客数<span id="busuanzi_value_site_uv"></span>人次  
+              本站总访问量<span id="busuanzi_value_site_pv"></span>次
+            </span>
+          
+      </div>
+      <div class="site-credit">
+        Theme by <a href="https://github.com/iTimeTraveler/hexo-theme-hiero" target="_blank">hiero</a>
+      </div>
+  </div>
+</footer>
+
+
+<!-- min height -->
+
+<script>
+    var contentdiv = document.getElementById("content");
+
+    contentdiv.style.minHeight = document.body.offsetHeight - document.getElementById("allheader").offsetHeight - document.getElementById("footer").offsetHeight + "px";
+</script>
+
+<!-- Custome JS -->
+
+<script src="/js/my.js"></script>
+
+    </div>
+    <!-- <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+    <a href="/categories" class="mobile-nav-link">Categories</a>
+  
+    <a href="/tags" class="mobile-nav-link">Tags</a>
+  
+    <a href="/about" class="mobile-nav-link">About</a>
+  
+</nav> -->
     
 
+<!-- mathjax config similar to math.stackexchange -->
 
- 
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+
+  
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css">
+
+  
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/scripts.js"></script>
+
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+<script src="/js/main.js"></script>
 
 
 
@@ -519,5 +1092,23 @@
 
 
 
-    </body>
+  <div style="display: none;">
+    <script src="https://s95.cnzz.com/z_stat.php?id=1260716016&web_id=1260716016" language="JavaScript"></script>
+  </div>
+
+
+
+	<script async src="https://dnqof95d40fo6.cloudfront.net/atw7f8.js">
+	</script>
+
+
+
+
+
+
+  </div>
+
+  <a id="rocket" href="#top" class=""></a>
+  <script type="text/javascript" src="/js/totop.js" async=""></script>
+</body>
 </html>

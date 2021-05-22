@@ -1,559 +1,1135 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
-    <head>
-    <meta charset="utf-8">
+<html>
+<head>
+  <meta charset="utf-8">
+
+  <!-- PACE Progress Bar START -->
+  
+    
+<script src="https://raw.githubusercontent.com/HubSpot/pace/v1.0.2/pace.min.js"></script>
 
     
+<link rel="stylesheet" href="https://github.com/HubSpot/pace/raw/master/themes/orange/pace-theme-flash.css">
 
-    <!-- 渲染优化 -->
-    <meta name="renderer" content="webkit">
-    <meta name="force-rendering" content="webkit">
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
-    <meta name="HandheldFriendly" content="True" >
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  
 
-    <!--icon-->
+  <!-- PACE Progress Bar START -->
 
-    <link rel="shortcut icon" type='image/x-icon' href="/favicon.ico">
-
-
-    <!-- meta -->
-
-
-<title>TheHushrush</title>
-
-
-
-
-
-    <!-- OpenGraph -->
- 
-    <meta name="description" content="Simple&amp;Naive">
+  
+  <title>TheHushrush</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  
+  
+  
+  <meta name="description" content="Simple and naive">
 <meta property="og:type" content="website">
 <meta property="og:title" content="TheHushrush">
 <meta property="og:url" content="http://hushrushly.github.io/page/3/index.html">
 <meta property="og:site_name" content="TheHushrush">
-<meta property="og:description" content="Simple&amp;Naive">
+<meta property="og:description" content="Simple and naive">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:author" content="Hushrush">
-<meta name="twitter:card" content="summary_large_image">
-
-
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="TheHushrush" type="application/atom+xml">
+  
+  <link rel="icon" href="/css/images/favicon.ico">
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Montserrat:700" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic" rel="stylesheet" type="text/css">
+  <link href="https://cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+  <style type="text/css">
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/9749f0/00000000000000000001008f/27/l?subset_id=2&fvd=n5) format("woff2");font-weight:500;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/90cf9f/000000000000000000010091/27/l?subset_id=2&fvd=n7) format("woff2");font-weight:500;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/8a5494/000000000000000000013365/27/l?subset_id=2&fvd=n4) format("woff2");font-weight:lighter;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/d337d8/000000000000000000010095/27/l?subset_id=2&fvd=i4) format("woff2");font-weight:400;font-style:italic;}</style>
     
-<link rel="stylesheet" href="/css/style/main.css">
- 
+  <link rel="stylesheet" id="athemes-headings-fonts-css" href="//fonts.googleapis.com/css?family=Yanone+Kaffeesatz%3A200%2C300%2C400%2C700&amp;ver=4.6.1" type="text/css" media="all">
+  
+<link rel="stylesheet" href="/css/style.css">
 
 
+  
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 
-    
-    
-    
 
-    
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css" >
+  <link rel="stylesheet" href="/css/hiero.css" >
+  <link rel="stylesheet" href="/css/glyphs.css" >
+  
 
-     
+  <!-- Custom CSS -->
+  
+<link rel="stylesheet" href="/css/my.css">
 
-    <!-- custom head -->
-
+  <!-- Google Adsense -->
+  
 <meta name="generator" content="Hexo 4.2.0"></head>
 
-    <body>
-        <div id="app">
-            <header class="header">
-    <div class="header__left">
-        <a href="/" class="button">
-            <span class="logo__text">
-                TheHushrush
-            </span>
-        </a>
-    </div>
-    <div class="header__right">
-        
-            <div class="navbar__menus">
-                
-                    <a href="/" class="navbar-menu button">
-                        首页
-                    </a>
-                
-                    <a href="/tags/" class="navbar-menu button">
-                        标签
-                    </a>
-                
-                    <a href="/archives/" class="navbar-menu button">
-                        归档
-                    </a>
-                
-                    <a href="/page/" class="navbar-menu button">
-                        Page
-                    </a>
-                
+<script>
+var themeMenus = {};
+
+  themeMenus["/"] = "首页"; 
+
+  themeMenus["/archives"] = "归档"; 
+
+  themeMenus["/categories"] = "分类"; 
+
+  themeMenus["/tags"] = "标签"; 
+
+  themeMenus["/about"] = "关于"; 
+
+</script>
+
+
+  <body>
+
+
+  <header id="allheader" class="site-header" role="banner">
+  <div class="clearfix container">
+      <div class="site-branding">
+
+          <h1 class="site-title">
+            
+              <a href="/" title="TheHushrush" rel="home"> TheHushrush </a>
+            
+          </h1>
+
+          
+            <div class="site-description">Simple and naive</div>
+          
+            
+          <nav id="main-navigation" class="main-navigation" role="navigation">
+            <a class="nav-open">Menu</a>
+            <a class="nav-close">Close</a>
+            <div class="clearfix sf-menu">
+
+              <ul id="main-nav" class="nmenu sf-js-enabled">
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/">首页</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/archives">归档</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/categories">分类</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/tags">标签</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/about">关于</a> </li>
+                    
+              </ul>
             </div>
-        
-        
-        
+          </nav>
 
-        
-        
 
-        
-
-        
-            <a class="dropdown-icon button" id="btn-dropdown">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width='24' height='24' fill="none" stroke="currentColor" stroke-width="0.7" stroke-linecap="round" stroke-linejoin="round">
-                    <path fill="currentColor" d="M3.314,4.8h13.372c0.41,0,0.743-0.333,0.743-0.743c0-0.41-0.333-0.743-0.743-0.743H3.314c-0.41,0-0.743,0.333-0.743,0.743C2.571,4.467,2.904,4.8,3.314,4.8z M16.686,15.2H3.314c-0.41,0-0.743,0.333-0.743,0.743s0.333,0.743,0.743,0.743h13.372c0.41,0,0.743-0.333,0.743-0.743S17.096,15.2,16.686,15.2z M16.686,9.257H3.314c-0.41,0-0.743,0.333-0.743,0.743s0.333,0.743,0.743,0.743h13.372c0.41,0,0.743-0.333,0.743-0.743S17.096,9.257,16.686,9.257z"></path>
-                </svg>
-            </a>
-            <div class="dropdown-menus" id="dropdown-menus">
-                <a class="dropback-icon button" id="btn-dropback">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width='24' height='24' fill="none" stroke="currentColor" stroke-width="0.7" stroke-linecap="round" stroke-linejoin="round">
-                        <path fill="currentColor" d="M11.469,10l7.08-7.08c0.406-0.406,0.406-1.064,0-1.469c-0.406-0.406-1.063-0.406-1.469,0L10,8.53l-7.081-7.08c-0.406-0.406-1.064-0.406-1.469,0c-0.406,0.406-0.406,1.063,0,1.469L8.531,10L1.45,17.081c-0.406,0.406-0.406,1.064,0,1.469c0.203,0.203,0.469,0.304,0.735,0.304c0.266,0,0.531-0.101,0.735-0.304L10,11.469l7.08,7.081c0.203,0.203,0.469,0.304,0.735,0.304c0.267,0,0.532-0.101,0.735-0.304c0.406-0.406,0.406-1.064,0-1.469L11.469,10z"></path>
-                    </svg>
-                </a>
-                
-                    <a href="/" class="dropdown-menu button">
-                        首页
-                    </a>
-                
-                    <a href="/tags/" class="dropdown-menu button">
-                        标签
-                    </a>
-                
-                    <a href="/archives/" class="dropdown-menu button">
-                        归档
-                    </a>
-                
-                    <a href="/page/" class="dropdown-menu button">
-                        Page
-                    </a>
-                
-            </div>
-            <script>
-                document.getElementById('btn-dropdown').addEventListener('click', () => {
-                    const dd = document.getElementById('dropdown-menus');
-                    requestAnimationFrame(() => {
-                        dd.style.display = 'flex';
-                        requestAnimationFrame(() => {
-                            dd.style.transform = 'translateY(0)';
-                            dd.style.opacity = '1';
-                        });
-                    });
-                });
-                document.getElementById('btn-dropback').addEventListener('click', () => {
-                    const dd = document.getElementById('dropdown-menus');
-                    dd.style.transform = 'translateY(2.25rem)';                    
-                    dd.style.opacity = '0';
-                    setTimeout(() => {dd.style.display = 'none';}, 350);
-                });
-            </script>
-        
-    </div>
+      </div>
+  </div>
 </header>
 
 
-    <div class="cover">
-        <div class="cover__logo">
+  <div id="originBgDiv" style="background: #fff; width: 100%;">
+
+      <div style="max-height:600px; overflow: hidden;  display: flex; display: -webkit-flex; align-items: center;">
+        <img id="originBg" width="100%" alt="" src="">
+      </div>
+
+  </div>
+
+  <script>
+  function setAboutIMG(){
+      var imgUrls = "css/images/pose.jpg,https://source.unsplash.com/collection/954550/1920x1080".split(",");
+      var random = Math.floor((Math.random() * imgUrls.length ));
+      if (imgUrls[random].startsWith('http') || imgUrls[random].indexOf('://') >= 0) {
+        document.getElementById("originBg").src=imgUrls[random];
+      } else {
+        document.getElementById("originBg").src='/' + imgUrls[random];
+      }
+  }
+  bgDiv=document.getElementById("originBgDiv");
+  if(location.pathname.match('about')){
+    setAboutIMG();
+    bgDiv.style.display='block';
+  }else{
+    bgDiv.style.display='none';
+  }
+  </script>
+
+
+
+  <div id="container">
+    <div id="wrap">
             
-                <h1>TheHushrush</h1>
-            
-        </div>
+      <div id="content" class="outer">
         
-            <div class="cover__intro">
-                <p>Simple &amp; Naive</p>
- 
-            </div>
+          <section id="main">
+  
+    <article id="post-2020122802"  class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
+    
+    
+      <header class="article-header">
         
+  
+    <h1 class="thumb" itemprop="name">
+      <a class="article-title" href="/2020/12/28/2020122802/">孟子的形象</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	Posted on <a href="/2020/12/28/2020122802/" class="article-date">
+	  <time datetime="2020-12-28T15:52:07.000Z" itemprop="datePublished">十二月 28, 2020</time>
+	</a>
+
+      
     </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>孟子辗转千万里，不辞颠沛之苦。就是为了游说诸侯，宣扬自己的仁政思想，在《孟子》一书中很好的保留了他的言行。想要让诸侯接受自己的治国思想。就不可避免地要和王侯贵族进行交往。孟子在当时的战国是处于“士农工商”的“士”这一层．凭他个人的实力是不能实施他的治国方略的．只有通过游说上层自上而下施行。当时孟子的这种方法用我们现在的眼光来看．在战国那个群雄逐鹿、弱肉强食的年代有些过于理想化了．但是又似乎是唯一的方法。在与这些诸侯贵胄交往的过程中，孟子很显然是处于弱势的一方：其一，孟子的所处的阶层显然不能与那些君主大夫相比．这是在身份地位上的弱势：其二。孟子想让这些人接受自己的思想．说白了就是有求于他人，在交往的彼此关系上也处于弱势。在这种情况下，孟子能够保持不卑不亢已是不易，但若想要据理力争、宁折不弯，几乎是不可能的事了。但是。孟子他做到了，即使面对权贵的威势，他仍然能够保有一个士子的气节，凛然挺立，铮铮铁骨。</p>
+<p>(一)自尊自立，不为权贵而折腰。《滕文公章句下》的开篇，孟子的学生陈代引用了《志书》上的一句话“枉尺而直寻”，本意是指屈曲一尺而伸直八尺．用以说明一位有才干的人为了施展自己的抱负，可以迎合君主的意愿而违背礼仪道德。认为这样是可以的。孟子没有直接否认的观点，而是给他举了两个例子。一个是齐景公田猎以旌旗来传唤管理山林园子的虞人．虞人认为于礼不合．冒着杀头的危险拒绝召见。另外一个是赵简子派王良为他宠幸的小臣奚驾车．结果宠臣奚一上午就猎到了十只鸟．并向赵简子夸赞王良驾驶技术好．赵简子便有意让王良专门为奚驾车，被王良拒绝了，《诗经》里解释云：“不失其驰。舍矢如破。我不贯与小人乘，请辞”，即王良认为奚让他驱车的方式不合规矩，所以拒绝为他驾车。单从孟子举的这两个例子．他就清晰表明了自己的立场。“如枉道而从彼，何也”，这声诘问令人振聋发聩，直指人心．更是直接禀明了自己的观点：一个人不能为了阿附诸侯而损害原则。“枉己者，未有能直人者也”．孟子认为凡是枉屈自己的人．没有一个能够使人正直的。孟子以身作则，教育自己的学生不要因为外力改变自己的初衷．要保持自尊自立．不能为了发达而枉屈自己。</p>
+<p>(二)仗义执言．坚持自己的理念。孟子在齐国游历时．在谒见齐宣王时有过几段对话，孟子觐见齐宣王时说：“为巨室，则必使工师求大木。工师得大木．则王喜，以为其能胜其任也。匠人斫而小之，则王怒，以为不胜其任矣。夫人幼而学之，壮而欲行之，王日，‘姑舍女所学而从我’，则何如?”这段话是说“大王要建造大宫室，就一定要派工师去寻求大木料．工师找到大木料大王就高兴．认为它能履行职责，一旦工匠把木料削小了．大王就生气，认为他是不称职。士人们从小学习，长大了就打算实行，假如大王说‘暂且舍弃你所学的．听从我的话去做’．那么怎么样呢?现在这有块未经琢磨的玉石，即使价格很昂贵，也一定要请玉匠雕琢加工。至于治理国家，却说：‘暂且舍弃你所学的那一套而照我说的办吧!’那跟要玉匠按照您的吩咐去雕刻玉石又有什么分别呢?”在孟子这段话中，孟子以工匠雕琢木料、玉石作比．认为齐宣王强迫士人按照自己的意愿去办事就如同让工匠按自己的要求去雕琢材料一样．使士人不能发挥自己的所学。著名学者南怀瑾在他的《孟子旁通》一书中把这种现象一言而概之．即是“学非所用用非所长”。这是春秋战国时许多君侯的“宾客”面临的境况．很多人都安于现状而孟子却能在君侯面前直言提出．如此不留情面地驳斥齐宣王刚愎自用、独断专行，表现了孟子性格的耿直，不畏惧权贵．坚持自己的思想。</p>
+<p>孟子谦逊而不失坚毅．克己而不失率真．机敏而不失操守，像一个烙印，丰满真实而深刻。</p>
 
-            <main class="main">
-    
-    <div class="posts">
-        
-            
-                <div class='post-entry content-card'>
-                    <div class="post-entry__header"></div>
-<div class="post-entry__content">
-    <h2 class="post-entry__title">
-        读《乡土中国》
-    </h2>
-    
-        <p>
-            《乡土中国》由中国最早的人类学和社会学学者之一费孝通先生所著，是中国最知名的社会学著作之一。本书由费孝通先生在西南联大和云南大学的“乡村社会学”讲稿整理而成，读来似于课堂听讲，如沐春风。
-研究社会的学者常会犯纸上谈兵的毛病，时常会用自己的主观臆想来居高临下地审视芸芸众生，而...
-        </p>
-    
-</div>
-<div class="post-entry__meta">
-    <a href="/archives/2020/12/" class="post-meta__date button">
-    2020-12-28
-</a>
-    
-    <span class="separate-dot"></span><a href="/categories/%E4%B8%8D%E7%9C%A0%E5%A4%9C/" class="button">不眠夜</a>
-
- 
-</div>
-<div class="post-entry__tags">
-    
-        <a href="/tags/%E8%AF%BB%E4%B9%A6/" class="post-tags__link button"># 读书</a>
-    
-</div> 
-<a href="/2020/12/28/20201228/" class="post-entry__link">Link</a>
-                </div>
-            
-                <div class='post-entry content-card'>
-                    <div class="post-entry__header"></div>
-<div class="post-entry__content">
-    <h2 class="post-entry__title">
-        孟子的形象
-    </h2>
-    
-        <p>
-            孟子辗转千万里，不辞颠沛之苦。就是为了游说诸侯，宣扬自己的仁政思想，在《孟子》一书中很好的保留了他的言行。想要让诸侯接受自己的治国思想。就不可避免地要和王侯贵族进行交往。孟子在当时的战国是处于“士农工商”的“士”这一层．凭他个人的实力是不能实施他的治国方略的．只有通过游说上层自上而下施行...
-        </p>
-    
-</div>
-<div class="post-entry__meta">
-    <a href="/archives/2020/12/" class="post-meta__date button">
-    2020-12-28
-</a>
-    
-    <span class="separate-dot"></span><a href="/categories/%E4%B8%8D%E7%9C%A0%E5%A4%9C/" class="button">不眠夜</a>
-
- 
-</div>
-<div class="post-entry__tags">
-    
-        <a href="/tags/%E8%AF%BB%E4%B9%A6/" class="post-tags__link button"># 读书</a>
-    
-</div> 
-<a href="/2020/12/28/2020122802/" class="post-entry__link">Link</a>
-                </div>
-            
-                <div class='post-entry content-card'>
-                    <div class="post-entry__header"></div>
-<div class="post-entry__content">
-    <h2 class="post-entry__title">
-        读《毛泽东传》
-    </h2>
-    
-        <p>
-            作为一代伟人，毛泽东不可不谓是中华人民共和国当之无愧的缔造者。其经历之丰富、思想之伟大值得每一个人详加思考、仔细品味、用心学习。当今人们身处一个前所未有的时代。在此风云变幻之际，社会各种思潮百家争鸣、不断碰撞，毛泽东思想便显得弥足珍贵。此时重温毛泽东的人格魅力和灿烂思想是十分必要的。
-        </p>
-    
-</div>
-<div class="post-entry__meta">
-    <a href="/archives/2020/12/" class="post-meta__date button">
-    2020-12-28
-</a>
-    
-    <span class="separate-dot"></span><a href="/categories/%E4%B8%8D%E7%9C%A0%E5%A4%9C/" class="button">不眠夜</a>
-
- 
-</div>
-<div class="post-entry__tags">
-    
-        <a href="/tags/%E8%AF%BB%E4%B9%A6/" class="post-tags__link button"># 读书</a>
-    
-</div> 
-<a href="/2020/12/28/2020122804/" class="post-entry__link">Link</a>
-                </div>
-            
-                <div class='post-entry content-card'>
-                    <div class="post-entry__header"></div>
-<div class="post-entry__content">
-    <h2 class="post-entry__title">
-        KMP算法
-    </h2>
-    
-        <p>
-            KMP算法在b站看的天勤率辉考研数据结构
-
-
-指针不需要回溯
-
-匹配速...
-        </p>
-    
-</div>
-<div class="post-entry__meta">
-    <a href="/archives/2020/11/" class="post-meta__date button">
-    2020-11-15
-</a>
-    
-    <span class="separate-dot"></span><a href="/categories/%E5%AD%A6%E4%B9%A0/" class="button">学习</a>
-
- 
-</div>
-<div class="post-entry__tags">
-    
-        <a href="/tags/%E5%AD%A6%E4%B9%A0/" class="post-tags__link button"># 学习</a>
-    
-</div> 
-<a href="/2020/11/15/kmp/" class="post-entry__link">Link</a>
-                </div>
-            
-                <div class='post-entry content-card'>
-                    <div class="post-entry__header"></div>
-<div class="post-entry__content">
-    <h2 class="post-entry__title">
-        大于小于运算的常见错误
-    </h2>
-    
-        <p>
-            大于小于运算的常见错误1.a&lt;b&lt;c表示(a&lt;b)&lt;c,实质上是false&lt...
-        </p>
-    
-</div>
-<div class="post-entry__meta">
-    <a href="/archives/2020/11/" class="post-meta__date button">
-    2020-11-15
-</a>
-    
-    <span class="separate-dot"></span><a href="/categories/%E5%AD%A6%E4%B9%A0/" class="button">学习</a>
-
- 
-</div>
-<div class="post-entry__tags">
-    
-        <a href="/tags/%E5%AD%A6%E4%B9%A0/" class="post-tags__link button"># 学习</a>
-    
-</div> 
-<a href="/2020/11/15/%E5%A4%A7%E4%BA%8E%E5%B0%8F%E4%BA%8E%E8%BF%90%E7%AE%97%E7%9A%84%E5%B8%B8%E8%A7%81%E9%94%99%E8%AF%AF/" class="post-entry__link">Link</a>
-                </div>
-            
-                <div class='post-entry content-card'>
-                    <div class="post-entry__header"></div>
-<div class="post-entry__content">
-    <h2 class="post-entry__title">
-        使用++a还是a=a+1?
-    </h2>
-    
-        <p>
-            使用++a还是a=a+1？1.建议使用++a或者a+=1，这样可以直观地表示增量。
-
-        </p>
-    
-</div>
-<div class="post-entry__meta">
-    <a href="/archives/2020/11/" class="post-meta__date button">
-    2020-11-15
-</a>
-    
-    <span class="separate-dot"></span><a href="/categories/%E5%AD%A6%E4%B9%A0/" class="button">学习</a>
-
- 
-</div>
-<div class="post-entry__tags">
-    
-        <a href="/tags/%E5%AD%A6%E4%B9%A0/" class="post-tags__link button"># 学习</a>
-    
-</div> 
-<a href="/2020/11/15/%E4%BD%BF%E7%94%A8++a%E8%BF%98%E6%98%AFa=a+1/" class="post-entry__link">Link</a>
-                </div>
-            
-                <div class='post-entry content-card'>
-                    <div class="post-entry__header"></div>
-<div class="post-entry__content">
-    <h2 class="post-entry__title">
-        类型转换
-    </h2>
-    
-        <p>
-            类型转换1.type{value}或type(value)可以将value转换为type类型。
-2.建议初始化的时候也这么做，不要用...
-        </p>
-    
-</div>
-<div class="post-entry__meta">
-    <a href="/archives/2020/11/" class="post-meta__date button">
-    2020-11-15
-</a>
-    
-    <span class="separate-dot"></span><a href="/categories/%E5%AD%A6%E4%B9%A0/" class="button">学习</a>
-
- 
-</div>
-<div class="post-entry__tags">
-    
-        <a href="/tags/%E5%AD%A6%E4%B9%A0/" class="post-tags__link button"># 学习</a>
-    
-</div> 
-<a href="/2020/11/15/%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2/" class="post-entry__link">Link</a>
-                </div>
-            
-                <div class='post-entry content-card'>
-                    <div class="post-entry__header"></div>
-<div class="post-entry__content">
-    <h2 class="post-entry__title">
-        常量表达式
-    </h2>
-    
-        <p>
-            常量表达式1.常量名应该体现其意义
-2.常量值不应该经常改变
-3.尽可能少用字面常量，尽可能多用符号常量。不能被...
-        </p>
-    
-</div>
-<div class="post-entry__meta">
-    <a href="/archives/2020/11/" class="post-meta__date button">
-    2020-11-15
-</a>
-    
-    <span class="separate-dot"></span><a href="/categories/%E5%AD%A6%E4%B9%A0/" class="button">学习</a>
-
- 
-</div>
-<div class="post-entry__tags">
-    
-        <a href="/tags/%E5%AD%A6%E4%B9%A0/" class="post-tags__link button"># 学习</a>
-    
-</div> 
-<a href="/2020/11/15/%E5%B8%B8%E9%87%8F%E8%A1%A8%E8%BE%BE%E5%BC%8F/" class="post-entry__link">Link</a>
-                </div>
-            
-                <div class='post-entry content-card'>
-                    <div class="post-entry__header"></div>
-<div class="post-entry__content">
-    <h2 class="post-entry__title">
-        喉痛
-    </h2>
-    
-        <p>
-            秋日干燥常发喉痛。于我而言，喉痛可分两种：其一如火烧，另一如烟熏。又以前者危害尤甚，发作时喉管似为炭火炙烤，吞咽时痛苦异常。意欲饮水缓解又不可得，徒增泌尿压力。夜间常难以入睡，辗转反侧而久不能寐。过几日渐而平息，转为第二种。炭火熄灭仍有余烟，隐隐刺痛喉咙。初时并不明显，尔后强度增加，需喝...
-        </p>
-    
-</div>
-<div class="post-entry__meta">
-    <a href="/archives/2020/11/" class="post-meta__date button">
-    2020-11-07
-</a>
-    
-    <span class="separate-dot"></span><a href="/categories/%E4%B8%8D%E7%9C%A0%E5%A4%9C/" class="button">不眠夜</a>
-
- 
-</div>
-<div class="post-entry__tags">
-    
-        <a href="/tags/%E9%9A%8F%E6%83%B3/" class="post-tags__link button"># 随想</a>
-    
-</div> 
-<a href="/2020/11/07/20201107/" class="post-entry__link">Link</a>
-                </div>
-            
-                <div class='post-entry content-card'>
-                    <div class="post-entry__header"></div>
-<div class="post-entry__content">
-    <h2 class="post-entry__title">
-        Is Lu Xun out of time？
-    </h2>
-    
-        <p>
-            谈及鲁迅，恐怕没有几个中国人会不知此为何人，其影响力早已深植于中国文化土壤之中，但前些年的“语文教科书删除鲁迅文章”事件在媒体的炒作下引发了较大的争议。或有人说鲁迅之文章与时代脱节，或有人说鲁迅之精神不符社会主旋律。然而鲁迅是否当真过时、不再为社会所需要呢？我的观点是否定的。
-
-        </p>
-    
-</div>
-<div class="post-entry__meta">
-    <a href="/archives/2020/11/" class="post-meta__date button">
-    2020-11-02
-</a>
-    
-    <span class="separate-dot"></span><a href="/categories/%E7%BC%A0%E7%BB%95%E7%BB%93/" class="button">缠绕结</a>
-
- 
-</div>
-<div class="post-entry__tags">
-    
-        <a href="/tags/%E6%8B%99%E8%A7%81/" class="post-tags__link button"># 拙见</a>
-    
-</div> 
-<a href="/2020/11/02/20201102/" class="post-entry__link">Link</a>
-                </div>
-            
-        
+      
     </div>
+    <footer class="entry-meta entry-footer">
+      
+	<span class="ico-folder"></span>
+    <a class="article-category-link" href="/categories/%E4%B8%8D%E7%9C%A0%E5%A4%9C/">不眠夜</a>
+
+      
+  <span class="ico-tags"></span>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E8%AF%BB%E4%B9%A6/" rel="tag">读书</a></li></ul>
+
+      
+            
+      
+    </footer>
+  </div>
+  
+</article>
+
+<!-- Table of Contents -->
+
     
+
+  
+    <article id="post-2020122804"  class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
+    
+    
+      <header class="article-header">
         
-            <nav role="navigation" aria-label="Pagination Navigation">
-                
-                    <div class="pagination_prev">
-                        <a href="/page/2/" class="button">
-                            &lt;&nbsp;上一页
-                        </a>
-                    </div>
-                
-                
-                    <div class="pagination_next">
-                        <a href="/page/4/" class="button">
-                            下一页&nbsp;&gt;
-                        </a>
-                    </div>
-                
-            </nav>
+  
+    <h1 class="thumb" itemprop="name">
+      <a class="article-title" href="/2020/12/28/2020122804/">读《毛泽东传》</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	Posted on <a href="/2020/12/28/2020122804/" class="article-date">
+	  <time datetime="2020-12-28T15:52:07.000Z" itemprop="datePublished">十二月 28, 2020</time>
+	</a>
+
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>作为一代伟人，毛泽东不可不谓是中华人民共和国当之无愧的缔造者。其经历之丰富、思想之伟大值得每一个人详加思考、仔细品味、用心学习。当今人们身处一个前所未有的时代。在此风云变幻之际，社会各种思潮百家争鸣、不断碰撞，毛泽东思想便显得弥足珍贵。此时重温毛泽东的人格魅力和灿烂思想是十分必要的。</p>
+<p>《毛泽东传》一书由中央文献研究室编写，逄先知和金冲及主编。该书分为“1893—1949”和“1949—1976”两个部分，是同类关于毛泽东的传记作品中引用原始资料最详细的版本之一。其内容之丰富、篇幅之浩大、叙述之详细使得阅读下来绝非易事。阅读《毛泽东传》是了解毛泽东生平和思想的最佳方法之一。</p>
+<p>1893年的中国正处于被列强瓜分的内忧外困的状态。时局动荡、社会不稳、民心愚昧……这个古老的国家正在面临巨大的挑战和艰难的探索。就在这一时期，孙中山开始由改良投身革命，中国正处于巨大变化的前夜。毛泽东出生在湖南省湘潭县韶山冲上屋场，父亲毛顺生小有资产，一家的生活条件在当时已经很好了，一般人会选择继承家业，继续一成不变的生活。但毛泽东不一样，他骨子里有一股顽劲儿，不爱儒家经典而偏爱《水浒传》一类的书籍。他有正义感，将自己的午饭分给穷人家的孩子。他有反抗精神，偏要坐着回答老师的问题。这一切都是潜在的革命品质，而离家出走后父亲态度的软化更给了他“革命”的信心。在此后的求学历程中，毛泽东逐渐通过阅读和学习认识世界。毛泽东先后接触了不同的主义和思想，但最终选择了马克思主义，说明其信仰绝非生来就有，而是通过长期实践逐步确立的。毛泽东积极参加并组织学生运动，并成为最早加入中国共产党的一批人之一。</p>
+<p>毛泽东与苏联的想法并不是完全一致的，事实上有诸多分歧。从苏联来的指挥和建议总是强调城市、强调工人的重要性，而毛泽东作为土生土长的中国人，了解中国的实际情况。虽然工人是革命的重要力量之一，但在当时力量还很薄弱，另外长期受到压迫的农民的革命性更是不可忽视的。因此毛泽东重视农村的革命而不盲目追求城市，并且团结一切可以团结的力量。苏共自认为是正统，不了解中国的实际情况，缺乏在中国的斗争经验。他们看不起毛泽东以及其所作所为，坚持己见。而毛泽东则重视实践调查，对待问题的观点更加实事求是。在与党内异己斗争的同时，毛泽东还要面临军阀的迫害，家人为中国的革命事业做出了巨大的牺牲。</p>
+<p>在长征时期，毛泽东带领军队与敌人、与自然环境展开艰苦卓绝的斗争。长征是历史的奇迹，而毛泽东在这个奇迹中不但克服了自然环境的险恶，还在党内建立了威信，成为了重要的领导人。在延安期间，毛泽东进行了深入的思考，撰写了一系列日后知名的著作，将其思想用文字的形式保存下来。这段时期他思考了中国的命运和前途，面对日本侵略者的大肆侵略，他认为只有团结起来才能救中国。他不仅争取了民间的广泛支持，还与国民党达成了第二次国共合作。为了救国图存，毛泽东付出了极大的心血与勇气。</p>
+<p>然而在抗日战争结束后，虽然毛泽东赴重庆参加“鸿门宴”，但却无法阻止国共双方再次决裂。而此时国共双方力量相差极为悬殊，但毛泽东领导的军队却能够一步一步打退国民党反动派，这体现了其天才的战略智慧和共产党的正义性、人民性。</p>
+<p>1949年10月1日，毛泽东在天安门城楼上庄严宣布中华人民共和国的成立，这也标志共产党成为中国的执政党。毛泽东知道共产主义的达成不是一蹴而就的。他希望中国从新民主主义过渡到社会主义，再从社会主义过渡到共产主义。在建国初期他并未完全抹去残存的资产阶级，而是让其一同参与国家建设。但在国家的建设过程中，他过于重视主观意志的作用，轻视了事物发展的客观规律，从而导致了一些发展中的曲折过程。但是在社会主义建设中中国并没有成功经验可以借鉴，毛泽东也是摸着石头过河，我们不应苛责其犯下了错误，对其求全责备，更不能因为错误就畏葸不前，原地踏步。</p>
+<p>毛泽东并非是一个完人，文化大革命是其一个重大失误。他的本意是为了防止资本主义复辟，整顿国内的环境。毛泽东希望“搞一次反对修正主义的演习”，通过演习锻炼群众，让老百姓能够造反来使党和国家的权利重新回到马克思主义者的手中。但事情的发展超出了他的预期，加上身边别有用心之人的诱导使他做出了许多错误的决定。他没有想到群众运动在文化大革命中走向了反面，被别有用心的人利用。但在文化大革命的后期他已经有所醒悟，并极力纠正许多错误。他尽其一生挽救中国、建设中国，其功劳是不可否认的，我们万不可以这个错误将其全盘否定。</p>
+<p>与一些其他著名共产党人相比，毛泽东接受教育、接受新思想的年龄要更晚。但他更加执着、更富理性、更脚踏实地，这也让他做成了前人没有做成的事业，达到了前人没有达到的高度。毛泽东是一位从人民群众中成长起来的伟大领袖，他的心中永远装着人民群众。若没有毛泽东，中国绝没有今天的面貌。毛泽东的一生都在斗争，但斗争的目的都是为了人民。</p>
+<p>阅读《毛泽东传》，我读到了毛泽东的传奇一生，读到了毛泽东的深刻思想，读到了毛泽东一心为人民的崇高精神。毛泽东是一个永不过时的人物，他不仅改变了中国，更影响了世界。因此他不仅是属于中国的，也是属于世界的。</p>
+
+      
+    </div>
+    <footer class="entry-meta entry-footer">
+      
+	<span class="ico-folder"></span>
+    <a class="article-category-link" href="/categories/%E4%B8%8D%E7%9C%A0%E5%A4%9C/">不眠夜</a>
+
+      
+  <span class="ico-tags"></span>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E8%AF%BB%E4%B9%A6/" rel="tag">读书</a></li></ul>
+
+      
+            
+      
+    </footer>
+  </div>
+  
+</article>
+
+<!-- Table of Contents -->
+
+    
+
+  
+    <article id="post-20201228"  class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
+    
+    
+      <header class="article-header">
         
+  
+    <h1 class="thumb" itemprop="name">
+      <a class="article-title" href="/2020/12/28/20201228/">读《乡土中国》</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	Posted on <a href="/2020/12/28/20201228/" class="article-date">
+	  <time datetime="2020-12-28T15:52:07.000Z" itemprop="datePublished">十二月 28, 2020</time>
+	</a>
+
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>《乡土中国》由中国最早的人类学和社会学学者之一费孝通先生所著，是中国最知名的社会学著作之一。本书由费孝通先生在西南联大和云南大学的“乡村社会学”讲稿整理而成，读来似于课堂听讲，如沐春风。</p>
+<p>研究社会的学者常会犯纸上谈兵的毛病，时常会用自己的主观臆想来居高临下地审视芸芸众生，而忘记了自己不过是众生一员。而费孝通先生则不然。正所谓“没有调查就没有发言权”，他深入田间地头进行实地考察，以真见解求真学问，从乡村的视角看中国的乡村百态。</p>
+<p>据费孝通先生自述，《乡土中国》并非是一部调查报告，而是对社会现实加以抽象，提炼出概念进而分析内在联系，也即建立了乡村社会的概念模型。本书共分14章，依次是乡土本色、文字下乡、再论文字下乡、差序格局、维系着私人的道德、家族、男女有别、礼治秩序、无讼、无为政治、长老政治、血缘和地缘、名实的分离、从欲望到需要。14篇文章并非独立存在，而是具有内在连续性。</p>
+<p>乡土社会是“熟悉”的社会。人与人熟悉，人与物熟悉。乡村的狭小圈子自古以来就少变动，由于变动的慢，极少产生新事物，人人从小就知道了身边的一切。在何时做何事，遇事应该如何处理，早就有无数前人帮你铺好了道路，你只需照做即可。因此所有人遵循着相同的伦理纲常，但又不觉得自己被什么制约。这不同于法律对人的强制要求，而是让人们认为一切都是天经地义的。</p>
+<p>在乡村，人们依靠土地生活。一块土地长时间地服务于几个家族，这些家族的根基稳固，导致外来人员难以融入。本地居民又极少向外迁徙，这就造成了乡村社会的稳定性和独立性。这又为无为政治和长老政治提供了基础，“天高皇帝远”，再加上乡村的稳定性和独立性，皇帝很难强行插手乡村的基层政治，便以无为代有为；无为又导致地方的自治，由于长老的丰富经验足已解决乡土社会中的他部分问题，又因长老一般德高望重，具有较高的社会地位，因此他们的意见往往具有决定性作用，进而形成了长老政治。</p>
+<p>费孝通指出，在乡土社会中血缘大于地缘，即使社会流动也不会改变这个特点，“籍贯只是血缘的投影”。只有商业的发展才能冲击这一关系，因为商业是不能在血缘之内发展的。两人必须先去数十里外的集市才能做买卖，即使他们可能就住在一起。</p>
+<p>乡土社会是静止的。几十年过去，几百年过去，人们生活并没有重大的改变。因此我们不能期待在这样稳固的社会中自动发生变革。在费孝通看来，社会改革的首要任务是由外来的知识分子进行制度建设。他设想只要有人将乡土工业安置在乡村中，具有守土心理的本地人就会自然而然到工厂中劳动。</p>
+<p>《乡土中国》于现今之中国具有特殊的重要意义。中国社会正处转型期，党的十九大以来，以习近平同志为核心的党中央高度重视乡村问题，始终把坚持农业农村优先发展作为“国之大者”。党的十九届五中全会提出要优先发展农业农村，全面推进乡村振兴。在乡村振兴战略的背景下，研究乡村问题便意义非凡。虽然时空环境发生了巨大变迁，但是这部著作仍有不少参考价值。社会的范式是根深蒂固的，即使我国在短短百年间经历了数次意识形态的巨大改变，但在乡村地区，《乡土中国》中所述的诸诸种种情状仍有所保持。我国若想真正治理好乡村问题，则可从本书中获得启发，并应该鼓励更多学者开展“费孝通式”的，深入乡村实地考察的研究。</p>
+
+      
+    </div>
+    <footer class="entry-meta entry-footer">
+      
+	<span class="ico-folder"></span>
+    <a class="article-category-link" href="/categories/%E4%B8%8D%E7%9C%A0%E5%A4%9C/">不眠夜</a>
+
+      
+  <span class="ico-tags"></span>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E8%AF%BB%E4%B9%A6/" rel="tag">读书</a></li></ul>
+
+      
+            
+      
+    </footer>
+  </div>
+  
+</article>
+
+<!-- Table of Contents -->
+
     
 
-
-</main>
-
-            <footer class="footer">
+  
+    <article id="post-kmp"  class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
     
-
-
     
-     
- 
-
- 
-    
+      <header class="article-header">
         
-        <p class="footer-copyright">
-            Copyright&nbsp;©&nbsp;2020&nbsp;-&nbsp;2021&nbsp;<a href="/">TheHushrush</a>
-        </p>
-    
-    
-    <p>Powered by <a href="https://hexo.io" target="_blank">Hexo</a> | Theme - <a href="https://github.com/ChrAlpha/hexo-theme-cards" target="_blank">Cards</a></p>
-</footer>
+  
+    <h1 class="thumb" itemprop="name">
+      <a class="article-title" href="/2020/11/15/kmp/">KMP算法</a>
+    </h1>
+  
 
-        </div>
+      </header>
+    
+    <div class="article-meta">
+      
+	Posted on <a href="/2020/11/15/kmp/" class="article-date">
+	  <time datetime="2020-11-15T15:52:07.000Z" itemprop="datePublished">十一月 15, 2020</time>
+	</a>
+
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="KMP算法"><a href="#KMP算法" class="headerlink" title="KMP算法"></a>KMP算法</h1><p>在b站看的天勤率辉考研数据结构</p>
+<hr>
+<ol>
+<li><p>指针不需要回溯</p>
+</li>
+<li><p>匹配速度快</p>
+<hr>
+<p>1 基本思路</p>
+<p>1.1 模式串和主串中字符一一比较，直到找到不同处</p>
+<p>1.2 前n个字符一定是相同的，现在找最大公共前后缀</p>
+<p>1.3 将移动模式串使得模式串中的前缀位对应主串中的后缀位</p>
+<p>1.4 继续比较</p>
+<hr>
+<p>2 注意</p>
+<p>2.1 最大公共前后缀要小于本身</p>
+<p>2.2 如果某一时刻模式串尾已经超出主串长度，则匹配失败</p>
+<p>2.3 公共前后缀可以交叉，前缀中的某部分可以在后缀中，只要能让模式串移动就行</p>
+<p>2.4 如果没有公共前后缀，就直接往后移动一位</p>
+<hr>
+<p>3 求解方法</p>
+<p>3.1 移动一位也就是与下一位比较</p>
+<p>3.2 将模式串存于一个数组中，一般习惯从下标为1开始存</p>
+<p>3.3 主串与模式串发生不匹配的位置叫做当前位置</p>
+<p>3.4 从1号位开始比较</p>
+<p>​        3.4.1 1号位不匹配则与下一位比较</p>
+<p>​        3.4.2 1号位匹配，而2号位不匹配，则公共前后缀相同，违反2.1，即公共前后缀长度为0，1号位与当前位置比较</p>
+<p>3.5 发生不匹配，则模式串中前缀的下一位与当前位置比较</p>
+<hr>
+<p>4 注意</p>
+<p>4.1 所谓指针在主串上，当前位置是主串上的位置</p>
+<p>4.2 模式串0号位默认不存储数据，从1号位开始存</p>
+<p>*4.3 如果公共前后缀长度位n，则模式串上n+1号位与当前位置比较。这样除了1号位就不匹配时没有公共前后缀，其他的都有（最多长度为0），所以可以把1号位不匹配的情况单独出来，其他情况按以上规律</p>
+<p>*4.4 next数组</p>
+<p>​        求模式串每一位失配时的公共前后缀长度，将其加一存到一个数组中就是next数组。设1号位的公共前后缀长度为-1，这样next数组第一位是0.</p>
+<p>*4.5 求出next数组后就知道每一位失配后下一步的操作</p>
+<hr>
+<p>以上是一种手工操作</p>
+<p>5 改进方法求next数组</p>
+<p>5.1 设next[j]=t，则j号位失配时，前面的公共前后缀长度是t-1。</p>
+<p>5.2 那么p[1]<del>p[t-1]是前缀，p[j-t+1]</del>p[j-1]是后缀</p>
+<p>5.3 若p[j]=p[t]，则next[j+1]=t+1=next[j]+1</p>
+<p>​        若p[j]!=p[t]，则循环将t赋值为next[t]，直到t=0或满足p[j]=p[t].t=0时next[j+1]=1</p>
+<p>5.4 背下来</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">getNext</span><span class="params">(Str substr, <span class="keyword">int</span> next[])</span><span class="comment">//求next和主串没关系</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> j = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">int</span> t = <span class="number">0</span>;<span class="comment">//next[1]==0</span></span><br><span class="line">    next[<span class="number">1</span>] = <span class="number">0</span>;<span class="comment">//1号位默认是0</span></span><br><span class="line">    <span class="keyword">while</span>(j&lt;substr.length)<span class="comment">//j&lt;字符串长度，而不能等于，因为接下来要求j+1的next</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span>(t==<span class="number">0</span>||j&lt;substr.ch[j]==substr.ch[t])</span><br><span class="line">        &#123;</span><br><span class="line">            next[j+<span class="number">1</span>]=t+<span class="number">1</span>;</span><br><span class="line">            ++t;</span><br><span class="line">            ++j;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">        &#123;</span><br><span class="line">            t=next[t];<span class="comment">//j还是不变</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">KMP</span><span class="params">(Str str, Str substr, <span class="keyword">int</span> next[])</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> i = <span class="number">1</span>;<span class="keyword">int</span> j = <span class="number">1</span>;<span class="comment">//i,j指向主串和模式串的位置</span></span><br><span class="line">    <span class="keyword">while</span>(i&lt;=str.length&amp;&amp;j&lt;=substr.length)<span class="comment">//i大于时匹配失败，j大于时匹配成功</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span>(str.ch[i]==substr.ch[j]||j==<span class="number">0</span>)<span class="comment">//若两字符相等，则比较下一位字符是否相等。j==0时模式串中无内容</span></span><br><span class="line">        &#123;</span><br><span class="line">            ++i;</span><br><span class="line">            ++j;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">        &#123;</span><br><span class="line">            j=next[j];<span class="comment">//i没有动，就是没有回溯，next[j]就是模式串中应该与主串比较的位置。next[j]为0就是第一位就不匹配，恰好让j也为0，这样可以并入if中</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span>(j&gt;substr.length)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">return</span> i-substr.length;<span class="comment">//匹配成功，返回主串中位置</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+
+      
+    </div>
+    <footer class="entry-meta entry-footer">
+      
+	<span class="ico-folder"></span>
+    <a class="article-category-link" href="/categories/%E5%AD%A6%E4%B9%A0/">学习</a>
+
+      
+  <span class="ico-tags"></span>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%AD%A6%E4%B9%A0/" rel="tag">学习</a></li></ul>
+
+      
+            
+      
+    </footer>
+  </div>
+  
+</article>
+
+<!-- Table of Contents -->
+
+    
+
+  
+    <article id="post-使用++a还是a=a+1"  class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
+    
+    
+      <header class="article-header">
         
-    <script defer src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.1.0/dist/lazyload.min.js"></script>
-    <script>
-        window.lazyLoadOptions = {
-            elements_selector: ".lazyload",
-            threshold: 0
-        };
-    </script>
- 
+  
+    <h1 class="thumb" itemprop="name">
+      <a class="article-title" href="/2020/11/15/%E4%BD%BF%E7%94%A8++a%E8%BF%98%E6%98%AFa=a+1/">使用++a还是a=a+1?</a>
+    </h1>
+  
 
- 
+      </header>
+    
+    <div class="article-meta">
+      
+	Posted on <a href="/2020/11/15/%E4%BD%BF%E7%94%A8++a%E8%BF%98%E6%98%AFa=a+1/" class="article-date">
+	  <time datetime="2020-11-15T15:52:07.000Z" itemprop="datePublished">十一月 15, 2020</time>
+	</a>
 
- 
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="使用-a还是a-a-1？"><a href="#使用-a还是a-a-1？" class="headerlink" title="使用++a还是a=a+1？"></a>使用++a还是a=a+1？</h1><p>1.建议使用++a或者a+=1，这样可以直观地表示增量。</p>
+<p>2.a=a+1可能会是a=a+2写错了，并且没有递增的增量的意思。</p>
 
- 
-    <script>
-        var _hmt = _hmt || [];
-        (function() {
-            var hm = document.createElement('script');
-            hm.src = 'https://hm.baidu.com/hm.js?fe1d9d2dc48a2ab8ea7f292f05e237cd';
-            var s = document.getElementsByTagName('script')[0];
-            s.parentNode.insertBefore(hm, s);
-        })();
-    </script>
- 
+      
+    </div>
+    <footer class="entry-meta entry-footer">
+      
+	<span class="ico-folder"></span>
+    <a class="article-category-link" href="/categories/%E5%AD%A6%E4%B9%A0/">学习</a>
+
+      
+  <span class="ico-tags"></span>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%AD%A6%E4%B9%A0/" rel="tag">学习</a></li></ul>
+
+      
+            
+      
+    </footer>
+  </div>
+  
+</article>
+
+<!-- Table of Contents -->
+
+    
+
+  
+    <article id="post-大于小于运算的常见错误"  class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" itemprop="name">
+      <a class="article-title" href="/2020/11/15/%E5%A4%A7%E4%BA%8E%E5%B0%8F%E4%BA%8E%E8%BF%90%E7%AE%97%E7%9A%84%E5%B8%B8%E8%A7%81%E9%94%99%E8%AF%AF/">大于小于运算的常见错误</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	Posted on <a href="/2020/11/15/%E5%A4%A7%E4%BA%8E%E5%B0%8F%E4%BA%8E%E8%BF%90%E7%AE%97%E7%9A%84%E5%B8%B8%E8%A7%81%E9%94%99%E8%AF%AF/" class="article-date">
+	  <time datetime="2020-11-15T15:52:07.000Z" itemprop="datePublished">十一月 15, 2020</time>
+	</a>
+
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="大于小于运算的常见错误"><a href="#大于小于运算的常见错误" class="headerlink" title="大于小于运算的常见错误"></a>大于小于运算的常见错误</h1><p>1.a&lt;b&lt;c表示(a&lt;b)&lt;c,实质上是false&lt;c或者true&lt;c.</p>
+<p>2.大于也一样。</p>
+<p>3.应该说a&lt;b&amp;&amp;b&lt;c.</p>
+<p>4.大于也一样。</p>
+
+      
+    </div>
+    <footer class="entry-meta entry-footer">
+      
+	<span class="ico-folder"></span>
+    <a class="article-category-link" href="/categories/%E5%AD%A6%E4%B9%A0/">学习</a>
+
+      
+  <span class="ico-tags"></span>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%AD%A6%E4%B9%A0/" rel="tag">学习</a></li></ul>
+
+      
+            
+      
+    </footer>
+  </div>
+  
+</article>
+
+<!-- Table of Contents -->
+
+    
+
+  
+    <article id="post-常量表达式"  class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" itemprop="name">
+      <a class="article-title" href="/2020/11/15/%E5%B8%B8%E9%87%8F%E8%A1%A8%E8%BE%BE%E5%BC%8F/">常量表达式</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	Posted on <a href="/2020/11/15/%E5%B8%B8%E9%87%8F%E8%A1%A8%E8%BE%BE%E5%BC%8F/" class="article-date">
+	  <time datetime="2020-11-15T15:52:07.000Z" itemprop="datePublished">十一月 15, 2020</time>
+	</a>
+
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="常量表达式"><a href="#常量表达式" class="headerlink" title="常量表达式"></a>常量表达式</h1><p>1.常量名应该体现其意义</p>
+<p>2.常量值不应该经常改变</p>
+<p>3.尽可能少用字面常量，尽可能多用符号常量。不能被直接识别的字面常量称为魔术常量</p>
+<p>4.常量表达式</p>
+<p>4.1常量表达式是仅由常量构成的整型值表达式，在编译期间就可以计算出结果。好处在于        1.允许一些计算只在编译时进行一次，而不是每次程序运行时；<br>　　2.编译器可以进行尺度更大的优化；<br>　　3.可以用在需求编译期间常量的上下文，例如数组长度等；</p>
+<p>4.2举例</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">constexpr</span> <span class="keyword">int</span> <span class="built_in">max</span> = <span class="number">17</span>;<span class="comment">//字面常量，是常量表达式</span></span><br><span class="line"><span class="keyword">int</span> val = <span class="number">19</span>;</span><br><span class="line"><span class="built_in">max</span>+<span class="number">2</span>;<span class="comment">//是常量表达式</span></span><br><span class="line">val+<span class="number">2</span>;<span class="comment">//不是常量表达式，有变量val</span></span><br></pre></td></tr></table></figure>
+
+<p>4.3constexpr和const</p>
+<p>4.3.1const 是对变量的一个修饰，告诉编译器这个变量只能被初始化且不能修改（可以通过堆栈溢出等方式修改），初始化可以延迟到运行时。</p>
+<p>例如</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">constexpr</span> <span class="keyword">int</span> <span class="built_in">max</span> = <span class="number">100</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">use</span><span class="params">(<span class="keyword">int</span> n)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">constexpr</span> <span class="keyword">int</span> c1=<span class="built_in">max</span>+<span class="number">7</span><span class="comment">//正确，c1是107，c1是常量</span></span><br><span class="line">	<span class="keyword">const</span> <span class="keyword">int</span> c2=n+<span class="number">7</span><span class="comment">//正确，n还不知道，但是编译的时候就知道了</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>4.3.2constexpr</p>
+<p>4.3.2.1constexpr修饰变量时，变量必须在编译时就被初始化。所有constexpr对象都是const的，但是不是所有的const对象都是constexpr的。</p>
+<p>4.3.2.2constexpr修饰函数（见引用段落）</p>
+<blockquote>
+<p>（以下见<a href="https://www.cnblogs.com/lizhanzhe/p/10901768.html）" target="_blank" rel="noopener">https://www.cnblogs.com/lizhanzhe/p/10901768.html）</a></p>
+<p>constexpr函数限制持有和返回的类型为字面值类型（literal type），本质上就是一些在编译期间可确定值的类型。在C++中，除了void之外的内置类型都是字面值类型，不过用户定义的类型也有可能是字面值类型，因为构造函数和其他成员函数可能是constexpr的；<br>　如果实参都是常量表达式的话，那么它可以在编译时产生返回值；其它情况下，常量表达式函数跟普通函数一样，只有在运行时才能被调用，产生返回值；</p>
+<p><strong>对constexpr函数的基本要求：</strong></p>
+<ol>
+<li>常量表达式函数必须有返回值（不可以是void函数）</li>
+<li>常量表达式函数体中只能有一条语句，且该语句必须是return语句。（可以使用?:、递归）但不产生实际代码的语句可以在常量表达式函数中使用，如static_assert,using,typedef等（这条规定在C++14中大幅放松）</li>
+<li>return语句中，不能使用非常量表达式的变量、函数，且return的表达式也要是常量表达式</li>
+<li>常量表达式函数在使用前，必须有定义。（普通函数在被调用前只要有函数声明就够了，不一定有定义）</li>
+</ol>
+<p><strong>常量构造函数的要求：</strong></p>
+<ol>
+<li>成员变量只能通过初始化列表来初始化，函数体必须为空</li>
+<li>初始化列表只能由常量表达式来赋值</li>
+</ol>
+<p><strong>常量成员函数的要求：</strong></p>
+<ol>
+<li>常量成员函数被隐式定义为const成员函数，不可以通过常量成员函数去修改成员变量。也就是说，常量成员函数往往是所谓的getter函数。（c++14则不同，允许constexpr成员函数去修改成员变量）</li>
+<li>常量成员函数不能是virtual的</li>
+</ol>
+<p><strong>在C++11与C++14的区别：</strong><br>　　在C++11标准中，对于constexpr修饰的函数给了及其苛刻的限定条件：函数的返回值类型及所有形参的类型都是字面值类型，而且函数体内必须有且只有一条return语句。这个条件显然是太苛刻了，以至于很多在constexpr的操作都要借助？：表达式，递归等办法实现。在C++14中，放宽了这一限定，只保留了“函数的返回值类型及所有形参的类型都是字面值类型”，也就是说，这些值都在编译期能确定了就行。</p>
+<h3 id="constexpr与const的本质区别"><a href="#constexpr与const的本质区别" class="headerlink" title="constexpr与const的本质区别"></a>constexpr与const的本质区别</h3><p>　　<strong>const</strong>主要用于表达“对接口的写权限控制”，即“对于被const修饰的量名(例如const指针变量)，不得通过它对所指对象作任何修改”。(但是可以通过其他接口修改该对象)。另外，把对象声明为const也为编译器提供了潜在的优化可能。具体来说就是，如果把一个量声明为const，并且没有其他地方对该量作取址运算，那么编译器通常(取决于编译期实现)会用该量的实际常量值直接替换掉代码中所有引用该量的地方，而不用在最终编译结果中生成对该量的存取指令。<strong>constexpr</strong>的主要功能则是让更多的运算可以在编译期完成，并能保证表达式在语义上是类型安全的。(译注：相比之下，C语言中#define只能提供简单的文本替换，而不具任何类型检查能力)。与const相比，被constexpr修饰的对象则强制要求其初始化表达式能够在编译期完成计算。之后所有引用该常量对象的地方，若非必要，一律用计算出来的常量值替换。</p>
+<h3 id="能否同时使用constexpr与const"><a href="#能否同时使用constexpr与const" class="headerlink" title="能否同时使用constexpr与const?"></a>能否同时使用constexpr与const?</h3><p>　　对于变量来讲，一般情况下constexpr已经包含了const的语义，所以没必要同时使用；但是也有特殊情况：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">static constexpr int N &#x3D; 3;</span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">  constexpr const int *NP &#x3D; &amp;N;</span><br><span class="line">  return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>　　在这里const和constexpr在修饰不同的东西，constexpr和const都必须要有。constexpr表示NP指针本身是常量表达式，而const表示指向的值是一个常量。去掉const之后无法编译，因为不能用正常指针指向常量。对于成员函数来讲，在C++11中constexpr同样包含const的含义，但是C++14中则不，所以C++14中可能会需要同时使用const与constexpr。</p>
+</blockquote>
+
+      
+    </div>
+    <footer class="entry-meta entry-footer">
+      
+	<span class="ico-folder"></span>
+    <a class="article-category-link" href="/categories/%E5%AD%A6%E4%B9%A0/">学习</a>
+
+      
+  <span class="ico-tags"></span>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%AD%A6%E4%B9%A0/" rel="tag">学习</a></li></ul>
+
+      
+            
+      
+    </footer>
+  </div>
+  
+</article>
+
+<!-- Table of Contents -->
+
+    
+
+  
+    <article id="post-类型转换"  class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" itemprop="name">
+      <a class="article-title" href="/2020/11/15/%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2/">类型转换</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	Posted on <a href="/2020/11/15/%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2/" class="article-date">
+	  <time datetime="2020-11-15T15:52:07.000Z" itemprop="datePublished">十一月 15, 2020</time>
+	</a>
+
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="类型转换"><a href="#类型转换" class="headerlink" title="类型转换"></a>类型转换</h1><p>1.type{value}或type(value)可以将value转换为type类型。</p>
+<p>2.建议初始化的时候也这么做，不要用int a = 2；之类。</p>
+<p>3.窄化转换会报错。</p>
+<p>3.举例：</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">double</span> d&#123;<span class="number">2.5</span>&#125;;</span><br><span class="line"><span class="keyword">int</span> i&#123;<span class="number">1</span>&#125;;</span><br><span class="line"><span class="keyword">int</span> i2&#123;d/i&#125;;<span class="comment">//这里错误，double转int可能窄化。</span></span><br></pre></td></tr></table></figure>
+
+<p>4.另外，算术表达式中有double类型的化就进行浮点运算，结果为double，否则用int，结果为int。</p>
+
+      
+    </div>
+    <footer class="entry-meta entry-footer">
+      
+	<span class="ico-folder"></span>
+    <a class="article-category-link" href="/categories/%E5%AD%A6%E4%B9%A0/">学习</a>
+
+      
+  <span class="ico-tags"></span>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%AD%A6%E4%B9%A0/" rel="tag">学习</a></li></ul>
+
+      
+            
+      
+    </footer>
+  </div>
+  
+</article>
+
+<!-- Table of Contents -->
+
+    
+
+  
+    <article id="post-20201107"  class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" itemprop="name">
+      <a class="article-title" href="/2020/11/07/20201107/">喉痛</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	Posted on <a href="/2020/11/07/20201107/" class="article-date">
+	  <time datetime="2020-11-07T08:13:08.000Z" itemprop="datePublished">十一月 7, 2020</time>
+	</a>
+
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>秋日干燥常发喉痛。于我而言，喉痛可分两种：其一如火烧，另一如烟熏。又以前者危害尤甚，发作时喉管似为炭火炙烤，吞咽时痛苦异常。意欲饮水缓解又不可得，徒增泌尿压力。夜间常难以入睡，辗转反侧而久不能寐。过几日渐而平息，转为第二种。炭火熄灭仍有余烟，隐隐刺痛喉咙。初时并不明显，尔后强度增加，需喝水缓解。像在烧开的沸水中浇一碗凉水，喝水缓解打灭了势头却没解决根本问题，几分钟后又周而复始，循环往复，不过也还是强度递减，属于欠阻尼振动。</p>
+<p>前几天感冒，夜里被喉痛侵扰而难以入睡，不得不将水杯拿上床。黎明时分又醒来，折磨我本就不好的睡眠。转念想到至少没发烧，也不是新冠，加上今年手上也没脱皮，与往年相比情况有所改善。<br>健康不容忽视，该锻炼还得锻炼，所谓身体是革命的本钱。但又厌恶运动，加之外套厚重，跑起步来有较大能量损耗，大汗淋漓时又不敢脱下，所以跑步计划一推再推，难以贯彻落实。好在住在七楼，每天强制攀爬楼梯，也算不小运动，要是拿快递则会多克服重力做不少功。</p>
+<p>话说回来，喉痛的原因也分主次，感冒固然会引发喉痛，但直接原因恐怕还是中午吃了干锅花菜。湖南小炒是我为数不多钟意的食堂窗口，其中干锅花菜和香干炒肉的性价比最高。名为素菜，肉却比直接点炒肉要多且价格更低。但干锅花菜放了些许辣，于我而言是合适的，于喉咙可能不一定了。辣常与火相关，可能锅里的辣椒点燃了喉中干柴，加上干燥的空气，烧得我唇齿枯焦，呼吸不适。<br>总之喉痛令人烦躁，又难以预防，可谓健康生活一大恶敌。</p>
+
+      
+    </div>
+    <footer class="entry-meta entry-footer">
+      
+	<span class="ico-folder"></span>
+    <a class="article-category-link" href="/categories/%E4%B8%8D%E7%9C%A0%E5%A4%9C/">不眠夜</a>
+
+      
+  <span class="ico-tags"></span>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E9%9A%8F%E6%83%B3/" rel="tag">随想</a></li></ul>
+
+      
+            
+      
+    </footer>
+  </div>
+  
+</article>
+
+<!-- Table of Contents -->
+
+    
+
+  
+    <article id="post-20201102"  class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" itemprop="name">
+      <a class="article-title" href="/2020/11/02/20201102/">Is Lu Xun out of time？</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	Posted on <a href="/2020/11/02/20201102/" class="article-date">
+	  <time datetime="2020-11-02T08:13:08.000Z" itemprop="datePublished">十一月 2, 2020</time>
+	</a>
+
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>谈及鲁迅，恐怕没有几个中国人会不知此为何人，其影响力早已深植于中国文化土壤之中，但前些年的“语文教科书删除鲁迅文章”事件在媒体的炒作下引发了较大的争议。或有人说鲁迅之文章与时代脱节，或有人说鲁迅之精神不符社会主旋律。然而鲁迅是否当真过时、不再为社会所需要呢？我的观点是否定的。</p>
+<p>从其作品反映的社会现象来说，鲁迅没有过时。鲁迅批判的社会现象至今仍未完全消失。《风筝》中家长压抑孩子的天性，现今家长动辄报补习班，限制课外活动甚至有愈演愈烈之势；其批判国民性的“自轻自贱、妄自尊大、自欺欺人、欺软怕硬、麻木健忘”等或多或少仍存在于社会中，不可不说其笔下的种种人物如今还能看得到原型，其对改造社会的向往仍值得去追求。或许对于学生来讲，鲁迅的作品并不适合学生的语文学习，但这并不能否定其作品的意义，更不能标志其过时与否。只要这些社会现象还存在、国民性还存在这些缺点，鲁迅就没有过时。</p>
+<p>从鲁迅的政治意义来说，鲁迅更没有过时。若将“鲁迅”等同于这位作家本人，那么一个人在去世以后便“过时”了。但在其去世之后，“鲁迅”逐渐被抽象成一种符号，带有鲜明的政治特征。“鲁迅”并不局限于一个市民、一位作家，更是革命/<em>和左翼</em>/的象征。/<em>在“文革”时期，对于鲁迅的褒扬一度接近神化的高度，作为政治工具的鲁迅自然没有“过时”；而在台湾，戒严时期里鲁迅则曾是不可言说的禁区，这也与国民党反动派的政治特点密不可分，可见在这一方面，鲁迅“过时”与否和时代的政治需求密切相关。</em>/鲁迅的存在使我们永葆革命精神，进而坚定我们的共产主义信仰，从这个角度来看，鲁迅更没有也不会过时。遗憾的是现在对于鲁迅的解读将其片面的塑造成了一种符号、一种词典上的词条。然而符号化后的鲁迅失去了原有的丰富内涵，变成了一个空洞的偶像，也给现今的“过时”论埋下了伏笔。当今学生普遍不爱读鲁迅作品，甚至仅看到鲁迅二字便会产生反感，追本溯源还是由于鲁迅被反复符号化地解读，透支了鲁迅的伟大形象，使大众对鲁迅产生了疲劳甚至厌烦，出于对这种疲劳的抗议，社会上出现了反对鲁迅，批其过时的声音。这个角度来看，所谓的“过时”、“无用”论实际上是一种情绪化的反抗。/<em>另一方面，从政治角度看，也不排除有保守势力甚至境外反动势力对鲁迅蓄意抹黑以打击革命，完全否定革命思想，煽动舆论来制造鲁迅过时的假象，这就相当值得警惕了。</em>/</p>
+<p>总而言之，鲁迅并没有过时，并且还会继续保持顽强的生命力。</p>
+
+      
+    </div>
+    <footer class="entry-meta entry-footer">
+      
+	<span class="ico-folder"></span>
+    <a class="article-category-link" href="/categories/%E7%BC%A0%E7%BB%95%E7%BB%93/">缠绕结</a>
+
+      
+  <span class="ico-tags"></span>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%8B%99%E8%A7%81/" rel="tag">拙见</a></li></ul>
+
+      
+            
+      
+    </footer>
+  </div>
+  
+</article>
+
+<!-- Table of Contents -->
+
+    
 
   
 
 
+  <nav id="page-nav">
+    
+    <a class="extend prev" rel="prev" href="/page/2/">上一页</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/4/">下一页</a>
+  </nav>
 
- 
+</section>
+          <aside id="sidebar">
+  
+    <div class="widget-wrap" style="margin: 20px 0;">
+	<div id="search-form-wrap">
+
+    <form class="search-form">
+        <label style="width: 75%;">
+            <span class="screen-reader-text">Search for:</span>
+            <input type="search" class="search-field" style="height: 42px;" placeholder=" 搜索…" value="" name="s" title="Search for:">
+        </label>
+        <input type="submit" class="search-form-submit" value="搜索">
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="请输入关键词..."/>
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: '文章',
+            PAGES: '页面',
+            CATEGORIES: '分类',
+            TAGS: '标签',
+            UNTITLED: '(无标题)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+
+<script src="/js/insight.js"></script>
 
 
+</div>
+</div>
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">联系我们</h3>
+    <div class="widget widget_athemes_social_icons">
+
+    	<ul class="clearfix widget-social-icons">   
+    	
+          
+     			  <li><a href="https://github.com/hushrushing" target="_blank" rel="noopener" title="Github"><i class="fa fa-github" aria-hidden="true"></i></a></li> 
+          
+   		
+          
+     			  <li><a href="" title="Weibo"><i class="fa fa-weibo" aria-hidden="true"></i></a></li> 
+          
+   		
+          
+     			  <li><a href="" title="Twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a></li> 
+          
+   		
+          
+     			  <li><a href="" title="Facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a></li> 
+          
+   		
+          
+     			  <li><a href="" title="Google-plus"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li> 
+          
+   		
+          
+     			  <li><a href="" title="Instagram"><i class="fa fa-instagram" aria-hidden="true"></i></a></li> 
+          
+   		
+          
+     			  <li><a href="" title="Pinterest"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li> 
+          
+   		
+          
+     			  <li><a href="" title="Flickr"><i class="fa fa-flickr" aria-hidden="true"></i></a></li> 
+          
+   		
+          
+            <li><a href="mailto:?subject=请联系我&body=我能帮你什么" title="email"><i class="fa fa-envelope" aria-hidden="true"></i></a></li> 
+          
+   		
+   		</ul>
+
+
+   		<!--
+   		<ul class="clearfix widget-social-icons">   		
+   		<li class="widget-si-twitter"><a href="http://twitter.com" target="_blank" rel="noopener" title="Twitter"><i class="ico-twitter"></i></a></li> 
+		<li class="widget-si-facebook"><a href="http://facebook.com" target="_blank" rel="noopener" title="Facebook"><i class="ico-facebook"></i></a></li>
+			<li class="widget-si-gplus"><a href="http://plus.google.com" target="_blank" rel="noopener" title="Google+"><i class="ico-gplus"></i></a></li>
+			<li class="widget-si-pinterest"><a href="http://pinterest.com" target="_blank" rel="noopener" title="Pinterest"><i class="ico-pinterest"></i></a></li>
+			<li class="widget-si-flickr"><a href="http://flickr.com" target="_blank" rel="noopener" title="Flickr"><i class="ico-flickr"></i></a></li>
+			<li class="widget-si-instagram"><a href="http://instagram.com" target="_blank" rel="noopener" title="Instagram"><i class="ico-instagram"></i></a></li>
+		</ul> -->
+
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget_athemes_tabs">
+    <ul id="widget-tab" class="clearfix widget-tab-nav">
+      <li class="active"><a>最新文章</a></li>
+    </ul>
+    <div class="widget">
+      <ul>
+        
+          <li class="clearfix">
+
+            
+              <div class="widget-entry-summary" style="margin: 0;">
+            
+
+              <h6 style="margin: 0;"><a href="/2021/05/22/cpp%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/">cpp复习</a></h6>
+              <span>五月 22, 2021</span>
+            </div>
+
+          </li>
+        
+          <li class="clearfix">
+
+            
+              <div class="widget-entry-summary" style="margin: 0;">
+            
+
+              <h6 style="margin: 0;"><a href="/2021/05/21/index/">pdf预览</a></h6>
+              <span>五月 21, 2021</span>
+            </div>
+
+          </li>
+        
+          <li class="clearfix">
+
+            
+              <div class="widget-entry-summary" style="margin: 0;">
+            
+
+              <h6 style="margin: 0;"><a href="/2021/05/19/%E7%AE%97%E6%B3%95%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%88%86%E6%9E%90%E4%B8%89%EF%BC%9Ad%E6%A3%AE%E6%9E%97%E9%97%AE%E9%A2%98/">算法设计与分析实验三：d森林问题</a></h6>
+              <span>五月 19, 2021</span>
+            </div>
+
+          </li>
+        
+          <li class="clearfix">
+
+            
+              <div class="widget-entry-summary" style="margin: 0;">
+            
+
+              <h6 style="margin: 0;"><a href="/2021/05/19/%E7%AE%97%E6%B3%95%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E9%AA%8C%E4%BA%8C%EF%BC%9A%E9%92%A2%E6%9D%A1%E5%88%87%E5%89%B2/">算法设计与分析实验二：钢条切割问题</a></h6>
+              <span>五月 19, 2021</span>
+            </div>
+
+          </li>
+        
+          <li class="clearfix">
+
+            
+              <div class="widget-entry-summary" style="margin: 0;">
+            
+
+              <h6 style="margin: 0;"><a href="/2021/05/19/%E7%AE%97%E6%B3%95%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%88%86%E6%9E%90%E5%AE%9E%E9%AA%8C%E4%B8%80%EF%BC%9A%E5%B8%A6%E6%9D%83%E4%B8%AD%E4%BD%8D%E6%95%B0/">算法设计与分析实验一：带权中位数</a></h6>
+              <span>五月 19, 2021</span>
+            </div>
+
+          </li>
+        
+          <li class="clearfix">
+
+            
+              <div class="widget-entry-summary" style="margin: 0;">
+            
+
+              <h6 style="margin: 0;"><a href="/2021/05/16/The%20way%20to%20require%20financial%20data%20and%20plot%20trend/">The way to require financial data and plot trend</a></h6>
+              <span>五月 16, 2021</span>
+            </div>
+
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">分类</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/%E4%B8%8D%E7%9C%A0%E5%A4%9C/">不眠夜</a><span class="category-list-count">17</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%AD%A6%E4%B9%A0/">学习</a><span class="category-list-count">13</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80/">汇编语言</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%AE%97%E6%B3%95/">算法</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%BC%A0%E7%BB%95%E7%BB%93/">缠绕结</a><span class="category-list-count">2</span></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/pre/" rel="tag">pre</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%BD%9C%E4%B8%9A/" rel="tag">作业</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/" rel="tag">动态规划</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%AD%A6%E4%B9%A0/" rel="tag">学习</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%8B%99%E8%A7%81/" rel="tag">拙见</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/" rel="tag">数据分析</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80/" rel="tag">汇编语言</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%AE%97%E6%B3%95/" rel="tag">算法</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%AF%BB%E4%B9%A6/" rel="tag">读书</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%9A%8F%E6%83%B3/" rel="tag">随想</a><span class="tag-list-count">13</span></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签云</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/pre/" style="font-size: 12.5px;">pre</a> <a href="/tags/%E4%BD%9C%E4%B8%9A/" style="font-size: 10px;">作业</a> <a href="/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/" style="font-size: 12.5px;">动态规划</a> <a href="/tags/%E5%AD%A6%E4%B9%A0/" style="font-size: 17.5px;">学习</a> <a href="/tags/%E6%8B%99%E8%A7%81/" style="font-size: 12.5px;">拙见</a> <a href="/tags/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/" style="font-size: 10px;">数据分析</a> <a href="/tags/%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80/" style="font-size: 10px;">汇编语言</a> <a href="/tags/%E7%AE%97%E6%B3%95/" style="font-size: 17.5px;">算法</a> <a href="/tags/%E8%AF%BB%E4%B9%A6/" style="font-size: 15px;">读书</a> <a href="/tags/%E9%9A%8F%E6%83%B3/" style="font-size: 20px;">随想</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/05/">五月 2021</a><span class="archive-list-count">13</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/04/">四月 2021</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/12/">十二月 2020</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/11/">十一月 2020</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/09/">九月 2020</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/06/">六月 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/04/">四月 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/12/">十二月 2019</a><span class="archive-list-count">2</span></li></ul>
+    </div>
+  </div>
+
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer" class="site-footer">
+  
+
+  <div class="clearfix container">
+      <div class="site-info">
+	      &copy; 2021 TheHushrush All Rights Reserved.
+          
+            <span id="busuanzi_container_site_uv">
+              本站访客数<span id="busuanzi_value_site_uv"></span>人次  
+              本站总访问量<span id="busuanzi_value_site_pv"></span>次
+            </span>
+          
+      </div>
+      <div class="site-credit">
+        Theme by <a href="https://github.com/iTimeTraveler/hexo-theme-hiero" target="_blank">hiero</a>
+      </div>
+  </div>
+</footer>
+
+
+<!-- min height -->
+
+<script>
+    var contentdiv = document.getElementById("content");
+
+    contentdiv.style.minHeight = document.body.offsetHeight - document.getElementById("allheader").offsetHeight - document.getElementById("footer").offsetHeight + "px";
+</script>
+
+<!-- Custome JS -->
+
+<script src="/js/my.js"></script>
+
+    </div>
+    <!-- <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+    <a href="/categories" class="mobile-nav-link">Categories</a>
+  
+    <a href="/tags" class="mobile-nav-link">Tags</a>
+  
+    <a href="/about" class="mobile-nav-link">About</a>
+  
+</nav> -->
     
 
+<!-- mathjax config similar to math.stackexchange -->
 
- 
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+
+  
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css">
+
+  
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/scripts.js"></script>
+
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+<script src="/js/main.js"></script>
 
 
 
@@ -562,5 +1138,23 @@
 
 
 
-    </body>
+  <div style="display: none;">
+    <script src="https://s95.cnzz.com/z_stat.php?id=1260716016&web_id=1260716016" language="JavaScript"></script>
+  </div>
+
+
+
+	<script async src="https://dnqof95d40fo6.cloudfront.net/atw7f8.js">
+	</script>
+
+
+
+
+
+
+  </div>
+
+  <a id="rocket" href="#top" class=""></a>
+  <script type="text/javascript" src="/js/totop.js" async=""></script>
+</body>
 </html>
