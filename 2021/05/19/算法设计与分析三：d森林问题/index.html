@@ -1,344 +1,322 @@
 <!DOCTYPE html>
-<!--[if lte IE 8 ]>
-<html class="ie" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
-<![endif]-->
-<!--[if (gte IE 9)|!(IE)]><!-->
-<!--
-***************  *      *     *
-      8          *    *       *
-      8          *  *         *
-      8          **           *
-      8          *  *         *
-      8          *    *       *
-      8          *      *     *
-      8          *        *   ***********    -----Theme By Kieran(http://go.kieran.top)
--->
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-CN" lang="zh-CN">
-<!--<![endif]-->
-
-<head>
-  <title>算法设计与分析实验三：d森林问题 | TheHushrush</title>
-  <!-- Meta data -->
-    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="generator" content="TheHushrush">
-    <meta name="author" content="Hushrush">
-    <meta name="description" content="" />
+<html>
+  <head>
+      <script>
+  var _hmt = _hmt || []
+  ;(function() {
+    var hm = document.createElement('script')
+    hm.src = 'https://hm.baidu.com/hm.js?5a0acc897fd96474a2c8f4deac84611a'
+    var s = document.getElementsByTagName('script')[0]
+    s.parentNode.insertBefore(hm, s)
+  })()
+</script> 
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
     <meta name="keywords" content="" />
-
-    <!-- Favicon, (keep icon in root folder) -->
-    <link rel="Shortcut Icon" href="/img/favicon.ico" type="image/ico">
-
-    <link rel="alternate" href="/atom.xml" title="TheHushrush" type="application/atom+xml">
-    <link rel="stylesheet" href="/css/all.css" media="screen" type="text/css">
+    <meta name="description" content="Simple and naive" />
     
-    <link rel="stylesheet" href="/highlightjs/vs.css" type="text/css">
+    <title>
+      算法设计与分析实验三：d森林问题 - TheHushrush
+    </title>
+    <link rel="manifest" href="/manifest.json" />
+    <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon" />
     
+<link rel="stylesheet" href="/style/style.css">
 
-    <!--[if IE 8]>
-    <link rel="stylesheet" type="text/css" href="/css/ie8.css" />
-    <![endif]-->
-
-    <!-- jQuery | Load our jQuery, with an alternative source fallback to a local version if request is unavailable -->
-    <script src="/js/jquery-1.11.1.min.js"></script>
-    <script>window.jQuery || document.write('<script src="js/jquery-1.11.1.min.js"><\/script>')</script>
-
-    <!-- Load these in the <head> for quicker IE8+ load times -->
-    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-    <script src="/js/html5shiv.min.js"></script>
-    <script src="/js/respond.min.js"></script>
-    <![endif]-->
-
-  
-  
-  
-
-  <style>.col-md-8.col-md-offset-2.opening-statement img{display:none;}</style>
+  <meta name="generator" content="Hexo 4.2.0"><link rel="alternate" href="/atom.xml" title="TheHushrush" type="application/atom+xml">
 </head>
-
-<!--
-<body class="post-template">
--->
-<body id="index" class="lightnav animsition">
-
-      <!-- ============================ Off-canvas navigation =========================== -->
-
-    <div class="sb-slidebar sb-right sb-style-overlay sb-momentum-scrolling">
-        <div class="sb-close" aria-label="Close Menu" aria-hidden="true">
-            <img src="/img/close.png" alt="Close"/>
-        </div>
-        <!-- Lists in Slidebars -->
-        <ul class="sb-menu">
-            <li><a href="/" class="animsition-link" title="Home">Home</a></li>
-            <li><a href="/archives" class="animsition-link" title="archive">archives</a></li>
-            <!-- Dropdown Menu -->
-			 
-            <li>
-                <a class="sb-toggle-submenu">Works<span class="sb-caret"></span></a>
-                <ul class="sb-submenu">
-                    
-                        <li><a href="/" target="_BLANK" class="animsition-link">AAA</a></li>
-                    
-                        <li><a href="/atom.xml" target="_BLANK" class="animsition-link">BBB</a></li>
-                    
-                </ul>
-            </li>
-            
-            
-        	<li>
-        		<a class="sb-toggle-submenu">Categories<span class="sb-caret"></span></a>
-            	<ul class="sb-submenu">
-				  	
-				    <li><a href="/categories/不眠夜/" class="animsition-link">不眠夜<small>(17)</small></a></li>
-				    
-				    <li><a href="/categories/学习/" class="animsition-link">学习<small>(13)</small></a></li>
-				    
-				    <li><a href="/categories/汇编语言/" class="animsition-link">汇编语言<small>(1)</small></a></li>
-				    
-				    <li><a href="/categories/算法/" class="animsition-link">算法<small>(2)</small></a></li>
-				    
-				    <li><a href="/categories/缠绕结/" class="animsition-link">缠绕结<small>(2)</small></a></li>
-				    
-				</ul>
-        	</li>
-			
-            
-            <li>
-                <a class="sb-toggle-submenu">Links<span class="sb-caret"></span></a>
-                <ul class="sb-submenu">
-                    
-                    <li><a href="http://hushrushing.github.io/" target="_blank" rel="noopener" class="animsition-link">Hushrush</a></li>
-                    
-                </ul>
-            </li>
-            
-        </ul>
-        <!-- Lists in Slidebars -->
-        <ul class="sb-menu secondary">
-            
-            <li><a href="/about.html" class="animsition-link" title="about">About</a></li>
-            <li><a href="/atom.xml" class="animsition-link" title="rss">RSS</a></li>
-        </ul>
+  <body>
+    <canvas id='pagemap'></canvas>
+    
+    <div id="post-toc" class="animated hiddenToc hide">
+      <span class="title">Toc</span>
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#d森林问题"><span class="toc-text">d森林问题</span></a></li></ol>
     </div>
     
-    <!-- ============================ END Off-canvas navigation =========================== -->
-
-    <!-- ============================ #sb-site Main Page Wrapper =========================== -->
-
-    <div id="sb-site">
-        <!-- #sb-site - All page content should be contained within this id, except the off-canvas navigation itself -->
-
-        <!-- ============================ Header & Logo bar =========================== -->
-
-        <div id="navigation" class="navbar navbar-fixed-top">
-            <div class="navbar-inner">
-                <div class="container">
-                    <!-- Nav logo -->
-                    <div class="logo">
-                        <a href="/" title="Logo" class="animsition-link">
-                        
-                        </a>
-                    </div>
-                    <!-- // Nav logo -->
-                    <!-- Info-bar -->
-                    <nav>
-                        <ul class="nav">
-                            <li><a href="/" class="animsition-link">TheHushrush</a></li>
-                            <li class="nolink"><span>Always </span>Creative.</li>
-                            
-                            <li><a href="https://github.com/hushrushing" title="Github" target="_blank"><i class="icon-github"></i></a></li>
-                            
-                            
-                            
-                            
-                            
-                            <li><a href="http://weibo.com/hushrushing" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a></li>
-                            
-                            <li class="nolink"><span>Welcome!</span></li>
-                        </ul>
-                    </nav>
-                    <!--// Info-bar -->
-                </div>
-                <!-- // .container -->
-                <div class="learnmore sb-toggle-right">More</div>
-                <button type="button" class="navbar-toggle menu-icon sb-toggle-right" title="More">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar before"></span>
-                <span class="icon-bar main"></span>
-                <span class="icon-bar after"></span>
-                </button>
-            </div>
-            <!-- // .navbar-inner -->
+    <div id="fixed-menu-wrap">
+      <span class="iconfont icon-sousuo search-box menu-reset"></span>
+      <span class="icon-toc menu-reset">Toc</span>
+      <span class="iconfont icon-arrowup menu-reset"></span>
+    </div>
+    <div id="fixed-menu">
+      <span class="iconfont icon-menu-"></span>
+    </div>
+    <div id="progress">
+      <div class="line"></div>
+    </div>
+    <div id="search-shade" class="animated hiddenSearch hide">
+      <div class="input-wrap">
+        <span class="iconfont icon-sousuo search-box"></span>
+        <input type="text" placeholder="Search" />
+        <span class="iconfont icon-close"></span>
+      </div>
+      <div class="search-result">
+        <div class="meta">
+          <span><b id="result-count">0</b> results found</span>
+          <img src="/images/logo.jpeg" />
+        </div>
+        <ul id="result-box"></ul>
+      </div>
+    </div>
+    <div id="menu-mask" class="animated hideMenuMask hide">
+      <span class="iconfont icon-close"></span>
+      <div class="nav">
+        
+        <a href="/" class="">
+          首页
+        </a>
+        
+        <a href="/archives" class="">
+          归档
+        </a>
+        
+        <a href="/categories" class="">
+          分类
+        </a>
+        
+        <a href="/tags" class="">
+          标签
+        </a>
+        
+        <a href="/about" class="">
+          关于
+        </a>
+        
+      </div>
+    </div>
+    <div id="header">
+      <div class="intro">
+        <a href="/" class="logo" style="background-image: url('/images/logo.jpeg')"></a>
+        <div class="author">Hushrush</div>
+      </div>
+      <div class="nav">
+        <span class="iconfont icon-menu menu-icon"></span>
+        <a href="#" class="search-box">
+          <span class="iconfont icon-sousuo"></span>
+        </a>
+      </div>
+    </div>
+    <div id="side" class="animated bounceInLeft">
+      <div class="shrink">
+        <a href="/" class="logo" style="background-image: url('/images/logo.jpeg')"></a>
+        <span class="iconfont icon-menu toggle-icon"></span>
+        <a href="#" class="search-box">
+          <span class="iconfont icon-sousuo"></span>
+        </a>
+      </div>
+      <div class="magnify">
+        <div class="about">
+          <div class="author">Hushrush</div>
+          <a href="/" class="logo" style="background-image: url('/images/logo.jpeg')"></a>
         </div>
 
-        <!-- ============================ Header & Logo bar =========================== -->
-
-
+        <div class="nav">
+          
+          <a href="/" class="">
+            首页
+          </a>
+          
+          <a href="/archives" class="">
+            归档
+          </a>
+          
+          <a href="/categories" class="">
+            分类
+          </a>
+          
+          <a href="/tags" class="">
+            标签
+          </a>
+          
+          <a href="/about" class="">
+            关于
+          </a>
+          
+          <a href="#" class="search-box">
+            <span class="iconfont icon-sousuo"></span>
+          </a>
+        </div>
+        <div class="bottom">
+          <div class="follow">
+            
+            <a href="https://github.com/shixiaohu2206" target="_block">
+              <span class="iconfont icon-github"></span>
+            </a>
+            
+            <a href="https://www.facebook.com/shi.xiaohu.5" target="_block">
+              <span class="iconfont icon-facebook"></span>
+            </a>
+            
+            <a href="https://www.instagram.com/shi_xiaohu/" target="_block">
+              <span class="iconfont icon-instagram"></span>
+            </a>
+             
+            <a href="/atom.xml" target="_block">
+              <span class="iconfont icon-rss"></span>
+            </a>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="container">
+      <div class="main animated bounceInRight delay-0.7s">
+        <article class="post-entry">
+    <div class="header">
       
-<section id="intro">
-    <div class="container">
-        <div class="row col-md-offset-2">
-            <div class="col-md-8">
-    			<span class="post-meta">
-      <time datetime="2021-05-18T16:00:00.000Z" itemprop="datePublished">
-          2021-05-19
-      </time>
-    
-    
-    | 
-    <a href='/tags/算法/'>算法</a>
-    
-    
-</span>
-                <h1>算法设计与分析实验三：d森林问题</h1>
-            </div>
-        </div>
-        <div class="col-md-8 col-md-offset-2">
-      		<h2 id="d森林问题"><a href="#d森林问题" class="headerlink" title="d森林问题"></a>d森林问题</h2><p><strong>1.    问题描述</strong><br>设T为一带权树，树中的每个边的权都为整数。又设S为T的一个顶点的子集，从T中删除S中的所有结点，则得到一个森林，记为T/S。如果T/S中所有树从根到叶子节点的路径长度都不超过d，则称T/S是一个d森林。设计一个算法求T的最小顶点集合S，使T/S为一个d森林。<br><strong>2.    题目分析</strong><br>本问题可用贪心算法解。从每个叶子节点向根节点移动，若路途中路长超过d则将子树分离。（1）贪心选择性质：若某一最优解某一步不符合贪心选择，则该步骤得到的子树长度要么和贪心选择得到的相同，要么比贪心选择得到的要短。若相同则贪心选择也可以得到最优解；否则原解不是最优解。（2）最优子结构性质：原树的某一子树删去S中结点（若有）显然也满足森林从根到叶子节点的路径长度都不超过d。<br><strong>3.    程序设计</strong><br>数组leaf存储叶节点；数组isCut存储某一结点是否被删去；数组parent存储双亲结点；数组parlen存储某节点到双亲结点的权值；数组dis存储某结点到叶节点的距离.函数cutAndDelete用于问题求解.若当前节点不是根节点,则向上移动,路长超过d且未分离时将结点删除并向根节点移动;若没有超过d则更新dist数组.若出度为0则将该结点添加到叶子节点数组leaf.主函数中先输入并建立树,再调用cutAndDelete求解.<br><strong>4.    代码</strong></p>
+      <div class="title">算法设计与分析实验三：d森林问题</div>
+      <div class="meta">
+        <span class="item">
+          <span class="iconfont icon-time-circle"></span>
+          <span>2021/05/19</span>
+        </span>
+
+        
+          <span class="item leancloud-visitors" id="/2021/05/19/%E7%AE%97%E6%B3%95%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%88%86%E6%9E%90%E4%B8%89%EF%BC%9Ad%E6%A3%AE%E6%9E%97%E9%97%AE%E9%A2%98/" data-flag-title="算法设计与分析实验三：d森林问题">
+            <span class="iconfont icon-eye1"></span>
+            <span class="leancloud-visitors-count"></span>
+          </span>
+        
+
+         
+        <span class="item">
+          <span class="iconfont icon-folder"></span>
+          <span>
+              
+                
+                  <a href="/categories/学习">学习</a>
+                
+              
+          </span>
+        </span>
+        
+        
+         
+          <span class="item">
+            <span class="iconfont icon-tag1"></span>
+            <span>
+                
+                  
+                    <a href="/tags/算法">算法</a>
+                  
+                
+            </span>
+          </span>
+         
+      </div>
+      <div>
+      </div>
+    </div>
+    <h2 id="d森林问题"><a href="#d森林问题" class="headerlink" title="d森林问题"></a>d森林问题</h2><p><strong>1.    问题描述</strong><br>设T为一带权树，树中的每个边的权都为整数。又设S为T的一个顶点的子集，从T中删除S中的所有结点，则得到一个森林，记为T/S。如果T/S中所有树从根到叶子节点的路径长度都不超过d，则称T/S是一个d森林。设计一个算法求T的最小顶点集合S，使T/S为一个d森林。<br><strong>2.    题目分析</strong><br>本问题可用贪心算法解。从每个叶子节点向根节点移动，若路途中路长超过d则将子树分离。（1）贪心选择性质：若某一最优解某一步不符合贪心选择，则该步骤得到的子树长度要么和贪心选择得到的相同，要么比贪心选择得到的要短。若相同则贪心选择也可以得到最优解；否则原解不是最优解。（2）最优子结构性质：原树的某一子树删去S中结点（若有）显然也满足森林从根到叶子节点的路径长度都不超过d。<br><strong>3.    程序设计</strong><br>数组leaf存储叶节点；数组isCut存储某一结点是否被删去；数组parent存储双亲结点；数组parlen存储某节点到双亲结点的权值；数组dis存储某结点到叶节点的距离.函数cutAndDelete用于问题求解.若当前节点不是根节点,则向上移动,路长超过d且未分离时将结点删除并向根节点移动;若没有超过d则更新dist数组.若出度为0则将该结点添加到叶子节点数组leaf.主函数中先输入并建立树,再调用cutAndDelete求解.<br><strong>4.    代码</strong></p>
 <figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"iostream"</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"fstream"</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"queue"</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> maximum = <span class="number">10000</span>;</span><br><span class="line"><span class="keyword">int</span> leaf[maximum];</span><br><span class="line"><span class="keyword">int</span> isCut[maximum];</span><br><span class="line"><span class="keyword">int</span> parent[maximum];</span><br><span class="line"><span class="keyword">int</span> parlen[maximum];</span><br><span class="line"><span class="keyword">int</span> dis[maximum];</span><br><span class="line"><span class="keyword">int</span> outdeg[maximum];</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">cutAndDelete</span><span class="params">(<span class="keyword">int</span> n, <span class="keyword">int</span> d)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> i = <span class="number">0</span>; <span class="keyword">int</span> num = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">for</span> (i = <span class="number">1</span>; i &lt;= leaf[<span class="number">0</span>]; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">if</span> (leaf[i] != <span class="number">1</span>)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">int</span> p = parent[leaf[i]];</span><br><span class="line">			<span class="keyword">int</span> len = parlen[leaf[i]];</span><br><span class="line">			<span class="keyword">if</span> (isCut[p] == <span class="number">0</span> &amp;&amp; dis[leaf[i]] + len &gt; d)</span><br><span class="line">			&#123;</span><br><span class="line">				num++;</span><br><span class="line">				isCut[p] = <span class="number">1</span>;</span><br><span class="line">				p = parent[p];</span><br><span class="line"></span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">else</span> <span class="keyword">if</span> (isCut[p] == <span class="number">0</span> &amp;&amp; dis[p] &lt; len + dis[leaf[i]])</span><br><span class="line">			&#123;</span><br><span class="line">				dis[p] = len + dis[leaf[i]];</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">if</span> (--outdeg[p] == <span class="number">0</span>)</span><br><span class="line">			&#123;</span><br><span class="line">				leaf[++leaf[<span class="number">0</span>]] = p;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> num;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="function">ifstream <span class="title">input</span><span class="params">(<span class="string">"exp3_in.txt"</span>)</span></span>;</span><br><span class="line">	<span class="keyword">int</span> nodenum, a, i, j, k, n, d, t;</span><br><span class="line">	input &gt;&gt; nodenum;</span><br><span class="line">	<span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; nodenum; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">memset</span>(leaf, <span class="number">0</span>, <span class="keyword">sizeof</span>(leaf));</span><br><span class="line">		<span class="built_in">memset</span>(parlen, <span class="number">0</span>, <span class="keyword">sizeof</span>(parlen));</span><br><span class="line">		<span class="built_in">memset</span>(isCut, <span class="number">0</span>, <span class="keyword">sizeof</span>(isCut));</span><br><span class="line">		<span class="built_in">memset</span>(dis, <span class="number">0</span>, <span class="keyword">sizeof</span>(dis));</span><br><span class="line">		<span class="built_in">memset</span>(outdeg, <span class="number">0</span>, <span class="keyword">sizeof</span>(outdeg));</span><br><span class="line">		<span class="built_in">memset</span>(parent, <span class="number">0</span>, <span class="keyword">sizeof</span>(parent));</span><br><span class="line">		input &gt;&gt; n &gt;&gt; d;</span><br><span class="line">		<span class="keyword">for</span> (j = <span class="number">1</span>; j &lt;= n; j++)</span><br><span class="line">		&#123;</span><br><span class="line">			input &gt;&gt; outdeg[j];</span><br><span class="line">			<span class="keyword">if</span> (outdeg[j] != <span class="number">0</span>)</span><br><span class="line">			&#123;</span><br><span class="line">				<span class="keyword">for</span> (k = <span class="number">0</span>; k &lt; outdeg[j]; k++)</span><br><span class="line">				&#123;</span><br><span class="line">					input &gt;&gt; t;</span><br><span class="line">					t += <span class="number">1</span>;</span><br><span class="line">					input &gt;&gt; a;</span><br><span class="line">					parent[t] = j;</span><br><span class="line">					parlen[t] = a;</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">else</span> <span class="keyword">if</span> (outdeg[j] == <span class="number">0</span>)</span><br><span class="line">			&#123;</span><br><span class="line">				leaf[++leaf[<span class="number">0</span>]] = j;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">int</span> result;</span><br><span class="line">		result = cutAndDelete(n, d);</span><br><span class="line">		<span class="built_in">cout</span> &lt;&lt; result &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p><strong>5.    运行结果</strong><br>    <img src="https://img-blog.csdnimg.cn/20210519114125909.png" alt="在这里插入图片描述"></p>
 
-            <div class="clearfix"></div>
-            <hr class="nogutter">
+
+  
+    <div class="post-reward">
+    <div id="reward-button">打赏</div>
+      <div id="qr">
+        <div class="wrap">
+            
+            <div class="bg-wrap">
+              <a href="/images/zhifubao.png" target="_block" class="bg" style="background-image:url('/images/zhifubao.png')"></a>
+              支付宝
+            </div>
+            
+            
+            <div class="bg-wrap">
+                <a href="/images/weixin.png" target="_block" class="bg" style="background-image:url('/images/weixin.png')"></a>
+              微信
+            </div>
+            
         </div>
-        <nav class="m-pagination col-md-8 col-md-offset-2 col-sm-24" role="pagination">
-    
-    <a class="pull-left" href="/2021/05/21/index/" style="float: left;">
-        ← pdf预览
-    </a>
-    
-    
-    <a class="pull-right" href="/2021/05/19/%E7%AE%97%E6%B3%95%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%88%86%E6%9E%90%E5%AE%9E%E9%AA%8C%E4%B8%80%EF%BC%9A%E5%B8%A6%E6%9D%83%E4%B8%AD%E4%BD%8D%E6%95%B0/">
-        算法设计与分析实验一：带权中位数 →
-    </a>
-    
-</nav>
-
-        <div class="col-md-8 col-md-offset-2 col-sm-24"><script type="text/javascript">
-  /**
-   * 搜狐畅言
-   */
-
-  /*
-  document.write('<div id="SOHUCS" sid="' + window.location.pathname.slice(1) + '" ></div>');
-
-  window.onload = function () {
-    (function () {
-      var appid = 'cytXXXX';
-      var conf = 'prod_xxxxxxxxxxxxxxxxx';
-      var width = window.innerWidth || document.documentElement.clientWidth;
-      var loadJs = function (d, a, id) {
-        var c = document.getElementsByTagName("head")[0] || document.head || document.documentElement;
-        var b = document.createElement("script");
-        b.setAttribute("type", "text/javascript");
-        b.setAttribute("charset", "UTF-8");
-        b.setAttribute("src", d);
-        if (id) {
-          b.setAttribute("id", id);
-        }
-        if (typeof a === "function") {
-          if (window.attachEvent) {
-            b.onreadystatechange = function () {
-              var e = b.readyState;
-              if (e === "loaded" || e === "complete") {
-                b.onreadystatechange = null;
-                a()
-              }
-            }
-          } else {
-            b.onload = a
-          }
-        }
-        c.appendChild(b)
-      };
-
-      loadJs("https://changyan.sohu.com/upload/changyan.js", function () {
-        window.changyan.api.config({
-          appid: appid,
-          conf: conf
-        })
-      });
-    })();
-  }
-  */
-
-</script>
-</div>
+      </div>
     </div>
-</section>
+  
+  <div class="post-guide">
+    <div class="item left">
+        
+          <a href="/2021/05/21/index/">pdf预览</a>
+        
+    </div>
+    <div class="item right">
+        
+          <a href="/2021/05/19/%E7%AE%97%E6%B3%95%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%88%86%E6%9E%90%E5%AE%9E%E9%AA%8C%E4%B8%80%EF%BC%9A%E5%B8%A6%E6%9D%83%E4%B8%AD%E4%BD%8D%E6%95%B0/">算法设计与分析实验一：带权中位数</a>
+        
+    </div>
+  </div>
 
+  
 
-      
-<!-- ============================ Footer =========================== -->
+  <div class="post-copyright">
+    <div class="auth">
+      本文作者：<a href="http://hushrushly.github.io">Hushrush</a>
+    </div>
+    <div class="link">
+      链接：<a href="http://hushrushly.github.io/2021/05/19/%E7%AE%97%E6%B3%95%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%88%86%E6%9E%90%E4%B8%89%EF%BC%9Ad%E6%A3%AE%E6%9E%97%E9%97%AE%E9%A2%98/">http://hushrushly.github.io/2021/05/19/%E7%AE%97%E6%B3%95%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%88%86%E6%9E%90%E4%B8%89%EF%BC%9Ad%E6%A3%AE%E6%9E%97%E9%97%AE%E9%A2%98/</a>
+    </div>
+    <div class="declare">
+      版权声明：本文首发于<a href="http://hushrushly.github.io">Hushrush</a>的博客，转载请注明出处！
+    </div>
+  </div>
 
-<footer>
-    <div class="container">
-            <div class="copy">
-                <p>
-                    &copy; 2014<script>new Date().getFullYear()>2010&&document.write("-"+new Date().getFullYear());</script>, Content By Hushrush. All Rights Reserved.
-                </p>
-                <p>Theme By <a href="//go.kieran.top" target="_blank" rel="noopener" style="color: #767D84">Kieran</a></p>
-            </div>
-            <div class="social">
-                <ul>
-                    
-                    <li><a href="https://github.com/hushrushing" title="Github" target="_blank"><i class="icon-github"></i></a>&nbsp;</li>
-                    
-                    
-                    
-                    
-                    
-                    <li><a href="http://weibo.com/hushrushing" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a>&nbsp;</li>
-                    
-                </ul>
-            </div>
-            <div class="clearfix"> </div>
-        </div>
-</footer>
+  <div id="comment"></div>
 
-<!-- ============================ END Footer =========================== -->
-      <!-- Load our scripts -->
-<!-- Resizable 'on-demand' full-height hero -->
-<script type="text/javascript">
-    var resizeHero = function () {
-        var hero = $(".cover,.heightblock"),
-            window1 = $(window);
-        hero.css({
-            "height": window1.height()
-        });
-    };
-
-    resizeHero();
-
-    $(window).resize(function () {
-        resizeHero();
-    });
-</script>
-<script src="/js/plugins.min.js"></script><!-- Bootstrap core and concatenated plugins always load here -->
-<script src="/js/scripts.js"></script><!-- Theme scripts -->
-
-
-<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
-<script src="/fancybox/jquery.fancybox.pack.js"></script>
-<script type="text/javascript">
-$('#intro').find('img').each(function(){
-  var alt = this.alt;
-
-  if (alt){
-    $(this).after('<span class="caption" style="display:none">' + alt + '</span>');
-  }
-
-  $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox" rel="gallery" />');
-});
-(function($){
-  $('.fancybox').fancybox();
-})(jQuery);
-</script>
-
-
-
-      
-</body>
+  
+  
+</article>
+        <footer>
+          <div class="copyright">
+            ©2021
+            <a href="http://hushrushly.github.io">Hushrush</a> Powered by <a href="https://hexo.io" target="_blank" rel="noopener">Hexo</a> |
+            <a href="https://github.com/shixiaohu2206/hexo-theme-huhu" target="_blank" rel="noopener">hexo-theme-huhu</a>
+          </div>
+          
+        </footer>
+      </div>
+    </div>
+  </body>
+  
 </html>
+<script type="text/javascript">
+                  window.HUHU_CONFIG = JSON.parse("{\"share\":[\"weibo\",\"weixin\",\"qqkongjian\",\"QQ\",\"douban\",\"facebook\",\"twitter\",\"google\"],\"valine\":{\"API_ID\":\"6ieLH7bGrju011dUapt0pFTI-MdYXbMMI\",\"API_KEY\":\"8VWSeumnLk1qGsiLzo5nENJq\",\"placeholder\":\"请发表评论：\"},\"service_worker\":{\"open\":false},\"baidu_tongji\":{\"site_from\":\"2020/4/1\",\"site_id\":\"fe1d9d2dc48a2ab8ea7f292f05e237cd\",\"access_token\":\"xxxxx\"}}")
+                </script> <script type="text/javascript">window.addEventListener('load', function() {
+    
+    window.loadJs = function(d, m, a) {
+      var c = document.getElementsByTagName('head')[0] || document.head || document.documentElement
+      var b = document.createElement('script')
+      b.defer = true
+      b.setAttribute('type', 'text/javascript')
+      b.setAttribute('charset', 'UTF-8')
+      b.setAttribute('async', 'true')
+      b.setAttribute('src', d)
+      m && b.setAttribute('data-main', '/scripts/app-built')
+      if (typeof a === 'function') {
+        if (window.attachEvent) {
+          b.onreadystatechange = function() {
+            var e = b.readyState
+            if (e === 'loaded' || e === 'complete') {
+              b.onreadystatechange = null
+              a()
+            }
+          }
+        } else {
+          b.onload = a
+        }
+      }
+      c.appendChild(b)
+    }
+    window.loadJs && window.loadJs('https://cdn.bootcss.com/require.js/2.3.6/require.min.js', true, function() {require.config({"paths":{"util":"util","share":"share","search":"search","pagemap":"pagemap.min","registerSW":"registerSW","valine":"cdn/Valine.min","av":["https://cdn.jsdelivr.net/npm/leancloud-storage/dist/av-min"],"pjax":["https://cdn.bootcss.com/jquery.pjax/2.0.1/jquery.pjax.min"],"jquery":["https://cdn.bootcss.com/jquery/3.4.1/jquery.min"],"confirm":["https://cdn.bootcss.com/jquery-confirm/3.3.4/jquery-confirm.min"],"fancybox":["https://cdn.bootcss.com/fancybox/3.5.7/jquery.fancybox.min"],"chart":["https://cdn.bootcss.com/Chart.js/2.8.0-rc.1/Chart.bundle.min"]},"map":{"*":{"css":"https://cdn.bootcss.com/require-css/0.1.10/css.min.js"}},"shim":{"fancybox":{"deps":["css!https://cdn.bootcss.com/fancybox/3.5.7/jquery.fancybox.min.css"]},"confirm":{"deps":["css!https://cdn.bootcss.com/jquery-confirm/3.3.4/jquery-confirm.min.css"]},"chart":{"deps":["css!https://cdn.bootcss.com/Chart.js/2.8.0-rc.1/Chart.min.css"]}},"waitSeconds":3})})
+  })</script> <script type="text/javascript">
+                  ;(function() {
+                    var bp = document.createElement('script')
+                    var curProtocol = window.location.protocol.split(':')[0]
+                    if (curProtocol === 'https') {
+                      bp.src = 'https://zz.bdstatic.com/linksubmit/push.js'
+                    } else {
+                      bp.src = 'http://push.zhanzhang.baidu.com/push.js'
+                    }
+                    var s = document.getElementsByTagName('script')[0]
+                    s.parentNode.insertBefore(bp, s)
+                  })()
+                </script> 
