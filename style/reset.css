@@ -126,7 +126,7 @@ body {
   -ms-text-size-adjust: 100%;
   box-sizing: border-box;
   background-color: #fff;
-  font-family: 'Varela', 'Microsoft Yahei';
+  font-family: 'Varela', 'SourceHanSerifCN-Regular', 'Microsoft Yahei';
 }
 a {
   text-decoration: none;
