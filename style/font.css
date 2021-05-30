@@ -1,4 +1,8 @@
 @font-face {
+  font-family: '';
+  src: url("../font/latinmodern-math.woff2") format('woff2');
+}
+@font-face {
   font-family: 'SourceHanSerifCN-Regular';
   src: url("../font/SourceHanSerifCN-Regular.woff2") format('woff2');
 }
