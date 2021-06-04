@@ -6,7 +6,7 @@
   <link href="http://hushrushly.github.io/atom.xml" rel="self"/>
   
   <link href="http://hushrushly.github.io/"/>
-  <updated>2021-06-04T07:43:06.082Z</updated>
+  <updated>2021-06-04T17:11:03.638Z</updated>
   <id>http://hushrushly.github.io/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>爬大山，趟大河。</title>
+    <link href="http://hushrushly.github.io/2021/06/05/%E8%BF%87%E5%A4%A7%E5%B1%B1/"/>
+    <id>http://hushrushly.github.io/2021/06/05/%E8%BF%87%E5%A4%A7%E5%B1%B1/</id>
+    <published>2021-06-05T11:50:04.000Z</published>
+    <updated>2021-06-04T17:11:03.638Z</updated>
+    
+    
+      
+      
+    <summary type="html">&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;p&gt;PDF预览&lt;/p&gt;
+
+
+	&lt;div class=&quot;row&quot;&gt;
+    &lt;embed src=&quot;/pdfs/过大山.pdf&quot; width=&quot;100%&quot; height=&quot;550&quot; type=&quot;application/pdf&quot;&gt;
+</summary>
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>Digital circuit experiment report</title>
@@ -433,29 +456,6 @@
     
     
     <category term="算法" scheme="http://hushrushly.github.io/tags/%E7%AE%97%E6%B3%95/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>假期后遗症</title>
-    <link href="http://hushrushly.github.io/2021/04/06/20210406/"/>
-    <id>http://hushrushly.github.io/2021/04/06/20210406/</id>
-    <published>2021-04-06T15:52:07.000Z</published>
-    <updated>2021-04-06T15:22:00.953Z</updated>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;“键盘鼠标和onenote终于派上了用场——这代表我到底放弃了厚厚的笔记本和钢笔（为了能放到博客上）。说实话，我看不出放在笔记本里和博客里有什么区别，反正也不会有其他人看。但是手写几行就让我厌烦，只好转移阵地。”&lt;/p&gt;
-&lt;p&gt;为期一周的数学建模大作业终于告一段落，使人有一</summary>
-      
-    
-    
-    
-    <category term="不眠夜" scheme="http://hushrushly.github.io/categories/%E4%B8%8D%E7%9C%A0%E5%A4%9C/"/>
-    
-    
-    <category term="随想" scheme="http://hushrushly.github.io/tags/%E9%9A%8F%E6%83%B3/"/>
     
   </entry>
   
