@@ -6,7 +6,7 @@
   <link href="http://hushrushly.github.io/atom.xml" rel="self"/>
   
   <link href="http://hushrushly.github.io/"/>
-  <updated>2021-05-22T01:36:24.329Z</updated>
+  <updated>2021-06-04T07:43:06.082Z</updated>
   <id>http://hushrushly.github.io/</id>
   
   <author>
@@ -15,6 +15,24 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Digital circuit experiment report</title>
+    <link href="http://hushrushly.github.io/2021/06/04/Digital%20circuit%20experiment%20report/"/>
+    <id>http://hushrushly.github.io/2021/06/04/Digital%20circuit%20experiment%20report/</id>
+    <published>2021-06-04T07:00:26.380Z</published>
+    <updated>2021-06-04T07:43:06.082Z</updated>
+    
+    
+      
+      
+    <summary type="html">&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;p&gt;数字逻辑电路专题实验报告&lt;br&gt;—— 交通灯控制器设计&lt;br&gt;PDF下载地址：&lt;a href=&quot;/pdfs/Digital_circuit_experiment_report.pdf&quot;&gt;点击下载&lt;/a&gt;&lt;br&gt;PDF预览见末</summary>
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>cpp复习</title>
@@ -438,28 +456,6 @@
     
     
     <category term="随想" scheme="http://hushrushly.github.io/tags/%E9%9A%8F%E6%83%B3/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>坚定理想信念，站稳人民立场，练就过硬本领，投身强国伟业。</title>
-    <link href="http://hushrushly.github.io/2020/12/29/20201229/"/>
-    <id>http://hushrushly.github.io/2020/12/29/20201229/</id>
-    <published>2020-12-29T15:52:07.000Z</published>
-    <updated>2020-12-29T03:43:11.264Z</updated>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;一、-坚定理想信念&quot;&gt;&lt;a href=&quot;#一、-坚定理想信念&quot; class=&quot;headerlink&quot; title=&quot;一、    坚定理想信念&quot;&gt;&lt;/a&gt;一、    坚定理想信念&lt;/h1&gt;&lt;h2 id=&quot;为什么要坚定理想信念？&quot;&gt;&lt;a href=&quot;#为什么要坚定理想</summary>
-      
-    
-    
-    
-    <category term="不眠夜" scheme="http://hushrushly.github.io/categories/%E4%B8%8D%E7%9C%A0%E5%A4%9C/"/>
-    
-    
-    <category term="pre" scheme="http://hushrushly.github.io/tags/pre/"/>
     
   </entry>
   
