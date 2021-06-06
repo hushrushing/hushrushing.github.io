@@ -6,7 +6,7 @@
   <link href="http://hushrushly.github.io/atom.xml" rel="self"/>
   
   <link href="http://hushrushly.github.io/"/>
-  <updated>2021-06-04T17:11:03.638Z</updated>
+  <updated>2021-06-06T05:39:02.518Z</updated>
   <id>http://hushrushly.github.io/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>汇编第二次上机实验</title>
+    <link href="http://hushrushly.github.io/2021/06/06/%E6%B1%87%E7%BC%96%E7%AC%AC%E4%BA%8C%E6%AC%A1%E4%B8%8A%E6%9C%BA%E5%AE%9E%E9%AA%8C/"/>
+    <id>http://hushrushly.github.io/2021/06/06/%E6%B1%87%E7%BC%96%E7%AC%AC%E4%BA%8C%E6%AC%A1%E4%B8%8A%E6%9C%BA%E5%AE%9E%E9%AA%8C/</id>
+    <published>2021-06-06T11:50:04.000Z</published>
+    <updated>2021-06-06T05:39:02.518Z</updated>
+    
+    
+      
+      
+    <summary type="html">&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;p&gt;PDF预览&lt;/p&gt;
+
+
+	&lt;div class=&quot;row&quot;&gt;
+    &lt;embed src=&quot;/pdfs/汇编实验2.pdf&quot; width=&quot;100%&quot; height=&quot;550&quot; type=&quot;application/pdf&quot;</summary>
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>爬大山，趟大河。</title>
@@ -432,30 +454,6 @@
     
     
     <category term="随想" scheme="http://hushrushly.github.io/tags/%E9%9A%8F%E6%83%B3/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>带权中位数</title>
-    <link href="http://hushrushly.github.io/2021/04/12/20210412/"/>
-    <id>http://hushrushly.github.io/2021/04/12/20210412/</id>
-    <published>2021-04-11T16:00:00.000Z</published>
-    <updated>2021-04-21T02:46:57.974Z</updated>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;带权中位数&quot;&gt;&lt;a href=&quot;#带权中位数&quot; class=&quot;headerlink&quot; title=&quot;带权中位数&quot;&gt;&lt;/a&gt;带权中位数&lt;/h1&gt;&lt;p&gt;1.题目描述&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;2021412.jpg&quot; alt=&quot;2021412&quot;&gt;&lt;/p&gt;
-&lt;p</summary>
-      
-    
-    
-    
-    <category term="学习" scheme="http://hushrushly.github.io/categories/%E5%AD%A6%E4%B9%A0/"/>
-    
-    
-    <category term="算法" scheme="http://hushrushly.github.io/tags/%E7%AE%97%E6%B3%95/"/>
     
   </entry>
   
