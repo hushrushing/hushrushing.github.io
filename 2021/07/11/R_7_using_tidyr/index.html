@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <script>
+  var _hmt = _hmt || []
+  ;(function() {
+    var hm = document.createElement('script')
+    hm.src = 'https://hm.baidu.com/hm.js?5a0acc897fd96474a2c8f4deac84611a'
+    var s = document.getElementsByTagName('script')[0]
+    s.parentNode.insertBefore(hm, s)
+  })()
+</script> 
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="keywords" content="" />
+    <meta name="description" content="Simple and naive" />
+    
+    <title>
+      R_7 tidyr - TheHushrush
+    </title>
+    <link rel="manifest" href="/manifest.json" />
+    <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon" />
+    
+<link rel="stylesheet" href="/style/style.css">
+
+  <meta name="generator" content="Hexo 4.2.0"><link rel="alternate" href="/atom.xml" title="TheHushrush" type="application/atom+xml">
+</head>
+  <body>
+    <canvas id='pagemap'></canvas>
+    
+    <div id="post-toc" class="animated hiddenToc hide">
+      <span class="title">Toc</span>
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#使用tidyr重塑数据"><span class="toc-text">使用tidyr重塑数据</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#1-适合分析的数据"><span class="toc-text">1. 适合分析的数据</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2-从列到行：gather"><span class="toc-text">2. 从列到行：gather()</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#3-从列到行：spread"><span class="toc-text">3. 从列到行：spread()</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#tidyr示例："><span class="toc-text">tidyr示例：</span></a></li></ol>
+    </div>
+    
+    <div id="fixed-menu-wrap">
+      <span class="iconfont icon-sousuo search-box menu-reset"></span>
+      <span class="icon-toc menu-reset">Toc</span>
+      <span class="iconfont icon-arrowup menu-reset"></span>
+    </div>
+    <div id="fixed-menu">
+      <span class="iconfont icon-menu-"></span>
+    </div>
+    <div id="progress">
+      <div class="line"></div>
+    </div>
+    <div id="search-shade" class="animated hiddenSearch hide">
+      <div class="input-wrap">
+        <span class="iconfont icon-sousuo search-box"></span>
+        <input type="text" placeholder="Search" />
+        <span class="iconfont icon-close"></span>
+      </div>
+      <div class="search-result">
+        <div class="meta">
+          <span><b id="result-count">0</b> results found</span>
+          <img src="/images/logo.jpeg" />
+        </div>
+        <ul id="result-box"></ul>
+      </div>
+    </div>
+    <div id="menu-mask" class="animated hideMenuMask hide">
+      <span class="iconfont icon-close"></span>
+      <div class="nav">
+        
+        <a href="/" class="">
+          首页
+        </a>
+        
+        <a href="/archives" class="">
+          归档
+        </a>
+        
+        <a href="/categories" class="">
+          分类
+        </a>
+        
+        <a href="/tags" class="">
+          标签
+        </a>
+        
+        <a href="/about" class="">
+          关于
+        </a>
+        
+      </div>
+    </div>
+    <div id="header">
+      <div class="intro">
+        <a href="/" class="logo" style="background-image: url('/images/logo.jpeg')"></a>
+        <div class="author">Hushrush</div>
+      </div>
+      <div class="nav">
+        <span class="iconfont icon-menu menu-icon"></span>
+        <a href="#" class="search-box">
+          <span class="iconfont icon-sousuo"></span>
+        </a>
+      </div>
+    </div>
+    <div id="side" class="animated bounceInLeft">
+      <div class="shrink">
+        <a href="/" class="logo" style="background-image: url('/images/logo.jpeg')"></a>
+        <span class="iconfont icon-menu toggle-icon"></span>
+        <a href="#" class="search-box">
+          <span class="iconfont icon-sousuo"></span>
+        </a>
+      </div>
+      <div class="magnify">
+        <div class="about">
+          <div class="author">Hushrush</div>
+          <a href="/" class="logo" style="background-image: url('/images/logo.jpeg')"></a>
+        </div>
+
+        <div class="nav">
+          
+          <a href="/" class="">
+            首页
+          </a>
+          
+          <a href="/archives" class="">
+            归档
+          </a>
+          
+          <a href="/categories" class="">
+            分类
+          </a>
+          
+          <a href="/tags" class="">
+            标签
+          </a>
+          
+          <a href="/about" class="">
+            关于
+          </a>
+          
+          <a href="#" class="search-box">
+            <span class="iconfont icon-sousuo"></span>
+          </a>
+        </div>
+        <div class="bottom">
+          <div class="follow">
+            
+            <a href="https://github.com/shixiaohu2206" target="_block">
+              <span class="iconfont icon-github"></span>
+            </a>
+            
+            <a href="https://www.facebook.com/shi.xiaohu.5" target="_block">
+              <span class="iconfont icon-facebook"></span>
+            </a>
+            
+            <a href="https://www.instagram.com/shi_xiaohu/" target="_block">
+              <span class="iconfont icon-instagram"></span>
+            </a>
+             
+            <a href="/atom.xml" target="_block">
+              <span class="iconfont icon-rss"></span>
+            </a>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="container">
+      <div class="main animated bounceInRight delay-0.7s">
+        <article class="post-entry">
+    <div class="header">
+      
+      <div class="title">R_7 tidyr</div>
+      <div class="meta">
+        <span class="item">
+          <span class="iconfont icon-time-circle"></span>
+          <span>2021/07/11</span>
+        </span>
+
+        
+          <span class="item leancloud-visitors" id="/2021/07/11/R_7_using_tidyr/" data-flag-title="R_7 tidyr">
+            <span class="iconfont icon-eye1"></span>
+            <span class="leancloud-visitors-count"></span>
+          </span>
+        
+
+         
+        <span class="item">
+          <span class="iconfont icon-folder"></span>
+          <span>
+              
+                
+                  <a href="/categories/学习">学习</a>
+                
+              
+          </span>
+        </span>
+        
+        
+         
+          <span class="item">
+            <span class="iconfont icon-tag1"></span>
+            <span>
+                
+                  
+                    <a href="/tags/R语言">R语言</a>
+                  
+                
+            </span>
+          </span>
+         
+      </div>
+      <div>
+      </div>
+    </div>
+    <html><head></head><body><h1 id="使用tidyr重塑数据">使用tidyr重塑数据<a class="post-anchor" href="#使用tidyr重塑数据"></a></h1><p>tidyr可以将数据转换为适当的结构，以便进行分析和可视化。</p>
+<h1 id="1-适合分析的数据">1. 适合分析的数据<a class="post-anchor" href="#1-适合分析的数据"></a></h1><p>整洁数据的三个原则：<br>（1）每个变量在一列中；<br>（2）每次观测结果对应一行；<br>（3）每个值对应一个单元格。</p>
+<p>宽格式是不适合分析的，但是表示方法简洁；长格式是适合分析的，但是会包含一些重复的数据。</p>
+<p>导入tidyr包</p>
+<figure class="highlight plain"><figcaption><span>install_tidyr}</span></figcaption><table><tbody><tr><td class="code"><pre><span class="line"># install.packages("tidyr")</span><br><span class="line"># library("tidyr")</span><br></pre></td></tr></tbody></table></figure>
+
+<h1 id="2-从列到行：gather">2. 从列到行：gather()<a class="post-anchor" href="#2-从列到行：gather"></a></h1><p>使用gather()函数将宽格式数据转换为长格式数据，即将在多个列中的数据收集到一个列中。</p>
+<figure class="highlight plain"><figcaption><span>gather}</span></figcaption><table><tbody><tr><td class="code"><pre><span class="line">band_data_wide &lt;- read.csv("band_price.csv")</span><br><span class="line">band_data_long &lt;- gather(</span><br><span class="line">  band_data_wide, #数据来源</span><br><span class="line">  key = band, #新产生数据框中的特征所在列的列名</span><br><span class="line">  value = price, #新产生数据框中的数据值所在列的列名</span><br><span class="line">  -city #从这些列中收集数据，负号表示从除了city以外</span><br><span class="line">)</span><br></pre></td></tr></tbody></table></figure>
+
+<h1 id="3-从列到行：spread">3. 从列到行：spread()<a class="post-anchor" href="#3-从列到行：spread"></a></h1><p>使用spread()函数将长格式转换为宽格式。</p>
+<figure class="highlight plain"><figcaption><span>spread}</span></figcaption><table><tbody><tr><td class="code"><pre><span class="line">price_by_band &lt;- spread(</span><br><span class="line">  band_data_long,</span><br><span class="line">  key = city,</span><br><span class="line">  value = price</span><br><span class="line">)</span><br></pre></td></tr></tbody></table></figure>
+
+<p>使用unite()和separate()将列合并或者展开。</p>
+<h1 id="tidyr示例：">tidyr示例：<a class="post-anchor" href="#tidyr示例："></a></h1><figure class="highlight plain"><figcaption><span>statistics}</span></figcaption><table><tbody><tr><td class="code"><pre><span class="line"># Exercise 1: analyzing avocado sales with the `tidyr` package</span><br><span class="line"></span><br><span class="line"># Load necessary packages (`tidyr`, `dplyr`, and `ggplot2`)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"># Set your working directory using the RStudio menu:</span><br><span class="line"># Session &gt; Set Working Directory &gt; To Source File Location</span><br><span class="line"></span><br><span class="line"># Load the `data/avocado.csv` file into a variable `avocados`</span><br><span class="line"># Make sure strings are *not* read in as factors</span><br><span class="line">avocados &lt;- read.csv("avocado.csv",stringsAsFactors = FALSE)</span><br><span class="line"></span><br><span class="line"># To tell R to treat the `Date` column as a date (not just a string)</span><br><span class="line"># Redefine that column as a date using the `as.Date()` function</span><br><span class="line"># (hint: use the `mutate` function)</span><br><span class="line">as.Date(avocados$Date, "%Y-%m-%d")</span><br><span class="line"></span><br><span class="line"># The file had some uninformative column names, so rename these columns:</span><br><span class="line"># `X4046` to `small_haas`</span><br><span class="line"># `X4225` to `large_haas`</span><br><span class="line"># `X4770` to `xlarge_haas`</span><br><span class="line">avocados &lt;- rename(</span><br><span class="line">  avocados,</span><br><span class="line">  small_haas = X4046,</span><br><span class="line">  large_haas = X4225,</span><br><span class="line">  xlarge_haas = X4770</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"># The data only has sales for haas avocados. Create a new column `other_avos`</span><br><span class="line"># that is the Total.Volume minus all haas avocados (small, large, xlarge)</span><br><span class="line">avocados &lt;- mutate(</span><br><span class="line">  avocados,</span><br><span class="line">  other_avos = Total.Volume - small_haas - large_haas - xlarge_haas</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"># To perform analysis by avocado size, create a dataframe `by_size` that has</span><br><span class="line"># only `Date`, `other_avos`, `small_haas`, `large_haas`, `xlarge_haas`</span><br><span class="line">by_size &lt;- select(avocados,Date,other_avos,small_haas,large_haas,xlarge_haas)</span><br><span class="line"></span><br><span class="line"># In order to visualize this data, it needs to be reshaped. The four columns</span><br><span class="line"># `other_avos`, `small_haas`, `large_haas`, `xlarge_haas` need to be </span><br><span class="line"># **gathered** together into a single column called `size`. The volume of sales</span><br><span class="line"># (currently stored in each column) should be stored in a new column called </span><br><span class="line"># `volume`. Create a new dataframe `size_gathered` by passing the `by_size` </span><br><span class="line"># data frame to the `gather()` function. `size_gathered` will only have 3 </span><br><span class="line"># columns: `Date`, `size`, and `volume`.</span><br><span class="line">size_gathered &lt;- by_size %&gt;%</span><br><span class="line">  gather(</span><br><span class="line">    key = size,</span><br><span class="line">    value = volume,</span><br><span class="line">    small_haas,large_haas,xlarge_haas,other_avos</span><br><span class="line">  )</span><br><span class="line"></span><br><span class="line"># Using `size_gathered`, compute the average sales volume of each size </span><br><span class="line"># (hint, first `group_by` size, then compute using `summarize`)</span><br><span class="line">avg_sales_value &lt;- size_gathered %&gt;%</span><br><span class="line">  group_by(size) %&gt;%</span><br><span class="line">  summarize(</span><br><span class="line">    avg = mean(volume, na.rm = TRUE)</span><br><span class="line">  )</span><br><span class="line"></span><br><span class="line"># This shape also facilitates the visualization of sales over time</span><br><span class="line"># (how to write this code is covered in Chapter 16)</span><br><span class="line">ggplot(size_gathered) +</span><br><span class="line">  geom_smooth(mapping = aes(x = Date, y = volume, col = size), se = F) </span><br><span class="line"></span><br><span class="line"></span><br><span class="line"># We can also investigate sales by avocado type (conventional, organic).</span><br><span class="line"># Create a new data frame `by_type` by grouping the `avocados` dataframe by</span><br><span class="line"># `Date` and `type`, and calculating the sum of the `Total.Volume` for that type</span><br><span class="line"># in that week (resulting in a data frame with 2 rows per week).</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"># To make a (visual) comparison of conventional versus organic sales, you </span><br><span class="line"># need to **spread** out the `type` column into two different columns. Create a </span><br><span class="line"># new data frame `by_type_wide` by passing the `by_type` data frame to </span><br><span class="line"># the `spread()` function!</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"># Now you can create a scatterplot comparing conventional to organic sales!</span><br><span class="line"># (how to write this code is covered in Chapter 16)</span><br><span class="line">ggplot(by_type_wide) +</span><br><span class="line">  geom_point(mapping = aes(x = conventional, y = organic, color = Date))</span><br></pre></td></tr></tbody></table></figure></body></html>
+
+  
+    <div class="post-reward">
+    <div id="reward-button">打赏</div>
+      <div id="qr">
+        <div class="wrap">
+            
+            <div class="bg-wrap">
+              <a href="/images/zhifubao.png" target="_block" class="bg" style="background-image:url('/images/zhifubao.png')"></a>
+              支付宝
+            </div>
+            
+            
+            <div class="bg-wrap">
+                <a href="/images/weixin.png" target="_block" class="bg" style="background-image:url('/images/weixin.png')"></a>
+              微信
+            </div>
+            
+        </div>
+      </div>
+    </div>
+  
+  <div class="post-guide">
+    <div class="item left">
+        
+          <a href="/2021/07/11/R_6_using_dplyr/">R_6 dplyr</a>
+        
+    </div>
+    <div class="item right">
+        
+          <a href="/2021/07/06/1%E4%BD%BF%E7%94%A8git%E5%92%8CGitHub%E8%BF%9B%E8%A1%8C%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6/">使用git和GitHub进行版本控制</a>
+        
+    </div>
+  </div>
+
+  
+
+  <div class="post-copyright">
+    <div class="auth">
+      本文作者：<a href="http://hushrushly.github.io">Hushrush</a>
+    </div>
+    <div class="link">
+      链接：<a href="http://hushrushly.github.io/2021/07/11/R_7_using_tidyr/">http://hushrushly.github.io/2021/07/11/R_7_using_tidyr/</a>
+    </div>
+    <div class="declare">
+      版权声明：本文首发于<a href="http://hushrushly.github.io">Hushrush</a>的博客，转载请注明出处！
+    </div>
+  </div>
+
+  <div id="comment"></div>
+
+  
+  
+</article>
+        <footer>
+          <div class="copyright">
+            ©2021
+            <a href="http://hushrushly.github.io">Hushrush</a> Powered by <a href="https://hexo.io" target="_blank" rel="noopener">Hexo</a> |
+            <a href="https://github.com/shixiaohu2206/hexo-theme-huhu" target="_blank" rel="noopener">hexo-theme-huhu</a>
+          </div>
+          
+        </footer>
+      </div>
+    </div>
+  </body>
+  
+</html>
+<script type="text/javascript">
+                  window.HUHU_CONFIG = JSON.parse("{\"share\":[\"weibo\",\"weixin\",\"qqkongjian\",\"QQ\",\"douban\",\"facebook\",\"twitter\",\"google\"],\"valine\":{\"API_ID\":\"6ieLH7bGrju011dUapt0pFTI-MdYXbMMI\",\"API_KEY\":\"8VWSeumnLk1qGsiLzo5nENJq\",\"placeholder\":\"请发表评论：\"},\"service_worker\":{\"open\":false},\"baidu_tongji\":{\"site_from\":\"2020/4/1\",\"site_id\":\"fe1d9d2dc48a2ab8ea7f292f05e237cd\",\"access_token\":\"xxxxx\"}}")
+                </script> <script type="text/javascript">window.addEventListener('load', function() {
+    
+    window.loadJs = function(d, m, a) {
+      var c = document.getElementsByTagName('head')[0] || document.head || document.documentElement
+      var b = document.createElement('script')
+      b.defer = true
+      b.setAttribute('type', 'text/javascript')
+      b.setAttribute('charset', 'UTF-8')
+      b.setAttribute('async', 'true')
+      b.setAttribute('src', d)
+      m && b.setAttribute('data-main', '/scripts/app-built')
+      if (typeof a === 'function') {
+        if (window.attachEvent) {
+          b.onreadystatechange = function() {
+            var e = b.readyState
+            if (e === 'loaded' || e === 'complete') {
+              b.onreadystatechange = null
+              a()
+            }
+          }
+        } else {
+          b.onload = a
+        }
+      }
+      c.appendChild(b)
+    }
+    window.loadJs && window.loadJs('https://cdn.bootcss.com/require.js/2.3.6/require.min.js', true, function() {require.config({"paths":{"util":"util","share":"share","search":"search","pagemap":"pagemap.min","registerSW":"registerSW","valine":"cdn/Valine.min","av":["https://cdn.jsdelivr.net/npm/leancloud-storage/dist/av-min"],"pjax":["https://cdn.bootcss.com/jquery.pjax/2.0.1/jquery.pjax.min"],"jquery":["https://cdn.bootcss.com/jquery/3.4.1/jquery.min"],"confirm":["https://cdn.bootcss.com/jquery-confirm/3.3.4/jquery-confirm.min"],"fancybox":["https://cdn.bootcss.com/fancybox/3.5.7/jquery.fancybox.min"],"chart":["https://cdn.bootcss.com/Chart.js/2.8.0-rc.1/Chart.bundle.min"]},"map":{"*":{"css":"https://cdn.bootcss.com/require-css/0.1.10/css.min.js"}},"shim":{"fancybox":{"deps":["css!https://cdn.bootcss.com/fancybox/3.5.7/jquery.fancybox.min.css"]},"confirm":{"deps":["css!https://cdn.bootcss.com/jquery-confirm/3.3.4/jquery-confirm.min.css"]},"chart":{"deps":["css!https://cdn.bootcss.com/Chart.js/2.8.0-rc.1/Chart.min.css"]}},"waitSeconds":3})})
+  })</script> <script type="text/javascript">
+                  ;(function() {
+                    var bp = document.createElement('script')
+                    var curProtocol = window.location.protocol.split(':')[0]
+                    if (curProtocol === 'https') {
+                      bp.src = 'https://zz.bdstatic.com/linksubmit/push.js'
+                    } else {
+                      bp.src = 'http://push.zhanzhang.baidu.com/push.js'
+                    }
+                    var s = document.getElementsByTagName('script')[0]
+                    s.parentNode.insertBefore(bp, s)
+                  })()
+                </script> 

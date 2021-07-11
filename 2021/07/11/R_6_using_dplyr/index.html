@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <script>
+  var _hmt = _hmt || []
+  ;(function() {
+    var hm = document.createElement('script')
+    hm.src = 'https://hm.baidu.com/hm.js?5a0acc897fd96474a2c8f4deac84611a'
+    var s = document.getElementsByTagName('script')[0]
+    s.parentNode.insertBefore(hm, s)
+  })()
+</script> 
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="keywords" content="" />
+    <meta name="description" content="Simple and naive" />
+    
+    <title>
+      R_6 dplyr - TheHushrush
+    </title>
+    <link rel="manifest" href="/manifest.json" />
+    <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon" />
+    
+<link rel="stylesheet" href="/style/style.css">
+
+  <meta name="generator" content="Hexo 4.2.0"><link rel="alternate" href="/atom.xml" title="TheHushrush" type="application/atom+xml">
+</head>
+  <body>
+    <canvas id='pagemap'></canvas>
+    
+    <div id="post-toc" class="animated hiddenToc hide">
+      <span class="title">Toc</span>
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#使用dplyr操作数据"><span class="toc-text">使用dplyr操作数据</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-选择"><span class="toc-text">1. 选择</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-过滤"><span class="toc-text">2. 过滤</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-修改"><span class="toc-text">3. 修改</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-汇总"><span class="toc-text">4. 汇总</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-管道操作"><span class="toc-text">5. 管道操作</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-按组分析数据框"><span class="toc-text">6. 按组分析数据框</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-连接数据框"><span class="toc-text">7. 连接数据框</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#8-dplyr实战：分析飞行数据"><span class="toc-text">8.dplyr实战：分析飞行数据</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#8-1-加载数据库"><span class="toc-text">8.1 加载数据库</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-2-了解数据集的结构"><span class="toc-text">8.2 了解数据集的结构</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-3-解决问题"><span class="toc-text">8.3 解决问题</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#问题一：哪家航空公司延迟起飞的次数最多？"><span class="toc-text">问题一：哪家航空公司延迟起飞的次数最多？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#问题二：平均来说，航班最早到达哪个机场？"><span class="toc-text">问题二：平均来说，航班最早到达哪个机场？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#问题三：航班在哪个月延误最久？"><span class="toc-text">问题三：航班在哪个月延误最久？</span></a></li></ol></li></ol></li></ol></li></ol>
+    </div>
+    
+    <div id="fixed-menu-wrap">
+      <span class="iconfont icon-sousuo search-box menu-reset"></span>
+      <span class="icon-toc menu-reset">Toc</span>
+      <span class="iconfont icon-arrowup menu-reset"></span>
+    </div>
+    <div id="fixed-menu">
+      <span class="iconfont icon-menu-"></span>
+    </div>
+    <div id="progress">
+      <div class="line"></div>
+    </div>
+    <div id="search-shade" class="animated hiddenSearch hide">
+      <div class="input-wrap">
+        <span class="iconfont icon-sousuo search-box"></span>
+        <input type="text" placeholder="Search" />
+        <span class="iconfont icon-close"></span>
+      </div>
+      <div class="search-result">
+        <div class="meta">
+          <span><b id="result-count">0</b> results found</span>
+          <img src="/images/logo.jpeg" />
+        </div>
+        <ul id="result-box"></ul>
+      </div>
+    </div>
+    <div id="menu-mask" class="animated hideMenuMask hide">
+      <span class="iconfont icon-close"></span>
+      <div class="nav">
+        
+        <a href="/" class="">
+          首页
+        </a>
+        
+        <a href="/archives" class="">
+          归档
+        </a>
+        
+        <a href="/categories" class="">
+          分类
+        </a>
+        
+        <a href="/tags" class="">
+          标签
+        </a>
+        
+        <a href="/about" class="">
+          关于
+        </a>
+        
+      </div>
+    </div>
+    <div id="header">
+      <div class="intro">
+        <a href="/" class="logo" style="background-image: url('/images/logo.jpeg')"></a>
+        <div class="author">Hushrush</div>
+      </div>
+      <div class="nav">
+        <span class="iconfont icon-menu menu-icon"></span>
+        <a href="#" class="search-box">
+          <span class="iconfont icon-sousuo"></span>
+        </a>
+      </div>
+    </div>
+    <div id="side" class="animated bounceInLeft">
+      <div class="shrink">
+        <a href="/" class="logo" style="background-image: url('/images/logo.jpeg')"></a>
+        <span class="iconfont icon-menu toggle-icon"></span>
+        <a href="#" class="search-box">
+          <span class="iconfont icon-sousuo"></span>
+        </a>
+      </div>
+      <div class="magnify">
+        <div class="about">
+          <div class="author">Hushrush</div>
+          <a href="/" class="logo" style="background-image: url('/images/logo.jpeg')"></a>
+        </div>
+
+        <div class="nav">
+          
+          <a href="/" class="">
+            首页
+          </a>
+          
+          <a href="/archives" class="">
+            归档
+          </a>
+          
+          <a href="/categories" class="">
+            分类
+          </a>
+          
+          <a href="/tags" class="">
+            标签
+          </a>
+          
+          <a href="/about" class="">
+            关于
+          </a>
+          
+          <a href="#" class="search-box">
+            <span class="iconfont icon-sousuo"></span>
+          </a>
+        </div>
+        <div class="bottom">
+          <div class="follow">
+            
+            <a href="https://github.com/shixiaohu2206" target="_block">
+              <span class="iconfont icon-github"></span>
+            </a>
+            
+            <a href="https://www.facebook.com/shi.xiaohu.5" target="_block">
+              <span class="iconfont icon-facebook"></span>
+            </a>
+            
+            <a href="https://www.instagram.com/shi_xiaohu/" target="_block">
+              <span class="iconfont icon-instagram"></span>
+            </a>
+             
+            <a href="/atom.xml" target="_block">
+              <span class="iconfont icon-rss"></span>
+            </a>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="container">
+      <div class="main animated bounceInRight delay-0.7s">
+        <article class="post-entry">
+    <div class="header">
+      
+      <div class="title">R_6 dplyr</div>
+      <div class="meta">
+        <span class="item">
+          <span class="iconfont icon-time-circle"></span>
+          <span>2021/07/11</span>
+        </span>
+
+        
+          <span class="item leancloud-visitors" id="/2021/07/11/R_6_using_dplyr/" data-flag-title="R_6 dplyr">
+            <span class="iconfont icon-eye1"></span>
+            <span class="leancloud-visitors-count"></span>
+          </span>
+        
+
+         
+        <span class="item">
+          <span class="iconfont icon-folder"></span>
+          <span>
+              
+                
+                  <a href="/categories/学习">学习</a>
+                
+              
+          </span>
+        </span>
+        
+        
+         
+          <span class="item">
+            <span class="iconfont icon-tag1"></span>
+            <span>
+                
+                  
+                    <a href="/tags/R语言">R语言</a>
+                  
+                
+            </span>
+          </span>
+         
+      </div>
+      <div>
+      </div>
+    </div>
+    <html><head></head><body><h1 id="使用dplyr操作数据">使用dplyr操作数据<a class="post-anchor" href="#使用dplyr操作数据"></a></h1><p>dplyr是一个外部包，在使用前需要先加载。</p>
+<figure class="highlight plain"><figcaption><span>load_dplyr}</span></figcaption><table><tbody><tr><td class="code"><pre><span class="line">#install.packages("dplyr")#已经安装过了</span><br><span class="line">library("dplyr")</span><br></pre></td></tr></tbody></table></figure>
+
+<p><em>加载一个数据集presidentialElections</em></p>
+<figure class="highlight plain"><figcaption><span>pscl}</span></figcaption><table><tbody><tr><td class="code"><pre><span class="line">#install.packages("pscl")#已经安装过了</span><br><span class="line">library("pscl")</span><br></pre></td></tr></tbody></table></figure>
+
+<h2 id="1-选择">1. 选择<a class="post-anchor" href="#1-选择"></a></h2><p>使用select()函数从数据框中选择列。</p>
+<figure class="highlight plain"><figcaption><span>select}</span></figcaption><table><tbody><tr><td class="code"><pre><span class="line">votes &lt;- select(presidentialElections,year,demVote)#不带引号</span><br><span class="line">#也可以用基础语法</span><br><span class="line">#votes &lt;- presidentialElections[,c("year","demVote")]</span><br><span class="line"></span><br><span class="line">#select函数的参数可以是列名向量</span><br><span class="line">select(presidentialElections,state:year)#选state到year</span><br><span class="line">select(presidentialElections,-south)#排除south</span><br></pre></td></tr></tbody></table></figure>
+
+<p><em>使用select函数选择单列也返回数据框而不是向量</em>。</p>
+<h2 id="2-过滤">2. 过滤<a class="post-anchor" href="#2-过滤"></a></h2><p>使用filter()函数提取行，也可以叫过滤。</p>
+<figure class="highlight plain"><figcaption><span>filter}</span></figcaption><table><tbody><tr><td class="code"><pre><span class="line">votes2008 &lt;- filter(</span><br><span class="line">  presidentialElections,</span><br><span class="line">  year == 2008</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">votes_colorado_2016 &lt;- filter(</span><br><span class="line">  presidentialElections,</span><br><span class="line">  year == 2016,</span><br><span class="line">  state == "Colorado"</span><br><span class="line">)</span><br></pre></td></tr></tbody></table></figure>
+
+<h2 id="3-修改">3. 修改<a class="post-anchor" href="#3-修改"></a></h2><p>使用mutate函数创建额外的列。</p>
+<figure class="highlight plain"><figcaption><span>mutate}</span></figcaption><table><tbody><tr><td class="code"><pre><span class="line">presidentialElections &lt;- mutate(</span><br><span class="line">  presidentialElections,</span><br><span class="line">  other_parties_vote = 100 - demVote,#每一列都是向量</span><br><span class="line">  abs_vote_difference = abs(demVote - other_parties_vote)</span><br><span class="line">)</span><br></pre></td></tr></tbody></table></figure>
+
+<p>使用rename()函数对某列重命名。</p>
+<figure class="highlight plain"><figcaption><span>rename}</span></figcaption><table><tbody><tr><td class="code"><pre><span class="line">rename(</span><br><span class="line">  presidentialElections,</span><br><span class="line">  other_vote = other_parties_vote </span><br><span class="line">)</span><br></pre></td></tr></tbody></table></figure>
+
+<p>使用arrange()函数对数据框中的行进行排序。先按照第一个参数进行排序，第一个参数相同时按照第二个参数排序。参数名前加负号表示降序，不加负号表示升序。</p>
+<figure class="highlight plain"><figcaption><span>arrange}</span></figcaption><table><tbody><tr><td class="code"><pre><span class="line">presidentialElections &lt;- arrange(</span><br><span class="line">  presidentialElections,</span><br><span class="line">  -year,</span><br><span class="line">  demVote</span><br><span class="line">)</span><br></pre></td></tr></tbody></table></figure>
+
+<h2 id="4-汇总">4. 汇总<a class="post-anchor" href="#4-汇总"></a></h2><p>使用summarize()函数生成一个包含summary列的新数据框。任何以向量为参数，返回单个值的函数都可以用在summarize函数中，也可以自己编写函数。</p>
+<h2 id="5-管道操作">5. 管道操作<a class="post-anchor" href="#5-管道操作"></a></h2><p>管道运算符%&gt;%可以从一个函数获取结果，将其作为第一个参数传给下一个函数。</p>
+<p><em>例：在2008年的美国选举中，哪个州对民主党候选人奥巴马的支持率最高？</em></p>
+<figure class="highlight plain"><figcaption><span>basic_solution}</span></figcaption><table><tbody><tr><td class="code"><pre><span class="line">#不使用管道操作符，会产生一系列的中间变量</span><br><span class="line"></span><br><span class="line">vote_2008 &lt;- filter(presidentialElections, year == 2008)</span><br><span class="line">most_dem_vote &lt;- filter(vote_2008, demVote == max(demVote))</span><br><span class="line"># 注意选择出的行符合过滤的条件为真。并不是选择max(demVote)</span><br><span class="line">most_dem_state &lt;- select(most_dem_vote, state)</span><br></pre></td></tr></tbody></table></figure>
+
+<figure class="highlight plain"><figcaption><span>tube_solution}</span></figcaption><table><tbody><tr><td class="code"><pre><span class="line">most_dem_state2 &lt;- presidentialElections %&gt;%</span><br><span class="line">  filter(year == 2008) %&gt;%</span><br><span class="line">  filter(demVote == max(demVote)) %&gt;%</span><br><span class="line">  select(state)#注意没有逗号</span><br></pre></td></tr></tbody></table></figure>
+
+<h2 id="6-按组分析数据框">6. 按组分析数据框<a class="post-anchor" href="#6-按组分析数据框"></a></h2><p>使用group_by()函数对数据框进行分组。第一个参数是需要分组的数据框，第二个参数是用于分组数据的列，该列值相同的行分为一组。group_by()函数返回一个tibble，一种特殊的数据框，而不是显式地将原数据框重新排列。</p>
+<figure class="highlight plain"><figcaption><span>group_by_test}</span></figcaption><table><tbody><tr><td class="code"><pre><span class="line">mean_state_demVote &lt;- presidentialElections %&gt;%</span><br><span class="line">  group_by(state) %&gt;%</span><br><span class="line">  summarize(</span><br><span class="line">    mean_state_demVote = mean(demVote)</span><br><span class="line">    )</span><br></pre></td></tr></tbody></table></figure>
+
+<h2 id="7-连接数据框">7. 连接数据框<a class="post-anchor" href="#7-连接数据框"></a></h2><p>使用left_join()函数连接两个数据框，第一、二个参数指定左右表，使用by参数指定需要匹配的参数。</p>
+<figure class="highlight plain"><figcaption><span>combine_data}</span></figcaption><table><tbody><tr><td class="code"><pre><span class="line">donations &lt;- read.csv("donations.csv")</span><br><span class="line">donors &lt;- read.csv("donors.csv")</span><br><span class="line"></span><br><span class="line">combined_data &lt;- left_join(donations,donors,by = "donor_name")</span><br></pre></td></tr></tbody></table></figure>
+
+<p>注意首先遍历左侧表，连接后的donor_name列一定和左表相同。如果右侧表中没有左侧表对应值，则用NA代替。right_join()函数的功能恰好相反。</p>
+<p>如果只想匹配特定的列，指定donor_name的值。</p>
+<figure class="highlight plain"><figcaption><span>combine_specified_data}</span></figcaption><table><tbody><tr><td class="code"><pre><span class="line">combined_specified_data &lt;- </span><br><span class="line">  left_join(donations, donors,by = c("donor_name" = "name"))</span><br></pre></td></tr></tbody></table></figure>
+
+<p> 除了左连接和右连接以外，还有内连接（交）和完全连接（并）。</p>
+<h2 id="8-dplyr实战：分析飞行数据">8.dplyr实战：分析飞行数据<a class="post-anchor" href="#8-dplyr实战：分析飞行数据"></a></h2><h3 id="8-1-加载数据库">8.1 加载数据库<a class="post-anchor" href="#8-1-加载数据库"></a></h3><figure class="highlight plain"><figcaption><span>FL_load_statistics}</span></figcaption><table><tbody><tr><td class="code"><pre><span class="line"># install.packages("nycflights13")</span><br><span class="line"> library("nycflights13")</span><br></pre></td></tr></tbody></table></figure>
+
+<h3 id="8-2-了解数据集的结构">8.2 了解数据集的结构<a class="post-anchor" href="#8-2-了解数据集的结构"></a></h3><figure class="highlight plain"><figcaption><span>FL_knowing_data_set}</span></figcaption><table><tbody><tr><td class="code"><pre><span class="line">?flights</span><br><span class="line">dim(flights)</span><br><span class="line">colnames(flights)</span><br><span class="line">View(flights)</span><br></pre></td></tr></tbody></table></figure>
+
+<h3 id="8-3-解决问题">8.3 解决问题<a class="post-anchor" href="#8-3-解决问题"></a></h3><h4 id="问题一：哪家航空公司延迟起飞的次数最多？">问题一：哪家航空公司延迟起飞的次数最多？<a class="post-anchor" href="#问题一：哪家航空公司延迟起飞的次数最多？"></a></h4><figure class="highlight plain"><figcaption><span>FL_p1}</span></figcaption><table><tbody><tr><td class="code"><pre><span class="line">most_delay &lt;- flights %&gt;%</span><br><span class="line">  group_by(carrier) %&gt;%</span><br><span class="line">  filter(dep_delay &gt; 0) %&gt;%</span><br><span class="line">  summarize(num_delay = n()) %&gt;%#函数n()返回组的规模</span><br><span class="line">  filter(num_delay == max(num_delay)) %&gt;%</span><br><span class="line">  select(carrier) %&gt;%</span><br><span class="line">  left_join(airlines, by = "carrier") %&gt;%</span><br><span class="line">  select(name)</span><br></pre></td></tr></tbody></table></figure>
+
+<h4 id="问题二：平均来说，航班最早到达哪个机场？">问题二：平均来说，航班最早到达哪个机场？<a class="post-anchor" href="#问题二：平均来说，航班最早到达哪个机场？"></a></h4><p><strong><em>注意有NA值时一定要删除NA值！</em></strong></p>
+<figure class="highlight plain"><figcaption><span>FL_p2}</span></figcaption><table><tbody><tr><td class="code"><pre><span class="line">earliest_arrive &lt;- flights %&gt;%</span><br><span class="line">  group_by(dest) %&gt;%</span><br><span class="line">  summarize(delay = mean(arr_delay, na.rm = TRUE)) %&gt;% #删除na值</span><br><span class="line">  filter(delay == min(delay, na.rm = TRUE)) %&gt;%</span><br><span class="line">  select(dest) %&gt;%</span><br><span class="line">  left_join(airports, by = c("dest" = "faa")) %&gt;%</span><br><span class="line">  select(name)</span><br></pre></td></tr></tbody></table></figure>
+
+<h4 id="问题三：航班在哪个月延误最久？">问题三：航班在哪个月延误最久？<a class="post-anchor" href="#问题三：航班在哪个月延误最久？"></a></h4><figure class="highlight plain"><figcaption><span>FL_p3}</span></figcaption><table><tbody><tr><td class="code"><pre><span class="line">longest_delay &lt;- flights %&gt;%</span><br><span class="line">  group_by(month) %&gt;%</span><br><span class="line">  summarize(avg_delay = mean(arr_delay, na.rm = TRUE)) %&gt;%</span><br><span class="line">  filter(avg_delay == max(avg_delay, na.rm = TRUE)) %&gt;%</span><br><span class="line">  select(month) </span><br><span class="line">print(longest_delay)</span><br></pre></td></tr></tbody></table></figure></body></html>
+
+  
+    <div class="post-reward">
+    <div id="reward-button">打赏</div>
+      <div id="qr">
+        <div class="wrap">
+            
+            <div class="bg-wrap">
+              <a href="/images/zhifubao.png" target="_block" class="bg" style="background-image:url('/images/zhifubao.png')"></a>
+              支付宝
+            </div>
+            
+            
+            <div class="bg-wrap">
+                <a href="/images/weixin.png" target="_block" class="bg" style="background-image:url('/images/weixin.png')"></a>
+              微信
+            </div>
+            
+        </div>
+      </div>
+    </div>
+  
+  <div class="post-guide">
+    <div class="item left">
+        
+          <a href="/2021/07/11/R_5_dataframe/">R_5 数据框</a>
+        
+    </div>
+    <div class="item right">
+        
+          <a href="/2021/07/11/R_7_using_tidyr/">R_7 tidyr</a>
+        
+    </div>
+  </div>
+
+  
+
+  <div class="post-copyright">
+    <div class="auth">
+      本文作者：<a href="http://hushrushly.github.io">Hushrush</a>
+    </div>
+    <div class="link">
+      链接：<a href="http://hushrushly.github.io/2021/07/11/R_6_using_dplyr/">http://hushrushly.github.io/2021/07/11/R_6_using_dplyr/</a>
+    </div>
+    <div class="declare">
+      版权声明：本文首发于<a href="http://hushrushly.github.io">Hushrush</a>的博客，转载请注明出处！
+    </div>
+  </div>
+
+  <div id="comment"></div>
+
+  
+  
+</article>
+        <footer>
+          <div class="copyright">
+            ©2021
+            <a href="http://hushrushly.github.io">Hushrush</a> Powered by <a href="https://hexo.io" target="_blank" rel="noopener">Hexo</a> |
+            <a href="https://github.com/shixiaohu2206/hexo-theme-huhu" target="_blank" rel="noopener">hexo-theme-huhu</a>
+          </div>
+          
+        </footer>
+      </div>
+    </div>
+  </body>
+  
+</html>
+<script type="text/javascript">
+                  window.HUHU_CONFIG = JSON.parse("{\"share\":[\"weibo\",\"weixin\",\"qqkongjian\",\"QQ\",\"douban\",\"facebook\",\"twitter\",\"google\"],\"valine\":{\"API_ID\":\"6ieLH7bGrju011dUapt0pFTI-MdYXbMMI\",\"API_KEY\":\"8VWSeumnLk1qGsiLzo5nENJq\",\"placeholder\":\"请发表评论：\"},\"service_worker\":{\"open\":false},\"baidu_tongji\":{\"site_from\":\"2020/4/1\",\"site_id\":\"fe1d9d2dc48a2ab8ea7f292f05e237cd\",\"access_token\":\"xxxxx\"}}")
+                </script> <script type="text/javascript">window.addEventListener('load', function() {
+    
+    window.loadJs = function(d, m, a) {
+      var c = document.getElementsByTagName('head')[0] || document.head || document.documentElement
+      var b = document.createElement('script')
+      b.defer = true
+      b.setAttribute('type', 'text/javascript')
+      b.setAttribute('charset', 'UTF-8')
+      b.setAttribute('async', 'true')
+      b.setAttribute('src', d)
+      m && b.setAttribute('data-main', '/scripts/app-built')
+      if (typeof a === 'function') {
+        if (window.attachEvent) {
+          b.onreadystatechange = function() {
+            var e = b.readyState
+            if (e === 'loaded' || e === 'complete') {
+              b.onreadystatechange = null
+              a()
+            }
+          }
+        } else {
+          b.onload = a
+        }
+      }
+      c.appendChild(b)
+    }
+    window.loadJs && window.loadJs('https://cdn.bootcss.com/require.js/2.3.6/require.min.js', true, function() {require.config({"paths":{"util":"util","share":"share","search":"search","pagemap":"pagemap.min","registerSW":"registerSW","valine":"cdn/Valine.min","av":["https://cdn.jsdelivr.net/npm/leancloud-storage/dist/av-min"],"pjax":["https://cdn.bootcss.com/jquery.pjax/2.0.1/jquery.pjax.min"],"jquery":["https://cdn.bootcss.com/jquery/3.4.1/jquery.min"],"confirm":["https://cdn.bootcss.com/jquery-confirm/3.3.4/jquery-confirm.min"],"fancybox":["https://cdn.bootcss.com/fancybox/3.5.7/jquery.fancybox.min"],"chart":["https://cdn.bootcss.com/Chart.js/2.8.0-rc.1/Chart.bundle.min"]},"map":{"*":{"css":"https://cdn.bootcss.com/require-css/0.1.10/css.min.js"}},"shim":{"fancybox":{"deps":["css!https://cdn.bootcss.com/fancybox/3.5.7/jquery.fancybox.min.css"]},"confirm":{"deps":["css!https://cdn.bootcss.com/jquery-confirm/3.3.4/jquery-confirm.min.css"]},"chart":{"deps":["css!https://cdn.bootcss.com/Chart.js/2.8.0-rc.1/Chart.min.css"]}},"waitSeconds":3})})
+  })</script> <script type="text/javascript">
+                  ;(function() {
+                    var bp = document.createElement('script')
+                    var curProtocol = window.location.protocol.split(':')[0]
+                    if (curProtocol === 'https') {
+                      bp.src = 'https://zz.bdstatic.com/linksubmit/push.js'
+                    } else {
+                      bp.src = 'http://push.zhanzhang.baidu.com/push.js'
+                    }
+                    var s = document.getElementsByTagName('script')[0]
+                    s.parentNode.insertBefore(bp, s)
+                  })()
+                </script> 

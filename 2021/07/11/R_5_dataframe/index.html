@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <script>
+  var _hmt = _hmt || []
+  ;(function() {
+    var hm = document.createElement('script')
+    hm.src = 'https://hm.baidu.com/hm.js?5a0acc897fd96474a2c8f4deac84611a'
+    var s = document.getElementsByTagName('script')[0]
+    s.parentNode.insertBefore(hm, s)
+  })()
+</script> 
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="keywords" content="" />
+    <meta name="description" content="Simple and naive" />
+    
+    <title>
+      R_5 数据框 - TheHushrush
+    </title>
+    <link rel="manifest" href="/manifest.json" />
+    <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon" />
+    
+<link rel="stylesheet" href="/style/style.css">
+
+  <meta name="generator" content="Hexo 4.2.0"><link rel="alternate" href="/atom.xml" title="TheHushrush" type="application/atom+xml">
+</head>
+  <body>
+    <canvas id='pagemap'></canvas>
+    
+    <div id="post-toc" class="animated hiddenToc hide">
+      <span class="title">Toc</span>
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#1-理解数据"><span class="toc-text">1. 理解数据</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-1-获取数据"><span class="toc-text">1.1 获取数据</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-2-数据类型"><span class="toc-text">1.2 数据类型</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-3-解释数据"><span class="toc-text">1.3 解释数据</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2-数据框（Data-Frame）"><span class="toc-text">2. 数据框（Data Frame）</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#2-1-创建数据框"><span class="toc-text">2.1 创建数据框</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-2-访问数据框"><span class="toc-text">2.2 访问数据框</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-3-使用csv数据"><span class="toc-text">2.3 使用csv数据</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-4-因子变量"><span class="toc-text">2.4 因子变量</span></a></li></ol></li></ol>
+    </div>
+    
+    <div id="fixed-menu-wrap">
+      <span class="iconfont icon-sousuo search-box menu-reset"></span>
+      <span class="icon-toc menu-reset">Toc</span>
+      <span class="iconfont icon-arrowup menu-reset"></span>
+    </div>
+    <div id="fixed-menu">
+      <span class="iconfont icon-menu-"></span>
+    </div>
+    <div id="progress">
+      <div class="line"></div>
+    </div>
+    <div id="search-shade" class="animated hiddenSearch hide">
+      <div class="input-wrap">
+        <span class="iconfont icon-sousuo search-box"></span>
+        <input type="text" placeholder="Search" />
+        <span class="iconfont icon-close"></span>
+      </div>
+      <div class="search-result">
+        <div class="meta">
+          <span><b id="result-count">0</b> results found</span>
+          <img src="/images/logo.jpeg" />
+        </div>
+        <ul id="result-box"></ul>
+      </div>
+    </div>
+    <div id="menu-mask" class="animated hideMenuMask hide">
+      <span class="iconfont icon-close"></span>
+      <div class="nav">
+        
+        <a href="/" class="">
+          首页
+        </a>
+        
+        <a href="/archives" class="">
+          归档
+        </a>
+        
+        <a href="/categories" class="">
+          分类
+        </a>
+        
+        <a href="/tags" class="">
+          标签
+        </a>
+        
+        <a href="/about" class="">
+          关于
+        </a>
+        
+      </div>
+    </div>
+    <div id="header">
+      <div class="intro">
+        <a href="/" class="logo" style="background-image: url('/images/logo.jpeg')"></a>
+        <div class="author">Hushrush</div>
+      </div>
+      <div class="nav">
+        <span class="iconfont icon-menu menu-icon"></span>
+        <a href="#" class="search-box">
+          <span class="iconfont icon-sousuo"></span>
+        </a>
+      </div>
+    </div>
+    <div id="side" class="animated bounceInLeft">
+      <div class="shrink">
+        <a href="/" class="logo" style="background-image: url('/images/logo.jpeg')"></a>
+        <span class="iconfont icon-menu toggle-icon"></span>
+        <a href="#" class="search-box">
+          <span class="iconfont icon-sousuo"></span>
+        </a>
+      </div>
+      <div class="magnify">
+        <div class="about">
+          <div class="author">Hushrush</div>
+          <a href="/" class="logo" style="background-image: url('/images/logo.jpeg')"></a>
+        </div>
+
+        <div class="nav">
+          
+          <a href="/" class="">
+            首页
+          </a>
+          
+          <a href="/archives" class="">
+            归档
+          </a>
+          
+          <a href="/categories" class="">
+            分类
+          </a>
+          
+          <a href="/tags" class="">
+            标签
+          </a>
+          
+          <a href="/about" class="">
+            关于
+          </a>
+          
+          <a href="#" class="search-box">
+            <span class="iconfont icon-sousuo"></span>
+          </a>
+        </div>
+        <div class="bottom">
+          <div class="follow">
+            
+            <a href="https://github.com/shixiaohu2206" target="_block">
+              <span class="iconfont icon-github"></span>
+            </a>
+            
+            <a href="https://www.facebook.com/shi.xiaohu.5" target="_block">
+              <span class="iconfont icon-facebook"></span>
+            </a>
+            
+            <a href="https://www.instagram.com/shi_xiaohu/" target="_block">
+              <span class="iconfont icon-instagram"></span>
+            </a>
+             
+            <a href="/atom.xml" target="_block">
+              <span class="iconfont icon-rss"></span>
+            </a>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="container">
+      <div class="main animated bounceInRight delay-0.7s">
+        <article class="post-entry">
+    <div class="header">
+      
+      <div class="title">R_5 数据框</div>
+      <div class="meta">
+        <span class="item">
+          <span class="iconfont icon-time-circle"></span>
+          <span>2021/07/11</span>
+        </span>
+
+        
+          <span class="item leancloud-visitors" id="/2021/07/11/R_5_dataframe/" data-flag-title="R_5 数据框">
+            <span class="iconfont icon-eye1"></span>
+            <span class="leancloud-visitors-count"></span>
+          </span>
+        
+
+         
+        <span class="item">
+          <span class="iconfont icon-folder"></span>
+          <span>
+              
+                
+                  <a href="/categories/学习">学习</a>
+                
+              
+          </span>
+        </span>
+        
+        
+         
+          <span class="item">
+            <span class="iconfont icon-tag1"></span>
+            <span>
+                
+                  
+                    <a href="/tags/R语言">R语言</a>
+                  
+                
+            </span>
+          </span>
+         
+      </div>
+      <div>
+      </div>
+    </div>
+    <html><head></head><body><h1 id="1-理解数据">1. 理解数据<a class="post-anchor" href="#1-理解数据"></a></h1><h2 id="1-1-获取数据">1.1 获取数据<a class="post-anchor" href="#1-1-获取数据"></a></h2><p>从这些地方可以获取数据：</p>
+<p>（1）政府出版物；</p>
+<p>（2）新闻和报刊；</p>
+<p>（3）科学研究出版物；</p>
+<p>（4）社交网络和媒体；</p>
+<p>（5）在线社区，如Kaggle，Socrata等。</p>
+<h2 id="1-2-数据类型">1.2 数据类型<a class="post-anchor" href="#1-2-数据类型"></a></h2><p>从测量尺度来说，数据可以分为：</p>
+<p>（1）名目数据：只有类别，没有大小，可以用布尔值表示。如香蕉、梨子、苹果等；</p>
+<p>（2）有序数据：可以比较大小，但是不能计算值之间的距离。如酒店的五星级，四星级等；</p>
+<p>（3）比例数据：可以比较大小也可以进行任何计算。如人口数量等；</p>
+<p>（4）间隔数据：可以计算差值但是不能计算比例。如星期一、星期二、星期三等。</p>
+<p>从数据结构来说，常用<strong>表格</strong>记录数据：每一行表示一个观测结果，每一列表示一个特征。表的每一个单元格都可以包含向量甚至是表，故表格可以是多维的。</p>
+<h2 id="1-3-解释数据">1.3 解释数据<a class="post-anchor" href="#1-3-解释数据"></a></h2><p>需要获取领域知识并了解数据模式。</p>
+<h1 id="2-数据框（Data-Frame）">2. 数据框（Data Frame）<a class="post-anchor" href="#2-数据框（Data-Frame）"></a></h1><p>R中主要使用数据框来存储二维数据。数据框实际上是列表，每个元素都是长度相同的向量。<strong>每个向量代表一列</strong>，相同索引处的数据组成一行。</p>
+<h2 id="2-1-创建数据框">2.1 创建数据框<a class="post-anchor" href="#2-1-创建数据框"></a></h2><p>使用data.frame()函数创建数据框。</p>
+<figure class="highlight plain"><figcaption><span>create_data_frame}</span></figcaption><table><tbody><tr><td class="code"><pre><span class="line">name &lt;- c("Ada","Bob","Chris")</span><br><span class="line">height &lt;- c(161,175,167)</span><br><span class="line">weight &lt;- c(95,145,106)</span><br><span class="line">people &lt;- data.frame(name,height,weight,stringsAsFactors = FALSE)</span><br></pre></td></tr></tbody></table></figure>
+
+<p>其中令stringsAsFactors为FALSE是将包含字符串的向量只是视为普通的向量而不是因子（另一种数据类型）。也可以使用key = value的形式创建数据框。</p>
+<figure class="highlight plain"><figcaption><span>key_value_data_frame}</span></figcaption><table><tbody><tr><td class="code"><pre><span class="line">people &lt;- data.frame(</span><br><span class="line">  name = c("Ada","Bob","Chris"),</span><br><span class="line">  height = c(161,175,167),</span><br><span class="line">  weight = c(95,145,106),</span><br><span class="line">  age = c(25,26,32)</span><br><span class="line">)</span><br></pre></td></tr></tbody></table></figure>
+
+<p>以下为对数据框进行操作的函数：</p>
+<figure class="highlight plain"><figcaption><span>data_frame_operation}</span></figcaption><table><tbody><tr><td class="code"><pre><span class="line">nrow(people)#返回行数</span><br><span class="line">ncol(people)#返回列数</span><br><span class="line">dim(people)#返回维度（行、列）</span><br><span class="line">colnames(people)#返回列名称</span><br><span class="line">rownames(people)#返回行名称</span><br><span class="line">head(people,n = 2)#返回前几行作为新的数据框，参数n确定返回行数</span><br><span class="line">tail(people,n = 2)#返回后几行作为新的数据框，参数n确定返回行数</span><br><span class="line">View(people)#在RStudio的查看器中查看数据框，注意大写V</span><br></pre></td></tr></tbody></table></figure>
+
+<h2 id="2-2-访问数据框">2.2 访问数据框<a class="post-anchor" href="#2-2-访问数据框"></a></h2><p>可以使用访问列表的方法访问数据框，但也可以用但括号表示法访问数据框。</p>
+<figure class="highlight plain"><figcaption><span>visit_data_frame}</span></figcaption><table><tbody><tr><td class="code"><pre><span class="line">people[3, "name"]#注意没有定义行名，故不能写people["Bob","height"]</span><br><span class="line">people[1,1]</span><br><span class="line">people[2,]#缺省则都显示</span><br><span class="line">people1 &lt;- people[1]#返回一个数据框</span><br><span class="line"></span><br><span class="line">rownames(people) &lt;- c("Ada","Bob","Chris")#分配行名，这样可以通过行名索引</span><br><span class="line">people["Bob","height"]</span><br><span class="line"></span><br><span class="line">#也可以一次索引多个行列</span><br><span class="line">people[2:4,1:2]</span><br><span class="line">people[people$"height" &gt; 170,]#注意逗号，没有则错</span><br></pre></td></tr></tbody></table></figure>
+
+<p>返回的数据类型取决于选择的列数：返回一列则是向量，返回两列则是数据框。索要使用数据框，需要首先使用is.data.frame()函数判断对象是否为数据框，若不是可以使用as.data.frame()函数将其转换为数据框。</p>
+<h2 id="2-3-使用csv数据">2.3 使用csv数据<a class="post-anchor" href="#2-3-使用csv数据"></a></h2><p>使用read.csv()函数导入csv数据，使用write.csv()函数将数据写入csv文件</p>
+<figure class="highlight plain"><figcaption><span>read_csv}</span></figcaption><table><tbody><tr><td class="code"><pre><span class="line">df &lt;- read.csv("example_file.csv",stringsAsFactors = FALSE)</span><br><span class="line">write.csv(df,"new_file.csv",row.names = FALSE)</span><br></pre></td></tr></tbody></table></figure>
+
+<p><em>关于工作目录</em></p>
+<p>使用getwd()函数得到当前工作目录，使用setwd()函数设置工作目录。也可以在RStudio界面中修改工作目录。</p>
+<h2 id="2-4-因子变量">2.4 因子变量<a class="post-anchor" href="#2-4-因子变量"></a></h2><p>Factor（因子）变量用来优化一组优先类别组成的变量。字符串会占用大量空间，如果将字符串一一对应地转换为数字则可以节省大量空间。可以通过as.factors()函数创建因子变量。</p>
+<figure class="highlight plain"><figcaption><span>create_factor}</span></figcaption><table><tbody><tr><td class="code"><pre><span class="line">shirt_sizes &lt;- as.factor(c("large","small","medium","large"))</span><br><span class="line">print(shirt_sizes)</span><br></pre></td></tr></tbody></table></figure>
+
+<p>但是因子不是向量，很多操作和函数不能对因子使用。</p>
+</body></html>
+
+  
+    <div class="post-reward">
+    <div id="reward-button">打赏</div>
+      <div id="qr">
+        <div class="wrap">
+            
+            <div class="bg-wrap">
+              <a href="/images/zhifubao.png" target="_block" class="bg" style="background-image:url('/images/zhifubao.png')"></a>
+              支付宝
+            </div>
+            
+            
+            <div class="bg-wrap">
+                <a href="/images/weixin.png" target="_block" class="bg" style="background-image:url('/images/weixin.png')"></a>
+              微信
+            </div>
+            
+        </div>
+      </div>
+    </div>
+  
+  <div class="post-guide">
+    <div class="item left">
+        
+          <a href="/2021/07/11/R_3_vectors/">R_3 向量</a>
+        
+    </div>
+    <div class="item right">
+        
+          <a href="/2021/07/11/R_6_using_dplyr/">R_6 dplyr</a>
+        
+    </div>
+  </div>
+
+  
+
+  <div class="post-copyright">
+    <div class="auth">
+      本文作者：<a href="http://hushrushly.github.io">Hushrush</a>
+    </div>
+    <div class="link">
+      链接：<a href="http://hushrushly.github.io/2021/07/11/R_5_dataframe/">http://hushrushly.github.io/2021/07/11/R_5_dataframe/</a>
+    </div>
+    <div class="declare">
+      版权声明：本文首发于<a href="http://hushrushly.github.io">Hushrush</a>的博客，转载请注明出处！
+    </div>
+  </div>
+
+  <div id="comment"></div>
+
+  
+  
+</article>
+        <footer>
+          <div class="copyright">
+            ©2021
+            <a href="http://hushrushly.github.io">Hushrush</a> Powered by <a href="https://hexo.io" target="_blank" rel="noopener">Hexo</a> |
+            <a href="https://github.com/shixiaohu2206/hexo-theme-huhu" target="_blank" rel="noopener">hexo-theme-huhu</a>
+          </div>
+          
+        </footer>
+      </div>
+    </div>
+  </body>
+  
+</html>
+<script type="text/javascript">
+                  window.HUHU_CONFIG = JSON.parse("{\"share\":[\"weibo\",\"weixin\",\"qqkongjian\",\"QQ\",\"douban\",\"facebook\",\"twitter\",\"google\"],\"valine\":{\"API_ID\":\"6ieLH7bGrju011dUapt0pFTI-MdYXbMMI\",\"API_KEY\":\"8VWSeumnLk1qGsiLzo5nENJq\",\"placeholder\":\"请发表评论：\"},\"service_worker\":{\"open\":false},\"baidu_tongji\":{\"site_from\":\"2020/4/1\",\"site_id\":\"fe1d9d2dc48a2ab8ea7f292f05e237cd\",\"access_token\":\"xxxxx\"}}")
+                </script> <script type="text/javascript">window.addEventListener('load', function() {
+    
+    window.loadJs = function(d, m, a) {
+      var c = document.getElementsByTagName('head')[0] || document.head || document.documentElement
+      var b = document.createElement('script')
+      b.defer = true
+      b.setAttribute('type', 'text/javascript')
+      b.setAttribute('charset', 'UTF-8')
+      b.setAttribute('async', 'true')
+      b.setAttribute('src', d)
+      m && b.setAttribute('data-main', '/scripts/app-built')
+      if (typeof a === 'function') {
+        if (window.attachEvent) {
+          b.onreadystatechange = function() {
+            var e = b.readyState
+            if (e === 'loaded' || e === 'complete') {
+              b.onreadystatechange = null
+              a()
+            }
+          }
+        } else {
+          b.onload = a
+        }
+      }
+      c.appendChild(b)
+    }
+    window.loadJs && window.loadJs('https://cdn.bootcss.com/require.js/2.3.6/require.min.js', true, function() {require.config({"paths":{"util":"util","share":"share","search":"search","pagemap":"pagemap.min","registerSW":"registerSW","valine":"cdn/Valine.min","av":["https://cdn.jsdelivr.net/npm/leancloud-storage/dist/av-min"],"pjax":["https://cdn.bootcss.com/jquery.pjax/2.0.1/jquery.pjax.min"],"jquery":["https://cdn.bootcss.com/jquery/3.4.1/jquery.min"],"confirm":["https://cdn.bootcss.com/jquery-confirm/3.3.4/jquery-confirm.min"],"fancybox":["https://cdn.bootcss.com/fancybox/3.5.7/jquery.fancybox.min"],"chart":["https://cdn.bootcss.com/Chart.js/2.8.0-rc.1/Chart.bundle.min"]},"map":{"*":{"css":"https://cdn.bootcss.com/require-css/0.1.10/css.min.js"}},"shim":{"fancybox":{"deps":["css!https://cdn.bootcss.com/fancybox/3.5.7/jquery.fancybox.min.css"]},"confirm":{"deps":["css!https://cdn.bootcss.com/jquery-confirm/3.3.4/jquery-confirm.min.css"]},"chart":{"deps":["css!https://cdn.bootcss.com/Chart.js/2.8.0-rc.1/Chart.min.css"]}},"waitSeconds":3})})
+  })</script> <script type="text/javascript">
+                  ;(function() {
+                    var bp = document.createElement('script')
+                    var curProtocol = window.location.protocol.split(':')[0]
+                    if (curProtocol === 'https') {
+                      bp.src = 'https://zz.bdstatic.com/linksubmit/push.js'
+                    } else {
+                      bp.src = 'http://push.zhanzhang.baidu.com/push.js'
+                    }
+                    var s = document.getElementsByTagName('script')[0]
+                    s.parentNode.insertBefore(bp, s)
+                  })()
+                </script> 

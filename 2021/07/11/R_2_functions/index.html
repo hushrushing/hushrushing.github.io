@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <script>
+  var _hmt = _hmt || []
+  ;(function() {
+    var hm = document.createElement('script')
+    hm.src = 'https://hm.baidu.com/hm.js?5a0acc897fd96474a2c8f4deac84611a'
+    var s = document.getElementsByTagName('script')[0]
+    s.parentNode.insertBefore(hm, s)
+  })()
+</script> 
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="keywords" content="" />
+    <meta name="description" content="Simple and naive" />
+    
+    <title>
+      R_2 函数 - TheHushrush
+    </title>
+    <link rel="manifest" href="/manifest.json" />
+    <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon" />
+    
+<link rel="stylesheet" href="/style/style.css">
+
+  <meta name="generator" content="Hexo 4.2.0"><link rel="alternate" href="/atom.xml" title="TheHushrush" type="application/atom+xml">
+</head>
+  <body>
+    <canvas id='pagemap'></canvas>
+    
+    <div id="post-toc" class="animated hiddenToc hide">
+      <span class="title">Toc</span>
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#R语言中的函数"><span class="toc-text">R语言中的函数</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-函数的调用"><span class="toc-text">1. 函数的调用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-基础函数"><span class="toc-text">2. 基础函数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-必需参数和可选参数"><span class="toc-text">3. 必需参数和可选参数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-加载函数"><span class="toc-text">4. 加载函数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-编写函数"><span class="toc-text">5. 编写函数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-调试函数"><span class="toc-text">6. 调试函数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-使用条件语句"><span class="toc-text">7.使用条件语句</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#8-本章练习"><span class="toc-text">8. 本章练习</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Exercise1"><span class="toc-text">Exercise1</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Exercise-1-calling-built-in-functions"><span class="toc-text">Exercise 1: calling built-in functions</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Create-a-variable-my-name-that-contains-your-name"><span class="toc-text">Create a variable my_name that contains your name</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Create-a-variable-name-length-that-holds-how-many-letters-including-spaces-are-in-your-name-use-the-nchar-function"><span class="toc-text">Create a variable name_length that holds how many letters (including spaces) are in your name (use the nchar() function)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Print-the-number-of-letters-in-your-name"><span class="toc-text">Print the number of letters in your name</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Create-a-variable-now-doing-that-is-your-name-followed-by-“is-programming-”-use-the-paste-function"><span class="toc-text">Create a variable now_doing that is your name followed by “is programming!” (use the paste() function)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Make-the-now-doing-variable-upper-case"><span class="toc-text">Make the now_doing variable upper case</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Bonus"><span class="toc-text">Bonus</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Pick-two-of-your-favorite-numbers-between-1-and-100-and-assign-them-to-variables-fav-1-and-fav-2"><span class="toc-text">Pick two of your favorite numbers (between 1 and 100) and assign them to variables fav_1 and fav_2</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Divide-each-number-by-the-square-root-of-201-and-save-the-new-value-in-the-original-variable"><span class="toc-text">Divide each number by the square root of 201 and save the new value in the original variable</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Create-a-variable-raw-sum-that-is-the-sum-of-the-two-variables-Use-the-sum-function-for-practice"><span class="toc-text">Create a variable raw_sum that is the sum of the two variables. Use the sum() function for practice.</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Create-a-variable-round-sum-that-is-the-raw-sum-rounded-to-1-decimal-place-Use-the-round-function"><span class="toc-text">Create a variable round_sum that is the raw_sum rounded to 1 decimal place. Use the round() function.</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Create-two-new-variables-round-1-and-round-2-that-are-your-fav-1-and-fav-2-variables-rounded-to-1-decimal-places"><span class="toc-text">Create two new variables round_1 and round_2 that are your fav_1 and fav_2 variables rounded to 1 decimal places</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Create-a-variable-sum-round-that-is-the-sum-of-the-rounded-values"><span class="toc-text">Create a variable sum_round that is the sum of the rounded values</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Which-is-bigger-round-sum-or-sum-round-You-can-use-the-max-function"><span class="toc-text">Which is bigger, round_sum or sum_round? (You can use the max() function!)</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Exercise-2"><span class="toc-text">Exercise 2</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Exercise-3"><span class="toc-text">Exercise 3</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Exercise-4"><span class="toc-text">Exercise 4</span></a></li></ol></li></ol></li></ol>
+    </div>
+    
+    <div id="fixed-menu-wrap">
+      <span class="iconfont icon-sousuo search-box menu-reset"></span>
+      <span class="icon-toc menu-reset">Toc</span>
+      <span class="iconfont icon-arrowup menu-reset"></span>
+    </div>
+    <div id="fixed-menu">
+      <span class="iconfont icon-menu-"></span>
+    </div>
+    <div id="progress">
+      <div class="line"></div>
+    </div>
+    <div id="search-shade" class="animated hiddenSearch hide">
+      <div class="input-wrap">
+        <span class="iconfont icon-sousuo search-box"></span>
+        <input type="text" placeholder="Search" />
+        <span class="iconfont icon-close"></span>
+      </div>
+      <div class="search-result">
+        <div class="meta">
+          <span><b id="result-count">0</b> results found</span>
+          <img src="/images/logo.jpeg" />
+        </div>
+        <ul id="result-box"></ul>
+      </div>
+    </div>
+    <div id="menu-mask" class="animated hideMenuMask hide">
+      <span class="iconfont icon-close"></span>
+      <div class="nav">
+        
+        <a href="/" class="">
+          首页
+        </a>
+        
+        <a href="/archives" class="">
+          归档
+        </a>
+        
+        <a href="/categories" class="">
+          分类
+        </a>
+        
+        <a href="/tags" class="">
+          标签
+        </a>
+        
+        <a href="/about" class="">
+          关于
+        </a>
+        
+      </div>
+    </div>
+    <div id="header">
+      <div class="intro">
+        <a href="/" class="logo" style="background-image: url('/images/logo.jpeg')"></a>
+        <div class="author">Hushrush</div>
+      </div>
+      <div class="nav">
+        <span class="iconfont icon-menu menu-icon"></span>
+        <a href="#" class="search-box">
+          <span class="iconfont icon-sousuo"></span>
+        </a>
+      </div>
+    </div>
+    <div id="side" class="animated bounceInLeft">
+      <div class="shrink">
+        <a href="/" class="logo" style="background-image: url('/images/logo.jpeg')"></a>
+        <span class="iconfont icon-menu toggle-icon"></span>
+        <a href="#" class="search-box">
+          <span class="iconfont icon-sousuo"></span>
+        </a>
+      </div>
+      <div class="magnify">
+        <div class="about">
+          <div class="author">Hushrush</div>
+          <a href="/" class="logo" style="background-image: url('/images/logo.jpeg')"></a>
+        </div>
+
+        <div class="nav">
+          
+          <a href="/" class="">
+            首页
+          </a>
+          
+          <a href="/archives" class="">
+            归档
+          </a>
+          
+          <a href="/categories" class="">
+            分类
+          </a>
+          
+          <a href="/tags" class="">
+            标签
+          </a>
+          
+          <a href="/about" class="">
+            关于
+          </a>
+          
+          <a href="#" class="search-box">
+            <span class="iconfont icon-sousuo"></span>
+          </a>
+        </div>
+        <div class="bottom">
+          <div class="follow">
+            
+            <a href="https://github.com/shixiaohu2206" target="_block">
+              <span class="iconfont icon-github"></span>
+            </a>
+            
+            <a href="https://www.facebook.com/shi.xiaohu.5" target="_block">
+              <span class="iconfont icon-facebook"></span>
+            </a>
+            
+            <a href="https://www.instagram.com/shi_xiaohu/" target="_block">
+              <span class="iconfont icon-instagram"></span>
+            </a>
+             
+            <a href="/atom.xml" target="_block">
+              <span class="iconfont icon-rss"></span>
+            </a>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="container">
+      <div class="main animated bounceInRight delay-0.7s">
+        <article class="post-entry">
+    <div class="header">
+      
+      <div class="title">R_2 函数</div>
+      <div class="meta">
+        <span class="item">
+          <span class="iconfont icon-time-circle"></span>
+          <span>2021/07/11</span>
+        </span>
+
+        
+          <span class="item leancloud-visitors" id="/2021/07/11/R_2_functions/" data-flag-title="R_2 函数">
+            <span class="iconfont icon-eye1"></span>
+            <span class="leancloud-visitors-count"></span>
+          </span>
+        
+
+         
+        <span class="item">
+          <span class="iconfont icon-folder"></span>
+          <span>
+              
+                
+                  <a href="/categories/学习">学习</a>
+                
+              
+          </span>
+        </span>
+        
+        
+         
+          <span class="item">
+            <span class="iconfont icon-tag1"></span>
+            <span>
+                
+                  
+                    <a href="/tags/R语言">R语言</a>
+                  
+                
+            </span>
+          </span>
+         
+      </div>
+      <div>
+      </div>
+    </div>
+    <html><head></head><body><h1 id="R语言中的函数">R语言中的函数<a class="post-anchor" href="#R语言中的函数"></a></h1><h2 id="1-函数的调用">1. 函数的调用<a class="post-anchor" href="#1-函数的调用"></a></h2><p>  通过“函数名（参数）”的形式可以调用函数。可以将函数的返回值存储在变量中，如果函数返回值需要立即使用也可以不存储在变量中，这叫做“匿名变量”。</p>
+<h2 id="2-基础函数">2. 基础函数<a class="post-anchor" href="#2-基础函数"></a></h2><p>  R内置了一些函数，如表2.1.</p>
+<p>  表2.1 一些内置函数</p>
+<table>
+<thead>
+<tr>
+<th align="center">函数名</th>
+<th align="center">功能</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">print()</td>
+<td align="center">打印</td>
+</tr>
+<tr>
+<td align="center">min()</td>
+<td align="center">求最小值</td>
+</tr>
+<tr>
+<td align="center">sqrt()</td>
+<td align="center">开方</td>
+</tr>
+<tr>
+<td align="center">sum()</td>
+<td align="center">求和</td>
+</tr>
+<tr>
+<td align="center">round()</td>
+<td align="center">取整</td>
+</tr>
+<tr>
+<td align="center">toupper()</td>
+<td align="center">返回大写字母</td>
+</tr>
+<tr>
+<td align="center">paste()</td>
+<td align="center">字符连接</td>
+</tr>
+<tr>
+<td align="center">nchar()</td>
+<td align="center">统计字符数</td>
+</tr>
+<tr>
+<td align="center">c()</td>
+<td align="center">连接成向量</td>
+</tr>
+<tr>
+<td align="center">seq()</td>
+<td align="center">返回序列</td>
+</tr>
+</tbody></table>
+<h2 id="3-必需参数和可选参数">3. 必需参数和可选参数<a class="post-anchor" href="#3-必需参数和可选参数"></a></h2><p>  必需参数必须提供参数值，而可选参数可以不提供。可选参数常用命名参数指定。命名参数具有默认值且没有固定顺序，使用命名参数可不考虑参数的顺序。</p>
+<h2 id="4-加载函数">4. 加载函数<a class="post-anchor" href="#4-加载函数"></a></h2><p>通过install.packages()可以加载库函数。</p>
+<figure class="highlight plain"><figcaption><span>install_packages}</span></figcaption><table><tbody><tr><td class="code"><pre><span class="line">#install.packages("stringr")#注意双引号,install是下载</span><br><span class="line">install.packages("stringr",repos = "http://cran.us.r-project.org")#使用knitr时必须指定CRAN</span><br><span class="line">library("stringr")#总是要用library，将库加载到当前会话中</span><br><span class="line">str_count("Mississippi","i")#对字符串的i计数，注意字符和字符串都可以用双引号，也可以用单引号</span><br></pre></td></tr></tbody></table></figure>
+
+<h2 id="5-编写函数">5. 编写函数<a class="post-anchor" href="#5-编写函数"></a></h2><p>以下为编写函数的示例。</p>
+<figure class="highlight plain"><figcaption><span>function_sample}</span></figcaption><table><tbody><tr><td class="code"><pre><span class="line">#本函数名为make_full_name，接受两个参数：名；姓，返回全名</span><br><span class="line">make_full_name&lt;-function(first_name, last_name)</span><br><span class="line">{</span><br><span class="line">  full_name&lt;-paste(first_name, last_name)</span><br><span class="line">  print(full_name)                #定义函数就是会在console出现一系列加号</span><br><span class="line">}</span><br><span class="line">my_name&lt;-make_full_name("Rush", "Hush")</span><br></pre></td></tr></tbody></table></figure>
+
+<p>命名方式：蛇形命名法用下划线分隔单词；也可以用点分隔单词。</p>
+<p>一个函数包含以下几个部分：</p>
+<p>（1）<strong>参数</strong>是分配给函数的值，注意按顺序传参。命名参数可以不按顺序。</p>
+<p>（2）<strong>函数体</strong>是大括号内的部分。如果函数超过20行，建议拆分为不同的小块。</p>
+<p>（3）<strong>返回值</strong>可以使用return()函数。</p>
+<h2 id="6-调试函数">6. 调试函数<a class="post-anchor" href="#6-调试函数"></a></h2><p>需要注意在调试函数前先传参，如果逐条运行函数体内的语句将会没有参数。</p>
+<h2 id="7-使用条件语句">7.使用条件语句<a class="post-anchor" href="#7-使用条件语句"></a></h2><p>使用if-else语句进行条件判断，特别注意使用else时，else需要和if的反括号在同一行。</p>
+<figure class="highlight plain"><figcaption><span>if_else_judge}</span></figcaption><table><tbody><tr><td class="code"><pre><span class="line">porridge_temp &lt;- 44  #粥的温度是44摄氏度</span><br><span class="line"># if(porridge_temp &gt; 50)</span><br><span class="line"># {</span><br><span class="line">#   print("太热了。")</span><br><span class="line"># }</span><br><span class="line"># else if(porridge_temp &lt; 30)       #错误，else要紧跟上一个大括号</span><br><span class="line"># {</span><br><span class="line">#   print("太冷了。")</span><br><span class="line"># }</span><br><span class="line">temp_judge &lt;- function(temp)</span><br><span class="line">{</span><br><span class="line">  if(porridge_temp &gt; 50)</span><br><span class="line">  {</span><br><span class="line">    print("太热了。")</span><br><span class="line">  }else if(porridge_temp &lt; 30)</span><br><span class="line">  {</span><br><span class="line">    print("太冷了。")</span><br><span class="line">  }else</span><br><span class="line">  {</span><br><span class="line">    print("粥的温度刚好。")</span><br><span class="line">  }</span><br><span class="line">}</span><br><span class="line">temp_judge(porridge_temp)</span><br></pre></td></tr></tbody></table></figure>
+
+<h2 id="8-本章练习">8. 本章练习<a class="post-anchor" href="#8-本章练习"></a></h2><h3 id="Exercise1">Exercise1<a class="post-anchor" href="#Exercise1"></a></h3><h4 id="Exercise-1-calling-built-in-functions">Exercise 1: calling built-in functions<a class="post-anchor" href="#Exercise-1-calling-built-in-functions"></a></h4><h4 id="Create-a-variable-my-name-that-contains-your-name">Create a variable <code>my_name</code> that contains your name<a class="post-anchor" href="#Create-a-variable-my-name-that-contains-your-name"></a></h4><figure class="highlight plain"><figcaption><span>ex_1_1}</span></figcaption><table><tbody><tr><td class="code"><pre><span class="line">my_name &lt;- paste("Hush","Rush")</span><br></pre></td></tr></tbody></table></figure>
+
+<h4 id="Create-a-variable-name-length-that-holds-how-many-letters-including-spaces-are-in-your-name-use-the-nchar-function">Create a variable <code>name_length</code> that holds how many letters (including spaces) are in your name (use the <code>nchar()</code> function)<a class="post-anchor" href="#Create-a-variable-name-length-that-holds-how-many-letters-including-spaces-are-in-your-name-use-the-nchar-function"></a></h4><figure class="highlight plain"><figcaption><span>ex_1_2}</span></figcaption><table><tbody><tr><td class="code"><pre><span class="line">name_length &lt;- nchar(my_name)</span><br></pre></td></tr></tbody></table></figure>
+
+<h4 id="Print-the-number-of-letters-in-your-name">Print the number of letters in your name<a class="post-anchor" href="#Print-the-number-of-letters-in-your-name"></a></h4><figure class="highlight plain"><figcaption><span>ex_1_3}</span></figcaption><table><tbody><tr><td class="code"><pre><span class="line">print(name_length - 1)  #there is a space</span><br></pre></td></tr></tbody></table></figure>
+
+<h4 id="Create-a-variable-now-doing-that-is-your-name-followed-by-“is-programming-”-use-the-paste-function">Create a variable <code>now_doing</code> that is your name followed by “is programming!” (use the <code>paste()</code> function)<a class="post-anchor" href="#Create-a-variable-now-doing-that-is-your-name-followed-by-“is-programming-”-use-the-paste-function"></a></h4><figure class="highlight plain"><figcaption><span>ex_1_4}</span></figcaption><table><tbody><tr><td class="code"><pre><span class="line">now_doing &lt;- paste(my_name , "is programming!")</span><br></pre></td></tr></tbody></table></figure>
+
+<h4 id="Make-the-now-doing-variable-upper-case">Make the <code>now_doing</code> variable upper case<a class="post-anchor" href="#Make-the-now-doing-variable-upper-case"></a></h4><figure class="highlight plain"><figcaption><span>ex_1_5}</span></figcaption><table><tbody><tr><td class="code"><pre><span class="line">now_doing &lt;- toupper(now_doing)</span><br></pre></td></tr></tbody></table></figure>
+
+<h4 id="Bonus">Bonus<a class="post-anchor" href="#Bonus"></a></h4><h4 id="Pick-two-of-your-favorite-numbers-between-1-and-100-and-assign-them-to-variables-fav-1-and-fav-2">Pick two of your favorite numbers (between 1 and 100) and assign them to variables <code>fav_1</code> and <code>fav_2</code><a class="post-anchor" href="#Pick-two-of-your-favorite-numbers-between-1-and-100-and-assign-them-to-variables-fav-1-and-fav-2"></a></h4><figure class="highlight plain"><figcaption><span>ex_1_6}</span></figcaption><table><tbody><tr><td class="code"><pre><span class="line">fav_1 &lt;- 2</span><br><span class="line">fav_2 &lt;- 99</span><br></pre></td></tr></tbody></table></figure>
+
+<h4 id="Divide-each-number-by-the-square-root-of-201-and-save-the-new-value-in-the-original-variable">Divide each number by the square root of 201 and save the new value in the original variable<a class="post-anchor" href="#Divide-each-number-by-the-square-root-of-201-and-save-the-new-value-in-the-original-variable"></a></h4><figure class="highlight plain"><figcaption><span>ex_1_7}</span></figcaption><table><tbody><tr><td class="code"><pre><span class="line">fav_1 &lt;- fav_1/sqrt(201)</span><br><span class="line">fav_2 &lt;- fav_1/sqrt(201)</span><br></pre></td></tr></tbody></table></figure>
+
+<h4 id="Create-a-variable-raw-sum-that-is-the-sum-of-the-two-variables-Use-the-sum-function-for-practice">Create a variable <code>raw_sum</code> that is the sum of the two variables. Use the <code>sum()</code> function for practice.<a class="post-anchor" href="#Create-a-variable-raw-sum-that-is-the-sum-of-the-two-variables-Use-the-sum-function-for-practice"></a></h4><figure class="highlight plain"><figcaption><span>ex_1_8}</span></figcaption><table><tbody><tr><td class="code"><pre><span class="line">#raw_sum &lt;- fav_1 + fav_2</span><br><span class="line">raw_sum &lt;- sum(fav_1 , fav_2)</span><br></pre></td></tr></tbody></table></figure>
+
+<h4 id="Create-a-variable-round-sum-that-is-the-raw-sum-rounded-to-1-decimal-place-Use-the-round-function">Create a variable <code>round_sum</code> that is the <code>raw_sum</code> rounded to 1 decimal place. Use the <code>round()</code> function.<a class="post-anchor" href="#Create-a-variable-round-sum-that-is-the-raw-sum-rounded-to-1-decimal-place-Use-the-round-function"></a></h4><figure class="highlight plain"><figcaption><span>ex_1_9}</span></figcaption><table><tbody><tr><td class="code"><pre><span class="line">round_sum &lt;- round(raw_sum,1)</span><br></pre></td></tr></tbody></table></figure>
+
+<h4 id="Create-two-new-variables-round-1-and-round-2-that-are-your-fav-1-and-fav-2-variables-rounded-to-1-decimal-places">Create two new variables <code>round_1</code> and <code>round_2</code> that are your <code>fav_1</code> and <code>fav_2</code> variables rounded to 1 decimal places<a class="post-anchor" href="#Create-two-new-variables-round-1-and-round-2-that-are-your-fav-1-and-fav-2-variables-rounded-to-1-decimal-places"></a></h4><figure class="highlight plain"><figcaption><span>ex_1_10}</span></figcaption><table><tbody><tr><td class="code"><pre><span class="line">round_1 &lt;- round(fav_1,1)</span><br><span class="line">round_2 &lt;- round(fav_2,1)</span><br></pre></td></tr></tbody></table></figure>
+
+<h4 id="Create-a-variable-sum-round-that-is-the-sum-of-the-rounded-values">Create a variable <code>sum_round</code> that is the sum of the rounded values<a class="post-anchor" href="#Create-a-variable-sum-round-that-is-the-sum-of-the-rounded-values"></a></h4><figure class="highlight plain"><figcaption><span>ex_1_11}</span></figcaption><table><tbody><tr><td class="code"><pre><span class="line">sum_round &lt;- sum(round_1,round_2)</span><br></pre></td></tr></tbody></table></figure>
+
+<h4 id="Which-is-bigger-round-sum-or-sum-round-You-can-use-the-max-function">Which is bigger, <code>round_sum</code> or <code>sum_round</code>? (You can use the <code>max()</code> function!)<a class="post-anchor" href="#Which-is-bigger-round-sum-or-sum-round-You-can-use-the-max-function"></a></h4><figure class="highlight plain"><figcaption><span>ex_1_12}</span></figcaption><table><tbody><tr><td class="code"><pre><span class="line">max_round &lt;- max(round_sum,sum_round)</span><br></pre></td></tr></tbody></table></figure>
+
+<h3 id="Exercise-2">Exercise 2<a class="post-anchor" href="#Exercise-2"></a></h3><figure class="highlight plain"><figcaption><span>ex_2}</span></figcaption><table><tbody><tr><td class="code"><pre><span class="line"># Exercise 2: using built-in string functions</span><br><span class="line"></span><br><span class="line"># Create a variable `lyric` that contains the text "I like to eat apples and </span><br><span class="line"># bananas"</span><br><span class="line"></span><br><span class="line">lyric &lt;- "I like to eat apples and bananas"</span><br><span class="line"></span><br><span class="line"># Use the `substr()` function to extract the 1st through 13th letters from the </span><br><span class="line"># `lyric`, and store the result in a variable called `intro`</span><br><span class="line"># Use `?substr` to see more about this function</span><br><span class="line"></span><br><span class="line">intro &lt;- substr(lyric,1,13)</span><br><span class="line"></span><br><span class="line"># Use the `substr()` function to extract the 15th through the last letter of the </span><br><span class="line"># `lyric`, and store the result in a variable called `fruits`</span><br><span class="line"># Hint: use `nchar()` to determine how many total letters there are!</span><br><span class="line"></span><br><span class="line">fruits &lt;- substr(lyric,15,nchar(lyric))</span><br><span class="line"></span><br><span class="line"># Use the `gsub()` function to substitute all the "a"s in `fruits` with "ee".</span><br><span class="line"># Store the result in a variable called `fruits_e`</span><br><span class="line"># Hint: see http://www.endmemo.com/program/R/sub.php for a simpmle example (or </span><br><span class="line"># use `?gsub`)</span><br><span class="line"></span><br><span class="line">fruits_e &lt;- gsub("a","ee",fruits)</span><br><span class="line"></span><br><span class="line"># Use the `gsub()` function to substitute all the "a"s in `fruits` with "o".</span><br><span class="line"># Store the result in a variable called `fruits_o`</span><br><span class="line"></span><br><span class="line">fruits_o &lt;- gsub("a","o",fruits)</span><br><span class="line"></span><br><span class="line"># Create a new variable `lyric_e` that is the `intro` combined with the new</span><br><span class="line"># `fruits_e` ending. Print out this variable</span><br><span class="line"></span><br><span class="line">lyric_e &lt;- paste(intro,fruits_e)</span><br><span class="line">lyric_e</span><br><span class="line"></span><br><span class="line"># Without making a new variable, print out the `intro` combined with the new</span><br><span class="line"># `fruits_o` ending</span><br><span class="line"></span><br><span class="line">print(paste(intro,fruits_o))</span><br></pre></td></tr></tbody></table></figure>
+
+<h3 id="Exercise-3">Exercise 3<a class="post-anchor" href="#Exercise-3"></a></h3><figure class="highlight plain"><figcaption><span>ex_3}</span></figcaption><table><tbody><tr><td class="code"><pre><span class="line"># Exercise 3: writing and executing functions</span><br><span class="line"></span><br><span class="line"># Define a function `add_three` that takes a single argument and</span><br><span class="line"># returns a value 3 greater than the input</span><br><span class="line"></span><br><span class="line">add_three &lt;- function(x)</span><br><span class="line">{</span><br><span class="line">  return(x+3)</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"># Create a variable `ten` that is the result of passing 7 to your `add_three` </span><br><span class="line"># function</span><br><span class="line"></span><br><span class="line">ten &lt;- add_three(7)</span><br><span class="line">print(ten)</span><br><span class="line"></span><br><span class="line"># Define a function `imperial_to_metric` that takes in two arguments: a number </span><br><span class="line"># of feet and a number of inches</span><br><span class="line"># The function should return the equivalent length in meters</span><br><span class="line"></span><br><span class="line">imperial_to_metric &lt;- function(feet,inches)</span><br><span class="line">{</span><br><span class="line">  return(feet * 0.3048 + inches * 0.0254)</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"># Create a variable `height_in_meters` by passing your height in imperial to the</span><br><span class="line"># `imperial_to_metric` function</span><br><span class="line">height_in_meters &lt;- imperial_to_metric(4,3)</span><br><span class="line">print(height_in_meters)</span><br></pre></td></tr></tbody></table></figure>
+
+<h3 id="Exercise-4">Exercise 4<a class="post-anchor" href="#Exercise-4"></a></h3><figure class="highlight plain"><figcaption><span>ex_4}</span></figcaption><table><tbody><tr><td class="code"><pre><span class="line"># Exercise 4: functions and conditionals</span><br><span class="line"></span><br><span class="line"># Define a function `is_twice_as_long` that takes in two character strings, and </span><br><span class="line"># returns whether or not (e.g., a boolean) the length of one argument is greater</span><br><span class="line"># than or equal to twice the length of the other.</span><br><span class="line"># Hint: compare the length difference to the length of the smaller string</span><br><span class="line"></span><br><span class="line">is_twice_as_long &lt;- function(string1,string2) #This function returns a boolean which is TRUE when lengths equal.</span><br><span class="line">{</span><br><span class="line">  length1 &lt;- nchar(string1)</span><br><span class="line">  length2 &lt;- nchar(string2)</span><br><span class="line">  if(length1 == length2)</span><br><span class="line">  {</span><br><span class="line">    flag &lt;- TRUE</span><br><span class="line">  } else</span><br><span class="line">  {</span><br><span class="line">    flag &lt;- FALSE</span><br><span class="line">  }</span><br><span class="line">  return (flag)</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"># Call your `is_twice_as_long` function by passing it different length strings</span><br><span class="line"># to confirm that it works. Make sure to check when _either_ argument is twice</span><br><span class="line"># as long, as well as when neither are!</span><br><span class="line"></span><br><span class="line">test &lt;- is_twice_as_long("abc","bnm")</span><br><span class="line"></span><br><span class="line"># Define a function `describe_difference` that takes in two strings. The</span><br><span class="line"># function should return one of the following sentences as appropriate</span><br><span class="line">#   "Your first string is longer by N characters"</span><br><span class="line">#   "Your second string is longer by N characters"</span><br><span class="line">#   "Your strings are the same length!"</span><br><span class="line"></span><br><span class="line">describe_difference &lt;- function(first_string,second_string)</span><br><span class="line">{</span><br><span class="line">  len1 &lt;- nchar(first_string)</span><br><span class="line">  len2 &lt;- nchar(second_string)</span><br><span class="line">  dif &lt;- len1 - len2</span><br><span class="line">  if(dif == 0)</span><br><span class="line">  {</span><br><span class="line">    print("Your strings are the same length!")</span><br><span class="line">  } else if(dif &gt; 0)</span><br><span class="line">  {</span><br><span class="line">    print("Your first string is longer by ")</span><br><span class="line">    print(dif)</span><br><span class="line">    print(" characters")</span><br><span class="line">  } else if(dif &lt; 0)</span><br><span class="line">  {</span><br><span class="line">    print("Your second string is longer by ")</span><br><span class="line">    print(abs(dif))</span><br><span class="line">    print(" characters")</span><br><span class="line">  }</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"># Call your `describe_difference` function by passing it different length strings</span><br><span class="line"># to confirm that it works. Make sure to check all 3 conditions1</span><br><span class="line"></span><br><span class="line">describe_difference("abcabc","bcdbcd")</span><br><span class="line">describe_difference("abcabc","bcd")</span><br><span class="line">describe_difference("abc","bcdbcd")</span><br></pre></td></tr></tbody></table></figure></body></html>
+
+  
+    <div class="post-reward">
+    <div id="reward-button">打赏</div>
+      <div id="qr">
+        <div class="wrap">
+            
+            <div class="bg-wrap">
+              <a href="/images/zhifubao.png" target="_block" class="bg" style="background-image:url('/images/zhifubao.png')"></a>
+              支付宝
+            </div>
+            
+            
+            <div class="bg-wrap">
+                <a href="/images/weixin.png" target="_block" class="bg" style="background-image:url('/images/weixin.png')"></a>
+              微信
+            </div>
+            
+        </div>
+      </div>
+    </div>
+  
+  <div class="post-guide">
+    <div class="item left">
+        
+          <a href="/2021/07/11/R_1_Basic%20Skills/">R_1 基本操作</a>
+        
+    </div>
+    <div class="item right">
+        
+          <a href="/2021/07/11/R_4_list/">R_4 列表</a>
+        
+    </div>
+  </div>
+
+  
+
+  <div class="post-copyright">
+    <div class="auth">
+      本文作者：<a href="http://hushrushly.github.io">Hushrush</a>
+    </div>
+    <div class="link">
+      链接：<a href="http://hushrushly.github.io/2021/07/11/R_2_functions/">http://hushrushly.github.io/2021/07/11/R_2_functions/</a>
+    </div>
+    <div class="declare">
+      版权声明：本文首发于<a href="http://hushrushly.github.io">Hushrush</a>的博客，转载请注明出处！
+    </div>
+  </div>
+
+  <div id="comment"></div>
+
+  
+  
+</article>
+        <footer>
+          <div class="copyright">
+            ©2021
+            <a href="http://hushrushly.github.io">Hushrush</a> Powered by <a href="https://hexo.io" target="_blank" rel="noopener">Hexo</a> |
+            <a href="https://github.com/shixiaohu2206/hexo-theme-huhu" target="_blank" rel="noopener">hexo-theme-huhu</a>
+          </div>
+          
+        </footer>
+      </div>
+    </div>
+  </body>
+  
+</html>
+<script type="text/javascript">
+                  window.HUHU_CONFIG = JSON.parse("{\"share\":[\"weibo\",\"weixin\",\"qqkongjian\",\"QQ\",\"douban\",\"facebook\",\"twitter\",\"google\"],\"valine\":{\"API_ID\":\"6ieLH7bGrju011dUapt0pFTI-MdYXbMMI\",\"API_KEY\":\"8VWSeumnLk1qGsiLzo5nENJq\",\"placeholder\":\"请发表评论：\"},\"service_worker\":{\"open\":false},\"baidu_tongji\":{\"site_from\":\"2020/4/1\",\"site_id\":\"fe1d9d2dc48a2ab8ea7f292f05e237cd\",\"access_token\":\"xxxxx\"}}")
+                </script> <script type="text/javascript">window.addEventListener('load', function() {
+    
+    window.loadJs = function(d, m, a) {
+      var c = document.getElementsByTagName('head')[0] || document.head || document.documentElement
+      var b = document.createElement('script')
+      b.defer = true
+      b.setAttribute('type', 'text/javascript')
+      b.setAttribute('charset', 'UTF-8')
+      b.setAttribute('async', 'true')
+      b.setAttribute('src', d)
+      m && b.setAttribute('data-main', '/scripts/app-built')
+      if (typeof a === 'function') {
+        if (window.attachEvent) {
+          b.onreadystatechange = function() {
+            var e = b.readyState
+            if (e === 'loaded' || e === 'complete') {
+              b.onreadystatechange = null
+              a()
+            }
+          }
+        } else {
+          b.onload = a
+        }
+      }
+      c.appendChild(b)
+    }
+    window.loadJs && window.loadJs('https://cdn.bootcss.com/require.js/2.3.6/require.min.js', true, function() {require.config({"paths":{"util":"util","share":"share","search":"search","pagemap":"pagemap.min","registerSW":"registerSW","valine":"cdn/Valine.min","av":["https://cdn.jsdelivr.net/npm/leancloud-storage/dist/av-min"],"pjax":["https://cdn.bootcss.com/jquery.pjax/2.0.1/jquery.pjax.min"],"jquery":["https://cdn.bootcss.com/jquery/3.4.1/jquery.min"],"confirm":["https://cdn.bootcss.com/jquery-confirm/3.3.4/jquery-confirm.min"],"fancybox":["https://cdn.bootcss.com/fancybox/3.5.7/jquery.fancybox.min"],"chart":["https://cdn.bootcss.com/Chart.js/2.8.0-rc.1/Chart.bundle.min"]},"map":{"*":{"css":"https://cdn.bootcss.com/require-css/0.1.10/css.min.js"}},"shim":{"fancybox":{"deps":["css!https://cdn.bootcss.com/fancybox/3.5.7/jquery.fancybox.min.css"]},"confirm":{"deps":["css!https://cdn.bootcss.com/jquery-confirm/3.3.4/jquery-confirm.min.css"]},"chart":{"deps":["css!https://cdn.bootcss.com/Chart.js/2.8.0-rc.1/Chart.min.css"]}},"waitSeconds":3})})
+  })</script> <script type="text/javascript">
+                  ;(function() {
+                    var bp = document.createElement('script')
+                    var curProtocol = window.location.protocol.split(':')[0]
+                    if (curProtocol === 'https') {
+                      bp.src = 'https://zz.bdstatic.com/linksubmit/push.js'
+                    } else {
+                      bp.src = 'http://push.zhanzhang.baidu.com/push.js'
+                    }
+                    var s = document.getElementsByTagName('script')[0]
+                    s.parentNode.insertBefore(bp, s)
+                  })()
+                </script> 

@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <script>
+  var _hmt = _hmt || []
+  ;(function() {
+    var hm = document.createElement('script')
+    hm.src = 'https://hm.baidu.com/hm.js?5a0acc897fd96474a2c8f4deac84611a'
+    var s = document.getElementsByTagName('script')[0]
+    s.parentNode.insertBefore(hm, s)
+  })()
+</script> 
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="keywords" content="" />
+    <meta name="description" content="Simple and naive" />
+    
+    <title>
+      R_4 列表 - TheHushrush
+    </title>
+    <link rel="manifest" href="/manifest.json" />
+    <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon" />
+    
+<link rel="stylesheet" href="/style/style.css">
+
+  <meta name="generator" content="Hexo 4.2.0"><link rel="alternate" href="/atom.xml" title="TheHushrush" type="application/atom+xml">
+</head>
+  <body>
+    <canvas id='pagemap'></canvas>
+    
+    <div id="post-toc" class="animated hiddenToc hide">
+      <span class="title">Toc</span>
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#4-列表"><span class="toc-text">4. 列表</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#4-1-创建列表"><span class="toc-text">4.1 创建列表</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-2-访问列表元素"><span class="toc-text">4.2  访问列表元素</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-3-修改列表"><span class="toc-text">4.3 修改列表</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#4-3-1-单括号和双括号"><span class="toc-text">4.3.1 单括号和双括号</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-4-使用函数"><span class="toc-text">4.4 使用函数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-5-本章练习"><span class="toc-text">4.5 本章练习</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Exercise-1"><span class="toc-text">Exercise 1</span></a></li></ol></li></ol></li></ol>
+    </div>
+    
+    <div id="fixed-menu-wrap">
+      <span class="iconfont icon-sousuo search-box menu-reset"></span>
+      <span class="icon-toc menu-reset">Toc</span>
+      <span class="iconfont icon-arrowup menu-reset"></span>
+    </div>
+    <div id="fixed-menu">
+      <span class="iconfont icon-menu-"></span>
+    </div>
+    <div id="progress">
+      <div class="line"></div>
+    </div>
+    <div id="search-shade" class="animated hiddenSearch hide">
+      <div class="input-wrap">
+        <span class="iconfont icon-sousuo search-box"></span>
+        <input type="text" placeholder="Search" />
+        <span class="iconfont icon-close"></span>
+      </div>
+      <div class="search-result">
+        <div class="meta">
+          <span><b id="result-count">0</b> results found</span>
+          <img src="/images/logo.jpeg" />
+        </div>
+        <ul id="result-box"></ul>
+      </div>
+    </div>
+    <div id="menu-mask" class="animated hideMenuMask hide">
+      <span class="iconfont icon-close"></span>
+      <div class="nav">
+        
+        <a href="/" class="">
+          首页
+        </a>
+        
+        <a href="/archives" class="">
+          归档
+        </a>
+        
+        <a href="/categories" class="">
+          分类
+        </a>
+        
+        <a href="/tags" class="">
+          标签
+        </a>
+        
+        <a href="/about" class="">
+          关于
+        </a>
+        
+      </div>
+    </div>
+    <div id="header">
+      <div class="intro">
+        <a href="/" class="logo" style="background-image: url('/images/logo.jpeg')"></a>
+        <div class="author">Hushrush</div>
+      </div>
+      <div class="nav">
+        <span class="iconfont icon-menu menu-icon"></span>
+        <a href="#" class="search-box">
+          <span class="iconfont icon-sousuo"></span>
+        </a>
+      </div>
+    </div>
+    <div id="side" class="animated bounceInLeft">
+      <div class="shrink">
+        <a href="/" class="logo" style="background-image: url('/images/logo.jpeg')"></a>
+        <span class="iconfont icon-menu toggle-icon"></span>
+        <a href="#" class="search-box">
+          <span class="iconfont icon-sousuo"></span>
+        </a>
+      </div>
+      <div class="magnify">
+        <div class="about">
+          <div class="author">Hushrush</div>
+          <a href="/" class="logo" style="background-image: url('/images/logo.jpeg')"></a>
+        </div>
+
+        <div class="nav">
+          
+          <a href="/" class="">
+            首页
+          </a>
+          
+          <a href="/archives" class="">
+            归档
+          </a>
+          
+          <a href="/categories" class="">
+            分类
+          </a>
+          
+          <a href="/tags" class="">
+            标签
+          </a>
+          
+          <a href="/about" class="">
+            关于
+          </a>
+          
+          <a href="#" class="search-box">
+            <span class="iconfont icon-sousuo"></span>
+          </a>
+        </div>
+        <div class="bottom">
+          <div class="follow">
+            
+            <a href="https://github.com/shixiaohu2206" target="_block">
+              <span class="iconfont icon-github"></span>
+            </a>
+            
+            <a href="https://www.facebook.com/shi.xiaohu.5" target="_block">
+              <span class="iconfont icon-facebook"></span>
+            </a>
+            
+            <a href="https://www.instagram.com/shi_xiaohu/" target="_block">
+              <span class="iconfont icon-instagram"></span>
+            </a>
+             
+            <a href="/atom.xml" target="_block">
+              <span class="iconfont icon-rss"></span>
+            </a>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="container">
+      <div class="main animated bounceInRight delay-0.7s">
+        <article class="post-entry">
+    <div class="header">
+      
+      <div class="title">R_4 列表</div>
+      <div class="meta">
+        <span class="item">
+          <span class="iconfont icon-time-circle"></span>
+          <span>2021/07/11</span>
+        </span>
+
+        
+          <span class="item leancloud-visitors" id="/2021/07/11/R_4_list/" data-flag-title="R_4 列表">
+            <span class="iconfont icon-eye1"></span>
+            <span class="leancloud-visitors-count"></span>
+          </span>
+        
+
+         
+        <span class="item">
+          <span class="iconfont icon-folder"></span>
+          <span>
+              
+                
+                  <a href="/categories/学习">学习</a>
+                
+              
+          </span>
+        </span>
+        
+        
+         
+          <span class="item">
+            <span class="iconfont icon-tag1"></span>
+            <span>
+                
+                  
+                    <a href="/tags/R语言">R语言</a>
+                  
+                
+            </span>
+          </span>
+         
+      </div>
+      <div>
+      </div>
+    </div>
+    <html><head></head><body><h1 id="4-列表">4. 列表<a class="post-anchor" href="#4-列表"></a></h1><p>列表也是一维元素的集合。与向量的不同之处在于：<br>（1）可以存储不同类型的元素；<br>（2）可以用名称进行标记、用标记的名称来引用元素。<em>向量也可以用名称标记元素，但是我们不这样做。</em><br>同样的数据结构在Python中被称为字典，列表对组织数据非常有用。</p>
+<h2 id="4-1-创建列表">4.1 创建列表<a class="post-anchor" href="#4-1-创建列表"></a></h2><p>使用list()函数创建列表，最好为每一个元素指定名称。</p>
+<figure class="highlight plain"><figcaption><span>create_list}</span></figcaption><table><tbody><tr><td class="code"><pre><span class="line">person1 &lt;- list(  #这是小括号而不是大括号</span><br><span class="line">  first_name = "Ada",  #使用等于号而不是箭头，用逗号分隔</span><br><span class="line">  job = "Programmer",</span><br><span class="line">  salary = 78000,</span><br><span class="line">  in_union = TRUE</span><br><span class="line">)</span><br><span class="line">#也可以不写名称</span><br><span class="line">person2 &lt;- list("Amy","salesperson",67000,FALSE)</span><br></pre></td></tr></tbody></table></figure>
+
+<p>使用names()访问列表中的名称。</p>
+<figure class="highlight plain"><figcaption><span>name_in_list}</span></figcaption><table><tbody><tr><td class="code"><pre><span class="line">names(person1)</span><br></pre></td></tr></tbody></table></figure>
+
+<p>列表的元素也可以是列表。</p>
+<figure class="highlight plain"><figcaption><span>list_in_list}</span></figcaption><table><tbody><tr><td class="code"><pre><span class="line">person3 &lt;- list(</span><br><span class="line">    first_name = "Adam",  </span><br><span class="line">    job = "Programmer",</span><br><span class="line">    salary = 78000,</span><br><span class="line">    in_union = TRUE,</span><br><span class="line">    favorites = list(</span><br><span class="line">      music = "pop",</span><br><span class="line">      food = "pasta"</span><br><span class="line">    )</span><br><span class="line">)</span><br></pre></td></tr></tbody></table></figure>
+
+<h2 id="4-2-访问列表元素">4.2  访问列表元素<a class="post-anchor" href="#4-2-访问列表元素"></a></h2><p>使用美元符号访问列表中的元素。</p>
+<figure class="highlight plain"><figcaption><span>visit_list_by_name}</span></figcaption><table><tbody><tr><td class="code"><pre><span class="line">print(person1)</span><br><span class="line">print(person2$first_name)</span><br></pre></td></tr></tbody></table></figure>
+
+<p>也可以使用双方括号和索引或名称访问列表中的元素。</p>
+<figure class="highlight plain"><figcaption><span>visit_list_by_index}</span></figcaption><table><tbody><tr><td class="code"><pre><span class="line">print(person2[[2]])</span><br><span class="line">print(person3[["first_name"]])</span><br></pre></td></tr></tbody></table></figure>
+
+<h2 id="4-3-修改列表">4.3 修改列表<a class="post-anchor" href="#4-3-修改列表"></a></h2><p>先访问列表元素，再对其赋值即可修改。若赋值NULL，则代表“未定义”。<strong><em>NA代表缺少的值，是一个洞；NULL代表未定义，不是一个洞</em></strong>。</p>
+<h3 id="4-3-1-单括号和双括号">4.3.1 单括号和双括号<a class="post-anchor" href="#4-3-1-单括号和双括号"></a></h3><p>单括号意为“过滤”，在向量中使用单括号实际上是按括号中的索引进行过滤。对列表里来说，单括号返回的是一个列表，而双括号返回列表中的元素。</p>
+<h2 id="4-4-使用函数">4.4 使用函数<a class="post-anchor" href="#4-4-使用函数"></a></h2><p>向量可以直接作为函数的参数，但是列表需要使用lapply()函数。该函数有两个参数，第一个是要作用的列表，另一个是应用于每一项的函数。</p>
+<figure class="highlight plain"><figcaption><span>list_apply_function}</span></figcaption><table><tbody><tr><td class="code"><pre><span class="line">lapply(list("a","b"), paste,"dances.")</span><br></pre></td></tr></tbody></table></figure>
+<p><em>sapply()函数作用于向量且只针对自定义函数</em></p>
+<h2 id="4-5-本章练习">4.5 本章练习<a class="post-anchor" href="#4-5-本章练习"></a></h2><h3 id="Exercise-1">Exercise 1<a class="post-anchor" href="#Exercise-1"></a></h3><figure class="highlight plain"><figcaption><span>ex_1}</span></figcaption><table><tbody><tr><td class="code"><pre><span class="line"># Exercise 1: creating and accessing lists</span><br><span class="line"></span><br><span class="line"># Create a vector `my_breakfast` of everything you ate for breakfast</span><br><span class="line"></span><br><span class="line">my_breakfast &lt;- c("cake","apple","milk")</span><br><span class="line"></span><br><span class="line"># Create a vector `my_lunch` of everything you ate (or will eat) for lunch</span><br><span class="line"></span><br><span class="line">my_lunch &lt;- c("rice","noodle","meat")</span><br><span class="line"></span><br><span class="line"># Create a list `meals` that has contains your breakfast and lunch</span><br><span class="line"></span><br><span class="line">meals &lt;- list(</span><br><span class="line">  breakfast = my_breakfast,</span><br><span class="line">  lunch = my_lunch</span><br><span class="line">  )</span><br><span class="line"></span><br><span class="line"># Add a "dinner" element to your `meals` list that has what you plan to eat </span><br><span class="line"># for dinner</span><br><span class="line"></span><br><span class="line">meals$dinner &lt;- c("rice","vegetables","meat")</span><br><span class="line"></span><br><span class="line"># Use dollar notation to extract your `dinner` element from your list</span><br><span class="line"># and save it in a vector called 'dinner'</span><br><span class="line"></span><br><span class="line">dinner &lt;- meals$dinner</span><br><span class="line"></span><br><span class="line"># Use double-bracket notation to extract your `lunch` element from your list</span><br><span class="line"># and save it in your list as the element at index 5 (no reason beyond practice)</span><br><span class="line"></span><br><span class="line">meals[[5]] &lt;- meals[["lunch"]]</span><br><span class="line"></span><br><span class="line"># Use single-bracket notation to extract your breakfast and lunch from your list</span><br><span class="line"># and save them to a list called `early_meals`</span><br><span class="line"></span><br><span class="line">early_meals &lt;- meals[c("breakfast","lunch")]</span><br><span class="line"></span><br><span class="line">### Challenge ###</span><br><span class="line"></span><br><span class="line"># Create a list that has the number of items you ate for each meal</span><br><span class="line"># Hint: use the `lapply()` function to apply the `length()` function to each item</span><br><span class="line"></span><br><span class="line">item_number &lt;- lapply(meals,length)</span><br><span class="line"></span><br><span class="line"># Write a function `add_pizza` that adds pizza to a given meal vector, and</span><br><span class="line"># returns the pizza-fied vector</span><br><span class="line"></span><br><span class="line">add_pizza &lt;- function(meal)</span><br><span class="line">{</span><br><span class="line">  meal[length(meal) + 1] &lt;- "pizza"</span><br><span class="line">  return(meal)</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"># Create a vector `better_meals` that is all your meals, but with pizza!</span><br><span class="line"></span><br><span class="line">better_meals &lt;- add_pizza(meals[["dinner"]])</span><br></pre></td></tr></tbody></table></figure>
+
+</body></html>
+
+  
+    <div class="post-reward">
+    <div id="reward-button">打赏</div>
+      <div id="qr">
+        <div class="wrap">
+            
+            <div class="bg-wrap">
+              <a href="/images/zhifubao.png" target="_block" class="bg" style="background-image:url('/images/zhifubao.png')"></a>
+              支付宝
+            </div>
+            
+            
+            <div class="bg-wrap">
+                <a href="/images/weixin.png" target="_block" class="bg" style="background-image:url('/images/weixin.png')"></a>
+              微信
+            </div>
+            
+        </div>
+      </div>
+    </div>
+  
+  <div class="post-guide">
+    <div class="item left">
+        
+          <a href="/2021/07/11/R_2_functions/">R_2 函数</a>
+        
+    </div>
+    <div class="item right">
+        
+          <a href="/2021/07/11/R_3_vectors/">R_3 向量</a>
+        
+    </div>
+  </div>
+
+  
+
+  <div class="post-copyright">
+    <div class="auth">
+      本文作者：<a href="http://hushrushly.github.io">Hushrush</a>
+    </div>
+    <div class="link">
+      链接：<a href="http://hushrushly.github.io/2021/07/11/R_4_list/">http://hushrushly.github.io/2021/07/11/R_4_list/</a>
+    </div>
+    <div class="declare">
+      版权声明：本文首发于<a href="http://hushrushly.github.io">Hushrush</a>的博客，转载请注明出处！
+    </div>
+  </div>
+
+  <div id="comment"></div>
+
+  
+  
+</article>
+        <footer>
+          <div class="copyright">
+            ©2021
+            <a href="http://hushrushly.github.io">Hushrush</a> Powered by <a href="https://hexo.io" target="_blank" rel="noopener">Hexo</a> |
+            <a href="https://github.com/shixiaohu2206/hexo-theme-huhu" target="_blank" rel="noopener">hexo-theme-huhu</a>
+          </div>
+          
+        </footer>
+      </div>
+    </div>
+  </body>
+  
+</html>
+<script type="text/javascript">
+                  window.HUHU_CONFIG = JSON.parse("{\"share\":[\"weibo\",\"weixin\",\"qqkongjian\",\"QQ\",\"douban\",\"facebook\",\"twitter\",\"google\"],\"valine\":{\"API_ID\":\"6ieLH7bGrju011dUapt0pFTI-MdYXbMMI\",\"API_KEY\":\"8VWSeumnLk1qGsiLzo5nENJq\",\"placeholder\":\"请发表评论：\"},\"service_worker\":{\"open\":false},\"baidu_tongji\":{\"site_from\":\"2020/4/1\",\"site_id\":\"fe1d9d2dc48a2ab8ea7f292f05e237cd\",\"access_token\":\"xxxxx\"}}")
+                </script> <script type="text/javascript">window.addEventListener('load', function() {
+    
+    window.loadJs = function(d, m, a) {
+      var c = document.getElementsByTagName('head')[0] || document.head || document.documentElement
+      var b = document.createElement('script')
+      b.defer = true
+      b.setAttribute('type', 'text/javascript')
+      b.setAttribute('charset', 'UTF-8')
+      b.setAttribute('async', 'true')
+      b.setAttribute('src', d)
+      m && b.setAttribute('data-main', '/scripts/app-built')
+      if (typeof a === 'function') {
+        if (window.attachEvent) {
+          b.onreadystatechange = function() {
+            var e = b.readyState
+            if (e === 'loaded' || e === 'complete') {
+              b.onreadystatechange = null
+              a()
+            }
+          }
+        } else {
+          b.onload = a
+        }
+      }
+      c.appendChild(b)
+    }
+    window.loadJs && window.loadJs('https://cdn.bootcss.com/require.js/2.3.6/require.min.js', true, function() {require.config({"paths":{"util":"util","share":"share","search":"search","pagemap":"pagemap.min","registerSW":"registerSW","valine":"cdn/Valine.min","av":["https://cdn.jsdelivr.net/npm/leancloud-storage/dist/av-min"],"pjax":["https://cdn.bootcss.com/jquery.pjax/2.0.1/jquery.pjax.min"],"jquery":["https://cdn.bootcss.com/jquery/3.4.1/jquery.min"],"confirm":["https://cdn.bootcss.com/jquery-confirm/3.3.4/jquery-confirm.min"],"fancybox":["https://cdn.bootcss.com/fancybox/3.5.7/jquery.fancybox.min"],"chart":["https://cdn.bootcss.com/Chart.js/2.8.0-rc.1/Chart.bundle.min"]},"map":{"*":{"css":"https://cdn.bootcss.com/require-css/0.1.10/css.min.js"}},"shim":{"fancybox":{"deps":["css!https://cdn.bootcss.com/fancybox/3.5.7/jquery.fancybox.min.css"]},"confirm":{"deps":["css!https://cdn.bootcss.com/jquery-confirm/3.3.4/jquery-confirm.min.css"]},"chart":{"deps":["css!https://cdn.bootcss.com/Chart.js/2.8.0-rc.1/Chart.min.css"]}},"waitSeconds":3})})
+  })</script> <script type="text/javascript">
+                  ;(function() {
+                    var bp = document.createElement('script')
+                    var curProtocol = window.location.protocol.split(':')[0]
+                    if (curProtocol === 'https') {
+                      bp.src = 'https://zz.bdstatic.com/linksubmit/push.js'
+                    } else {
+                      bp.src = 'http://push.zhanzhang.baidu.com/push.js'
+                    }
+                    var s = document.getElementsByTagName('script')[0]
+                    s.parentNode.insertBefore(bp, s)
+                  })()
+                </script> 
