@@ -99,16 +99,16 @@
   </entry>
   
   <entry>
-    <title>R_4 列表</title>
-    <link href="http://hushrushly.github.io/2021/07/11/R_4_list/"/>
-    <id>http://hushrushly.github.io/2021/07/11/R_4_list/</id>
+    <title>R_3 向量</title>
+    <link href="http://hushrushly.github.io/2021/07/11/R_3_vectors/"/>
+    <id>http://hushrushly.github.io/2021/07/11/R_3_vectors/</id>
     <published>2021-07-10T16:00:00.000Z</published>
-    <updated>2021-07-11T07:11:46.157Z</updated>
+    <updated>2021-07-11T07:10:55.991Z</updated>
     
     
       
       
-    <summary type="html">&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;h1 id=&quot;4-列表&quot;&gt;4. 列表&lt;a class=&quot;post-anchor&quot; href=&quot;#4-列表&quot;&gt;&lt;/a&gt;&lt;/h1&gt;&lt;p&gt;列表也是一维元素的集合。与向量的不同之处在于：&lt;br&gt;（1）可以存储不同类型的元素；&lt;br&gt;（2</summary>
+    <summary type="html">&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;h1 id=&quot;向量&quot;&gt;向量&lt;a class=&quot;post-anchor&quot; href=&quot;#向量&quot;&gt;&lt;/a&gt;&lt;/h1&gt;&lt;h2 id=&quot;1-向量&quot;&gt;1.向量&lt;a class=&quot;post-anchor&quot; href=&quot;#1-向量&quot;&gt;&lt;/a&gt;</summary>
       
     
     
@@ -121,16 +121,16 @@
   </entry>
   
   <entry>
-    <title>R_3 向量</title>
-    <link href="http://hushrushly.github.io/2021/07/11/R_3_vectors/"/>
-    <id>http://hushrushly.github.io/2021/07/11/R_3_vectors/</id>
+    <title>R_4 列表</title>
+    <link href="http://hushrushly.github.io/2021/07/11/R_4_list/"/>
+    <id>http://hushrushly.github.io/2021/07/11/R_4_list/</id>
     <published>2021-07-10T16:00:00.000Z</published>
-    <updated>2021-07-11T07:10:55.991Z</updated>
+    <updated>2021-07-11T07:11:46.157Z</updated>
     
     
       
       
-    <summary type="html">&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;h1 id=&quot;向量&quot;&gt;向量&lt;a class=&quot;post-anchor&quot; href=&quot;#向量&quot;&gt;&lt;/a&gt;&lt;/h1&gt;&lt;h2 id=&quot;1-向量&quot;&gt;1.向量&lt;a class=&quot;post-anchor&quot; href=&quot;#1-向量&quot;&gt;&lt;/a&gt;</summary>
+    <summary type="html">&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;h1 id=&quot;4-列表&quot;&gt;4. 列表&lt;a class=&quot;post-anchor&quot; href=&quot;#4-列表&quot;&gt;&lt;/a&gt;&lt;/h1&gt;&lt;p&gt;列表也是一维元素的集合。与向量的不同之处在于：&lt;br&gt;（1）可以存储不同类型的元素；&lt;br&gt;（2</summary>
       
     
     
@@ -304,15 +304,13 @@
     
       
       
-    <summary type="html">
-
-	&lt;div class=&quot;row&quot;&gt;
+    <summary type="html">&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;div class=&quot;row&quot;&gt;
     &lt;embed src=&quot;/pdfs/cpp复习笔记.pdf&quot; width=&quot;100%&quot; height=&quot;550&quot; type=&quot;application/pdf&quot;&gt;
 	&lt;/div&gt;
 
 
 
-&lt;p&gt;下载地址：&lt;a href=&quot;/pdfs/</summary>
+&lt;</summary>
       
     
     
@@ -330,15 +328,13 @@
     
       
       
-    <summary type="html">
-
-	&lt;div class=&quot;row&quot;&gt;
+    <summary type="html">&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;div class=&quot;row&quot;&gt;
     &lt;embed src=&quot;/pdfs/index.pdf&quot; width=&quot;100%&quot; height=&quot;550&quot; type=&quot;application/pdf&quot;&gt;
 	&lt;/div&gt;
 
 
 
-&lt;p&gt;下载地址：&lt;a href=&quot;/pdfs/in</summary>
+&lt;p&gt;</summary>
       
     
     
@@ -356,7 +352,7 @@
     
       
       
-    <summary type="html">&lt;h2 id=&quot;d森林问题&quot;&gt;&lt;a href=&quot;#d森林问题&quot; class=&quot;headerlink&quot; title=&quot;d森林问题&quot;&gt;&lt;/a&gt;d森林问题&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;1.    问题描述&lt;/strong&gt;&lt;br&gt;设T为一带权树，树中的每个边的权都为整数。又设S为T的</summary>
+    <summary type="html">&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;h2 id=&quot;d森林问题&quot;&gt;d森林问题&lt;a class=&quot;post-anchor&quot; href=&quot;#d森林问题&quot;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;1.    问题描述&lt;/strong&gt;&lt;br&gt;设T为一带权树，树中的每个边的</summary>
       
     
     
@@ -378,7 +374,7 @@
     
       
       
-    <summary type="html">&lt;h2 id=&quot;算法设计与分析实验一：带权中位数&quot;&gt;&lt;a href=&quot;#算法设计与分析实验一：带权中位数&quot; class=&quot;headerlink&quot; title=&quot;算法设计与分析实验一：带权中位数&quot;&gt;&lt;/a&gt;&lt;strong&gt;算法设计与分析实验一：带权中位数&lt;/strong&gt;&lt;/h2&gt;</summary>
+    <summary type="html">&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;h2 id=&quot;算法设计与分析实验一：带权中位数&quot;&gt;&lt;strong&gt;算法设计与分析实验一：带权中位数&lt;/strong&gt;&lt;a class=&quot;post-anchor&quot; href=&quot;#算法设计与分析实验一：带权中位数&quot;&gt;&lt;/a&gt;&lt;/h2</summary>
       
     
     
@@ -400,7 +396,7 @@
     
       
       
-    <summary type="html">&lt;h2 id=&quot;钢条切割问题&quot;&gt;&lt;a href=&quot;#钢条切割问题&quot; class=&quot;headerlink&quot; title=&quot;钢条切割问题&quot;&gt;&lt;/a&gt;钢条切割问题&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;1.问题描述&lt;/strong&gt;&lt;br&gt;设有一个长度为 L 的钢条，在钢条上标有 n 个位置点</summary>
+    <summary type="html">&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;h2 id=&quot;钢条切割问题&quot;&gt;钢条切割问题&lt;a class=&quot;post-anchor&quot; href=&quot;#钢条切割问题&quot;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;1.问题描述&lt;/strong&gt;&lt;br&gt;设有一个长度为 L 的钢条，在钢</summary>
       
     
     
@@ -422,7 +418,7 @@
     
       
       
-    <summary type="html">&lt;p&gt;&lt;img src=&quot;https://img-blog.csdnimg.cn/20210516224637248.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM</summary>
+    <summary type="html">&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;p&gt;&lt;a href=&quot;https://img-blog.csdnimg.cn/20210516224637248.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdG</summary>
       
     
     
@@ -444,7 +440,7 @@
     
       
       
-    <summary type="html">&lt;p&gt;&lt;img src=&quot;https://img-blog.csdnimg.cn/20210514180043796.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM</summary>
+    <summary type="html">&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;p&gt;&lt;a href=&quot;https://img-blog.csdnimg.cn/20210514180043796.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdG</summary>
       
     
     

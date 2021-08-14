@@ -207,8 +207,8 @@
       <div>
       </div>
     </div>
-    <p>（mathjax渲染数学公式）</p>
-<h1 id="不眠夜"><a href="#不眠夜" class="headerlink" title="不眠夜"></a>不眠夜</h1><blockquote>
+    <html><head></head><body><p>（mathjax渲染数学公式）</p>
+<h1 id="不眠夜">不眠夜<a class="post-anchor" href="#不眠夜"></a></h1><blockquote>
 <p>​    最近考试暂时告一段落，打算重启博客，因此来试试手，看看操作是不是全忘记了。</p>
 </blockquote>
 <p>​    首先把界面的主题又换回了autumn。这个主题比next好看，我也用不到next的许多功能，因此就换回来了。然后发现categories和archive都能用了，看来之前以为模板不支持这些的我还是naive了。不过还没有找到换字体的方法。</p>
@@ -218,7 +218,7 @@
 <blockquote>
 <p>链接</p>
 </blockquote>
-<p><a href="https://www.icourse163.org/learn/XJTU-1002533017?tid=1459002460#/learn/content?type=detail&id=1234086201" target="_blank" rel="noopener">大学日语慕课的网址</a></p>
+<p><a href="https://www.icourse163.org/learn/XJTU-1002533017?tid=1459002460#/learn/content?type=detail&amp;id=1234086201" target="_blank" rel="noopener">大学日语慕课的网址</a></p>
 <blockquote>
 <p>不知道怎么形容的功能</p>
 </blockquote>
@@ -247,13 +247,13 @@
 <blockquote>
 <p>插入图片</p>
 </blockquote>
-<p><img src="https://ftp.bmp.ovh/imgs/2020/06/6bdb62fef9e0705d.jpg" alt="插图片"></p>
+<p><a href="https://ftp.bmp.ovh/imgs/2020/06/6bdb62fef9e0705d.jpg" target="_blank" rel="noopener" data-caption="插图片" data-fancybox="images"><img src="https://ftp.bmp.ovh/imgs/2020/06/6bdb62fef9e0705d.jpg" alt="插图片"></a></p>
 <blockquote>
 <p>插入代码</p>
 </blockquote>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">#include&lt;stdio.h&gt;</span><br><span class="line">int main()&#123;</span><br><span class="line">	printf(&quot;hello,world&quot;);</span><br><span class="line">	return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tbody><tr><td class="code"><pre><span class="line">#include&lt;stdio.h&gt;</span><br><span class="line">int main(){</span><br><span class="line">	printf("hello,world");</span><br><span class="line">	return 0;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
 
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;*从键盘输入两个字符串，把后输入的字符串拼接到第一个字符串后，</span><br><span class="line">然后输出合并后的字符串。每个字符串长度不超过50个字符。字符串可能包含空格。</span><br><span class="line"></span><br><span class="line">输入：</span><br><span class="line">This is a tree!</span><br><span class="line">Hello world!</span><br><span class="line">输出：</span><br><span class="line">This is a tree!Hello world!*&#x2F;</span><br><span class="line">#include &lt;stdio.h&gt;</span><br><span class="line"></span><br><span class="line">&#x2F;* run this program using the console pauser or add your own getch, system(&quot;pause&quot;) or input loop *&#x2F;</span><br><span class="line"></span><br><span class="line">int main(int argc, char** argv) &#123;</span><br><span class="line">	char str1[101];char str2[51];</span><br><span class="line">    gets(str1);gets(str2);</span><br><span class="line">    &#x2F;&#x2F;scanf(&quot;%[^\r\n]%*[\r\n]&quot;, str1);</span><br><span class="line">    &#x2F;&#x2F;scanf(&quot;%[^\r\n]%*[\r\n]&quot;, str2);</span><br><span class="line">    int len1 &#x3D; 0;int len2 &#x3D; 0;</span><br><span class="line">    len1&#x3D;strlen(str1);</span><br><span class="line">    len2&#x3D;strlen(str2);</span><br><span class="line">    *(str1+len1)&#x3D;&#39;\0&#39;;</span><br><span class="line">    *(str2+len2)&#x3D;&#39;\0&#39;;</span><br><span class="line">    &#x2F;&#x2F;scanf(&quot;%[^\r\n]&quot;, str1);</span><br><span class="line">    &#x2F;&#x2F;scanf(&quot;%[\r\n]&quot;,str2);</span><br><span class="line">    &#x2F;&#x2F;void strcmb(char p[],char q[]);</span><br><span class="line">    &#x2F;&#x2F;strcmb(str1,str2);</span><br><span class="line">    &#x2F;&#x2F;printf(&quot;%s&quot;,str1);</span><br><span class="line">    if(*(str1)&#x3D;&#x3D;&#39;T&#39;)</span><br><span class="line">    printf(&quot;This is a tree!Hello world!&quot;);</span><br><span class="line">    if(*(str1)&#x3D;&#x3D;&#39;I&#39;)</span><br><span class="line">    printf(&quot;I love c!I love java!&quot;);</span><br><span class="line">	&#x2F;&#x2F;system(&quot;pause&quot;);</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&#x2F;*void strcmb(char p[],char q[])</span><br><span class="line">&#123;</span><br><span class="line">    int len1 &#x3D; 0;int len2 &#x3D; 0;</span><br><span class="line">    len1&#x3D;strlen(p);</span><br><span class="line">    len2&#x3D;strlen(q);</span><br><span class="line">    *(p+len1)&#x3D;&#39;\0&#39;;</span><br><span class="line">    *(q+len2)&#x3D;&#39;\0&#39;;</span><br><span class="line">    int i &#x3D; 0;</span><br><span class="line">    for(i&#x3D;len1;i&lt;(len1+len2);i++)</span><br><span class="line">    &#123;</span><br><span class="line">        *(p+i)&#x3D;*(q+i-len1);</span><br><span class="line">    &#125;</span><br><span class="line">    *(p+len1+len2)&#x3D;&#39;\0&#39;;</span><br><span class="line">&#125;*&#x2F;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tbody><tr><td class="code"><pre><span class="line">/*从键盘输入两个字符串，把后输入的字符串拼接到第一个字符串后，</span><br><span class="line">然后输出合并后的字符串。每个字符串长度不超过50个字符。字符串可能包含空格。</span><br><span class="line"></span><br><span class="line">输入：</span><br><span class="line">This is a tree!</span><br><span class="line">Hello world!</span><br><span class="line">输出：</span><br><span class="line">This is a tree!Hello world!*/</span><br><span class="line">#include &lt;stdio.h&gt;</span><br><span class="line"></span><br><span class="line">/* run this program using the console pauser or add your own getch, system("pause") or input loop */</span><br><span class="line"></span><br><span class="line">int main(int argc, char** argv) {</span><br><span class="line">	char str1[101];char str2[51];</span><br><span class="line">    gets(str1);gets(str2);</span><br><span class="line">    //scanf("%[^\r\n]%*[\r\n]", str1);</span><br><span class="line">    //scanf("%[^\r\n]%*[\r\n]", str2);</span><br><span class="line">    int len1 = 0;int len2 = 0;</span><br><span class="line">    len1=strlen(str1);</span><br><span class="line">    len2=strlen(str2);</span><br><span class="line">    *(str1+len1)='\0';</span><br><span class="line">    *(str2+len2)='\0';</span><br><span class="line">    //scanf("%[^\r\n]", str1);</span><br><span class="line">    //scanf("%[\r\n]",str2);</span><br><span class="line">    //void strcmb(char p[],char q[]);</span><br><span class="line">    //strcmb(str1,str2);</span><br><span class="line">    //printf("%s",str1);</span><br><span class="line">    if(*(str1)=='T')</span><br><span class="line">    printf("This is a tree!Hello world!");</span><br><span class="line">    if(*(str1)=='I')</span><br><span class="line">    printf("I love c!I love java!");</span><br><span class="line">	//system("pause");</span><br><span class="line">    return 0;</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line">/*void strcmb(char p[],char q[])</span><br><span class="line">{</span><br><span class="line">    int len1 = 0;int len2 = 0;</span><br><span class="line">    len1=strlen(p);</span><br><span class="line">    len2=strlen(q);</span><br><span class="line">    *(p+len1)='\0';</span><br><span class="line">    *(q+len2)='\0';</span><br><span class="line">    int i = 0;</span><br><span class="line">    for(i=len1;i&lt;(len1+len2);i++)</span><br><span class="line">    {</span><br><span class="line">        *(p+i)=*(q+i-len1);</span><br><span class="line">    }</span><br><span class="line">    *(p+len1+len2)='\0';</span><br><span class="line">}*/</span><br></pre></td></tr></tbody></table></figure>
 
 <blockquote>
 <p>插入公式</p>
@@ -295,7 +295,7 @@
 <p>水平分割线</p>
 </blockquote>
 <hr>
-
+</body></html>
 
   
     <div class="post-reward">

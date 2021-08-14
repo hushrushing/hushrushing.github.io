@@ -207,18 +207,18 @@
       <div>
       </div>
     </div>
-    <h1 id="常量表达式"><a href="#常量表达式" class="headerlink" title="常量表达式"></a>常量表达式</h1><p>1.常量名应该体现其意义</p>
+    <html><head></head><body><h1 id="常量表达式">常量表达式<a class="post-anchor" href="#常量表达式"></a></h1><p>1.常量名应该体现其意义</p>
 <p>2.常量值不应该经常改变</p>
 <p>3.尽可能少用字面常量，尽可能多用符号常量。不能被直接识别的字面常量称为魔术常量</p>
 <p>4.常量表达式</p>
 <p>4.1常量表达式是仅由常量构成的整型值表达式，在编译期间就可以计算出结果。好处在于        1.允许一些计算只在编译时进行一次，而不是每次程序运行时；<br>　　2.编译器可以进行尺度更大的优化；<br>　　3.可以用在需求编译期间常量的上下文，例如数组长度等；</p>
 <p>4.2举例</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">constexpr</span> <span class="keyword">int</span> <span class="built_in">max</span> = <span class="number">17</span>;<span class="comment">//字面常量，是常量表达式</span></span><br><span class="line"><span class="keyword">int</span> val = <span class="number">19</span>;</span><br><span class="line"><span class="built_in">max</span>+<span class="number">2</span>;<span class="comment">//是常量表达式</span></span><br><span class="line">val+<span class="number">2</span>;<span class="comment">//不是常量表达式，有变量val</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight c++"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">constexpr</span> <span class="keyword">int</span> <span class="built_in">max</span> = <span class="number">17</span>;<span class="comment">//字面常量，是常量表达式</span></span><br><span class="line"><span class="keyword">int</span> val = <span class="number">19</span>;</span><br><span class="line"><span class="built_in">max</span>+<span class="number">2</span>;<span class="comment">//是常量表达式</span></span><br><span class="line">val+<span class="number">2</span>;<span class="comment">//不是常量表达式，有变量val</span></span><br></pre></td></tr></tbody></table></figure>
 
 <p>4.3constexpr和const</p>
 <p>4.3.1const 是对变量的一个修饰，告诉编译器这个变量只能被初始化且不能修改（可以通过堆栈溢出等方式修改），初始化可以延迟到运行时。</p>
 <p>例如</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">constexpr</span> <span class="keyword">int</span> <span class="built_in">max</span> = <span class="number">100</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">use</span><span class="params">(<span class="keyword">int</span> n)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">constexpr</span> <span class="keyword">int</span> c1=<span class="built_in">max</span>+<span class="number">7</span><span class="comment">//正确，c1是107，c1是常量</span></span><br><span class="line">	<span class="keyword">const</span> <span class="keyword">int</span> c2=n+<span class="number">7</span><span class="comment">//正确，n还不知道，但是编译的时候就知道了</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight c++"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">constexpr</span> <span class="keyword">int</span> <span class="built_in">max</span> = <span class="number">100</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">use</span><span class="params">(<span class="keyword">int</span> n)</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">	<span class="keyword">constexpr</span> <span class="keyword">int</span> c1=<span class="built_in">max</span>+<span class="number">7</span><span class="comment">//正确，c1是107，c1是常量</span></span><br><span class="line">	<span class="keyword">const</span> <span class="keyword">int</span> c2=n+<span class="number">7</span><span class="comment">//正确，n还不知道，但是编译的时候就知道了</span></span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
 
 <p>4.3.2constexpr</p>
 <p>4.3.2.1constexpr修饰变量时，变量必须在编译时就被初始化。所有constexpr对象都是const的，但是不是所有的const对象都是constexpr的。</p>
@@ -244,13 +244,13 @@
 <li>常量成员函数不能是virtual的</li>
 </ol>
 <p><strong>在C++11与C++14的区别：</strong><br>　　在C++11标准中，对于constexpr修饰的函数给了及其苛刻的限定条件：函数的返回值类型及所有形参的类型都是字面值类型，而且函数体内必须有且只有一条return语句。这个条件显然是太苛刻了，以至于很多在constexpr的操作都要借助？：表达式，递归等办法实现。在C++14中，放宽了这一限定，只保留了“函数的返回值类型及所有形参的类型都是字面值类型”，也就是说，这些值都在编译期能确定了就行。</p>
-<h3 id="constexpr与const的本质区别"><a href="#constexpr与const的本质区别" class="headerlink" title="constexpr与const的本质区别"></a>constexpr与const的本质区别</h3><p>　　<strong>const</strong>主要用于表达“对接口的写权限控制”，即“对于被const修饰的量名(例如const指针变量)，不得通过它对所指对象作任何修改”。(但是可以通过其他接口修改该对象)。另外，把对象声明为const也为编译器提供了潜在的优化可能。具体来说就是，如果把一个量声明为const，并且没有其他地方对该量作取址运算，那么编译器通常(取决于编译期实现)会用该量的实际常量值直接替换掉代码中所有引用该量的地方，而不用在最终编译结果中生成对该量的存取指令。<strong>constexpr</strong>的主要功能则是让更多的运算可以在编译期完成，并能保证表达式在语义上是类型安全的。(译注：相比之下，C语言中#define只能提供简单的文本替换，而不具任何类型检查能力)。与const相比，被constexpr修饰的对象则强制要求其初始化表达式能够在编译期完成计算。之后所有引用该常量对象的地方，若非必要，一律用计算出来的常量值替换。</p>
-<h3 id="能否同时使用constexpr与const"><a href="#能否同时使用constexpr与const" class="headerlink" title="能否同时使用constexpr与const?"></a>能否同时使用constexpr与const?</h3><p>　　对于变量来讲，一般情况下constexpr已经包含了const的语义，所以没必要同时使用；但是也有特殊情况：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">static constexpr int N &#x3D; 3;</span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">  constexpr const int *NP &#x3D; &amp;N;</span><br><span class="line">  return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="constexpr与const的本质区别">constexpr与const的本质区别<a class="post-anchor" href="#constexpr与const的本质区别"></a></h3><p>　　<strong>const</strong>主要用于表达“对接口的写权限控制”，即“对于被const修饰的量名(例如const指针变量)，不得通过它对所指对象作任何修改”。(但是可以通过其他接口修改该对象)。另外，把对象声明为const也为编译器提供了潜在的优化可能。具体来说就是，如果把一个量声明为const，并且没有其他地方对该量作取址运算，那么编译器通常(取决于编译期实现)会用该量的实际常量值直接替换掉代码中所有引用该量的地方，而不用在最终编译结果中生成对该量的存取指令。<strong>constexpr</strong>的主要功能则是让更多的运算可以在编译期完成，并能保证表达式在语义上是类型安全的。(译注：相比之下，C语言中#define只能提供简单的文本替换，而不具任何类型检查能力)。与const相比，被constexpr修饰的对象则强制要求其初始化表达式能够在编译期完成计算。之后所有引用该常量对象的地方，若非必要，一律用计算出来的常量值替换。</p>
+<h3 id="能否同时使用constexpr与const">能否同时使用constexpr与const?<a class="post-anchor" href="#能否同时使用constexpr与const"></a></h3><p>　　对于变量来讲，一般情况下constexpr已经包含了const的语义，所以没必要同时使用；但是也有特殊情况：</p>
+<figure class="highlight plain"><table><tbody><tr><td class="code"><pre><span class="line">static constexpr int N = 3;</span><br><span class="line">int main()</span><br><span class="line">{</span><br><span class="line">  constexpr const int *NP = &amp;N;</span><br><span class="line">  return 0;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
 
 <p>　　在这里const和constexpr在修饰不同的东西，constexpr和const都必须要有。constexpr表示NP指针本身是常量表达式，而const表示指向的值是一个常量。去掉const之后无法编译，因为不能用正常指针指向常量。对于成员函数来讲，在C++11中constexpr同样包含const的含义，但是C++14中则不，所以C++14中可能会需要同时使用const与constexpr。</p>
 </blockquote>
-
+</body></html>
 
   
     <div class="post-reward">
@@ -276,12 +276,12 @@
   <div class="post-guide">
     <div class="item left">
         
-          <a href="/2020/11/15/%E5%A4%A7%E4%BA%8E%E5%B0%8F%E4%BA%8E%E8%BF%90%E7%AE%97%E7%9A%84%E5%B8%B8%E8%A7%81%E9%94%99%E8%AF%AF/">大于小于运算的常见错误</a>
+          <a href="/2020/11/15/%E4%BD%BF%E7%94%A8++a%E8%BF%98%E6%98%AFa=a+1/">使用++a还是a=a+1?</a>
         
     </div>
     <div class="item right">
         
-          <a href="/2020/11/15/%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2/">类型转换</a>
+          <a href="/2020/11/15/%E5%A4%A7%E4%BA%8E%E5%B0%8F%E4%BA%8E%E8%BF%90%E7%AE%97%E7%9A%84%E5%B8%B8%E8%A7%81%E9%94%99%E8%AF%AF/">大于小于运算的常见错误</a>
         
     </div>
   </div>

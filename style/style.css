@@ -134,7 +134,7 @@ body {
   -ms-text-size-adjust: 100%;
   box-sizing: border-box;
   background-color: #fff;
-  font-family: 'Varela', 'Microsoft Yahei';
+  font-family: 'latinmodern-math', 'SourceHanSerifCN-Regular', 'Microsoft Yahei';
 }
 a {
   text-decoration: none;
@@ -177,8 +177,12 @@ a {
   background: #bbdefb;
 }
 @font-face {
-  font-family: 'Varela';
-  src: url("../font/Varela.woff2") format('woff2');
+  font-family: '';
+  src: url("../font/latinmodern-math.woff2") format('woff2');
+}
+@font-face {
+  font-family: 'SourceHanSerifCN-Regular';
+  src: url("../font/SourceHanSerifCN-Regular.woff2") format('woff2');
 }
 .post-entry {
   width: 100%;
