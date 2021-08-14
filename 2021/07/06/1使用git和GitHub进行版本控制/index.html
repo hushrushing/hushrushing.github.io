@@ -1,382 +1,613 @@
+
+
+
 <!DOCTYPE html>
-<html>
-  <head>
-      <script>
-  var _hmt = _hmt || []
-  ;(function() {
-    var hm = document.createElement('script')
-    hm.src = 'https://hm.baidu.com/hm.js?5a0acc897fd96474a2c8f4deac84611a'
-    var s = document.getElementsByTagName('script')[0]
-    s.parentNode.insertBefore(hm, s)
-  })()
-</script> 
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <meta name="keywords" content="" />
-    <meta name="description" content="Simple and naive" />
-    
-    <title>
-      使用git和GitHub进行版本控制 - TheHushrush
-    </title>
-    <link rel="manifest" href="/manifest.json" />
-    <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon" />
-    
-<link rel="stylesheet" href="/style/style.css">
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>  使用git和GitHub进行版本控制 |    NoSleep</title>
+  <meta name="description" content="Official Page of Hushrush.">
+  <!-- 标签页图标 -->
+  
 
-  <meta name="generator" content="Hexo 4.2.0"><link rel="alternate" href="/atom.xml" title="TheHushrush" type="application/atom+xml">
+  <!-- 图标库 -->
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css" rel="stylesheet">
+  <!-- 动画库 -->
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fushaolei/cdn-white@1.0/css/animate.css"/>
+  
+  <!-- css文件 -->
+  
+<link rel="stylesheet" href="/css/white.css">
+
+  <!-- 代码高亮 -->
+  
+<meta name="generator" content="Hexo 4.2.0"><link rel="alternate" href="/atom.xml" title="TheHushrush" type="application/atom+xml">
 </head>
-  <body>
-    <canvas id='pagemap'></canvas>
-    
-    <div id="post-toc" class="animated hiddenToc hide">
-      <span class="title">Toc</span>
-      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#使用git和GitHub进行版本控制"><span class="toc-text">使用git和GitHub进行版本控制</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-git的核心概念"><span class="toc-text">1 git的核心概念</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-GitHub"><span class="toc-text">2 GitHub</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-使用git进行版本控制"><span class="toc-text">3 使用git进行版本控制</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#3-1生成仓库"><span class="toc-text">3.1生成仓库</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#3-2-检查仓库状态"><span class="toc-text">3.2 检查仓库状态</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#3-3-跟踪项目变更"><span class="toc-text">3.3 跟踪项目变更</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#3-4-审核本地git"><span class="toc-text">3.4 审核本地git</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-在GitHub中存储项目"><span class="toc-text">4 在GitHub中存储项目</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#4-1-分支和克隆"><span class="toc-text">4.1 分支和克隆</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#4-2-访问项目历史"><span class="toc-text">4.2 访问项目历史</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#4-3-忽略项目中的文件"><span class="toc-text">4.3 忽略项目中的文件</span></a></li></ol></li></ol></li></ol></li></ol>
-    </div>
-    
-    <div id="fixed-menu-wrap">
-      <span class="iconfont icon-sousuo search-box menu-reset"></span>
-      <span class="icon-toc menu-reset">Toc</span>
-      <span class="iconfont icon-arrowup menu-reset"></span>
-    </div>
-    <div id="fixed-menu">
-      <span class="iconfont icon-menu-"></span>
-    </div>
-    <div id="progress">
-      <div class="line"></div>
-    </div>
-    <div id="search-shade" class="animated hiddenSearch hide">
-      <div class="input-wrap">
-        <span class="iconfont icon-sousuo search-box"></span>
-        <input type="text" placeholder="Search" />
-        <span class="iconfont icon-close"></span>
-      </div>
-      <div class="search-result">
-        <div class="meta">
-          <span><b id="result-count">0</b> results found</span>
-          <img src="/images/logo.jpeg" />
-        </div>
-        <ul id="result-box"></ul>
-      </div>
-    </div>
-    <div id="menu-mask" class="animated hideMenuMask hide">
-      <span class="iconfont icon-close"></span>
-      <div class="nav">
-        
-        <a href="/" class="">
-          首页
-        </a>
-        
-        <a href="/archives" class="">
-          归档
-        </a>
-        
-        <a href="/categories" class="">
-          分类
-        </a>
-        
-        <a href="/tags" class="">
-          标签
-        </a>
-        
-        <a href="/about" class="">
-          关于
-        </a>
-        
-      </div>
-    </div>
-    <div id="header">
-      <div class="intro">
-        <a href="/" class="logo" style="background-image: url('/images/logo.jpeg')"></a>
-        <div class="author">Hushrush</div>
-      </div>
-      <div class="nav">
-        <span class="iconfont icon-menu menu-icon"></span>
-        <a href="#" class="search-box">
-          <span class="iconfont icon-sousuo"></span>
-        </a>
-      </div>
-    </div>
-    <div id="side" class="animated bounceInLeft">
-      <div class="shrink">
-        <a href="/" class="logo" style="background-image: url('/images/logo.jpeg')"></a>
-        <span class="iconfont icon-menu toggle-icon"></span>
-        <a href="#" class="search-box">
-          <span class="iconfont icon-sousuo"></span>
-        </a>
-      </div>
-      <div class="magnify">
-        <div class="about">
-          <div class="author">Hushrush</div>
-          <a href="/" class="logo" style="background-image: url('/images/logo.jpeg')"></a>
-        </div>
 
-        <div class="nav">
-          
-          <a href="/" class="">
-            首页
-          </a>
-          
-          <a href="/archives" class="">
-            归档
-          </a>
-          
-          <a href="/categories" class="">
-            分类
-          </a>
-          
-          <a href="/tags" class="">
-            标签
-          </a>
-          
-          <a href="/about" class="">
-            关于
-          </a>
-          
-          <a href="#" class="search-box">
-            <span class="iconfont icon-sousuo"></span>
-          </a>
-        </div>
-        <div class="bottom">
-          <div class="follow">
-            
-            <a href="https://github.com/shixiaohu2206" target="_block">
-              <span class="iconfont icon-github"></span>
-            </a>
-            
-            <a href="https://www.facebook.com/shi.xiaohu.5" target="_block">
-              <span class="iconfont icon-facebook"></span>
-            </a>
-            
-            <a href="https://www.instagram.com/shi_xiaohu/" target="_block">
-              <span class="iconfont icon-instagram"></span>
-            </a>
-             
-            <a href="/atom.xml" target="_block">
-              <span class="iconfont icon-rss"></span>
-            </a>
-            
-          </div>
-        </div>
+
+<body>
+
+<div class="menu-outer">
+    <div class="menu-inner">
+      <div class="menu-site-name  animate__animated  animate__fadeInUp">
+        <a href="/">
+          NoSleep
+        </a>
+        
       </div>
+      <div class="menu-group">
+        <ul class="menu-ul">
+        
+          <a href="/" class="nav-link">
+            <li class="menu-li  animate__animated  animate__fadeInUp">
+              HOME
+            </li>
+          </a>
+        
+          <a href="/archives" class="nav-link">
+            <li class="menu-li  animate__animated  animate__fadeInUp">
+              BLOG
+            </li>
+          </a>
+        
+        
+          <li class="menu-li animate__animated  animate__fadeInUp" id="sort">
+             Category
+             <div class="categories-outer " id="sort-div">
+               <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/%E4%B8%8D%E7%9C%A0%E5%A4%9C/">不眠夜</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%AD%A6%E4%B9%A0/">学习</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80/">汇编语言</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%AE%97%E6%B3%95/">算法</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%BC%A0%E7%BB%95%E7%BB%93/">缠绕结</a></li></ul>
+             </div>
+          </li>
+        
+        
+        <a href="/search">
+          <li class="menu-li  animate__animated  animate__fadeInUp">
+            <i class="ri-search-line"></i>
+          </li>
+        </a>
+        
+          <li class="menu-li animate__animated  animate__fadeInUp" id="mobile-menu">
+            <i class="ri-menu-line"></i>
+          </li>
+        
+        </ul>
+
+      </div>
+
     </div>
-    <div id="container">
-      <div class="main animated bounceInRight delay-0.7s">
-        <article class="post-entry">
-    <div class="header">
+</div>
+<div id="mobile-main" class="animate__animated  animate__fadeIn">
+  <div class="mobile-menu-inner">
+    <div class="mobile-menu-site-name animate__animated  animate__fadeInUp">
+      <a href="/">
+        NoSleep
+      </a>
+    </div>
+    <div class="mobile-menu-group" id="mobile-close">
+      <i class="ri-close-line"></i>
+    </div>
+
+  </div>
+
+  <div class="mobile-menu-div">
+  
+    <a href="/" class="mobile-nav-link">
+      <div class="mobile-menu-child animate__animated  animate__fadeInUp">
+        <span>HOME</span>
+      </div>
+    </a>
+  
+    <a href="/archives" class="mobile-nav-link">
+      <div class="mobile-menu-child animate__animated  animate__fadeInUp">
+        <span>BLOG</span>
+      </div>
+    </a>
+  
+  
+    <a href="/search">  
+      <div class="mobile-menu-child  animate__animated  animate__fadeInUp">
+        <i class="ri-search-line"></i>
+      </div>
+    </a>
+    
+  </div>
+
+
+</div>
+
+<div class="body-outer">
+  <div class="body-inner">
+    
+<article class="post-inner">
+  <div class="post-content-outer">
+    <div class="post-intro">
+      <div class="post-title animate__animated  animate__fadeInUp">使用git和GitHub进行版本控制</div>
+      <div class="meta-intro animate__animated  animate__fadeInUp">7月 06 2021</div>
       
-      <div class="title">使用git和GitHub进行版本控制</div>
-      <div class="meta">
-        <span class="item">
-          <span class="iconfont icon-time-circle"></span>
-          <span>2021/07/06</span>
-        </span>
-
-        
-          <span class="item leancloud-visitors" id="/2021/07/06/1%E4%BD%BF%E7%94%A8git%E5%92%8CGitHub%E8%BF%9B%E8%A1%8C%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6/" data-flag-title="使用git和GitHub进行版本控制">
-            <span class="iconfont icon-eye1"></span>
-            <span class="leancloud-visitors-count"></span>
-          </span>
-        
-
-         
-        <span class="item">
-          <span class="iconfont icon-folder"></span>
-          <span>
-              
-                
-                  <a href="/categories/学习">学习</a>
-                
-              
-          </span>
-        </span>
-        
-        
-         
-          <span class="item">
-            <span class="iconfont icon-tag1"></span>
-            <span>
-                
-                  
-                    <a href="/tags/版本控制 github">版本控制 github</a>
-                  
-                
-            </span>
-          </span>
-         
-      </div>
-      <div>
-      </div>
     </div>
-    <html><head></head><body><h2 id="使用git和GitHub进行版本控制">使用git和GitHub进行版本控制<a class="post-anchor" href="#使用git和GitHub进行版本控制"></a></h2><h3 id="1-git的核心概念">1 git的核心概念<a class="post-anchor" href="#1-git的核心概念"></a></h3><p><strong>仓库（repo）</strong>：文件历史的数据库，保存在项目目录下的.git隐藏目录中。</p>
+    <div class="post-content-inner">
+      <div class="post-content-inner-space">
+
+      </div>
+      <div class="post-content-main animate__animated  animate__fadeInUp">
+        <!-- top型目录 -->
+        
+        <h2 id="使用git和GitHub进行版本控制"><a href="#使用git和GitHub进行版本控制" class="headerlink" title="使用git和GitHub进行版本控制"></a>使用git和GitHub进行版本控制</h2><h3 id="1-git的核心概念"><a href="#1-git的核心概念" class="headerlink" title="1 git的核心概念"></a>1 git的核心概念</h3><p><strong>仓库（repo）</strong>：文件历史的数据库，保存在项目目录下的.git隐藏目录中。</p>
 <p><strong>提交</strong>：添加到仓库的某一时间点的工作快照。</p>
 <p><strong>远程</strong>：指向非本机上仓库副本的链接。</p>
 <p><strong>合并</strong>：将不同的“提交”组合到一起而无需手工组合。</p>
-<h3 id="2-GitHub">2 GitHub<a class="post-anchor" href="#2-GitHub"></a></h3><p>GitHub是一个云托管项目副本的网站，是一个可以用来保存代码仓库的地方。可以使用git来进行版本控制。</p>
-<h3 id="3-使用git进行版本控制">3 使用git进行版本控制<a class="post-anchor" href="#3-使用git进行版本控制"></a></h3><h5 id="3-1生成仓库">3.1生成仓库<a class="post-anchor" href="#3-1生成仓库"></a></h5><p>仓库需要在已有目录上生成。可以在本地新建一个文件夹，在该文件夹下通过git的init动作可以将其转化为仓库。</p>
-<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">mkdir learning_git<span class="comment">#创建一个文件夹（目录）</span></span><br><span class="line">cd learing_git<span class="comment">#切换工作目录</span></span><br><span class="line">git init<span class="comment">#将这个文件夹转化为仓库</span></span><br></pre></td></tr></tbody></table></figure>
+<h3 id="2-GitHub"><a href="#2-GitHub" class="headerlink" title="2 GitHub"></a>2 GitHub</h3><p>GitHub是一个云托管项目副本的网站，是一个可以用来保存代码仓库的地方。可以使用git来进行版本控制。</p>
+<h3 id="3-使用git进行版本控制"><a href="#3-使用git进行版本控制" class="headerlink" title="3 使用git进行版本控制"></a>3 使用git进行版本控制</h3><h5 id="3-1生成仓库"><a href="#3-1生成仓库" class="headerlink" title="3.1生成仓库"></a>3.1生成仓库</h5><p>仓库需要在已有目录上生成。可以在本地新建一个文件夹，在该文件夹下通过git的init动作可以将其转化为仓库。</p>
+<figure class="highlight r"><table><tr><td class="code"><pre><span class="line">mkdir learning_git<span class="comment">#创建一个文件夹（目录）</span></span><br><span class="line">cd learing_git<span class="comment">#切换工作目录</span></span><br><span class="line">git init<span class="comment">#将这个文件夹转化为仓库</span></span><br></pre></td></tr></table></figure>
 
 <p>不要将一个repo放在另一个repo中，这样很难管理。应该创建很多个不同的repo</p>
-<h5 id="3-2-检查仓库状态">3.2 检查仓库状态<a class="post-anchor" href="#3-2-检查仓库状态"></a></h5><p>使用status命令来检查仓库的状态：</p>
-<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">git status</span><br></pre></td></tr></tbody></table></figure>
+<h5 id="3-2-检查仓库状态"><a href="#3-2-检查仓库状态" class="headerlink" title="3.2 检查仓库状态"></a>3.2 检查仓库状态</h5><p>使用status命令来检查仓库的状态：</p>
+<figure class="highlight r"><table><tr><td class="code"><pre><span class="line">git status</span><br></pre></td></tr></table></figure>
 
 <p>git status总是会显示当前仓库的状态，并给出下一步骤。</p>
-<h5 id="3-3-跟踪项目变更">3.3 跟踪项目变更<a class="post-anchor" href="#3-3-跟踪项目变更"></a></h5><p>改动数据仓库，如添加或删除文件等。再次执行git status会显示更改过和未提交的文件。要提交这些更改，需要</p>
+<h5 id="3-3-跟踪项目变更"><a href="#3-3-跟踪项目变更" class="headerlink" title="3.3 跟踪项目变更"></a>3.3 跟踪项目变更</h5><p>改动数据仓库，如添加或删除文件等。再次执行git status会显示更改过和未提交的文件。要提交这些更改，需要</p>
 <p>（1）使用git add将更改添加到临时存储区</p>
-<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">git add FILE_NAME</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight r"><table><tr><td class="code"><pre><span class="line">git add FILE_NAME</span><br></pre></td></tr></table></figure>
 
 <p>添加到临时存储区则改变了仓库，再次执行git add会显示哪些文件在临时区域。<strong>注意：文件名不能包含空格</strong></p>
 <p>（2）使用git commit提交更改</p>
-<figure class="highlight plain"><table><tbody><tr><td class="code"><pre><span class="line">git commit -m"提交消息"</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git commit -m&quot;提交消息&quot;</span><br></pre></td></tr></table></figure>
 
 <p>其中提交消息是关于该更改的有用信息，如“修补了严重错误”，建议不要超过50个字符。</p>
 <p>（3）再次使用git status核对执行结果</p>
 <p>再次使用git status应该显示“全部提交完毕”。</p>
-<h5 id="3-4-审核本地git">3.4 审核本地git<a class="post-anchor" href="#3-4-审核本地git"></a></h5><p>使用git的开发循环是：（1）编辑文件；（2）添加文件；（3）提交更改。一旦有了好的“断点”应该及时提交更改，以随时回到这个断点。如果添加了多余的文件，可以通过</p>
-<figure class="highlight plain"><table><tbody><tr><td class="code"><pre><span class="line">git reset</span><br></pre></td></tr></tbody></table></figure>
+<h5 id="3-4-审核本地git"><a href="#3-4-审核本地git" class="headerlink" title="3.4 审核本地git"></a>3.4 审核本地git</h5><p>使用git的开发循环是：（1）编辑文件；（2）添加文件；（3）提交更改。一旦有了好的“断点”应该及时提交更改，以随时回到这个断点。如果添加了多余的文件，可以通过</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git reset</span><br></pre></td></tr></table></figure>
 
 <p>来删除多余的文件。如果提交了多余的文件，可以通过</p>
-<figure class="highlight r"><table><tbody><tr><td class="code"><pre><span class="line">git reset --soft HEAD~<span class="number">1</span></span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight r"><table><tr><td class="code"><pre><span class="line">git reset --soft HEAD~<span class="number">1</span></span><br></pre></td></tr></table></figure>
 
 <p>撤销提交，但更改的文件仍在目录中。但是只能撤销最近的提交。</p>
-<h3 id="4-在GitHub中存储项目">4 在GitHub中存储项目<a class="post-anchor" href="#4-在GitHub中存储项目"></a></h3><p>存储在GitHub上的仓库是本地仓库的副本，也叫origin。将本地仓库链接到GitHub有两个常见的过程：</p>
+<h3 id="4-在GitHub中存储项目"><a href="#4-在GitHub中存储项目" class="headerlink" title="4 在GitHub中存储项目"></a>4 在GitHub中存储项目</h3><p>存储在GitHub上的仓库是本地仓库的副本，也叫origin。将本地仓库链接到GitHub有两个常见的过程：</p>
 <p>（1）上传：点击“New Repository”在GitHub上新建一个repo，链接本地的repo到GitHub上新建的repo。</p>
 <p>（2）下载：克隆GitHub上的repo副本，再修改和编辑代码。</p>
 <p><strong>注意：应该先在本地进行开发工作，再将改动合并到远程副本中</strong></p>
-<h5 id="4-1-分支和克隆">4.1 分支和克隆<a class="post-anchor" href="#4-1-分支和克隆"></a></h5><p>由于无法直接修改别人的repo，所以应该先将repo复制到自己的账户中，这个过程叫做分支（Fork）。点击“Fork”按钮进行分支，这样就可以在自己的账户下更改副本，将repo克隆（Clone）到本地进行修改。</p>
-<figure class="highlight plain"><table><tbody><tr><td class="code"><pre><span class="line">cd ~/Desktop</span><br><span class="line">git clone REPO_URL</span><br></pre></td></tr></tbody></table></figure>
+<h5 id="4-1-分支和克隆"><a href="#4-1-分支和克隆" class="headerlink" title="4.1 分支和克隆"></a>4.1 分支和克隆</h5><p>由于无法直接修改别人的repo，所以应该先将repo复制到自己的账户中，这个过程叫做分支（Fork）。点击“Fork”按钮进行分支，这样就可以在自己的账户下更改副本，将repo克隆（Clone）到本地进行修改。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">cd ~&#x2F;Desktop</span><br><span class="line">git clone REPO_URL</span><br></pre></td></tr></table></figure>
 
 <p>更改完成后将repo上传回GitHub中，这个过程叫推送（Push）。</p>
-<figure class="highlight plain"><table><tbody><tr><td class="code"><pre><span class="line">git push</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git push</span><br></pre></td></tr></table></figure>
 
 <p>可以通过git remote查看远程位置。</p>
-<figure class="highlight plain"><table><tbody><tr><td class="code"><pre><span class="line">git remote -v</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git remote -v</span><br></pre></td></tr></table></figure>
 
 <p>可以通过git pull下载其他人的更改并且融合到本地仓库中，这个过程叫拉取（Pull）</p>
-<figure class="highlight plain"><table><tbody><tr><td class="code"><pre><span class="line">git pull</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git pull</span><br></pre></td></tr></table></figure>
 
 <p><strong>注意：拉取代码有可能产生融合冲突，每次工作前要先拉取最新版本以避免冲突。</strong></p>
-<h5 id="4-2-访问项目历史">4.2 访问项目历史<a class="post-anchor" href="#4-2-访问项目历史"></a></h5><p>使用git log查看提交历史。</p>
-<figure class="highlight plain"><table><tbody><tr><td class="code"><pre><span class="line">git log</span><br></pre></td></tr></tbody></table></figure>
+<h5 id="4-2-访问项目历史"><a href="#4-2-访问项目历史" class="headerlink" title="4.2 访问项目历史"></a>4.2 访问项目历史</h5><p>使用git log查看提交历史。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git log</span><br></pre></td></tr></table></figure>
 
 <p>可以恢复早期版本，方法有</p>
 <p>（1）替换为原来某一个版本；</p>
-<figure class="highlight plain"><table><tbody><tr><td class="code"><pre><span class="line">git log --oneline</span><br><span class="line">git checkout HASH FILENAME</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git log --oneline</span><br><span class="line">git checkout HASH FILENAME</span><br></pre></td></tr></table></figure>
 
 <p>先查看原来版本的hash值和文件名，再用checkout恢复版本。如果要修改最近的提交，可以将hash值用–代替。</p>
 <p>（2）撤销修改。</p>
-<figure class="highlight plain"><table><tbody><tr><td class="code"><pre><span class="line">git revert HASH --no-edit</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git revert HASH --no-edit</span><br></pre></td></tr></table></figure>
 
 <p>可以反转指定的提交。通过revert可以避免破坏修改历史，但reset会破坏修改历史。</p>
-<h5 id="4-3-忽略项目中的文件">4.3 忽略项目中的文件<a class="post-anchor" href="#4-3-忽略项目中的文件"></a></h5><p>在仓库中新建一个名为.gitignore的隐藏文件，文件中输入需要隐藏的文件或文件夹的名称。这样可以避免提交这些文件。</p>
-<figure class="highlight plain"><table><tbody><tr><td class="code"><pre><span class="line">#example</span><br><span class="line">secret/password.txt	#注意前面的目录</span><br><span class="line">raw_data/	#隐藏一个文件夹</span><br></pre></td></tr></tbody></table></figure>
+<h5 id="4-3-忽略项目中的文件"><a href="#4-3-忽略项目中的文件" class="headerlink" title="4.3 忽略项目中的文件"></a>4.3 忽略项目中的文件</h5><p>在仓库中新建一个名为.gitignore的隐藏文件，文件中输入需要隐藏的文件或文件夹的名称。这样可以避免提交这些文件。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">#example</span><br><span class="line">secret&#x2F;password.txt	#注意前面的目录</span><br><span class="line">raw_data&#x2F;	#隐藏一个文件夹</span><br></pre></td></tr></table></figure>
 
-</body></html>
 
-  
-    <div class="post-reward">
-    <div id="reward-button">打赏</div>
-      <div id="qr">
-        <div class="wrap">
-            
-            <div class="bg-wrap">
-              <a href="/images/zhifubao.png" target="_block" class="bg" style="background-image:url('/images/zhifubao.png')"></a>
-              支付宝
-            </div>
+        <!-- 分类文章 -->
+        
+          <div class="post-categoris-bottom">
+            <div class="post-categoris-name">学习</div>
+            <ul>
             
             
-            <div class="bg-wrap">
-                <a href="/images/weixin.png" target="_block" class="bg" style="background-image:url('/images/weixin.png')"></a>
-              微信
-            </div>
+              
             
+            
+            
+              
+            
+            
+            
+            
+            
+              
+            
+            
+            
+              
+            
+            
+            
+              
+            
+            
+            
+              
+            
+            
+            
+              
+            
+            
+            
+              
+            
+            
+            
+              
+            
+            
+            
+              
+            
+            
+            
+              
+                <li class="base">
+                  <a  href="/2020/11/15/kmp/" class="post-categoris-bottom-link">
+                  KMP算法
+                </a>
+                </li>
+              
+              
+            
+            
+            
+              
+                <li class="base">
+                  <a  href="/2020/11/15/%E4%BD%BF%E7%94%A8++a%E8%BF%98%E6%98%AFa=a+1/" class="post-categoris-bottom-link">
+                  使用++a还是a=a+1?
+                </a>
+                </li>
+              
+              
+            
+            
+            
+              
+                <li class="base">
+                  <a  href="/2020/11/15/%E5%A4%A7%E4%BA%8E%E5%B0%8F%E4%BA%8E%E8%BF%90%E7%AE%97%E7%9A%84%E5%B8%B8%E8%A7%81%E9%94%99%E8%AF%AF/" class="post-categoris-bottom-link">
+                  大于小于运算的常见错误
+                </a>
+                </li>
+              
+              
+            
+            
+            
+              
+                <li class="base">
+                  <a  href="/2020/11/15/%E5%B8%B8%E9%87%8F%E8%A1%A8%E8%BE%BE%E5%BC%8F/" class="post-categoris-bottom-link">
+                  常量表达式
+                </a>
+                </li>
+              
+              
+            
+            
+            
+              
+                <li class="base">
+                  <a  href="/2020/11/15/%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2/" class="post-categoris-bottom-link">
+                  类型转换
+                </a>
+                </li>
+              
+              
+            
+            
+            
+              
+            
+            
+            
+              
+            
+            
+            
+              
+            
+            
+            
+              
+            
+            
+            
+              
+            
+            
+            
+              
+                <li class="base">
+                  <a  href="/2021/04/12/20210412/" class="post-categoris-bottom-link">
+                  带权中位数
+                </a>
+                </li>
+              
+              
+            
+            
+            
+              
+            
+            
+            
+              
+            
+            
+            
+              
+            
+            
+            
+              
+            
+            
+            
+              
+            
+            
+            
+              
+            
+            
+            
+              
+                <li class="base">
+                  <a  href="/2021/05/03/%E7%9F%A5%E8%AF%86%E5%88%86%E5%AD%90%E7%9A%84%E5%AE%B6%E5%9B%BD%E6%83%85%E6%80%80/" class="post-categoris-bottom-link">
+                  知识分子的家国情怀（作业）
+                </a>
+                </li>
+              
+              
+            
+            
+            
+            
+            
+              
+                <li class="base">
+                  <a  href="/2021/05/10/%E7%AE%97%E6%B3%95%E7%AC%AC%E5%85%AD%E7%AB%A0%20%E5%88%86%E6%94%AF%E9%99%90%E7%95%8C%E6%B3%95/" class="post-categoris-bottom-link">
+                  算法第六章 分支限界法
+                </a>
+                </li>
+              
+              
+            
+            
+            
+              
+                <li class="base">
+                  <a  href="/2021/05/14/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E8%83%BD%E5%90%A6%E5%BD%BB%E5%BA%95%E4%BB%A3%E6%9B%BF%E4%BA%BA%E7%B1%BB%EF%BC%9F/" class="post-categoris-bottom-link">
+                  人工智能能否彻底代替人类？
+                </a>
+                </li>
+              
+              
+            
+            
+            
+              
+            
+            
+            
+              
+                <li class="base">
+                  <a  href="/2021/05/16/The%20way%20to%20require%20financial%20data%20and%20plot%20trend/" class="post-categoris-bottom-link">
+                  The way to require financial data and plot trend
+                </a>
+                </li>
+              
+              
+            
+            
+            
+              
+                <li class="base">
+                  <a  href="/2021/05/19/%E7%AE%97%E6%B3%95%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%88%86%E6%9E%90%E5%AE%9E%E9%AA%8C%E4%B8%80%EF%BC%9A%E5%B8%A6%E6%9D%83%E4%B8%AD%E4%BD%8D%E6%95%B0/" class="post-categoris-bottom-link">
+                  算法设计与分析实验一：带权中位数
+                </a>
+                </li>
+              
+              
+            
+            
+            
+              
+                <li class="base">
+                  <a  href="/2021/05/19/%E7%AE%97%E6%B3%95%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%88%86%E6%9E%90%E4%B8%89%EF%BC%9Ad%E6%A3%AE%E6%9E%97%E9%97%AE%E9%A2%98/" class="post-categoris-bottom-link">
+                  算法设计与分析实验三：d森林问题
+                </a>
+                </li>
+              
+              
+            
+            
+            
+              
+                <li class="base">
+                  <a  href="/2021/05/19/%E7%AE%97%E6%B3%95%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E9%AA%8C%E4%BA%8C%EF%BC%9A%E9%92%A2%E6%9D%A1%E5%88%87%E5%89%B2/" class="post-categoris-bottom-link">
+                  算法设计与分析实验二：钢条切割问题
+                </a>
+                </li>
+              
+              
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+              
+                <li class="me base">
+                  <a  href="/2021/07/06/1%E4%BD%BF%E7%94%A8git%E5%92%8CGitHub%E8%BF%9B%E8%A1%8C%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6/" class="post-categoris-bottom-link">
+                  使用git和GitHub进行版本控制
+                </a>
+                </li>
+              
+              
+            
+            
+            
+              
+                <li class="base">
+                  <a  href="/2021/07/11/R_1_Basic%20Skills/" class="post-categoris-bottom-link">
+                  R_1 基本操作
+                </a>
+                </li>
+              
+              
+            
+            
+            
+              
+                <li class="base">
+                  <a  href="/2021/07/11/R_3_vectors/" class="post-categoris-bottom-link">
+                  R_3 向量
+                </a>
+                </li>
+              
+              
+            
+            
+            
+              
+                <li class="base">
+                  <a  href="/2021/07/11/R_4_list/" class="post-categoris-bottom-link">
+                  R_4 列表
+                </a>
+                </li>
+              
+              
+            
+            
+            
+              
+                <li class="base">
+                  <a  href="/2021/07/11/R_5_dataframe/" class="post-categoris-bottom-link">
+                  R_5 数据框
+                </a>
+                </li>
+              
+              
+            
+            
+            
+              
+                <li class="base">
+                  <a  href="/2021/07/11/R_7_using_tidyr/" class="post-categoris-bottom-link">
+                  R_7 tidyr
+                </a>
+                </li>
+              
+              
+            
+            
+            
+              
+                <li class="base">
+                  <a  href="/2021/07/11/R_2_functions/" class="post-categoris-bottom-link">
+                  R_2 函数
+                </a>
+                </li>
+              
+              
+            
+            
+            
+              
+                <li class="base">
+                  <a  href="/2021/07/11/R_6_using_dplyr/" class="post-categoris-bottom-link">
+                  R_6 dplyr
+                </a>
+                </li>
+              
+              
+            
+            
+            
+            
+            
+            
+            </ul>
+
+          </div>
+
+        
+      </div>
+      <div class="post-content-inner-space">
+        
+          <div class="space-toc-main animate__animated  animate__fadeInUp">
+            <ol class="space-toc"><li class="space-toc-item space-toc-level-2"><a class="space-toc-link" href="#使用git和GitHub进行版本控制"><span class="space-toc-text">使用git和GitHub进行版本控制</span></a></li></ol>
+           </div>
+        
+      </div>
+   </div>
+    <!-- 评论 -->
+    
+    <div class="bottom-comments-outer">
+      <div class="bottom-comments-inner">
+        <!-- valine -->
+        
+        <!-- Gitalk -->
+        
+        <!-- livere -->
+        
         </div>
       </div>
-    </div>
-  
-  <div class="post-guide">
-    <div class="item left">
-        
-          <a href="/2021/07/11/R_7_using_tidyr/">R_7 tidyr</a>
-        
-    </div>
-    <div class="item right">
-        
-          <a href="/2021/06/06/%E6%B1%87%E7%BC%96%E7%AC%AC%E4%BA%8C%E6%AC%A1%E4%B8%8A%E6%9C%BA%E5%AE%9E%E9%AA%8C/">汇编第二次上机实验</a>
-        
-    </div>
-  </div>
-
-  
-
-  <div class="post-copyright">
-    <div class="auth">
-      本文作者：<a href="http://hushrushly.github.io">Hushrush</a>
-    </div>
-    <div class="link">
-      链接：<a href="http://hushrushly.github.io/2021/07/06/1%E4%BD%BF%E7%94%A8git%E5%92%8CGitHub%E8%BF%9B%E8%A1%8C%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6/">http://hushrushly.github.io/2021/07/06/1%E4%BD%BF%E7%94%A8git%E5%92%8CGitHub%E8%BF%9B%E8%A1%8C%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6/</a>
-    </div>
-    <div class="declare">
-      版权声明：本文首发于<a href="http://hushrushly.github.io">Hushrush</a>的博客，转载请注明出处！
-    </div>
-  </div>
-
-  <div id="comment"></div>
-
-  
-  
-</article>
-        <footer>
-          <div class="copyright">
-            ©2021
-            <a href="http://hushrushly.github.io">Hushrush</a> Powered by <a href="https://hexo.io" target="_blank" rel="noopener">Hexo</a> |
-            <a href="https://github.com/shixiaohu2206/hexo-theme-huhu" target="_blank" rel="noopener">hexo-theme-huhu</a>
-          </div>
-          
-        </footer>
-      </div>
-    </div>
-  </body>
-  
-</html>
-<script type="text/javascript">
-                  window.HUHU_CONFIG = JSON.parse("{\"share\":[\"weibo\",\"weixin\",\"qqkongjian\",\"QQ\",\"douban\",\"facebook\",\"twitter\",\"google\"],\"valine\":{\"API_ID\":\"6ieLH7bGrju011dUapt0pFTI-MdYXbMMI\",\"API_KEY\":\"8VWSeumnLk1qGsiLzo5nENJq\",\"placeholder\":\"请发表评论：\"},\"service_worker\":{\"open\":false},\"baidu_tongji\":{\"site_from\":\"2020/4/1\",\"site_id\":\"fe1d9d2dc48a2ab8ea7f292f05e237cd\",\"access_token\":\"xxxxx\"}}")
-                </script> <script type="text/javascript">window.addEventListener('load', function() {
     
-    window.loadJs = function(d, m, a) {
-      var c = document.getElementsByTagName('head')[0] || document.head || document.documentElement
-      var b = document.createElement('script')
-      b.defer = true
-      b.setAttribute('type', 'text/javascript')
-      b.setAttribute('charset', 'UTF-8')
-      b.setAttribute('async', 'true')
-      b.setAttribute('src', d)
-      m && b.setAttribute('data-main', '/scripts/app-built')
-      if (typeof a === 'function') {
-        if (window.attachEvent) {
-          b.onreadystatechange = function() {
-            var e = b.readyState
-            if (e === 'loaded' || e === 'complete') {
-              b.onreadystatechange = null
-              a()
-            }
-          }
-        } else {
-          b.onload = a
-        }
-      }
-      c.appendChild(b)
-    }
-    window.loadJs && window.loadJs('https://cdn.bootcss.com/require.js/2.3.6/require.min.js', true, function() {require.config({"paths":{"util":"util","share":"share","search":"search","pagemap":"pagemap.min","registerSW":"registerSW","valine":"cdn/Valine.min","av":["https://cdn.jsdelivr.net/npm/leancloud-storage/dist/av-min"],"pjax":["https://cdn.bootcss.com/jquery.pjax/2.0.1/jquery.pjax.min"],"jquery":["https://cdn.bootcss.com/jquery/3.4.1/jquery.min"],"confirm":["https://cdn.bootcss.com/jquery-confirm/3.3.4/jquery-confirm.min"],"fancybox":["https://cdn.bootcss.com/fancybox/3.5.7/jquery.fancybox.min"],"chart":["https://cdn.bootcss.com/Chart.js/2.8.0-rc.1/Chart.bundle.min"]},"map":{"*":{"css":"https://cdn.bootcss.com/require-css/0.1.10/css.min.js"}},"shim":{"fancybox":{"deps":["css!https://cdn.bootcss.com/fancybox/3.5.7/jquery.fancybox.min.css"]},"confirm":{"deps":["css!https://cdn.bootcss.com/jquery-confirm/3.3.4/jquery-confirm.min.css"]},"chart":{"deps":["css!https://cdn.bootcss.com/Chart.js/2.8.0-rc.1/Chart.min.css"]}},"waitSeconds":3})})
-  })</script> <script type="text/javascript">
-                  ;(function() {
-                    var bp = document.createElement('script')
-                    var curProtocol = window.location.protocol.split(':')[0]
-                    if (curProtocol === 'https') {
-                      bp.src = 'https://zz.bdstatic.com/linksubmit/push.js'
-                    } else {
-                      bp.src = 'http://push.zhanzhang.baidu.com/push.js'
-                    }
-                    var s = document.getElementsByTagName('script')[0]
-                    s.parentNode.insertBefore(bp, s)
-                  })()
-                </script> 
+  </div>
+</article>
+  </div>
+</div>
+
+
+
+<!-- 如果是home模式的话，不在首页就显示footer，如果不是home模式的话 所有都显示footer -->
+
+  <div class="footer-outer animate__animated  animate__fadeInUp">
+    <div class="footer-inner">
+    <div class="footer-text">
+    <p>Power by <a href="http://hexo.io/" target="_blank" rel="noopener">Hexo</a> Theme by <a href="https://github.com/FuShaoLei/hexo-theme-white" target="_blank" rel="noopener">White</a></p>
+
+    </div>
+    <div class="footer-contact">
+    <ul class="footer-ul">
+        
+        <li class="footer-li">
+            <a href="https://github.com/hushrushing" target="_blank">
+                <i class="ri-github-line"></i>
+            </a>
+        </li>
+        
+        <li class="footer-li">
+            <a href="mailto:hacyo@outlook.com" target="_blank">
+                <i class="ri-mail-line"></i>
+            </a>
+        </li>
+        
+    </ul>
+    </div>
+    </div>
+</div>
+
+
+
+
+
+
+<script src="/js/white.js"></script>
+
+
+
+</body>
+</html>
