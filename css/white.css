@@ -16,11 +16,11 @@
 }
 @font-face {
   font-family: Gothic;
-  src: url("https://cdn.jsdelivr.net/gh/fushaolei/cdn-white@1.0/font/GOTHIC.TTF");
+  src: url("https://fonts.gstatic.com/s/notoserifsc/v8/H4c8BXePl9DZ0Xe7gG9cyOj7mm63SzUpCNMKEN0nmGnGv-OMEQDgKS-k5SiuioPhBdQcziZZTQ.4.woff2") format('woff2');
 }
 @font-face {
   font-family: Merriweather;
-  src: url("https://cdn.jsdelivr.net/gh/fushaolei/cdn-white@1.0/font/Merriweather-Regular-9.ttf");
+  src: url("https://cdn.jsdelivr.net/gh/fushaolei/cdn-white@1.0/font/GOTHIC.TTF");
 }
 * {
   padding: 0;
